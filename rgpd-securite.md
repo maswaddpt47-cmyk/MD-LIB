@@ -82,11 +82,11 @@ sur `main` (injection, XSS, secrets, contrôle d'accès, dépendances
 vulnérables) + repassage complet de la checklist RGPD/sécurité sur tout le
 repo, pas seulement les derniers changements.
 
-**Important — ceci n'est PAS automatique dans l'absolu.** C'est une routine
-planifiée (`create_trigger`) **rattachée à une session Claude Code Remote
-précise**, pas une propriété de ce fichier ni des `CLAUDE.md` des projets.
-Si cette session expire ou est fermée avant sa prochaine échéance, la
-routine s'arrête et personne n'est prévenu automatiquement — il faut la
-reprogrammer depuis une session active. Cette note sert de traçabilité :
-si l'audit trimestriel n'a pas eu lieu depuis plus de 3-4 mois, c'est le
-signal qu'il faut la reprogrammer.
+C'est une routine planifiée (`create_trigger`, id `trig_018SBR4ihGT8Y2ud7sP5kxYm`,
+cron `0 8 1 1,4,7,10 *`), configurée en mode **session neuve à chaque
+déclenchement** (`create_new_session_on_fire`) — donc indépendante de toute
+session de travail : la supprimer, la fermer ou la laisser expirer n'affecte
+pas la routine. Notification push + email à chaque exécution. Cette note
+sert de traçabilité : si l'audit trimestriel n'a pas eu lieu depuis plus de
+3-4 mois (aucune notification reçue), c'est le signal qu'il faut vérifier
+avec `list_triggers` et la reprogrammer si besoin.
