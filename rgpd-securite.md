@@ -72,3 +72,21 @@ Ne pas transformer ça en audit permanent qui ralentit tout : un point
 mineur et déjà connu de l'utilisateur ne mérite qu'une ligne, pas un
 paragraphe. Un point critique (secret exposé, donnée sensible non protégée)
 doit être signalé immédiatement, avant de continuer la tâche en cours.
+
+## Audit de sécurité approfondi trimestriel
+
+En complément de la vigilance légère ci-dessus (déclenchée au fil de l'eau
+sur ce qui est touché en session), un audit plus poussé est prévu tous les
+trois mois sur ATELIERS_NEWGEN et Ateliers CD47 NextStep : `/security-review`
+sur `main` (injection, XSS, secrets, contrôle d'accès, dépendances
+vulnérables) + repassage complet de la checklist RGPD/sécurité sur tout le
+repo, pas seulement les derniers changements.
+
+**Important — ceci n'est PAS automatique dans l'absolu.** C'est une routine
+planifiée (`create_trigger`) **rattachée à une session Claude Code Remote
+précise**, pas une propriété de ce fichier ni des `CLAUDE.md` des projets.
+Si cette session expire ou est fermée avant sa prochaine échéance, la
+routine s'arrête et personne n'est prévenu automatiquement — il faut la
+reprogrammer depuis une session active. Cette note sert de traçabilité :
+si l'audit trimestriel n'a pas eu lieu depuis plus de 3-4 mois, c'est le
+signal qu'il faut la reprogrammer.
