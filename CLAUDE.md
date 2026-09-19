@@ -17,6 +17,11 @@ ce projet, sans avoir à attacher MD-LIB à chaque fois.
 | `git-workflow.md` | Pull avant intervention, commits conventionnels, push sur `main`, gestion de branche imposée par la plateforme |
 | `rgpd-securite.md` | Checklist RGPD/sécurité + note sur la routine d'audit trimestriel planifiée |
 | `pwa-service-worker.md` | Garde-fous PWA/service worker : pas de cache quand un `?v=N` existe, pas de `respondWith`, et le rechargement forcé impossible en mode installé |
+| `hygiene-instructions.md` | Empêcher le millefeuille d'instructions : une contrainte testable devient un test, tester le coût et pas seulement la justesse, dater/qualifier chaque affirmation, budget fermé, pas de changelog dans le code |
+
+**À lire en premier** quand on s'apprête à ajouter une règle quelque part :
+`hygiene-instructions.md`. Les autres fichiers disent quoi faire, celui-là dit
+où l'écrire — et quand ne pas l'écrire du tout.
 
 ## Convention de nommage
 
