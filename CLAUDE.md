@@ -16,6 +16,7 @@ ce projet, sans avoir à attacher MD-LIB à chaque fois.
 | `collaboration.md` | Règles de collaboration avec Claude (comportement attendu des deux côtés) |
 | `git-workflow.md` | Pull avant intervention, commits conventionnels, push sur `main`, gestion de branche imposée par la plateforme |
 | `rgpd-securite.md` | Checklist RGPD/sécurité + note sur la routine d'audit trimestriel planifiée |
+| `pwa-service-worker.md` | Garde-fous PWA/service worker : pas de cache quand un `?v=N` existe, pas de `respondWith`, et le rechargement forcé impossible en mode installé |
 
 ## Convention de nommage
 
