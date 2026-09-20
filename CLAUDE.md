@@ -54,6 +54,10 @@ projet. Quand l'utilisateur demande une modification :
   imposée par la plateforme, merge dans `main` en fin de session.
 - `maswaddpt47-cmyk/ateliers-cd47_NextStep` — push direct sur `main`, pas
   de branche intermédiaire.
+- `maswaddpt47-cmyk/GDINV2` — branche de travail `main`, branche de session
+  imposée à merger dans `main` en fin de session (le déploiement GitHub
+  Pages ne part que depuis `main`). Règles propagées le 20/09/2026 dans la
+  section « Règles générales adaptées à ce projet » de son `CLAUDE.md`.
 
 Vérifier leur `CLAUDE.md` respectif avant de propager, les conventions
 peuvent diverger d'un projet à l'autre.
