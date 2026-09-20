@@ -74,6 +74,6 @@ dans `main` en fin de session (`git checkout main && git merge <branche>
 ## Audit de sécurité trimestriel
 
 Une routine planifiée (voir `rgpd-securite.md`) tourne indépendamment de
-toute session pour auditer ATELIERS_NEWGEN et NextStep. Elle n'a pas besoin
-que ce repo soit attaché — vérifier avec `list_triggers` si son état est en
-doute.
+toute session pour auditer ATELIERS_NEWGEN, NextStep et GDINV2 (ajouté le
+20/09/2026). Elle n'a pas besoin que ce repo soit attaché — vérifier avec
+`list_triggers` si son état est en doute.

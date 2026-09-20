@@ -77,7 +77,9 @@ doit être signalé immédiatement, avant de continuer la tâche en cours.
 
 En complément de la vigilance légère ci-dessus (déclenchée au fil de l'eau
 sur ce qui est touché en session), un audit plus poussé est prévu tous les
-trois mois sur ATELIERS_NEWGEN et Ateliers CD47 NextStep : `/security-review`
+trois mois sur ATELIERS_NEWGEN, Ateliers CD47 NextStep et GDINV2 (ajouté le
+20/09/2026, en même temps que son passage en projet consommateur) :
+`/security-review`
 sur `main` (injection, XSS, secrets, contrôle d'accès, dépendances
 vulnérables) + repassage complet de la checklist RGPD/sécurité sur tout le
 repo, pas seulement les derniers changements.
