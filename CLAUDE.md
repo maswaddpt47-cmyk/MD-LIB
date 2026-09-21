@@ -67,10 +67,11 @@ projet. Quand l'utilisateur demande une modification :
   propre bloc), que le gabarit seul ne suffit pas à couvrir pour satisfaire le
   test d'auto-suffisance du §9 lui-même. Copie **relue le 21/09/2026 depuis une
   session tierce : test du §9 passé**, les deux fichiers suffisent à ouvrir un
-  bloc et à y répondre sans MD-LIB. Reste à y porter la phrase de relais type
-  (« …réponds à AG-00N, **tu es la session B** ») : sans ce libellé fourni au
-  relais, le contradicteur ne peut pas remplir le champ `Auteur`, seule
-  distinction quand les deux sessions poussent sous la même identité GitHub.
+  bloc et à y répondre sans MD-LIB. Le libellé de la phrase de relais
+  (« …réponds à AG-00N, **tu es la session B** ») reste utile pour remplir le
+  champ `Auteur`, mais ce n'est **pas** la distinction qui fait foi : le
+  trailer `Claude-Session:` des commits distingue deux sessions même sous une
+  identité GitHub unique (§10, corrigé le 21/09/2026 après AG-001).
   Branche de travail `main`, branche de session
   imposée à merger dans `main` en fin de session (le déploiement GitHub
   Pages ne part que depuis `main`). Règles propagées le 20/09/2026 dans la
