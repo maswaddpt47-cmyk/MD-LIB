@@ -57,10 +57,8 @@ projet. Quand l'utilisateur demande une modification :
 - `maswaddpt47-cmyk/GDINV2` — branche de travail `main`, branche de session
   imposée à merger dans `main` en fin de session (le déploiement GitHub
   Pages ne part que depuis `main`). Règles propagées le 20/09/2026 dans la
-  section « Règles générales adaptées à ce projet » de son `CLAUDE.md`.
-  ⚠️ **La règle 17 (21/09/2026) n'y est pas encore** : ce dépôt n'était pas
-  attaché à la session qui l'a écrite, et son ajout a été refusé. Reste à
-  propager, en adaptant la mention des runners à ceux de ce projet-là.
+  section « Règles générales adaptées à ce projet » de son `CLAUDE.md` ;
+  les règles 14 à 17 le 21/09/2026, dans sa section « Ce que coûte un test ».
 
 Vérifier leur `CLAUDE.md` respectif avant de propager, les conventions
 peuvent diverger d'un projet à l'autre.
