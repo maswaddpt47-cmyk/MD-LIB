@@ -18,6 +18,7 @@ ce projet, sans avoir à attacher MD-LIB à chaque fois.
 | `rgpd-securite.md` | Checklist RGPD/sécurité + note sur la routine d'audit trimestriel planifiée |
 | `pwa-service-worker.md` | Garde-fous PWA/service worker : pas de cache quand un `?v=N` existe, pas de `respondWith`, et le rechargement forcé impossible en mode installé |
 | `hygiene-instructions.md` | Empêcher le millefeuille d'instructions : une contrainte testable devient un test, tester le coût et pas seulement la justesse, dater/qualifier chaque affirmation, budget fermé, pas de changelog dans le code |
+| `agora.md` | Faire contredire une proposition par une autre session via un `AGORA.md` commité dans le projet : six critères de déclenchement observables, rôle du contradicteur, gabarit de bloc, entretien |
 
 **À lire en premier** quand on s'apprête à ajouter une règle quelque part :
 `hygiene-instructions.md`. Les autres fichiers disent quoi faire, celui-là dit
