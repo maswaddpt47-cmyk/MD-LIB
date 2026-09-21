@@ -52,10 +52,15 @@ projet. Quand l'utilisateur demande une modification :
 ## Projets consommateurs actuels
 
 - `maswaddpt47-cmyk/ATELIERS_NEWGEN` — développe sur une branche dédiée
-  imposée par la plateforme, merge dans `main` en fin de session.
+  imposée par la plateforme, merge dans `main` en fin de session. **Projet
+  pilote pour `agora.md`** : `AGORA.md` créé à la racine et résumé propagé en
+  section 8 de son `CLAUDE.md` le 21/09/2026. Format à éprouver ici avant
+  propagation ailleurs (plate-forme non déployée, et jumeau de NextStep —
+  le cas `hygiene-instructions.md` §6).
 - `maswaddpt47-cmyk/ateliers-cd47_NextStep` — push direct sur `main`, pas
   de branche intermédiaire.
-- `maswaddpt47-cmyk/GDINV2` — branche de travail `main`, branche de session
+- `maswaddpt47-cmyk/GDINV2` — **`agora.md` pas encore propagé** (en attente
+  du retour du pilote NEWGEN). Branche de travail `main`, branche de session
   imposée à merger dans `main` en fin de session (le déploiement GitHub
   Pages ne part que depuis `main`). Règles propagées le 20/09/2026 dans la
   section « Règles générales adaptées à ce projet » de son `CLAUDE.md` ;
