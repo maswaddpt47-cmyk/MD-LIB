@@ -108,6 +108,12 @@ Trois issues possibles, jamais « d'accord / pas d'accord » :
   fréquente et la plus utile ;*
 - **contredit** — avec le constat qui le prouve.
 
+**Une session ne répond jamais à un bloc qu'elle a ouvert.** Le dispositif
+n'existe que pour faire lire le code par un autre contexte ; s'auto-répondre
+produit un tampon de validation, pas une contradiction. Si la session ne peut
+pas déterminer si le bloc est le sien — reprise, résumé de contexte,
+changement de compte — elle demande à l'utilisateur avant de répondre.
+
 **Règle de preuve : une réponse sans `fichier:ligne`, mesure ou log ne compte
 pas.** Sans elle, deux textes s'accordent poliment et on obtient un tampon de
 validation qui donne une fausse garantie — exactement ce que
@@ -117,6 +123,7 @@ validation qui donne une fausse garantie — exactement ce que
 
 ```markdown
 ## AG-003 — Titre court — ouvert le 21/09/2026
+**Auteur** : session <libellé donné par l'utilisateur> — lu sur `<sha court>`
 **Proposition** : ce qui est proposé, en 3 lignes maximum.
 **Critère déclencheur** : n° et lequel.
 **Ce que ça engage** : ce qui serait coûteux à défaire.
@@ -124,12 +131,22 @@ validation qui donne une fausse garantie — exactement ce que
 **Où regarder** : fichier.js:120-180
 
 ### Réponse — 21/09/2026
+**Auteur** : session <autre libellé> — lu sur `<sha court>`
 **Verdict** : confirmé | amendé | contredit
 **Constat** : avec fichier:ligne, mesure ou log.
 **Amendement** : ...
 
 ### Tranché le JJ/MM/AAAA — décision : ...
 ```
+
+**`Auteur`** n'est pas de la politesse : sans lui, rien n'empêche une session
+de répondre à son propre bloc, et tout le bénéfice disparaît. Le libellé est
+donné par l'utilisateur au moment du relais (« tu es la session B ») — une
+session ne peut pas déterminer seule qui elle est. Dans le doute, demander.
+
+**`lu sur <sha court>`** = le commit que la session avait sous les yeux. Une
+réponse écrite sur un état du code différent de la proposition ne vaut pas
+grand-chose, et c'est invisible autrement. `git log --oneline -1`.
 
 Le champ **« non vérifié par l'auteur »** est le plus important du gabarit :
 c'est lui qui transforme le duel en coopération. L'auteur y écrit honnêtement où
@@ -145,7 +162,9 @@ fin de session. C'est une exception assumée au workflow de branche de
 `git-workflow.md` : c'est du texte, ça ne peut casser aucun déploiement.
 
 Écriture **append-only** : une session n'édite jamais le bloc d'une autre, elle
-ajoute le sien. Ça évite les conflits de fusion. Si les collisions deviennent
+ajoute le sien. Ça évite les conflits de fusion. **`git pull --rebase origin
+main` juste avant de pousser** : deux sessions qui poussent en même temps —
+a fortiori depuis deux comptes — produisent sinon un rejet non-fast-forward. Si les collisions deviennent
 fréquentes, passer à un dossier `agora/` avec un fichier par débat.
 
 ## 8. Entretien — sinon plus personne ne le lit
@@ -178,10 +197,50 @@ moins bien appliqué, pas mieux :
    la phrase « soumettre d'office, ne jamais bloquer, pousser sur `main` », et
    un renvoi vers `AGORA.md`. Une quinzaine de lignes, pas plus.
 
+**Test d'auto-suffisance avant de clore la propagation :** une session qui
+n'aurait que le projet sous les yeux — autre compte, MD-LIB non attaché —
+doit pouvoir ouvrir un bloc et y répondre correctement avec ces deux fichiers
+seuls. Si elle a besoin d'ouvrir `MD-LIB/agora.md` pour agir, la copie est
+incomplète (cf. §10).
+
 Le reste de ce fichier (le pourquoi, la calibration, le rôle du contradicteur)
 reste ici : c'est ce qui justifie la règle, pas ce qui l'exécute.
 
-## 10. Le point faible connu du dispositif
+## 10. Fonctionner entre deux comptes Claude différents
+
+C'est le mode d'emploi normal, pas un cas limite : deux comptes n'ont ni
+mémoire, ni préférences, ni sessions en commun. Le dispositif tient quand même
+parce que **le canal est le dépôt Git, pas le compte Claude** — exactement
+comme `CHANTIERS.md`.
+
+**Ce qui le rend possible, et les conditions à remplir :**
+
+- Le second compte doit avoir **accès en écriture au dépôt GitHub** (compte
+  GitHub collaborateur du dépôt, application Claude autorisée dessus). C'est
+  une condition GitHub, rien à configurer côté Claude.
+- **`AGORA.md` et la section du `CLAUDE.md` doivent suffire à répondre sans
+  MD-LIB.** Un second compte n'aura pas ce dépôt attaché. C'est la raison
+  d'être du §9 : on copie les critères et le gabarit dans le projet, on ne
+  renvoie pas vers une règle que l'autre ne peut pas ouvrir. Tout renvoi vers
+  `MD-LIB/agora.md` porte la mention « non requis pour répondre ».
+- **`git pull --rebase origin main` avant de pousser un bloc.** Deux comptes
+  qui poussent sur `main` en même temps produisent un rejet non-fast-forward.
+  L'écriture étant append-only en fin de fichier, le rebase passe sans
+  conflit.
+
+**Ce qui n'est pas possible, et ne le sera pas :** aucune notification d'un
+compte vers l'autre. Les sessions, les routines planifiées et les messages
+inter-sessions sont cloisonnés par compte. **Le relais reste humain** — c'est
+une limite dure du support, pas un raffinement à ajouter plus tard. Elle est
+sans gravité ici : le dispositif a été conçu asynchrone et non bloquant dès
+le §4.
+
+**Bénéfice collatéral :** deux comptes poussent avec deux identités Git
+différentes. `git log` distingue alors qui a écrit quoi, indépendamment de ce
+que le bloc déclare — une vérification gratuite que le champ `Auteur` n'a pas
+été rempli au hasard.
+
+## 11. Le point faible connu du dispositif
 
 **C'est Claude qui oublie.** Aucun mécanisme ne le réveille, aucun test n'
 échoue si un critère rempli reste silencieux. La seule vérification réelle est
