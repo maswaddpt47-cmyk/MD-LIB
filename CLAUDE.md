@@ -59,12 +59,13 @@ projet. Quand l'utilisateur demande une modification :
   le cas `hygiene-instructions.md` §6).
 - `maswaddpt47-cmyk/ateliers-cd47_NextStep` — push direct sur `main`, pas
   de branche intermédiaire.
-- `maswaddpt47-cmyk/GDINV2` — **`agora.md` pas encore propagé**, mais le
-  pilote NEWGEN a validé le format le 21/09/2026 : un cycle complet
-  (proposition, contradiction, tranchage, remontée dans `CHANTIERS.md`) a
-  corrigé un protocole de mesure avant qu'il ne consomme du quota, la session
-  contradictrice ayant infirmé deux points de l'auteur sur pièces. Propager
-  quand l'utilisateur le demandera, format inchangé. Branche de travail `main`, branche de session
+- `maswaddpt47-cmyk/GDINV2` — **`agora.md` propagé le 21/09/2026**, après
+  validation du format par le pilote NEWGEN : `AGORA.md` à la racine, section
+  « AGORA » dans son `CLAUDE.md`, chantier ouvert dans son `CHANTIERS.md`
+  jusqu'au premier bloc tranché. Écart assumé au §9 : son `AGORA.md` porte
+  aussi les règles de réponse (trois verdicts, preuve obligatoire, jamais son
+  propre bloc), que le gabarit seul ne suffit pas à couvrir pour satisfaire le
+  test d'auto-suffisance du §9 lui-même. Branche de travail `main`, branche de session
   imposée à merger dans `main` en fin de session (le déploiement GitHub
   Pages ne part que depuis `main`). Règles propagées le 20/09/2026 dans la
   section « Règles générales adaptées à ce projet » de son `CLAUDE.md` ;
