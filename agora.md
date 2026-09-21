@@ -41,6 +41,12 @@ critère vérifiable devient un critère, pas un paragraphe qui espère être lu
 
 Soumettre à l'AGORA dès qu'un de ces faits est constaté :
 
+**Rappel accroché à une habitude existante :** toute entrée **« décision à
+trancher »** écrite dans le `CHANTIERS.md` d'un projet est par définition un
+candidat. Au moment de l'écrire, dire pourquoi on ouvre un bloc ou non. Ça
+n'ajoute aucune vigilance nouvelle — `CHANTIERS.md` se met déjà à jour à chaque
+avancée — et l'omission se voit dans le diff.
+
 1. **La décision ferme une porte** — schéma de données, format de stockage,
    nouvelle dépendance, contrat entre modules. Défaire coûte une migration.
 2. **Deux options ont été envisagées, une seule a été écrite, sans arbitrage
@@ -134,6 +140,8 @@ validation qui donne une fausse garantie — exactement ce que
 **Critère déclencheur** : n° et lequel.
 **Ce que ça engage** : ce qui serait coûteux à défaire.
 **Non vérifié par l'auteur** : ...
+**Si personne ne répond, je fais quoi ?** ← si la réponse est « je continue
+pareil », le bloc n'avait pas lieu d'être.
 **Où regarder** : fichier.js:120-180
 
 ### Réponse — 21/09/2026
@@ -146,9 +154,18 @@ validation qui donne une fausse garantie — exactement ce que
 ```
 
 **`Auteur`** n'est pas de la politesse : sans lui, rien n'empêche une session
-de répondre à son propre bloc, et tout le bénéfice disparaît. Le libellé est
-donné par l'utilisateur au moment du relais (« tu es la session B ») — une
-session ne peut pas déterminer seule qui elle est. Dans le doute, demander.
+de répondre à son propre bloc, et tout le bénéfice disparaît. Y inscrire les
+**8 premiers caractères de l'identifiant de session** — celui que Claude pose
+déjà dans le trailer `Claude-Session:` de chacun de ses commits. Il est unique
+par session, y compris entre deux sessions d'un même compte poussant sous la
+même identité GitHub (vérifié le 21/09/2026 : `0168bGSA` pour l'auteur d'AG-001,
+`017sTFys` pour son contradicteur).
+
+Une session compare donc l'identifiant du bloc au sien : **identiques, elle ne
+répond pas.** Plus besoin que l'utilisateur fournisse un libellé au relais, et
+`git log` permet de vérifier après coup qu'un bloc et sa réponse viennent bien
+de deux sessions, quoi qu'en dise le texte. Si l'identifiant est introuvable,
+demander à l'utilisateur plutôt que d'inventer.
 
 **`lu sur <sha court>`** = le commit que la session avait sous les yeux. Une
 réponse écrite sur un état du code différent de la proposition ne vaut pas
@@ -259,7 +276,18 @@ toujours figurer dans la phrase de relais (§4).
 fait à la main, ou une session sans cette consigne, n'en portera pas — dans ce
 cas, demander à l'utilisateur avant de répondre.
 
-## 11. Le point faible connu du dispositif
+## 11. La règle sert-elle à quelque chose ? — compteur
+
+Tenir à jour cette seule ligne, à chaque bloc tranché. Si les « confirmé sans
+rien changer » dominent, le dispositif produit du tampon et se supprime.
+
+> **Au 21/09/2026 : 1 bloc — 0 confirmé, 1 amendé, 0 contredit.** A corrigé un
+> protocole de mesure avant qu'il ne consomme du quota ; le contradicteur a
+> infirmé deux points de l'auteur sur pièces.
+
+Un compteur, pas un journal : le récit est dans `git log`.
+
+## 12. Le point faible connu du dispositif
 
 **C'est Claude qui oublie.** Aucun mécanisme ne le réveille, aucun test n'
 échoue si un critère rempli reste silencieux. La seule vérification réelle est

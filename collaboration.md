@@ -27,6 +27,14 @@ Mémoire générale, valable pour tous les projets (actuels et futurs) — extra
 
 17. **Le rendu se vérifie à l'œil de l'utilisateur, pas par un test.** Un changement de rendu pur (couleur, libellé, position, CSS, mise en page) ne justifie ni test ni capture : dire quoi regarder et laisser l'utilisateur confirmer coûte moins cher et voit mieux. La ligne de partage est **rendu / calcul**, pas visible / invisible — un calcul, un filtre ou un format de données garde son test ciblé, parce que l'œil ne contrôle que le cas affiché ce jour-là : une régression sur une combinaison de valeurs rare passera inaperçue. Les suites lourdes ne se lancent que si le changement touche ce qu'elles couvrent réellement ; sinon la CI au push suffit. Capture avant/après à la demande, pas par défaut.
 
+18. **Réponses courtes, simples, non techniques par défaut.** Demandé
+explicitement le 21/09/2026 : des réponses longues et denses ne sont pas
+lues, donc elles ne servent à rien — même justes. Aller au résultat et à ce
+que l'utilisateur doit faire ; laisser le détail technique dans le code, les
+messages de commit et les fichiers du dépôt, qui sont faits pour ça.
+Développer seulement si c'est demandé, ou si une décision en dépend
+réellement — et le dire en une phrase, pas en trois paragraphes.
+
 **Bonnes pratiques à maintenir**
 
 12. Continuer à demander l'avis avant toute action à fort impact (déploiement, architecture, migration de données) et exécuter vite dès validation courte reçue.
