@@ -65,7 +65,13 @@ projet. Quand l'utilisateur demande une modification :
   jusqu'au premier bloc tranché. Écart assumé au §9 : son `AGORA.md` porte
   aussi les règles de réponse (trois verdicts, preuve obligatoire, jamais son
   propre bloc), que le gabarit seul ne suffit pas à couvrir pour satisfaire le
-  test d'auto-suffisance du §9 lui-même. Branche de travail `main`, branche de session
+  test d'auto-suffisance du §9 lui-même. Copie **relue le 21/09/2026 depuis une
+  session tierce : test du §9 passé**, les deux fichiers suffisent à ouvrir un
+  bloc et à y répondre sans MD-LIB. Reste à y porter la phrase de relais type
+  (« …réponds à AG-00N, **tu es la session B** ») : sans ce libellé fourni au
+  relais, le contradicteur ne peut pas remplir le champ `Auteur`, seule
+  distinction quand les deux sessions poussent sous la même identité GitHub.
+  Branche de travail `main`, branche de session
   imposée à merger dans `main` en fin de session (le déploiement GitHub
   Pages ne part que depuis `main`). Règles propagées le 20/09/2026 dans la
   section « Règles générales adaptées à ce projet » de son `CLAUDE.md` ;
