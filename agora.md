@@ -161,11 +161,13 @@ par session, y compris entre deux sessions d'un même compte poussant sous la
 même identité GitHub (vérifié le 21/09/2026 : `0168bGSA` pour l'auteur d'AG-001,
 `017sTFys` pour son contradicteur).
 
-Une session compare donc l'identifiant du bloc au sien : **identiques, elle ne
-répond pas.** Plus besoin que l'utilisateur fournisse un libellé au relais, et
-`git log` permet de vérifier après coup qu'un bloc et sa réponse viennent bien
-de deux sessions, quoi qu'en dise le texte. Si l'identifiant est introuvable,
-demander à l'utilisateur plutôt que d'inventer.
+**La preuve est le trailer, pas le champ.** Avant de répondre, comparer le
+`Claude-Session:` du commit qui a déposé le bloc
+(`git log -1 --format=%B <sha du bloc>`) à celui de la session courante :
+identiques, elle ne répond pas. Le champ `Auteur` n'est qu'un libellé de
+lecture — recopié à la main, il ne survit pas à un compactage de contexte et
+ne prouve rien. Quand le trailer est absent (commit fait à la main), demander
+à l'utilisateur. Plus besoin de libellé fourni au relais.
 
 **`lu sur <sha court>`** = le commit que la session avait sous les yeux. Une
 réponse écrite sur un état du code différent de la proposition ne vaut pas
