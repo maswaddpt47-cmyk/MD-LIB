@@ -77,7 +77,13 @@ signalement RGPD de `rgpd-securite.md` :
 
 > ⚖️ AGORA : critère 1 (ferme une porte) — le format de stockage retenu.
 > Bloc AG-004 commité. À coller dans l'autre session :
-> « pull, lis AGORA.md, réponds à AG-004 ».
+> « pull, lis AGORA.md, réponds à AG-004, tu es la session B ».
+
+**La phrase de relais porte toujours le libellé de la session qui répond.**
+C'est ce qui permet au contradicteur de remplir le champ `Auteur` et de
+vérifier qu'il ne répond pas à son propre bloc — il ne peut le déduire de
+rien d'autre, surtout si les deux comptes poussent sous la même identité
+GitHub (§10).
 
 **L'AGORA ne bloque jamais.** Claude continue le travail en parallèle : rien ne
 garantit qu'une réponse arrive un jour.
@@ -235,10 +241,13 @@ une limite dure du support, pas un raffinement à ajouter plus tard. Elle est
 sans gravité ici : le dispositif a été conçu asynchrone et non bloquant dès
 le §4.
 
-**Bénéfice collatéral :** deux comptes poussent avec deux identités Git
-différentes. `git log` distingue alors qui a écrit quoi, indépendamment de ce
-que le bloc déclare — une vérification gratuite que le champ `Auteur` n'a pas
-été rempli au hasard.
+**Attention — `git log` ne distingue rien si les deux comptes Claude poussent
+avec le même compte GitHub.** Les commits portent alors la même identité, et
+le champ `Auteur` du bloc devient la **seule** distinction disponible. Comme
+il repose sur un libellé fourni par l'utilisateur, ce libellé doit figurer
+dans la phrase de relais elle-même (§4), pas être deviné. Sur deux comptes
+GitHub distincts, `git log` fournit en prime une vérification gratuite du
+champ `Auteur` ; ne pas compter dessus par défaut.
 
 ## 11. Le point faible connu du dispositif
 
