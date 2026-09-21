@@ -241,13 +241,23 @@ une limite dure du support, pas un raffinement à ajouter plus tard. Elle est
 sans gravité ici : le dispositif a été conçu asynchrone et non bloquant dès
 le §4.
 
-**Attention — `git log` ne distingue rien si les deux comptes Claude poussent
-avec le même compte GitHub.** Les commits portent alors la même identité, et
-le champ `Auteur` du bloc devient la **seule** distinction disponible. Comme
-il repose sur un libellé fourni par l'utilisateur, ce libellé doit figurer
-dans la phrase de relais elle-même (§4), pas être deviné. Sur deux comptes
-GitHub distincts, `git log` fournit en prime une vérification gratuite du
-champ `Auteur` ; ne pas compter dessus par défaut.
+**Deux sessions se distinguent par le trailer `Claude-Session:` de leurs
+commits, même sous une identité GitHub unique.** Corrigé le 21/09/2026 : la
+version précédente affirmait que `git log` ne distingue rien dans ce cas et
+que le champ `Auteur` était la seule distinction disponible. Faux, mesuré sur
+GDINV2 (bloc `a1f0ac3` et sa réponse `2351a0f`, trailers différents sous le
+même compte GitHub) — c'est la session contradictrice d'AG-001 qui l'a relevé.
+
+**Avant de répondre à un bloc, comparer `git log -1 --format=%B <sha du bloc>`
+au trailer de la session courante.** C'est la vérification qui fait foi. Le
+champ `Auteur` n'est qu'un libellé de lecture : attribué à l'oral au moment du
+relais, il ne survit pas à un compactage de contexte et n'est contraint par
+rien. Il reste utile à la lecture humaine du fichier, et le libellé doit
+toujours figurer dans la phrase de relais (§4).
+
+**Réserve** : ce trailer vient d'une consigne de session, pas de git. Un commit
+fait à la main, ou une session sans cette consigne, n'en portera pas — dans ce
+cas, demander à l'utilisateur avant de répondre.
 
 ## 11. Le point faible connu du dispositif
 
