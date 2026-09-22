@@ -213,14 +213,44 @@ fréquentes, passer à un dossier `agora/` avec un fichier par débat.
 
 ## 9. Ce qu'on copie dans un projet consommateur
 
-Deux choses seulement, sinon le `CLAUDE.md` du projet enfle et l'ensemble est
-moins bien appliqué, pas mieux :
+Deux fichiers, et rien de plus : au-delà, le `CLAUDE.md` du projet enfle et
+l'ensemble est moins bien appliqué, pas mieux.
 
-1. Un `AGORA.md` à la racine du projet, contenant le gabarit du §6 et rien
-   d'autre au départ.
+1. Un `AGORA.md` à la racine du projet, portant **le gabarit du §6 *et* les
+   trois règles qui ne s'en déduisent pas** :
+   - **ne jamais répondre à un bloc qu'on a ouvert soi-même**, avec la
+     vérification du trailer `Claude-Session:` (§10) ;
+   - **append-only, `git pull --rebase` puis push direct sur `main`** (§7) ;
+   - **aucune donnée d'usager** dans un bloc (`rgpd-securite.md`).
+
+   Ces trois-là, et pas d'autres : mesuré le 21/09/2026 sur AG-001/GDINV2
+   (`2351a0f`, `0bb0495`), une session qui s'est vu refuser l'accès à MD-LIB
+   en a eu besoin pour répondre. **Les trois verdicts et la règle de preuve
+   sont déjà portés par le gabarit** — les réécrire en prose les duplique
+   sans rien ajouter. Confirmé le 22/09/2026 par AG-001/MD-LIB, qui avait
+   d'abord proposé l'inverse.
+
+   Y ajouter le **cycle de relais** (dépôt du bloc → phrase à coller →
+   réponse → l'utilisateur tranche), et **le fait qu'aucune notification ne
+   passe d'un compte à l'autre**. *Supposé, pas mesuré* (22/09/2026) : sans
+   lui, rien n'indique à une session isolée que le second temps dépend de
+   l'utilisateur. À retirer si une copie s'en passe sans dommage.
 2. Dans le `CLAUDE.md` du projet : les **six critères du §2**, la liste du §3,
    la phrase « soumettre d'office, ne jamais bloquer, pousser sur `main` », et
-   un renvoi vers `AGORA.md`. Une quinzaine de lignes, pas plus.
+   un renvoi vers `AGORA.md`.
+
+**Combien de lignes, mesuré et non supposé (22/09/2026).** Le plafond « une
+quinzaine de lignes » qui figurait ici était une estimation, et les deux seules
+copies existantes le dépassent de 2,5× à 3,5× : `GDINV2/CLAUDE.md:122-159` =
+**38 lignes**, `ATELIERS_NEWGEN/CLAUDE.md:246-297` = **51 lignes**. Un plafond
+que 100 % des copies violent n'est pas un plafond, c'est une note que personne
+n'applique. La borne est donc **35 à 50 lignes**. Au-delà de 50, couper.
+
+**Une seule liste, pas une variante par projet.** Les deux copies ont divergé
+sans raison — NEWGEN porte le cycle de relais que GDINV2 n'a pas, GDINV2 porte
+l'entretien que NEWGEN n'a pas. La troisième copie ne doit pas être une
+troisième version : partir de la liste ci-dessus, et si on s'en écarte, écrire
+pourquoi dans le `CLAUDE.md` de MD-LIB.
 
 **Test d'auto-suffisance avant de clore la propagation :** une session qui
 n'aurait que le projet sous les yeux — autre compte, MD-LIB non attaché —
@@ -283,9 +313,11 @@ cas, demander à l'utilisateur avant de répondre.
 Tenir à jour cette seule ligne, à chaque bloc tranché. Si les « confirmé sans
 rien changer » dominent, le dispositif produit du tampon et se supprime.
 
-> **Au 21/09/2026 : 1 bloc — 0 confirmé, 1 amendé, 0 contredit.** A corrigé un
-> protocole de mesure avant qu'il ne consomme du quota ; le contradicteur a
-> infirmé deux points de l'auteur sur pièces.
+> **Au 22/09/2026 : 2 blocs — 0 confirmé, 2 amendés, 0 contredit.** AG-001
+> GDINV2 a corrigé un protocole de mesure avant qu'il ne consomme du quota ;
+> AG-001 MD-LIB a corrigé la règle de propagation elle-même, dont l'auteur
+> avait mal identifié les deux tiers. Dans les deux cas le contradicteur a
+> infirmé des points de l'auteur sur pièces — 0 confirmé sur 2.
 
 Un compteur, pas un journal : le récit est dans `git log`.
 

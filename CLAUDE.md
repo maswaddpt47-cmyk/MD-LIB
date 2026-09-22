@@ -19,6 +19,7 @@ ce projet, sans avoir à attacher MD-LIB à chaque fois.
 | `pwa-service-worker.md` | Garde-fous PWA/service worker : pas de cache quand un `?v=N` existe, pas de `respondWith`, et le rechargement forcé impossible en mode installé |
 | `hygiene-instructions.md` | Empêcher le millefeuille d'instructions : une contrainte testable devient un test, tester le coût et pas seulement la justesse, dater/qualifier chaque affirmation, budget fermé, pas de changelog dans le code |
 | `agora.md` | Faire contredire une proposition par une autre session via un `AGORA.md` commité dans le projet : six critères de déclenchement observables, rôle du contradicteur, gabarit de bloc, entretien |
+| `AGORA.md` | L'AGORA de **ce dépôt** : les blocs ouverts et tranchés sur les règles elles-mêmes (`agora.md` est la règle, `AGORA.md` est l'instance) |
 
 **À lire en premier** quand on s'apprête à ajouter une règle quelque part :
 `hygiene-instructions.md`. Les autres fichiers disent quoi faire, celui-là dit
@@ -62,10 +63,10 @@ projet. Quand l'utilisateur demande une modification :
 - `maswaddpt47-cmyk/GDINV2` — **`agora.md` propagé le 21/09/2026**, après
   validation du format par le pilote NEWGEN : `AGORA.md` à la racine, section
   « AGORA » dans son `CLAUDE.md`, chantier ouvert dans son `CHANTIERS.md`
-  jusqu'au premier bloc tranché. Écart assumé au §9 : son `AGORA.md` porte
-  aussi les règles de réponse (trois verdicts, preuve obligatoire, jamais son
-  propre bloc), que le gabarit seul ne suffit pas à couvrir pour satisfaire le
-  test d'auto-suffisance du §9 lui-même. Copie **relue le 21/09/2026 depuis une
+  jusqu'au premier bloc tranché. Son `AGORA.md` porte aussi les règles de
+  réponse : ce n'est plus un écart, **le §9 a été corrigé le 22/09/2026**
+  (AG-001 de MD-LIB) — la copie doit porter le gabarit *et* les trois règles
+  qui ne s'en déduisent pas. Copie **relue le 21/09/2026 depuis une
   session tierce : test du §9 passé**, les deux fichiers suffisent à ouvrir un
   bloc et à y répondre sans MD-LIB. Le libellé de la phrase de relais
   (« …réponds à AG-00N, **tu es la session B** ») reste utile pour remplir le
@@ -74,7 +75,9 @@ projet. Quand l'utilisateur demande une modification :
   identité GitHub unique (§10, corrigé le 21/09/2026 après AG-001). **Aligné le
   22/09/2026** sur les deux améliorations retenues : rappel accroché aux
   « décisions à trancher » de `CHANTIERS.md`, et ligne « si personne ne
-  répond, je fais quoi ? » dans le gabarit. Les trois projets sont à jour.
+  répond, je fais quoi ? » dans le gabarit. **Reste à propager (§9 corrigé le
+  22/09/2026)** : la liste canonique des trois règles, et la borne de 35-50
+  lignes qui remplace le plafond irréaliste de 15.
   Branche de travail `main`, branche de session
   imposée à merger dans `main` en fin de session (le déploiement GitHub
   Pages ne part que depuis `main`). Règles propagées le 20/09/2026 dans la
