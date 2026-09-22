@@ -75,9 +75,15 @@ projet. Quand l'utilisateur demande une modification :
   identité GitHub unique (§10, corrigé le 21/09/2026 après AG-001). **Aligné le
   22/09/2026** sur les deux améliorations retenues : rappel accroché aux
   « décisions à trancher » de `CHANTIERS.md`, et ligne « si personne ne
-  répond, je fais quoi ? » dans le gabarit. **Reste à propager (§9 corrigé le
-  22/09/2026)** : la liste canonique des trois règles, et la borne de 35-50
-  lignes qui remplace le plafond irréaliste de 15.
+  répond, je fais quoi ? » dans le gabarit. **Liste canonique du §9 propagée
+  le 22/09/2026** : les deux puces dupliquées par le gabarit (les trois
+  verdicts, la règle de preuve) retirées, le cycle de relais et l'absence de
+  notification inter-comptes ajoutés. **Écart assumé** : la copie garde ses
+  sections « Entretien » et la posture « compléter, pas réécrire », que le §9
+  ne liste pas — la première n'est pas une règle de réponse, la seconde ne se
+  déduit pas du gabarit. La borne de 35-50 lignes n'a rien demandé : la
+  section AGORA de son `CLAUDE.md` fait 37 lignes (mesuré le 22/09/2026,
+  `GDINV2/CLAUDE.md:122-158`).
   Branche de travail `main`, branche de session
   imposée à merger dans `main` en fin de session (le déploiement GitHub
   Pages ne part que depuis `main`). Règles propagées le 20/09/2026 dans la
