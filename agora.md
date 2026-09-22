@@ -86,10 +86,10 @@ signalement RGPD de `rgpd-securite.md` :
 > « pull, lis AGORA.md, réponds à AG-004, tu es la session B ».
 
 **La phrase de relais porte toujours le libellé de la session qui répond.**
-C'est ce qui permet au contradicteur de remplir le champ `Auteur` et de
-vérifier qu'il ne répond pas à son propre bloc — il ne peut le déduire de
-rien d'autre, surtout si les deux comptes poussent sous la même identité
-GitHub (§10).
+Il sert à remplir le champ `Auteur`, qui reste utile à la lecture humaine du
+fichier. Ce n'est **pas** ce qui prouve qu'une session ne répond pas à son
+propre bloc : cette preuve est le trailer `Claude-Session:` des commits, qui
+distingue deux sessions même sous une identité GitHub unique (§10).
 
 **L'AGORA ne bloque jamais.** Claude continue le travail en parallèle : rien ne
 garantit qu'une réponse arrive un jour.
@@ -327,5 +327,5 @@ Un compteur, pas un journal : le récit est dans `git log`.
 échoue si un critère rempli reste silencieux. La seule vérification réelle est
 que l'utilisateur le reprenne quand le diff montre un critère rempli sans
 signalement — d'où l'exigence du §2 que les critères soient constatables dans le
-diff, et celle du §9 qu'ils tiennent en quinze lignes dans le fichier lu au
-démarrage.
+diff, et celle du §9 que la copie tienne dans la borne mesurée de 35 à 50
+lignes du fichier lu au démarrage.
