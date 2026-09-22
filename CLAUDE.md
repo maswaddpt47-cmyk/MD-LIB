@@ -71,7 +71,10 @@ projet. Quand l'utilisateur demande une modification :
   (« …réponds à AG-00N, **tu es la session B** ») reste utile pour remplir le
   champ `Auteur`, mais ce n'est **pas** la distinction qui fait foi : le
   trailer `Claude-Session:` des commits distingue deux sessions même sous une
-  identité GitHub unique (§10, corrigé le 21/09/2026 après AG-001).
+  identité GitHub unique (§10, corrigé le 21/09/2026 après AG-001). **Aligné le
+  22/09/2026** sur les deux améliorations retenues : rappel accroché aux
+  « décisions à trancher » de `CHANTIERS.md`, et ligne « si personne ne
+  répond, je fais quoi ? » dans le gabarit. Les trois projets sont à jour.
   Branche de travail `main`, branche de session
   imposée à merger dans `main` en fin de session (le déploiement GitHub
   Pages ne part que depuis `main`). Règles propagées le 20/09/2026 dans la
