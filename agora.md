@@ -194,6 +194,10 @@ fréquentes, passer à un dossier `agora/` avec un fichier par débat.
 
 ## 8. Entretien — sinon plus personne ne le lit
 
+- **Un bloc sort du fichier dès qu'il n'y a plus rien à décider** —
+  proposition tranchée ou réfutée, amendements appliqués. **Une mesure encore
+  à faire n'est pas une décision** : elle appartient à `CHANTIERS.md`. Un bloc
+  laissé ouvert signale « quelqu'un doit agir » et égare la session suivante.
 - **Un bloc tranché sort du fichier.** Sa conclusion remonte dans le
   `CHANTIERS.md` du projet (points à ne pas défaire), ou dans son `CLAUDE.md` si
   elle devient une règle. Le récit appartient à `git log`. Un AGORA qui
@@ -308,20 +312,7 @@ toujours figurer dans la phrase de relais (§4).
 fait à la main, ou une session sans cette consigne, n'en portera pas — dans ce
 cas, demander à l'utilisateur avant de répondre.
 
-## 11. La règle sert-elle à quelque chose ? — compteur
-
-Tenir à jour cette seule ligne, à chaque bloc tranché. Si les « confirmé sans
-rien changer » dominent, le dispositif produit du tampon et se supprime.
-
-> **Au 22/09/2026 : 2 blocs — 0 confirmé, 2 amendés, 0 contredit.** AG-001
-> GDINV2 a corrigé un protocole de mesure avant qu'il ne consomme du quota ;
-> AG-001 MD-LIB a corrigé la règle de propagation elle-même, dont l'auteur
-> avait mal identifié les deux tiers. Dans les deux cas le contradicteur a
-> infirmé des points de l'auteur sur pièces — 0 confirmé sur 2.
-
-Un compteur, pas un journal : le récit est dans `git log`.
-
-## 12. Le point faible connu du dispositif
+## 11. Le point faible connu du dispositif
 
 **C'est Claude qui oublie.** Aucun mécanisme ne le réveille, aucun test n'
 échoue si un critère rempli reste silencieux. La seule vérification réelle est
