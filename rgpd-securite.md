@@ -77,8 +77,9 @@ doit être signalé immédiatement, avant de continuer la tâche en cours.
 
 En complément de la vigilance légère ci-dessus (déclenchée au fil de l'eau
 sur ce qui est touché en session), un audit plus poussé est prévu tous les
-trois mois sur ATELIERS_NEWGEN, Ateliers CD47 NextStep et GDINV2 (ajouté le
-20/09/2026, en même temps que son passage en projet consommateur) :
+trois mois sur ATELIERS_NEWGEN, Ateliers CD47 NextStep, GDINV2 et — ajoutés
+le 23/09/2026, après la remédiation RGPD complète de septembre 2026 — SMS-mail
+et sms-mail-multi :
 `/security-review`
 sur `main` (injection, XSS, secrets, contrôle d'accès, dépendances
 vulnérables) + repassage complet de la checklist RGPD/sécurité sur tout le
