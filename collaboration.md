@@ -37,8 +37,8 @@ réellement — et le dire en une phrase, pas en trois paragraphes.
 
 **Bonnes pratiques à maintenir**
 
-12. Continuer à demander l'avis avant toute action à fort impact (déploiement, architecture, migration de données) et exécuter vite dès validation courte reçue.
-13. Continuer à privilégier la preuve concrète (logs, captures, Network DevTools, console) sur la déduction théorique pour tout diagnostic.
+19. Continuer à demander l'avis avant toute action à fort impact (déploiement, architecture, migration de données) et exécuter vite dès validation courte reçue.
+20. Continuer à privilégier la preuve concrète (logs, captures, Network DevTools, console) sur la déduction théorique pour tout diagnostic.
 
 ## Côté utilisateur — priorité haute
 
