@@ -39,10 +39,14 @@ Pour chaque session de travail :
 
 **Important — branche imposée par la plateforme :**
 Claude Code sur le web impose parfois une branche de travail dédiée (ex. `claude/code-review-*`).
-Dans ce cas, merger systématiquement dans `main` et pousser à la fin de chaque session :
-```bash
-git checkout main
-git merge <branche> --no-ff
-git push origin main
-```
-Le déploiement (GitHub Pages ou autre) ne se déclenche généralement que sur `main`. Travailler uniquement sur une branche de feature rend les changements invisibles en production.
+Dans ce cas, deux flux possibles selon le projet — vérifier lequel s'applique avant d'agir plutôt que de supposer :
+
+- **Merge local**, à la fin de chaque session :
+  ```bash
+  git checkout main
+  git merge <branche> --no-ff
+  git push origin main
+  ```
+- **PR + merge** (ex. quand un outil GitHub — `create_pull_request`/`merge_pull_request` — est disponible dans la session) : ouvrir une pull request depuis la branche vers `main`, puis la merger sans attendre la fin de session — un commit distinct par modification logique, comme en local.
+
+Dans les deux cas : le déploiement (GitHub Pages ou autre) ne se déclenche généralement que sur `main`. Travailler uniquement sur une branche de feature rend les changements invisibles en production.
