@@ -85,11 +85,30 @@ sur `main` (injection, XSS, secrets, contrôle d'accès, dépendances
 vulnérables) + repassage complet de la checklist RGPD/sécurité sur tout le
 repo, pas seulement les derniers changements.
 
-C'est une routine planifiée (`create_trigger`, id `trig_018SBR4ihGT8Y2ud7sP5kxYm`,
-cron `0 8 1 1,4,7,10 *`), configurée en mode **session neuve à chaque
-déclenchement** (`create_new_session_on_fire`) — donc indépendante de toute
-session de travail : la supprimer, la fermer ou la laisser expirer n'affecte
-pas la routine. Notification push + email à chaque exécution. Cette note
-sert de traçabilité : si l'audit trimestriel n'a pas eu lieu depuis plus de
-3-4 mois (aucune notification reçue), c'est le signal qu'il faut vérifier
-avec `list_triggers` et la reprogrammer si besoin.
+C'est une routine planifiée (`create_trigger`, id
+**`trig_018quyGJKmHRXRWYxpw9ous4`**, cron `0 8 1 1,4,7,10 *` — évalué en
+**UTC**, soit 09 h ou 10 h heure française selon la saison), configurée en mode
+**session neuve à chaque déclenchement** (`create_new_session_on_fire`) — donc
+indépendante de toute session de travail : la supprimer, la fermer ou la
+laisser expirer n'affecte pas la routine. Notification push + email à chaque
+exécution.
+
+⚠️ **La routine a disparu une première fois.** Recréée le 23/09/2026 : un
+`list_triggers` ce jour-là n'a renvoyé **aucune** routine, alors que ce
+fichier et les trois `CLAUDE.md` consommateurs affirmaient depuis le
+20/09/2026 qu'un audit trimestriel tournait. L'id précédent
+(`trig_018SBR4ihGT8Y2ud7sP5kxYm`) n'existait plus. Cause inconnue — jamais
+créée, ou supprimée depuis. **Leçon : cette note ne prouve rien par
+elle-même.** Le seul contrôle qui vaut est `list_triggers`.
+
+⚠️ **Limite connue de la routine recréée** : elle a été créée depuis une
+session qui ne portait aucun connecteur, donc les sessions qu'elle déclenche
+tournent **sans les outils `mcp__*`** — notamment l'attachement de dépôts et
+l'API GitHub. Conséquence possible : l'audit ne couvre que les dépôts déjà
+attachés par défaut à l'environnement. **Non vérifié** — à constater au
+premier déclenchement (01/10/2026). Si le rapport ne couvre pas les cinq
+dépôts, recréer la routine depuis l'interface Routines de claude.ai, ou depuis
+une session qui porte les connecteurs.
+
+**Contrôle à faire** : si aucune notification n'est arrivée depuis plus de
+3-4 mois, vérifier avec `list_triggers` et reprogrammer.
