@@ -90,6 +90,16 @@ projet. Quand l'utilisateur demande une modification :
   section « Règles générales adaptées à ce projet » de son `CLAUDE.md` ;
   les règles 14 à 17 le 21/09/2026, dans sa section « Ce que coûte un test ».
 
+- `maswaddpt47-cmyk/SMS-mail` et `maswaddpt47-cmyk/sms-mail-multi` (jumeaux)
+  — **`agora.md` et la tenue de `CHANTIERS.md` propagés le 26/09/2026** :
+  `AGORA.md` et `CHANTIERS.md` à la racine de chacun, sections « Reprise de
+  session » et « AGORA » dans leur `CLAUDE.md` (36 lignes, dans la borne du
+  §9). Chaque jumeau a son propre `AGORA.md` : un débat se dépose dans le
+  repo où le changement est écrit. **Non fait** : `scripts/check-chantiers.sh`
+  (hook `SessionStart`), reporté par l'utilisateur. Test d'auto-suffisance du
+  §9 **pas encore passé** (aucune session tierce n'a relu la copie).
+  Branche de session imposée, mergée dans `main` en fin de session.
+
 Vérifier leur `CLAUDE.md` respectif avant de propager, les conventions
 peuvent diverger d'un projet à l'autre.
 
