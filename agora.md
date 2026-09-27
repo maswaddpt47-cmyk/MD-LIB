@@ -150,6 +150,14 @@ bonne volonté : **le tableau des blocs tranchés porte une colonne « Verdict �
 et le total des trois issues. Une colonne d'un seul verdict se voit d'un coup
 d'œil par toute session qui ouvre le fichier.
 
+**Le total est une alerte, pas un objectif** (ajouté le 27/09/2026). Afficher
+la série crée la pression inverse : rendre « confirmé » pour la casser. Le
+verdict découle de la contrainte 1 appliquée au bloc, jamais du total. Pour
+savoir si une série est de la politesse, relire ce que chaque « amendé » a
+changé — code, décision ou chiffre : celui qui n'a rien changé était un
+« confirmé » ; celui qui a changé le code n'est pas suspect parce qu'il est le
+treizième.
+
 **Règle de preuve : une réponse sans `fichier:ligne`, mesure ou log ne compte
 pas.** Sans elle, deux textes s'accordent poliment et on obtient un tampon de
 validation qui donne une fausse garantie — exactement ce que
