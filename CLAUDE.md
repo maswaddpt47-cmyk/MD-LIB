@@ -122,8 +122,9 @@ collaboration :
 Dans la liste du §9 depuis le 27/09/2026 et copiée dans les quatre `AGORA.md`
 consommateurs : ATELIERS_NEWGEN (`312b63d`, paragraphe « total = alerte »
 `059fd31`), GDINV2 (`f648657`), SMS-mail (`ebc584f`), sms-mail-multi
-(`066a50a`). Écart de chiffres non résolu : `agora.md` dit 13 amendés sur 15
-blocs, l'`AGORA.md` de NEWGEN 12 amendés et 2 clos sans réponse.
+(`066a50a`). Chiffres recomptés le 27/09/2026 sur l'historique git de NEWGEN :
+15 blocs, 12 amendés, 3 sans réponse — `agora.md` et l'`AGORA.md` de NEWGEN
+alignés.
 
 ## Workflow git de ce repo
 

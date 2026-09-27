@@ -128,8 +128,9 @@ changement de compte — elle demande à l'utilisateur avant de répondre.
 
 ### Sincérité — trois contraintes contre la politesse
 
-Au 27/09/2026, sur 15 blocs tranchés dans ATELIERS_NEWGEN : **13 « amendé »,
-0 « confirmé », 0 « contredit »**. Un contradicteur qui n'emploie jamais les
+Au 27/09/2026, sur 15 blocs tranchés dans ATELIERS_NEWGEN : **12 « amendé »,
+0 « confirmé », 0 « contredit »**, 3 tranchés sans réponse (recompté sur
+l'historique git). Un contradicteur qui n'emploie jamais les
 deux autres verdicts a cessé de contredire : il rend un service de politesse
 qui donne une fausse garantie.
 
