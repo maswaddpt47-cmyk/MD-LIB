@@ -103,6 +103,20 @@ projet. Quand l'utilisateur demande une modification :
 Vérifier leur `CLAUDE.md` respectif avant de propager, les conventions
 peuvent diverger d'un projet à l'autre.
 
+## Règle 19 de `collaboration.md` — propagation faite
+
+« Pas de compliment, un constat » est propagée le **27/09/2026** dans les cinq
+projets consommateurs, chacun à l'endroit où il tient déjà ses règles de
+collaboration :
+
+| Projet | Emplacement |
+|---|---|
+| ATELIERS_NEWGEN | règle 19, section 7 |
+| ateliers-cd47_NextStep | règle 19, section « Côté Claude » |
+| GDINV2 | puce de « Posture de travail attendue » |
+| SMS-mail | règle 8ter, section « Côté Claude » |
+| sms-mail-multi | règle 8ter, idem (jumeau aligné) |
+
 ## Workflow git de ce repo
 
 Pas de suite de tests, pas de CI bloquante ici — repo purement
