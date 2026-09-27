@@ -117,13 +117,13 @@ collaboration :
 | SMS-mail | règle 8ter, section « Côté Claude » |
 | sms-mail-multi | règle 8ter, idem (jumeau aligné) |
 
-## Section « Sincérité » d'`agora.md` — où elle est
+## Section « Sincérité » d'`agora.md` — propagation faite
 
-Portée par l'`AGORA.md` d'ATELIERS_NEWGEN et de GDINV2 ; son dernier
-paragraphe (« le total est une alerte, pas un objectif », `0f20aae`) y est
-propagé le 27/09/2026 (NEWGEN `059fd31`, GDINV2 `f648657`). **Absente des
-jumeaux SMS-mail / sms-mail-multi** : le §9 ne la liste pas parmi ce qu'on
-copie — à trancher par l'utilisateur.
+Dans la liste du §9 depuis le 27/09/2026 et copiée dans les quatre `AGORA.md`
+consommateurs : ATELIERS_NEWGEN (`312b63d`, paragraphe « total = alerte »
+`059fd31`), GDINV2 (`f648657`), SMS-mail (`ebc584f`), sms-mail-multi
+(`066a50a`). Écart de chiffres non résolu : `agora.md` dit 13 amendés sur 15
+blocs, l'`AGORA.md` de NEWGEN 12 amendés et 2 clos sans réponse.
 
 ## Workflow git de ce repo
 

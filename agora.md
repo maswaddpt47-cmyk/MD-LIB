@@ -259,12 +259,18 @@ l'ensemble est moins bien appliqué, pas mieux.
    - **append-only, `git pull --rebase` puis push direct sur `main`** (§7) ;
    - **aucune donnée d'usager** dans un bloc (`rgpd-securite.md`).
 
-   Ces trois-là, et pas d'autres : mesuré le 21/09/2026 sur AG-001/GDINV2
+   Ces trois-là parmi les règles de réponse : mesuré le 21/09/2026 sur AG-001/GDINV2
    (`2351a0f`, `0bb0495`), une session qui s'est vu refuser l'accès à MD-LIB
    en a eu besoin pour répondre. **Les trois verdicts et la règle de preuve
    sont déjà portés par le gabarit** — les réécrire en prose les duplique
    sans rien ajouter. Confirmé le 22/09/2026 par AG-001/MD-LIB, qui avait
    d'abord proposé l'inverse.
+
+   Y ajouter la **section « Sincérité »** du §5 (les trois contraintes, le
+   total des verdicts sous « Blocs tranchés » et « le total est une alerte,
+   pas un objectif ») : elle ne se déduit pas du gabarit, qui ne dit pas
+   quand « amendé » cesse d'en être un. Ajoutée à la liste le 27/09/2026,
+   copiée dans les quatre `AGORA.md` consommateurs.
 
    Y ajouter le **cycle de relais** (dépôt du bloc → phrase à coller →
    réponse → l'utilisateur tranche), et **le fait qu'aucune notification ne
