@@ -117,6 +117,14 @@ collaboration :
 | SMS-mail | règle 8ter, section « Côté Claude » |
 | sms-mail-multi | règle 8ter, idem (jumeau aligné) |
 
+## Section « Sincérité » d'`agora.md` — où elle est
+
+Portée par l'`AGORA.md` d'ATELIERS_NEWGEN et de GDINV2 ; son dernier
+paragraphe (« le total est une alerte, pas un objectif », `0f20aae`) y est
+propagé le 27/09/2026 (NEWGEN `059fd31`, GDINV2 `f648657`). **Absente des
+jumeaux SMS-mail / sms-mail-multi** : le §9 ne la liste pas parmi ce qu'on
+copie — à trancher par l'utilisateur.
+
 ## Workflow git de ce repo
 
 Pas de suite de tests, pas de CI bloquante ici — repo purement
