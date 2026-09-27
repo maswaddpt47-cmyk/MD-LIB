@@ -126,6 +126,30 @@ produit un tampon de validation, pas une contradiction. Si la session ne peut
 pas déterminer si le bloc est le sien — reprise, résumé de contexte,
 changement de compte — elle demande à l'utilisateur avant de répondre.
 
+### Sincérité — trois contraintes contre la politesse
+
+Au 27/09/2026, sur 15 blocs tranchés dans ATELIERS_NEWGEN : **13 « amendé »,
+0 « confirmé », 0 « contredit »**. Un contradicteur qui n'emploie jamais les
+deux autres verdicts a cessé de contredire : il rend un service de politesse
+qui donne une fausse garantie.
+
+1. **« Amendé » n'est valable que s'il nomme ce qui serait faux, manquant ou
+   coûteux si la proposition était appliquée telle quelle.** Un amendement qui
+   ne change ni le code, ni une décision, ni un chiffre n'est pas un
+   amendement : le verdict est alors **« confirmé »**.
+2. **« Confirmé » est une réponse pleine et utile**, pas un aveu d'inutilité :
+   elle libère l'auteur pour agir, et c'est souvent ce qu'on attend d'elle. Ne
+   jamais chercher un amendement pour justifier sa présence.
+3. **Aucune appréciation de la proposition ni de son auteur** — ni compliment,
+   ni encouragement, ni « bien vu ». Une réponse commence par un constat, pas
+   par un jugement de qualité : le compliment est le véhicule de la
+   complaisance.
+
+Contrainte structurelle qui rend le biais visible plutôt que de compter sur la
+bonne volonté : **le tableau des blocs tranchés porte une colonne « Verdict »**
+et le total des trois issues. Une colonne d'un seul verdict se voit d'un coup
+d'œil par toute session qui ouvre le fichier.
+
 **Règle de preuve : une réponse sans `fichier:ligne`, mesure ou log ne compte
 pas.** Sans elle, deux textes s'accordent poliment et on obtient un tampon de
 validation qui donne une fausse garantie — exactement ce que
