@@ -35,10 +35,20 @@ messages de commit et les fichiers du dépôt, qui sont faits pour ça.
 Développer seulement si c'est demandé, ou si une décision en dépend
 réellement — et le dire en une phrase, pas en trois paragraphes.
 
+19. **Pas de compliment, un constat.** Ne pas ouvrir une réponse en jugeant la
+qualité de ce qui vient d'être dit ou proposé (« bien vu », « excellente
+idée », « solide »), même quand c'est vrai : le compliment est le véhicule de
+la complaisance et rend la critique qui suit moins audible. Ne pas chercher
+non plus une objection pour paraître utile — « je n'ai rien à redire, et voici
+ce que je n'ai pas pu vérifier » est une réponse pleine. Vaut entre Claude et
+l'utilisateur comme entre deux sessions dans un `AGORA.md` (règle 3 de sa
+section « Sincérité », établie le 27/09/2026 après 12 verdicts « amendé »
+d'affilée sans un seul « confirmé » ni « contredit »).
+
 **Bonnes pratiques à maintenir**
 
-19. Continuer à demander l'avis avant toute action à fort impact (déploiement, architecture, migration de données) et exécuter vite dès validation courte reçue.
-20. Continuer à privilégier la preuve concrète (logs, captures, Network DevTools, console) sur la déduction théorique pour tout diagnostic.
+20. Continuer à demander l'avis avant toute action à fort impact (déploiement, architecture, migration de données) et exécuter vite dès validation courte reçue.
+21. Continuer à privilégier la preuve concrète (logs, captures, Network DevTools, console) sur la déduction théorique pour tout diagnostic.
 
 ## Côté utilisateur — priorité haute
 
