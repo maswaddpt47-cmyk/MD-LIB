@@ -100,6 +100,22 @@ projet. Quand l'utilisateur demande une modification :
   §9 **pas encore passé** (aucune session tierce n'a relu la copie).
   Branche de session imposée, mergée dans `main` en fin de session.
 
+- `maswaddpt47-cmyk/pptx-creator` — **`CHANTIERS.md` et `agora.md`/`AGORA.md`
+  propagés le 28/09/2026** : `CHANTIERS.md` et `AGORA.md` créés à la racine,
+  section « AGORA » ajoutée à son `CLAUDE.md` (six critères, exclusions,
+  phrase « soumet d'office, ne bloque jamais »), renvoi vers `CHANTIERS.md`
+  en tête de son `CLAUDE.md`. Premier chantier consigné : la décision à
+  trancher sur l'import `.doc`/`.docx` dans le mode « Adapter un PPTX
+  existant ». **Écart assumé** : la règle §7 d'`agora.md` (push direct sur
+  `main` pour un bloc AGORA, exception au workflow de branche) n'a pas été
+  appliquée à ce premier commit — la session qui a propagé était contrainte
+  par sa plateforme à ne pousser que sur sa branche de session imposée, avec
+  merge dans `main` en fin de session, conformément au `CLAUDE.md` du projet.
+  À corriger dès qu'un vrai bloc AGORA (pas la mise en place initiale) doit
+  circuler entre deux sessions. Test d'auto-suffisance du §9 **pas encore
+  passé** (aucune session tierce n'a relu la copie). Branche de session
+  imposée par la plateforme, mergée dans `main` en fin de session.
+
 Vérifier leur `CLAUDE.md` respectif avant de propager, les conventions
 peuvent diverger d'un projet à l'autre.
 
