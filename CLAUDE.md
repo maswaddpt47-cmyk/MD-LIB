@@ -116,6 +116,18 @@ projet. Quand l'utilisateur demande une modification :
   passé** (aucune session tierce n'a relu la copie). Branche de session
   imposée par la plateforme, mergée dans `main` en fin de session.
 
+- `maswaddpt47-cmyk/FICHES_MEMO_ACTION_KOLB` — générateur Word de fiches
+  Action / Mémo / Kolb (GitHub Pages). **Tenue de `CHANTIERS.md` (règle 8ter
+  de `collaboration.md`) propagée le 29/09/2026** : `CHANTIERS.md` à la racine,
+  `CLAUDE.md` minimal qui y renvoie, et `scripts/check-chantiers.sh` copié
+  depuis NEWGEN avec son hook `SessionStart` (rappel de ménage seul, sans les
+  tests propres à NEWGEN ; testé muet sur un fichier à jour, alertant sur un
+  en-tête vieilli et une tâche barrée). **Non propagés** : les autres règles
+  de `collaboration.md` et `agora.md`. Branche de session imposée par la
+  plateforme, `main` mis à jour en avance rapide (GitHub Pages ne déploie que
+  `main`). `maswaddpt47-cmyk/fiches-generator` y sert de référence en lecture
+  seule : ne jamais le modifier.
+
 Vérifier leur `CLAUDE.md` respectif avant de propager, les conventions
 peuvent diverger d'un projet à l'autre.
 
