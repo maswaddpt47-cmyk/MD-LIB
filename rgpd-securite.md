@@ -77,9 +77,10 @@ doit être signalé immédiatement, avant de continuer la tâche en cours.
 
 En complément de la vigilance légère ci-dessus (déclenchée au fil de l'eau
 sur ce qui est touché en session), un audit plus poussé est prévu tous les
-trois mois sur ATELIERS_NEWGEN, Ateliers CD47 NextStep, GDINV2 et — ajoutés
-le 23/09/2026, après la remédiation RGPD complète de septembre 2026 — SMS-mail
-et sms-mail-multi :
+trois mois sur ATELIERS_NEWGEN, Ateliers CD47 NextStep, GDINV2, SMS-mail et
+sms-mail-multi (ajoutés le 23/09/2026) et `ateliers-backups` (ajouté le
+30/09/2026 : workflows de copie chiffrée seulement, jamais le dossier
+`copies/`) :
 `/security-review`
 sur `main` (injection, XSS, secrets, contrôle d'accès, dépendances
 vulnérables) + repassage complet de la checklist RGPD/sécurité sur tout le
@@ -109,6 +110,25 @@ attachés par défaut à l'environnement. **Non vérifié** — à constater au
 premier déclenchement (01/10/2026). Si le rapport ne couvre pas les cinq
 dépôts, recréer la routine depuis l'interface Routines de claude.ai, ou depuis
 une session qui porte les connecteurs.
+
+**Consigne mise à jour le 30/09/2026** (`update_trigger`, même id) : elle
+décrivait encore Google Apps Script (endpoints sans jeton, `PropertiesService`)
+alors que les Ateliers tournent sur l'API PHP d'Alwaysdata depuis le 25/09.
+Elle porte désormais : l'architecture actuelle ; les workflows GitHub Actions
+(secrets, `permissions:`, accès SSH par clé) ; la non-régression des tests
+RGPD-01 à RGPD-18 ; la confrontation du code au registre de sécurité
+(`ateliers-backups/documents/`, une mesure décrite qui n'est plus vraie est
+une trouvaille) ; les points ouverts du §9 du registre (faille ACME
+d'Alwaysdata, DPA, historique des copies, ancien secret SSH, GitHub sur la
+liste DPF). Le texte fait foi dans la routine elle-même : le relire par
+`get_trigger`, pas ici. **Quand l'architecture d'un projet audité change,
+mettre à jour la consigne dans la foulée** — elle a eu cinq jours de retard
+cette fois.
+
+⚠️ La routine n'a **aucun dépôt attaché** (`sources` vide) ni connecteur :
+l'audit dépend de `add_repo` dans la session déclenchée. Premier
+déclenchement le 01/10/2026 : vérifier en tête du rapport la liste des dépôts
+non audités.
 
 **Contrôle à faire** : si aucune notification n'est arrivée depuis plus de
 3-4 mois, vérifier avec `list_triggers` et reprogrammer.

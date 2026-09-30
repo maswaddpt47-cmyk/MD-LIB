@@ -168,6 +168,8 @@ dans `main` en fin de session (`git checkout main && git merge <branche>
 
 Une routine planifiée (voir `rgpd-securite.md`) tourne indépendamment de
 toute session pour auditer ATELIERS_NEWGEN, NextStep, GDINV2 (ajouté le
-20/09/2026) et SMS-mail/sms-mail-multi (ajoutés le 23/09/2026). Elle n'a pas
+20/09/2026), SMS-mail/sms-mail-multi (ajoutés le 23/09/2026) et les
+workflows d'`ateliers-backups` (ajoutés le 30/09/2026, consigne mise à jour
+pour l'API PHP ce jour-là). Elle n'a pas
 besoin que ce repo soit attaché — vérifier avec `list_triggers` si son état
 est en doute.
