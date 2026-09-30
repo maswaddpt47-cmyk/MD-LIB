@@ -20,6 +20,7 @@ ce projet, sans avoir à attacher MD-LIB à chaque fois.
 | `hygiene-instructions.md` | Empêcher le millefeuille d'instructions : une contrainte testable devient un test, tester le coût et pas seulement la justesse, dater/qualifier chaque affirmation, budget fermé, pas de changelog dans le code |
 | `agora.md` | Faire contredire une proposition par une autre session via un `AGORA.md` commité dans le projet : six critères de déclenchement observables, rôle du contradicteur, gabarit de bloc, entretien |
 | `AGORA.md` | L'AGORA de **ce dépôt** : les blocs ouverts et tranchés sur les règles elles-mêmes (`agora.md` est la règle, `AGORA.md` est l'instance) |
+| `charte-graphique-cd47.md` | Charte graphique du CD47 en texte : couleurs officielles (bleu `#4389BD`…), polices (Capriola, Verdana), règles du logo, fichiers à utiliser. **À lire avant toute production aux couleurs du CD47.** Le PDF source `charte-graphique-cd47.pdf` fait foi. Référence, pas une règle à copier : un projet la cite et s'y conforme |
 
 **À lire en premier** quand on s'apprête à ajouter une règle quelque part :
 `hygiene-instructions.md`. Les autres fichiers disent quoi faire, celui-là dit
