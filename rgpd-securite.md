@@ -119,8 +119,9 @@ Elle porte désormais : l'architecture actuelle ; les workflows GitHub Actions
 RGPD-01 à RGPD-18 ; la confrontation du code au registre de sécurité
 (`ateliers-backups/documents/`, une mesure décrite qui n'est plus vraie est
 une trouvaille) ; les points ouverts du §9 du registre (faille ACME
-d'Alwaysdata, DPA, historique des copies, ancien secret SSH, GitHub sur la
-liste DPF). Le texte fait foi dans la routine elle-même : le relire par
+d'Alwaysdata, DPA, GitHub sur la liste DPF). Réalignée le soir même :
+l'historique des copies et l'ancien secret SSH, soldés le 30/09, y sont
+devenus des points à vérifier qu'ils restent soldés. Le texte fait foi dans la routine elle-même : le relire par
 `get_trigger`, pas ici. **Quand l'architecture d'un projet audité change,
 mettre à jour la consigne dans la foulée** — elle a eu cinq jours de retard
 cette fois.
