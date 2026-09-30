@@ -60,6 +60,5 @@ Déclinaisons noir et blanc disponibles dans chaque mode.
 
 ## Projets qui appliquent cette charte
 
-- `FICHES_MEMO_ACTION_KOLB` — écart au 30/09/2026 : titres en `#078AC0` (mesuré sur
-  capture) au lieu de `#4389BD`, et police Calibri (demandée par l'utilisateur) au
-  lieu de Verdana. À trancher avec l'utilisateur.
+- `FICHES_MEMO_ACTION_KOLB` — bleu `#4389BD` appliqué le 30/09/2026. **Écart assumé** :
+  police Calibri au lieu de Verdana, choix explicite de l'utilisateur le 30/09/2026.
