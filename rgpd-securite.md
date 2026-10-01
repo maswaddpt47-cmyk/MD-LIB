@@ -86,8 +86,10 @@ sur `main` (injection, XSS, secrets, contrôle d'accès, dépendances
 vulnérables) + repassage complet de la checklist RGPD/sécurité sur tout le
 repo, pas seulement les derniers changements.
 
-C'est une routine planifiée (`create_trigger`, id
-**`trig_018quyGJKmHRXRWYxpw9ous4`**, cron `0 8 1 1,4,7,10 *` — évalué en
+C'est une routine planifiée (id **`trig_01J6ZMsLHKbgXAQsRYgQL16q`**, créée
+par l'utilisateur dans l'interface Routines le 01/10/2026, **6 dépôts
+attachés** ; l'ancienne `trig_018quyGJKmHRXRWYxpw9ous4`, sans dépôt, est
+désactivée et gardée pour le rapport du 01/10/2026, cron `0 8 1 1,4,7,10 *` — évalué en
 **UTC**, soit 09 h ou 10 h heure française selon la saison), configurée en mode
 **session neuve à chaque déclenchement** (`create_new_session_on_fire`) — donc
 indépendante de toute session de travail : la supprimer, la fermer ou la
@@ -130,6 +132,12 @@ cette fois.
 l'audit dépend de `add_repo` dans la session déclenchée. Premier
 déclenchement le 01/10/2026 : vérifier en tête du rapport la liste des dépôts
 non audités.
+
+**Leçon du 01/10/2026** : la première exécution (ancienne routine, aucun
+dépôt attaché, aucun connecteur) a tourné 4 minutes sans rien consigner ;
+l'audit a été refait en session. Une routine d'audit doit avoir ses dépôts
+attachés à la création (champ « Sélectionner un dépôt » de l'interface,
+introuvable ensuite) ; aucun connecteur n'est nécessaire.
 
 **Contrôle à faire** : si aucune notification n'est arrivée depuis plus de
 3-4 mois, vérifier avec `list_triggers` et reprogrammer.
