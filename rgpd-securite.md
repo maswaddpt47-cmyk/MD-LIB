@@ -137,7 +137,10 @@ non audités.
 dépôt attaché, aucun connecteur) a tourné 4 minutes sans rien consigner ;
 l'audit a été refait en session. Une routine d'audit doit avoir ses dépôts
 attachés à la création (champ « Sélectionner un dépôt » de l'interface,
-introuvable ensuite) ; aucun connecteur n'est nécessaire.
+introuvable ensuite) ; aucun connecteur n'est nécessaire. Une routine créée dans l'interface **ne peut pas
+être modifiée par Claude** (`update_trigger` refusé) : toute mise à jour de
+la consigne passe par l'utilisateur (champ « Instructions », seul champ
+modifiable). Claude prépare le texte complet, l'utilisateur le colle.
 
 **Contrôle à faire** : si aucune notification n'est arrivée depuis plus de
 3-4 mois, vérifier avec `list_triggers` et reprogrammer.
