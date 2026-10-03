@@ -146,6 +146,22 @@ collaboration :
 | SMS-mail | règle 8ter, section « Côté Claude » |
 | sms-mail-multi | règle 8ter, idem (jumeau aligné) |
 
+## Règle 22 de `collaboration.md` — propagation faite
+
+« Pistes d'amélioration à moments fixés » (et fusion des règles 10 et 11, ici
+seulement) propagée le **03/10/2026** dans les six projets, avec une section
+« Pistes d'amélioration » (proposées / écartées) ajoutée en fin de leur
+`CHANTIERS.md` :
+
+| Projet | Emplacement | Commit |
+|---|---|---|
+| ATELIERS_NEWGEN | règle 20, section 7 | `833e757` |
+| ateliers-cd47_NextStep | règle 20, « Côté Claude » | `ef56409` |
+| GDINV2 | puce de « Posture de travail attendue » | `09b6a68` |
+| SMS-mail | règle 8quater, « Côté Claude » | `1e9860d` |
+| sms-mail-multi | règle 8quater, idem (jumeau aligné) | `ad94e67` |
+| pptx-creator | règle 8bis, « Côté Claude » | `3ab3624` |
+
 ## Section « Sincérité » d'`agora.md` — propagation faite
 
 Dans la liste du §9 depuis le 27/09/2026 et copiée dans les quatre `AGORA.md`
