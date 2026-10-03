@@ -18,8 +18,7 @@ Mémoire générale, valable pour tous les projets (actuels et futurs) — extra
 **Ce fichier ne se supprime pas** — il sert aux sessions suivantes, indéfiniment. Ce qui se supprime, ce sont les **tâches, au fur et à mesure qu'elles sont terminées** : dès qu'un chantier est fini, retirer son descriptif plutôt que de le barrer ou de le raconter. Avant de retirer une tâche, en extraire ce qui doit survivre — l'invariant à ne pas défaire, le piège à ne pas refaire, la décision et sa raison — et le remonter dans la section des points à ne pas défaire, en une ou deux lignes. Le récit de ce qui a été fait appartient à `git log`, pas ici. Un `CHANTIERS.md` qui accumule des sections « Résolu le … » devient le millefeuille que `hygiene-instructions.md` cherche à éviter, et personne ne le lit plus. **La règle seule n'a pas suffi** (NEWGEN : 1 065 lignes le 26/09/2026, en-tête daté du 22/09, 25 lignes de tâches terminées) : le ménage est donc déclenché par un script lancé au démarrage de session (hook `SessionStart`), `scripts/check-chantiers.sh` — à copier depuis `ATELIERS_NEWGEN` —, qui signale un fichier de plus de 300 lignes, un en-tête « État au **JJ/MM/AAAA** » de plus de 7 jours, ou des titres ✅ / textes barrés. Il n'échoue jamais : Claude propose alors le ménage à l'utilisateur en début de session.
 
 9. Avant de pousser un changement visuel (CSS/layout), vérifier mentalement les interactions connues à risque (stacking context, overflow, position sticky/fixed) sur les zones sensibles existantes.
-10. Sur tout problème réseau/backend qui dure plus de 3 itérations : demander une capture Network DevTools ou les logs d'exécution du backend avant de continuer à supposer.
-11. Vérifier l'état exact du déploiement backend (version + URL active en config) en début de session dès qu'un bug réseau est signalé.
+10. Bug réseau/backend signalé : vérifier d'abord l'état exact du déploiement backend (version + URL active en config) ; au-delà de 3 itérations sans résolution, demander une capture Network DevTools ou les logs d'exécution du backend avant de continuer à supposer. (Ex-règles 10 et 11, fusionnées le 03/10/2026 ; le numéro 11 n'est pas réutilisé.)
 
 14. **Doser les tests à leur valeur, pas à la prudence.** Une suite de tests coûte du temps et de l'argent à chaque lancement : la lancer en entier une seule fois, juste avant le commit, jamais à chaque étape intermédiaire. Écrire un ou deux tests ciblés par correctif, pas quatre à six ; réserver la contre-preuve — celle qui rejoue l'implémentation fautive — aux pièges réellement subtils, ceux qu'on remettrait sans s'en apercevoir.
 15. **Les tests ne trouvent pas les défauts de sens.** Ils vérifient des calculs et des états, pas ce qu'un écran est censé signifier : un graphe peut calculer juste et raconter faux. Un test écrit après coup empêche la régression, il ne découvre rien. Ne jamais présenter une suite verte comme une garantie que l'affichage est correct, ni s'en servir pour décharger l'utilisateur du contrôle visuel.
@@ -44,6 +43,19 @@ ce que je n'ai pas pu vérifier » est une réponse pleine. Vaut entre Claude et
 l'utilisateur comme entre deux sessions dans un `AGORA.md` (règle 3 de sa
 section « Sincérité », établie le 27/09/2026 après 12 verdicts « amendé »
 d'affilée sans un seul « confirmé » ni « contredit »).
+
+22. **Proposer des pistes d'amélioration à des moments fixés, pas au fil de
+l'eau** (demande du 03/10/2026). À la fin d'une fonctionnalité livrée et
+validée par l'utilisateur, et sur toute demande de revue de l'interface : au
+plus 3 pistes, classées par utilité, non développées. Chercher **dans**
+l'outil (écran confus, saisie en double, clics inutiles) **et autour** : ce
+que l'équipe fait encore à côté (tableur, mail, papier), ce que la hiérarchie
+redemande — l'angle qu'on rate en ne lisant que le code (rubriques Tickets et
+Nouveautés d'ATELIERS, jamais proposées). S'appuyer sur des faits (compteurs
+d'usage, remontées de l'équipe, `CHANTIERS.md`), pas une impression. Consigner
+chaque piste dans la section « Pistes » du `CHANTIERS.md` : *proposées, en
+attente*, ou *écartées*, avec date et raison ; une piste écartée ne se
+repropose pas sans fait nouveau.
 
 **Bonnes pratiques à maintenir**
 
