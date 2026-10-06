@@ -162,6 +162,23 @@ seulement) propagée le **03/10/2026** dans les six projets, avec une section
 | sms-mail-multi | règle 8quater, idem (jumeau aligné) | `ad94e67` |
 | pptx-creator | règle 8bis, « Côté Claude » | `3ab3624` |
 
+## Captures envoyées à Claude (`rgpd-securite.md`) — propagation faite
+
+Puce « Captures d'écran et fichiers envoyés à Claude » (charte IA du CD47 §4)
+ajoutée le **06/10/2026** à la checklist sécurité (`67fd125`), propagée :
+
+| Projet | Emplacement | Commit |
+|---|---|---|
+| ATELIERS_NEWGEN | section 6, checklist condensée | `8896838` |
+| ateliers-cd47_NextStep | « Routine RGPD », checklist condensée | `10ddf24` |
+| GDINV2 | « RGPD & données personnelles », garde-fou 4 | `80af54a` |
+| SMS-mail | fin du « Point critique RGPD » | `0da23b0` |
+| sms-mail-multi | idem (jumeau aligné) | `e4ca6d8` |
+| pptx-creator | règle 8ter, « Côté Claude » | `99d8a8c` |
+
+**Non propagée** : FICHES_MEMO_ACTION_KOLB (pas attaché à la session du
+06/10/2026).
+
 ## Section « Sincérité » d'`agora.md` — propagation faite
 
 Dans la liste du §9 depuis le 27/09/2026 et copiée dans les quatre `AGORA.md`
