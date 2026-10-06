@@ -66,6 +66,9 @@ où elle est constatée).
   Une capture qui montre des données réelles se signale en une ligne :
   rappel d'habitude, pas alerte RGPD. Ne jamais dramatiser une donnée
   anonyme : la règle vise l'identifiable.
+- **Durées et purges** : une purge automatique est une élimination
+  d'archives publiques, soumise au tableau de gestion et au visa des Archives
+  départementales (`archivage-cd47.md`). Consignes IA : `charte-ia-cd47.md`.
 
 ## Format du signalement
 
