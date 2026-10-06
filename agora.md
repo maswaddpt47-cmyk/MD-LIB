@@ -359,3 +359,41 @@ que l'utilisateur le reprenne quand le diff montre un critère rempli sans
 signalement — d'où l'exigence du §2 que les critères soient constatables dans le
 diff, et celle du §9 que la copie tienne dans la borne mesurée de 35 à 50
 lignes du fichier lu au démarrage.
+
+## 12. Un contradicteur d'un autre éditeur : Codex (06/10/2026)
+
+**Le constat.** Sur les 23 blocs de NEWGEN entre deux sessions Claude :
+18 « amendé », 1 « confirmé », **0 « contredit »**. Deux Claude partagent les
+mêmes angles morts. Le 06/10/2026, Codex (OpenAI), lancé une seule fois en
+lecture seule sur NEWGEN et NextStep, a trouvé ce que Claude et l'AGORA
+avaient manqué : changement de mot de passe sans l'ancien, deux services
+externes absents des registres, noms d'agents dans le code public.
+
+**Les quatre règles** (décision de l'utilisateur, 06/10/2026) :
+
+1. **L'AGORA entre sessions Claude reste la règle** pour les décisions
+   courantes : écrans, données, organisation du code. Rapide, et la session B
+   connaît le contexte.
+2. **Un bloc qui touche à la sécurité, à l'authentification ou aux données
+   personnelles va à Codex au lieu de la session B.** L'utilisateur colle le
+   bloc dans Codex (autorisations « Lecture seule », réflexion au plus haut),
+   en ajoutant : « Réponds selon le gabarit de AGORA.md, avec fichier:ligne ;
+   ne modifie rien. » Il rapporte la réponse ; la session qui a ouvert le bloc
+   l'inscrit **telle quelle** sous `### Réponse — Codex — JJ/MM/AAAA`, sans la
+   reformuler ni la juger : l'utilisateur tranche. Même règle de preuve.
+3. **Audit Codex trimestriel**, le jour de l'audit automatique de Claude, avec
+   une consigne écrite fixe (modèle : `consigne-audit-externe.md`) qui ne lui
+   donne **pas nos conclusions** : il ne lit ni `CLAUDE.md`, ni `CHANTIERS.md`,
+   ni `AGORA.md` avant d'avoir fini son relevé. Chaque point est vérifié dans
+   le code avant d'être retenu ; le rapport vérifié est rangé hors de tout
+   dépôt public.
+4. **Audit Codex ponctuel** après tout changement structurant de sécurité :
+   connexion ou mots de passe, nouvelle page publique, changement
+   d'hébergement.
+
+**Pas plus.** Pas de collaboration quotidienne : chaque échange passe par
+l'utilisateur (aucune notification entre les deux outils), deux IA qui
+modifient le même code se défont l'une l'autre, Codex qui lirait nos
+conclusions perdrait son regard neuf, et la charte IA du CD47 demande la
+sobriété (§10) et la vérification des outils autorisés (§8, question ouverte
+au 06/10/2026). Codex ne modifie jamais le code : il relit, Claude corrige.
