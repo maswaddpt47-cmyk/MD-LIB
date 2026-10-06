@@ -198,6 +198,23 @@ consommateurs : ATELIERS_NEWGEN (`312b63d`, paragraphe « total = alerte »
 15 blocs, 12 amendés, 3 sans réponse — `agora.md` et l'`AGORA.md` de NEWGEN
 alignés.
 
+## Règles Codex (`agora.md` §12) — propagation faite
+
+Quatre règles (AGORA courant entre Claude ; blocs de sécurité soumis à Codex ;
+audit Codex trimestriel ; audit Codex ponctuel) et modèle
+`consigne-audit-externe.md`, décidés et propagés le **06/10/2026** dans tous
+les projets :
+
+| Projet | Emplacement | Commit |
+|---|---|---|
+| ATELIERS_NEWGEN | §8 (`CLAUDE.md`, resserré : 50 lignes), §6 audit, `AGORA.md` | `0e55aea` |
+| ateliers-cd47_NextStep | « Audit trimestriel » (pas d'AGORA propre : celui de NEWGEN) | `855bfdb` |
+| GDINV2 | section AGORA, `AGORA.md` | `d4ae9c8` |
+| SMS-mail | section AGORA, `AGORA.md` | `c5662d0` |
+| sms-mail-multi | idem (jumeau aligné) | `29742d2` |
+| pptx-creator | section AGORA, `AGORA.md` | `1a85b55` |
+| FICHES_MEMO_ACTION_KOLB | « Regard extérieur — Codex » (pas d'AGORA : décision soumise directement à Codex) | `997653e` |
+
 ## Workflow git de ce repo
 
 Pas de suite de tests, pas de CI bloquante ici — repo purement
