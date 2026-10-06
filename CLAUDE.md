@@ -181,6 +181,13 @@ ajoutée le **06/10/2026** à la checklist sécurité (`67fd125`), propagée :
 **Non propagée** : FICHES_MEMO_ACTION_KOLB (pas attaché à la session du
 06/10/2026).
 
+## Résumés charte IA et archivage du CD47 — propagation faite
+
+`charte-ia-cd47.md` et `archivage-cd47.md` (06/10/2026, `8dbd50f`) : renvoi
+ajouté dans la checklist RGPD de NEWGEN et de NextStep (puce « Références
+CD47 »). Autres projets : la ligne de `rgpd-securite.md` suffit (choix de
+l'utilisateur, 06/10/2026).
+
 ## Section « Sincérité » d'`agora.md` — propagation faite
 
 Dans la liste du §9 depuis le 27/09/2026 et copiée dans les quatre `AGORA.md`
