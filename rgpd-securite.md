@@ -59,6 +59,13 @@ où elle est constatée).
   minimum de droits nécessaires, ou hérite-t-il par défaut de droits larges ?
 - **Logs** : les logs (erreurs, exécutions GAS, etc.) contiennent-ils des
   données personnelles en clair qui ne devraient pas y être ?
+- **Captures d'écran et fichiers envoyés à Claude** (charte d'utilisation de
+  l'IA du CD47, §4 : pas de données personnelles ni confidentielles dans les
+  outils d'IA ; ajouté le 06/10/2026) : captures faites dans un bac à sable ou
+  sur des données fictives, sinon recadrées ; fichiers de test anonymisés.
+  Une capture qui montre des données réelles se signale en une ligne :
+  rappel d'habitude, pas alerte RGPD. Ne jamais dramatiser une donnée
+  anonyme : la règle vise l'identifiable.
 
 ## Format du signalement
 
