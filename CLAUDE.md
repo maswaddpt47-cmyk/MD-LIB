@@ -132,6 +132,17 @@ projet. Quand l'utilisateur demande une modification :
   `main`). `maswaddpt47-cmyk/fiches-generator` y sert de référence en lecture
   seule : ne jamais le modifier.
 
+- `maswaddpt47-cmyk/PAPPERBOARD` — application **WoocLight** (participation
+  en direct type Wooclap, PHP + JSON, Alwaysdata). Créé le 09/10/2026 :
+  `CLAUDE.md` avec les règles copiées (git, collaboration, tests dosés,
+  RGPD/sécurité, charte CD47), `CHANTIERS.md` et `scripts/check-chantiers.sh`
+  copié depuis NEWGEN. **Non fait** : le hook `SessionStart`
+  (`.claude/settings.json`), refusé à Claude par le garde-fou de la
+  plateforme, à créer par l'utilisateur. Pas d'`AGORA.md` : audit Codex
+  ponctuel avant mise en production (`agora.md` §12, règle 4). Branche de
+  session imposée, mergée `--no-ff` dans `main` en fin de session (le
+  déploiement part de `main`).
+
 Vérifier leur `CLAUDE.md` respectif avant de propager, les conventions
 peuvent diverger d'un projet à l'autre.
 
