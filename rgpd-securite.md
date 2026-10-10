@@ -152,5 +152,15 @@ introuvable ensuite) ; aucun connecteur n'est nécessaire. Une routine créée d
 la consigne passe par l'utilisateur (champ « Instructions », seul champ
 modifiable). Claude prépare le texte complet, l'utilisateur le colle.
 
+**Constat du 10/10/2026** : `list_triggers` montre encore active l'ancienne
+routine `trig_018SBR4ihGT8Y2ud7sP5kxYm` (consigne GAS périmée), que la note du
+23/09/2026 disait introuvable ; elle a tourné le 01/10/2026. **Désactivée** le
+10/10/2026 (pas supprimée, à la demande de l'utilisateur). La routine en vigueur,
+`trig_01J6ZMsLHKbgXAQsRYgQL16q`, n'apparaît pas dans `list_triggers` depuis une
+session : seule l'interface Routines fait foi pour elle. PAPPERBOARD (WoocLight)
+ajouté le même jour aux deux rappels d'audit Codex ; son bloc pour la routine
+d'audit est dans `PAPPERBOARD/docs/routine-audit-trimestriel.md`, à coller par
+l'utilisateur.
+
 **Contrôle à faire** : si aucune notification n'est arrivée depuis plus de
 3-4 mois, vérifier avec `list_triggers` et reprogrammer.
