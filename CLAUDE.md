@@ -24,6 +24,7 @@ ce projet, sans avoir à attacher MD-LIB à chaque fois.
 | `charte-ia-cd47.md` | Résumé des 11 consignes d'utilisation de l'IA du CD47 (données personnelles, identifiants, relecture humaine, sobriété…) et ce qu'elles changent dans nos projets. Le PDF interne fait foi, non publié ici (dépôt public). Référence, pas une règle à copier |
 | `archivage-cd47.md` | Résumé du guide « Archivage et protection des données personnelles » du CD47 : DUC/DUA, tableau de gestion, visa des Archives départementales pour toute élimination (purges automatiques comprises), nommage V0.x/V1. Le PDF interne fait foi, non publié ici. Référence, pas une règle à copier |
 | `charte-graphique-cd47.md` | Charte graphique du CD47 en texte : couleurs officielles (bleu `#4389BD`…), polices (Capriola, Verdana), règles du logo, fichiers à utiliser. **À lire avant toute production aux couleurs du CD47.** Le PDF source `charte-graphique-cd47.pdf` fait foi. Référence, pas une règle à copier : un projet la cite et s'y conforme |
+| `deploiement.md` + `outils/` | Ne jamais annoncer « en ligne » avant le ✅ de `outils/attendre-deploiement.sh` (workflows GitHub Actions du commit poussé). Déclenché après chaque `git push` par un hook que le Setup script de l'environnement installe (`outils/script-demarrage.sh`, à coller par l'utilisateur). Rien à copier dans les projets : une ligne de rappel dans leur `CLAUDE.md` suffit |
 
 **À lire en premier** quand on s'apprête à ajouter une règle quelque part :
 `hygiene-instructions.md`. Les autres fichiers disent quoi faire, celui-là dit
