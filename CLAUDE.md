@@ -231,7 +231,8 @@ les projets :
 
 Ajoutée le **13/10/2026** sous « 3. Push vers main » du `CLAUDE.md` de SMS-mail
 (`b4f5a6c`) et sms-mail-multi (`cd19a82`), déploiements vérifiés ✅ par le
-script. **Non faite** : les autres projets. **Hook non installé** dans la
+script. GDINV2 le 13/10/2026, fin de « Déploiement et cache » (`53cd262`,
+déploiement ✅ par le script). **Non faite** : les autres projets. **Hook non installé** dans la
 session du 13/10/2026 (Setup script pas encore collé).
 
 ## Workflow git de ce repo
