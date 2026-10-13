@@ -227,6 +227,13 @@ les projets :
 | pptx-creator | section AGORA, `AGORA.md` | `1a85b55` |
 | FICHES_MEMO_ACTION_KOLB | « Regard extérieur — Codex » (pas d'AGORA : décision soumise directement à Codex) | `997653e` |
 
+## `deploiement.md` — ligne de rappel
+
+Ajoutée le **13/10/2026** sous « 3. Push vers main » du `CLAUDE.md` de SMS-mail
+(`b4f5a6c`) et sms-mail-multi (`cd19a82`), déploiements vérifiés ✅ par le
+script. **Non faite** : les autres projets. **Hook non installé** dans la
+session du 13/10/2026 (Setup script pas encore collé).
+
 ## Workflow git de ce repo
 
 Pas de suite de tests, pas de CI bloquante ici — repo purement
