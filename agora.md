@@ -390,6 +390,17 @@ externes absents des registres, noms d'agents dans le code public.
 4. **Audit Codex ponctuel** après tout changement structurant de sécurité :
    connexion ou mots de passe, nouvelle page publique, changement
    d'hébergement.
+5. **L'IA qui écrit ne relit pas** (décision de l'utilisateur, 14/10/2026),
+   pour tout contenu produit par une IA (questions de quiz, textes, code) :
+   la relecture se fait avec une IA **d'un autre éditeur**, jamais dans une
+   nouvelle conversation de la même IA. Mesuré le 14/10/2026 (PAPPERBOARD,
+   4 versions anonymisées d'un même quiz, chaque IA classant les 4) : ChatGPT
+   et Claude se sont classés premiers ; Gemini et Mistral, qui se sont classés
+   dernier et troisième, ont donné le classement retenu. La consigne de
+   relecture impose l'ordre public → fond → sources → forme, et exige des
+   sources précises avec « pas de source sûre » plutôt qu'une référence
+   inventée (trois IA y ont cité trois lois différentes sur un même sujet).
+   L'utilisateur ouvre les liens et tranche ; pas de seconde relecture par IA.
 
 **Pas plus.** Pas de collaboration quotidienne : chaque échange passe par
 l'utilisateur (aucune notification entre les deux outils), deux IA qui
