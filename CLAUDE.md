@@ -141,7 +141,8 @@ projet. Quand l'utilisateur demande une modification :
   compte Alwaysdata personnel `wooclight`, palette neutre (plus de charte
   CD47), l'utilisateur est responsable de traitement. En ligne le 14/10/2026.
   **Non fait** : le hook `SessionStart`, refusé à Claude par la plateforme,
-  à créer par l'utilisateur. Pas d'`AGORA.md` : audit Codex ponctuel
+  à créer par l'utilisateur. Références au CD47 retirées de tout le dépôt le 14/10/2026 (`fae9607`).
+  Pas d'`AGORA.md` : audit Codex ponctuel
   (`agora.md` §12, règle 4), deux passés le 10/10/2026. `main` protégée par
   un ruleset (contrôle `tests`) : pousser la branche de session, attendre la
   CI verte, puis `git push origin <sha>:main` en avance rapide ; le
@@ -235,6 +236,7 @@ les projets :
 Ajoutée le **13/10/2026** sous « 3. Push vers main » du `CLAUDE.md` de SMS-mail
 (`b4f5a6c`) et sms-mail-multi (`cd19a82`), déploiements vérifiés ✅ par le
 script. GDINV2 le 13/10/2026, fin de « Déploiement et cache » (`53cd262`,
+déploiement ✅ par le script). PAPPERBOARD le 14/10/2026, section « 1. Git » (`fae9607`,
 déploiement ✅ par le script). **Non faite** : les autres projets. **Hook non installé** dans la
 session du 13/10/2026 (Setup script pas encore collé).
 
