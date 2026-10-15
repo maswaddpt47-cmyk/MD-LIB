@@ -138,8 +138,9 @@ projet. Quand l'utilisateur demande une modification :
   les règles copiées (git, collaboration, tests dosés, RGPD/sécurité),
   `CHANTIERS.md` et `scripts/check-chantiers.sh` copié depuis NEWGEN.
   **Projet personnel depuis le 14/10/2026** : hors obligations du CD47,
-  compte Alwaysdata personnel `wooclight`, palette neutre (plus de charte
-  CD47), l'utilisateur est responsable de traitement. En ligne le 14/10/2026.
+  compte Alwaysdata personnel `wooclight`, charte propre « Papier & Terre »
+  (conçue dans Claude Design, validée le 15/10/2026 ; plus de charte CD47),
+  l'utilisateur est responsable de traitement. En ligne le 14/10/2026.
   **Non fait** : le hook `SessionStart`, refusé à Claude par la plateforme,
   à créer par l'utilisateur. Références au CD47 retirées de tout le dépôt le 14/10/2026 (`fae9607`).
   Pas d'`AGORA.md` : audit Codex ponctuel
