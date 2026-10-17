@@ -71,6 +71,23 @@ vérifier — sans corriger d'office. Constat du 02/10/2026 (ATELIERS) : des
 numéros en double sur une capture de la Corbeille ont révélé une faute de
 l'API (numéro d'un nouvel atelier calculé sans la Corbeille).
 
+25. **Bug de données signalé par capture : consulter le repo privé de
+sauvegarde réel (`*-backups`) avant de formuler une hypothèse.** Une capture
+d'écran seule ne distingue pas un bug de rendu d'un bug de données — relire
+l'export JSON réel (historique, horodatage) permet de confirmer ou d'écarter
+l'hypothèse avant de corriger. Constat du 01-02/10/2026 (SMS-mail/sms-mail-multi) :
+un doublon d'historique et une double-réservation sur un même créneau n'ont
+été confirmés qu'en relisant `backups/<profil>/backup-*.json`, pas sur la
+seule foi de la capture.
+
+26. **UI qui semble en retard sur ce qui vient d'être poussé : vérifier le
+déploiement réel avant de conclure.** Ni au bug de code, ni au cache
+navigateur par défaut — interroger l'API du CI (ex. GitHub Actions) pour
+confirmer que le déploiement a bien eu lieu et correspond au commit attendu.
+Constat du 30/09/2026 (SMS-mail) : une capture montrant une ancienne grille a
+été diagnostiquée comme cache navigateur seulement après vérification du
+déploiement, pas par déduction.
+
 **Bonnes pratiques à maintenir**
 
 20. Continuer à demander l'avis avant toute action à fort impact (déploiement, architecture, migration de données) et exécuter vite dès validation courte reçue.
