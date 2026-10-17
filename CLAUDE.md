@@ -164,104 +164,31 @@ projet. Quand l'utilisateur demande une modification :
 Vérifier leur `CLAUDE.md` respectif avant de propager, les conventions
 peuvent diverger d'un projet à l'autre.
 
-## Règle 19 de `collaboration.md` — propagation faite
+## Reste à propager
 
-« Pas de compliment, un constat » est propagée le **27/09/2026** dans les cinq
-projets consommateurs, chacun à l'endroit où il tient déjà ses règles de
-collaboration :
+Les comptes rendus de propagation ont été retirés le 17/10/2026 (AG-002,
+amendé) : qui a propagé quoi, quand et dans quel commit est dans `git log`,
+ici et dans chaque projet — `hygiene-instructions.md` §5. Ne subsiste que ce
+qui demande encore une action :
 
-| Projet | Emplacement |
-|---|---|
-| ATELIERS_NEWGEN | règle 19, section 7 |
-| ateliers-cd47_NextStep | règle 19, section « Côté Claude » |
-| GDINV2 | puce de « Posture de travail attendue » |
-| SMS-mail | règle 8ter, section « Côté Claude » |
-| sms-mail-multi | règle 8ter, idem (jumeau aligné) |
+- **Captures envoyées à Claude** (`rgpd-securite.md`) : pas propagée à
+  FICHES_MEMO_ACTION_KOLB (dépôt non attaché le 06/10/2026).
+- **`deploiement.md`** : ligne de rappel posée dans SMS-mail, sms-mail-multi,
+  GDINV2 et PAPPERBOARD seulement ; manque dans les autres. **Hook non
+  installé** (Setup script pas encore collé par l'utilisateur).
+- **Règles 2 et 17 de `collaboration.md`** : pas propagées à PPTX-CREATOR
+  (attache refusée par la plateforme le 17/10/2026, à refaire).
+- **Règles 27 à 31 de `collaboration.md`** (17/10/2026) : propagées dans aucun
+  projet. Tri proposé par l'auteur, non arbitré : 27, 29 et 30 partout ; 28 et
+  31 seulement ici.
+- **`scripts/check-chantiers.sh`** : manque dans SMS-mail et sms-mail-multi
+  (reporté par l'utilisateur) ; hook refusé à Claude dans PAPPERBOARD.
+- **Test d'auto-suffisance du §9** non passé pour SMS-mail, sms-mail-multi,
+  pptx-creator, FICHES_MEMO_ACTION_KOLB et PAPPERBOARD.
 
-## Règle 22 de `collaboration.md` — propagation faite
-
-« Pistes d'amélioration à moments fixés » (et fusion des règles 10 et 11, ici
-seulement) propagée le **03/10/2026** dans les six projets, avec une section
-« Pistes d'amélioration » (proposées / écartées) ajoutée en fin de leur
-`CHANTIERS.md` :
-
-| Projet | Emplacement | Commit |
-|---|---|---|
-| ATELIERS_NEWGEN | règle 20, section 7 | `833e757` |
-| ateliers-cd47_NextStep | règle 20, « Côté Claude » | `ef56409` |
-| GDINV2 | puce de « Posture de travail attendue » | `09b6a68` |
-| SMS-mail | règle 8quater, « Côté Claude » | `1e9860d` |
-| sms-mail-multi | règle 8quater, idem (jumeau aligné) | `ad94e67` |
-| pptx-creator | règle 8bis, « Côté Claude » | `3ab3624` |
-
-## Captures envoyées à Claude (`rgpd-securite.md`) — propagation faite
-
-Puce « Captures d'écran et fichiers envoyés à Claude » (charte IA du CD47 §4)
-ajoutée le **06/10/2026** à la checklist sécurité (`67fd125`), propagée :
-
-| Projet | Emplacement | Commit |
-|---|---|---|
-| ATELIERS_NEWGEN | section 6, checklist condensée | `8896838` |
-| ateliers-cd47_NextStep | « Routine RGPD », checklist condensée | `10ddf24` |
-| GDINV2 | « RGPD & données personnelles », garde-fou 4 | `80af54a` |
-| SMS-mail | fin du « Point critique RGPD » | `0da23b0` |
-| sms-mail-multi | idem (jumeau aligné) | `e4ca6d8` |
-| pptx-creator | règle 8ter, « Côté Claude » | `99d8a8c` |
-
-**Non propagée** : FICHES_MEMO_ACTION_KOLB (pas attaché à la session du
-06/10/2026).
-
-## Résumés charte IA et archivage du CD47 — propagation faite
-
-`charte-ia-cd47.md` et `archivage-cd47.md` (06/10/2026, `8dbd50f`) : renvoi
-ajouté dans la checklist RGPD de NEWGEN et de NextStep (puce « Références
-CD47 »). Autres projets : la ligne de `rgpd-securite.md` suffit (choix de
-l'utilisateur, 06/10/2026).
-
-## Section « Sincérité » d'`agora.md` — propagation faite
-
-Dans la liste du §9 depuis le 27/09/2026 et copiée dans les quatre `AGORA.md`
-consommateurs : ATELIERS_NEWGEN (`312b63d`, paragraphe « total = alerte »
-`059fd31`), GDINV2 (`f648657`), SMS-mail (`ebc584f`), sms-mail-multi
-(`066a50a`). Chiffres recomptés le 27/09/2026 sur l'historique git de NEWGEN :
-15 blocs, 12 amendés, 3 sans réponse — `agora.md` et l'`AGORA.md` de NEWGEN
-alignés.
-
-## Règles Codex (`agora.md` §12) — propagation faite
-
-Quatre règles (AGORA courant entre Claude ; blocs de sécurité soumis à Codex ;
-audit Codex trimestriel ; audit Codex ponctuel) et modèle
-`consigne-audit-externe.md`, décidés et propagés le **06/10/2026** dans tous
-les projets :
-
-| Projet | Emplacement | Commit |
-|---|---|---|
-| ATELIERS_NEWGEN | §8 (`CLAUDE.md`, resserré : 50 lignes), §6 audit, `AGORA.md` | `0e55aea` |
-| ateliers-cd47_NextStep | « Audit trimestriel » (pas d'AGORA propre : celui de NEWGEN) | `855bfdb` |
-| GDINV2 | section AGORA, `AGORA.md` | `d4ae9c8` |
-| SMS-mail | section AGORA, `AGORA.md` | `c5662d0` |
-| sms-mail-multi | idem (jumeau aligné) | `29742d2` |
-| pptx-creator | section AGORA, `AGORA.md` | `1a85b55` |
-| FICHES_MEMO_ACTION_KOLB | « Regard extérieur — Codex » (pas d'AGORA : décision soumise directement à Codex) | `997653e` |
-
-## `deploiement.md` — ligne de rappel
-
-Ajoutée le **13/10/2026** sous « 3. Push vers main » du `CLAUDE.md` de SMS-mail
-(`b4f5a6c`) et sms-mail-multi (`cd19a82`), déploiements vérifiés ✅ par le
-script. GDINV2 le 13/10/2026, fin de « Déploiement et cache » (`53cd262`,
-déploiement ✅ par le script). PAPPERBOARD le 14/10/2026, section « 1. Git » (`fae9607`,
-déploiement ✅ par le script). **Non faite** : les autres projets. **Hook non installé** dans la
-session du 13/10/2026 (Setup script pas encore collé).
-
-## Règles 2 et 17 de `collaboration.md` (validé, mesure du rendu, fonction visible)
-
-Précisées le **17/10/2026** après la collaboration sur WoocLight. Propagées dans
-PAPPERBOARD (`CLAUDE.md`, pull request #2, `97bb880`) ; la consigne « dire
-appareil, pas téléphone » y reste, elle est propre à ce projet. **Propagées le
-17/10/2026** (accord de l'utilisateur) dans ATELIERS_NEWGEN, NextStep, GDINV2,
-SMS-mail, sms-mail-multi (règle 8quinquies créée, absente jusque-là) et
-FICHES_MEMO_ACTION_KOLB (rappel de deux lignes). **Non propagées** :
-PPTX-CREATOR (attache refusée par la plateforme le 17/10/2026, à refaire).
+Tranché et à ne pas reproposer : les résumés `charte-ia-cd47.md` et
+`archivage-cd47.md` ne sont renvoyés que depuis NEWGEN et NextStep — ailleurs
+la ligne de `rgpd-securite.md` suffit (choix de l'utilisateur, 06/10/2026).
 
 ## Workflow git de ce repo
 
