@@ -241,6 +241,14 @@ déploiement ✅ par le script). PAPPERBOARD le 14/10/2026, section « 1. Git »
 déploiement ✅ par le script). **Non faite** : les autres projets. **Hook non installé** dans la
 session du 13/10/2026 (Setup script pas encore collé).
 
+## Règles 2 et 17 de `collaboration.md` (validé, mesure du rendu, fonction visible)
+
+Précisées le **17/10/2026** après la collaboration sur WoocLight. Propagées dans
+PAPPERBOARD (`CLAUDE.md`, pull request #2, `97bb880`) ; la consigne « dire
+appareil, pas téléphone » y reste, elle est propre à ce projet. **Non propagées** :
+ATELIERS_NEWGEN, NextStep, GDINV2, SMS-mail, sms-mail-multi, pptx-creator,
+FICHES_MEMO_ACTION_KOLB (à demander à l'utilisateur, projet par projet).
+
 ## Workflow git de ce repo
 
 Pas de suite de tests, pas de CI bloquante ici — repo purement
