@@ -12,7 +12,7 @@ Mémoire générale, valable pour tous les projets (actuels et futurs) — extra
 6. Sur tout appel Bash touchant un repo précis en contexte multi-repo, utiliser `cd /chemin/complet &&` systématiquement ; vérifier `git status`/`git log` et la cohérence CLAUDE.md du projet vs instructions de session avant d'agir, pas après.
 7. Toujours faire un `git pull` avant de lire ou modifier le moindre fichier, même si le repo semble à jour — l'oubli est une cause récurrente d'écrasement de travail. Respecter la politique de push définie par le projet et signaler tout conflit entre CLAUDE.md et les instructions de session avant d'agir, pas après.
 8. Après toute reprise de session ou résumé de contexte, relire l'état réel du fichier concerné avant de le modifier ou de le renvoyer — ne jamais présumer qu'un correctif précédent est encore en place.
-8bis. Utiliser des dates explicites (JJ/MM ou JJ/MM/AAAA) plutôt que des termes relatifs ("hier", "aujourd'hui", "la semaine dernière", "demain") : la perception du temps de Claude vient d'un contexte injecté en début de session, pas d'une horloge en temps réel — elle devient peu fiable sur une session qui s'étale sur plusieurs jours ou plusieurs reprises.
+8bis. Utiliser des dates explicites (JJ/MM ou JJ/MM/AAAA) plutôt que des termes relatifs ("hier", "aujourd'hui", "la semaine dernière", "demain") : la perception du temps de Claude vient d'un contexte injecté en début de session, pas d'une horloge en temps réel — elle devient peu fiable sur une session qui s'étale sur plusieurs jours ou plusieurs reprises. Toute heure donnée à l'utilisateur est en **heure de Paris** : GitHub, les API et les journaux affichent l'UTC, à convertir avant de l'écrire (02/10/2026 : « tu dis 12:51 et il est 14:51 »).
 8ter. **Consigner l'état du travail dans le dépôt, pas seulement dans la conversation.** Une session ne transmet rien à la suivante : autre compte, autre jour, résumé de contexte intermédiaire — le contexte repart de zéro, et les fichiers déposés par l'utilisateur disparaissent avec le conteneur. Seul ce qui est commité survit. Dès qu'un constat mesuré, une décision en attente ou un chantier ouvert a de la valeur au-delà de l'échange en cours, créer (ou mettre à jour) un **`CHANTIERS.md` à la racine du projet**, sans attendre qu'on le demande, et le réactualiser à chaque avancée significative plutôt qu'en fin de session — une session peut s'interrompre sans préavis. Y faire figurer : la date et le commit de référence, les décisions à trancher avec les chiffres qui les éclairent, les chantiers restants par ordre de priorité, et les points à ne pas défaire. Ajouter un renvoi vers lui depuis le `CLAUDE.md` du projet, seul fichier lu automatiquement au démarrage.
 
 **Ce fichier ne se supprime pas** — il sert aux sessions suivantes, indéfiniment. Ce qui se supprime, ce sont les **tâches, au fur et à mesure qu'elles sont terminées** : dès qu'un chantier est fini, retirer son descriptif plutôt que de le barrer ou de le raconter. Avant de retirer une tâche, en extraire ce qui doit survivre — l'invariant à ne pas défaire, le piège à ne pas refaire, la décision et sa raison — et le remonter dans la section des points à ne pas défaire, en une ou deux lignes. Le récit de ce qui a été fait appartient à `git log`, pas ici. Un `CHANTIERS.md` qui accumule des sections « Résolu le … » devient le millefeuille que `hygiene-instructions.md` cherche à éviter, et personne ne le lit plus. **La règle seule n'a pas suffi** (NEWGEN : 1 065 lignes le 26/09/2026, en-tête daté du 22/09, 25 lignes de tâches terminées) : le ménage est donc déclenché par un script lancé au démarrage de session (hook `SessionStart`), `scripts/check-chantiers.sh` — à copier depuis `ATELIERS_NEWGEN` —, qui signale un fichier de plus de 300 lignes, un en-tête « État au **JJ/MM/AAAA** » de plus de 7 jours, ou des titres ✅ / textes barrés. Il n'échoue jamais : Claude propose alors le ménage à l'utilisateur en début de session.
@@ -56,6 +56,20 @@ d'usage, remontées de l'équipe, `CHANTIERS.md`), pas une impression. Consigner
 chaque piste dans la section « Pistes » du `CHANTIERS.md` : *proposées, en
 attente*, ou *écartées*, avec date et raison ; une piste écartée ne se
 repropose pas sans fait nouveau.
+
+23. **Un comportement qui change emporte ses textes.** Dans la même livraison,
+chercher tous les textes visibles qui décrivent l'ancien comportement
+(dialogues de confirmation, aide, annonces publiées, messages d'erreur) et les
+corriger, ou les signaler s'ils sortent du périmètre. Constat du 02/10/2026
+(ATELIERS) : la Corbeille ouverte aux conseillers, trois textes disaient encore
+« passez par l'administrateur » ; c'est l'utilisateur qui les a relevés.
+
+24. **Une capture envoyée pour valider un point se lit en entier.** Toute
+incohérence visible hors du point demandé (doublon, valeur impossible, ordre
+anormal) se signale, en hypothèse non vérifiée, avec la proposition de
+vérifier — sans corriger d'office. Constat du 02/10/2026 (ATELIERS) : des
+numéros en double sur une capture de la Corbeille ont révélé une faute de
+l'API (numéro d'un nouvel atelier calculé sans la Corbeille).
 
 **Bonnes pratiques à maintenir**
 
