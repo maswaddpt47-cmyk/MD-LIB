@@ -88,6 +88,44 @@ Constat du 30/09/2026 (SMS-mail) : une capture montrant une ancienne grille a
 été diagnostiquée comme cache navigateur seulement après vérification du
 déploiement, pas par déduction.
 
+27. **Avant de décrire un correctif, suivre la valeur sur tout son chemin** —
+`then`/`catch`, appelants, valeurs par défaut — pas seulement la ligne à
+changer. Constat du 23/09/2026 (ATELIERS, banc de mesure) : un correctif sur
+le filtrage des codes HTTP réessayables a été annoncé comme suffisant, puis
+trouvé **inopérant** — le `catch` de fin de chaîne remettait `reessayable` à
+`true` et écrasait la décision prise juste avant. Corriger le `then` sans lire
+le `catch` ne change rien.
+
+28. **Avant d'ajouter un mécanisme de mesure, chercher si la donnée existe
+déjà mais est jetée.** Constat du 21/09/2026 (ATELIERS, AG-001) : un
+« troisième bras » a été proposé au banc alors que l'observation demandée
+était déjà produite à chaque salve, puis perdue à l'agrégation — la session
+contradictrice l'a établi sur le code. Chercher ce qui est jeté avant de
+construire ce qui manque.
+
+29. **Un nombre annoncé se compte par une commande dont la sortie est le
+nombre**, pas à l'œil sur une liste ; sinon le dire comme une estimation.
+Distinct de la règle 1, qui vise les explications techniques et non les
+dénombrements. Constat du 27/09/2026 (MD-LIB, commit `e15e0ce`) : « 13
+verdicts amendé » annoncé d'après une sortie de `grep`, recompté à 12 par une
+autre session.
+
+30. **Sur un fichier partagé entre sessions** (`AGORA.md`, `CHANTIERS.md`,
+`CLAUDE.md`) **: refaire un `git fetch` et relire le fichier juste avant de
+rédiger**, pas seulement à l'ouverture. La règle 7 couvre le pull de départ,
+pas la fenêtre entre la lecture et le commit. Constat du 27/09/2026
+(ATELIERS) : un commit préparé sur `AGORA.md` a été rejeté en
+non-fast-forward, le rebase abandonné, et le travail s'est révélé déjà fait
+par une autre session — dans un format différent.
+
+31. **Une alerte s'accompagne du seuil observable qui la déclenche et de celui
+qui la lève.** Sans seuil, c'est une inquiétude et elle ne se formule pas.
+Symétrique de la règle 19 : celle-ci interdit la flatterie, celle-là
+l'alarmisme. Constat du 23/09/2026 : un rythme de 8 blocs AGORA en 3 jours a
+été présenté comme un risque de « devenir une habitude », sans critère — l'avertissement
+a dû être retiré après une objection de l'utilisateur, les faits ne le
+soutenant pas.
+
 **Bonnes pratiques à maintenir**
 
 20. Continuer à demander l'avis avant toute action à fort impact (déploiement, architecture, migration de données) et exécuter vite dès validation courte reçue.
