@@ -177,7 +177,8 @@ qui demande encore une action :
   GDINV2 et PAPPERBOARD seulement ; manque dans les autres. **Hook non
   installé** (Setup script pas encore collé par l'utilisateur).
 - **Règles 2 et 17 de `collaboration.md`** : pas propagées à PPTX-CREATOR
-  (attache refusée par la plateforme le 17/10/2026, à refaire).
+  (attache refusée par la plateforme ; l'utilisateur y renonce le 17/10/2026, ne plus le
+  proposer).
 - **Règles 27 à 31 de `collaboration.md`** : 27, 29 et 30 propagées le
   17/10/2026 dans les **huit** projets (NEWGEN, NextStep, GDINV2, SMS-mail,
   sms-mail-multi, PAPPERBOARD, FICHES_MEMO_ACTION_KOLB, PPTX-CREATOR), au
