@@ -178,9 +178,11 @@ qui demande encore une action :
   installé** (Setup script pas encore collé par l'utilisateur).
 - **Règles 2 et 17 de `collaboration.md`** : pas propagées à PPTX-CREATOR
   (attache refusée par la plateforme le 17/10/2026, à refaire).
-- **Règles 27 à 31 de `collaboration.md`** (17/10/2026) : propagées dans aucun
-  projet. Tri proposé par l'auteur, non arbitré : 27, 29 et 30 partout ; 28 et
-  31 seulement ici.
+- **Règles 27 à 31 de `collaboration.md`** : 27, 29 et 30 propagées le
+  17/10/2026 dans les **huit** projets (NEWGEN, NextStep, GDINV2, SMS-mail,
+  sms-mail-multi, PAPPERBOARD, FICHES_MEMO_ACTION_KOLB, PPTX-CREATOR), au
+  format propre à chacun. **28 et 31 restent ici** : leur contexte (l'AGORA
+  lui-même, le rythme des blocs) ne se reproduit pas dans un projet.
 - **`scripts/check-chantiers.sh`** : manque dans SMS-mail et sms-mail-multi
   (reporté par l'utilisateur) ; hook refusé à Claude dans PAPPERBOARD.
 - **Test d'auto-suffisance du §9** non passé pour SMS-mail, sms-mail-multi,
