@@ -143,8 +143,9 @@ projet. Quand l'utilisateur demande une modification :
   l'utilisateur est responsable de traitement. En ligne le 14/10/2026.
   **Non fait** : le hook `SessionStart`, refusé à Claude par la plateforme,
   à créer par l'utilisateur. Références au CD47 retirées de tout le dépôt le 14/10/2026 (`fae9607`).
-  Pas d'`AGORA.md` : audit Codex ponctuel
-  (`agora.md` §12, règle 4), deux passés le 10/10/2026. `main` protégée par
+  **`AGORA.md` créé le 17/10/2026** (section 6 de son `CLAUDE.md`, blocs AG-001
+  et AG-002 ouverts après coup, test d'auto-suffisance du §9 pas encore passé) ;
+  la sécurité reste à Codex (`agora.md` §12, règle 4), deux audits passés le 10/10/2026. `main` protégée par
   un ruleset (contrôle `tests`) : pousser la branche de session, attendre la
   CI verte, puis `git push origin <sha>:main` en avance rapide ; le
   déploiement part tout seul.
