@@ -408,3 +408,36 @@ modifient le même code se défont l'une l'autre, Codex qui lirait nos
 conclusions perdrait son regard neuf, et la charte IA du CD47 demande la
 sobriété (§10) et la vérification des outils autorisés (§8, question ouverte
 au 06/10/2026). Codex ne modifie jamais le code : il relit, Claude corrige.
+
+## 13. Installation systématique dans chaque projet (17/10/2026)
+
+Décision de l'utilisateur, 17/10/2026 : **tout projet a son AGORA**, installée à
+sa création et non à la demande. « Pas d'AGORA ici » n'est plus une position
+valable (FICHES_MEMO_ACTION_KOLB l'avait ; corrigé le jour même). Pourquoi : la
+règle ne marche que si le dépôt porte tout ce qu'il faut pour ouvrir un bloc et y
+répondre sans MD-LIB (test du §9) ; un projet sans AGORA n'a ni les critères ni
+le geste, et la contradiction n'a jamais lieu.
+
+**Installation, en un seul commit** (dans cet ordre) :
+1. `AGORA.md` à la racine : règles de réponse, sincérité, cycle de relais, gabarit
+   (§9 et §10), tableau « Blocs tranchés » vide. Copie de référence la plus courte
+   et à jour : `PAPPERBOARD/AGORA.md` (17/10/2026), à adapter sur une seule chose,
+   la ligne « append-only / où pousser » selon la convention git du projet.
+2. Section « AGORA » dans le `CLAUDE.md` du projet (35 à 50 lignes) : les six
+   critères, la liste « ne va pas à l'AGORA », « soumet d'office, ne bloque
+   jamais », le renvoi « `MD-LIB/agora.md` non requis pour répondre », la mention
+   de Codex pour sécurité / données personnelles (§12).
+3. Dans `CHANTIERS.md` : une ligne « AGORA installée le JJ/MM/AAAA » et le rappel
+   « chaque décision à trancher est candidate à un bloc ».
+4. Dans MD-LIB `CLAUDE.md`, l'entrée du projet : date d'installation, test du §9
+   « pas encore passé » tant qu'aucune session tierce n'a répondu à un bloc.
+
+**Jumeaux** : deux dépôts qui partagent le code (NEWGEN / NextStep) peuvent partager
+un seul `AGORA.md`, à condition que le `CLAUDE.md` du second le dise explicitement
+(c'est le cas de NextStep). **Blocs d'installation** : on n'ouvre pas de bloc pour
+l'installation elle-même ; les premiers blocs sont les décisions déjà prises dont
+la porte est fermée, signalées « soumis après coup » (biais de statu quo noté).
+**Session à venir** : toute session qui crée un projet applique ce §13 avant le
+premier commit de code ; une session sur un projet sans `AGORA.md` l'installe et le
+dit à l'utilisateur au premier message.
+

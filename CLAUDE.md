@@ -38,6 +38,14 @@ pas `ATELIERS_NEWGEN.md`) — l'objectif est la réutilisation multi-projets,
 un nom lié à un repo précis n'a pas de sens ici et crée un risque de
 collision quand on ajoute d'autres projets.
 
+## Nouveau projet — AGORA installée dès la création
+
+Tout projet a son `AGORA.md` et sa section « AGORA » dans son `CLAUDE.md`
+(`agora.md` §13, décidé le 17/10/2026). Une session qui crée un projet l'installe
+avant le premier commit de code ; une session qui découvre un projet sans AGORA
+l'installe et le dit au premier message. Seule exception : un jumeau qui partage
+l'`AGORA.md` de l'autre et le dit dans son `CLAUDE.md`.
+
 ## Règle de propagation — la plus importante
 
 **Il n'y a pas de lien automatique entre ce repo et les `CLAUDE.md` des
@@ -132,6 +140,9 @@ projet. Quand l'utilisateur demande une modification :
   plateforme, `main` mis à jour en avance rapide (GitHub Pages ne déploie que
   `main`). `maswaddpt47-cmyk/fiches-generator` y sert de référence en lecture
   seule : ne jamais le modifier.
+  **AGORA installée le 17/10/2026** (`AGORA.md` + section « AGORA » dans son
+  `CLAUDE.md`, qui disait « Pas d'AGORA ici » ; l'encart Codex est conservé).
+  Test d'auto-suffisance du §9 pas encore passé.
 
 - `maswaddpt47-cmyk/PAPPERBOARD` — application **WoocLight** (participation
   en direct type Wooclap, PHP + JSON). Créé le 09/10/2026 : `CLAUDE.md` avec
@@ -246,9 +257,11 @@ session du 13/10/2026 (Setup script pas encore collé).
 
 Précisées le **17/10/2026** après la collaboration sur WoocLight. Propagées dans
 PAPPERBOARD (`CLAUDE.md`, pull request #2, `97bb880`) ; la consigne « dire
-appareil, pas téléphone » y reste, elle est propre à ce projet. **Non propagées** :
-ATELIERS_NEWGEN, NextStep, GDINV2, SMS-mail, sms-mail-multi, pptx-creator,
-FICHES_MEMO_ACTION_KOLB (à demander à l'utilisateur, projet par projet).
+appareil, pas téléphone » y reste, elle est propre à ce projet. **Propagées le
+17/10/2026** (accord de l'utilisateur) dans ATELIERS_NEWGEN, NextStep, GDINV2,
+SMS-mail, sms-mail-multi (règle 8quinquies créée, absente jusque-là) et
+FICHES_MEMO_ACTION_KOLB (rappel de deux lignes). **Non propagées** :
+PPTX-CREATOR (attache refusée par la plateforme le 17/10/2026, à refaire).
 
 ## Workflow git de ce repo
 
