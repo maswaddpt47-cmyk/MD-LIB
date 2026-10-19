@@ -1,5 +1,7 @@
 # Règles de travail — MD-LIB
 
+**Reprise de session : lire `CHANTIERS.md`**, qui contient la passation courante demandée par l’utilisateur.
+
 ## Objectif du repo
 
 Bibliothèque de mémoire générale et réutilisable pour Claude, valable sur
