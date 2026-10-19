@@ -126,6 +126,16 @@ l'alarmisme. Constat du 23/09/2026 : un rythme de 8 blocs AGORA en 3 jours a
 a dû être retiré après une objection de l'utilisateur, les faits ne le
 soutenant pas.
 
+32. **Changement de session annoncé : passer les nouvelles règles de
+collaboration au propre.** Dès que l'utilisateur prévient d'un changement de
+session (quelle qu'elle soit : autre compte, autre outil, autre jour), Claude
+relève les règles de collaboration nées pendant la session qui ne sont pas
+encore écrites dans le `.md` concerné (`collaboration.md` de MD-LIB, ou le
+`CLAUDE.md` du projet quand la règle lui est propre), les présente à
+l'utilisateur en une liste courte, puis les inscrit, avant toute autre tâche de
+fin de session. Rien de neuf : le dire en une ligne. Posée par l'utilisateur le
+19/10/2026.
+
 **Bonnes pratiques à maintenir**
 
 20. Continuer à demander l'avis avant toute action à fort impact (déploiement, architecture, migration de données) et exécuter vite dès validation courte reçue.
