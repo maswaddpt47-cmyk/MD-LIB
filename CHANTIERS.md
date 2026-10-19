@@ -26,8 +26,8 @@ deux dépôts et leurs CHANTIERS pour éviter des modifications concurrentes.
 | Production | `maswaddpt47-cmyk/PAPPERBOARD` |
 | Main de production à cet état | `98c91a61dac3782536ee2e804b543e5bd3135484` ; intégration encore en branche |
 | Branche d’intégration | `codex/interface-simulation-fidele` |
-| Dernier commit poussé | `426f2958e970864dcc96cbecbb0fb3d2a4a452dd` ; toujours vérifier la tête réelle avant reprise |
-| Vérification de ce commit | [Actions 39257671164](https://github.com/maswaddpt47-cmyk/PAPPERBOARD/actions/runs/39257671164), en attente au relevé ; résultat à actualiser |
+| Dernier commit poussé | `0507a20703af32fd2babe2258d78b5814cc8e366` ; toujours vérifier la tête réelle avant reprise |
+| Vérification de ce commit | [Actions 39258220745](https://github.com/maswaddpt47-cmyk/PAPPERBOARD/actions/runs/39258220745), en attente au relevé ; résultat à actualiser |
 | Prototype publié | `maswaddpt47-cmyk/PAPPERBOARD-CHATGPT`, main `0db8291e300e721cc8d588e4a2670ce1c5019795` ; Pages et contrôles verts |
 | Référence visuelle figée | `PAPPERBOARD-CHATGPT@7a80fc3a81083f3cb8adf4dfc5e79e686e9fb5bb` ; fichier autonome et empreintes copiés dans `PAPPERBOARD/tests/reference/` |
 | Guide complet | `PAPPERBOARD-CHATGPT/docs/CONSIGNE-CLAUDE-UI-PHP.md` ; `PAPPERBOARD/docs/interface-reference.md` |
@@ -63,9 +63,9 @@ le rafraîchissement, il ne constitue pas un gel historique.
   4 archivage, 5 protection, 15 charte, 103 parcours navigateur, 79 UI et 768
   cas de galerie réussis. Ce vert ancien ne suffit pas pour fusionner une tête ultérieure.
 - **Prototype `7a80fc3`** : 769 contrôles Chrome réussis, suite PHP verte.
-- Les derniers compléments de tests sont encore à confirmer sur `426f2958`.
+- Les derniers compléments de tests sont encore à confirmer sur `0507a207`.
   Les anciens échecs de ciblage de boutons, d’en-tête CSRF du test et de
-  sélecteurs de la référence sont corrigés dans la tête ; ne pas relancer
+  sélecteurs de la référence (bouton dans la notice volontairement masquée) sont corrigés dans la tête ; ne pas relancer
   les anciennes versions pour décider du déploiement.
 - La comparaison de styles et les captures ne prouvent pas automatiquement une
   égalité de chaque pixel de tous les écrans.
