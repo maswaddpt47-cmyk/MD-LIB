@@ -105,15 +105,18 @@ projet. Quand l'utilisateur demande une modification :
   section « Règles générales adaptées à ce projet » de son `CLAUDE.md` ;
   les règles 14 à 17 le 21/09/2026, dans sa section « Ce que coûte un test ».
 
-- `maswaddpt47-cmyk/SMS-mail` et `maswaddpt47-cmyk/sms-mail-multi` (jumeaux)
-  — **`agora.md` et la tenue de `CHANTIERS.md` propagés le 26/09/2026** :
-  `AGORA.md` et `CHANTIERS.md` à la racine de chacun, sections « Reprise de
-  session » et « AGORA » dans leur `CLAUDE.md` (36 lignes, dans la borne du
-  §9). Chaque jumeau a son propre `AGORA.md` : un débat se dépose dans le
-  repo où le changement est écrit. **Non fait** : `scripts/check-chantiers.sh`
-  (hook `SessionStart`), reporté par l'utilisateur. Test d'auto-suffisance du
-  §9 **pas encore passé** (aucune session tierce n'a relu la copie).
-  Branche de session imposée, mergée dans `main` en fin de session.
+- `maswaddpt47-cmyk/SMS-mail` et `maswaddpt47-cmyk/sms-mail-multi` —
+  **ne sont plus des jumeaux depuis le 20/10/2026** : SMS-mail (solo) est
+  **gelé** sur décision de l'utilisateur, plus aucun développement ni
+  portage ; `sms-mail-multi` est désormais le seul actif. **`agora.md` et la
+  tenue de `CHANTIERS.md` propagés le 26/09/2026** : `AGORA.md` et
+  `CHANTIERS.md` à la racine de chacun, sections « Reprise de session » et
+  « AGORA » dans leur `CLAUDE.md`. Chaque repo garde son propre `AGORA.md`.
+  **Non fait** : `scripts/check-chantiers.sh` (hook `SessionStart`), reporté
+  par l'utilisateur — reste valable pour sms-mail-multi seul. Test
+  d'auto-suffisance du §9 **pas encore passé** sur sms-mail-multi (sans
+  objet pour SMS-mail, gelé). Branche de session imposée, mergée dans `main`
+  en fin de session.
 
 - `maswaddpt47-cmyk/pptx-creator` — **`CHANTIERS.md` et `agora.md`/`AGORA.md`
   propagés le 28/09/2026** : `CHANTIERS.md` et `AGORA.md` créés à la racine,
