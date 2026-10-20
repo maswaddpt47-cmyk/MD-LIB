@@ -136,6 +136,18 @@ l'utilisateur en une liste courte, puis les inscrit, avant toute autre tâche de
 fin de session. Rien de neuf : le dire en une ligne. Posée par l'utilisateur le
 19/10/2026.
 
+33. **Un chiffre destiné aux élus ou à la hiérarchie passe par Codex avant
+d'être diffusé.** Tout projet qui projette des calculs ou des statistiques à
+d'autres personnes que l'utilisateur fait auditer ses indicateurs par Codex sur
+l'export réel (lecture seule, hors dépôt public) avant la première diffusion, à
+chaque changement d'import, de fusion, de calcul ou de filtre, et chaque
+trimestre — et livre cinq familles de tests (parcours idempotent, même
+population, recomptage indépendant, provenance, unité) ainsi que le tableau
+« affiché / recompté / écart ». Une suite verte n'est pas une garantie : 251
+tests passaient quand l'audit en a trouvé 14. Détail : `chiffres-diffuses.md`.
+Posée par l'utilisateur le 20/10/2026 : « je ne peux pas me permettre de
+fournir aux élus et à mes supérieurs de fausses informations ».
+
 **Bonnes pratiques à maintenir**
 
 20. Continuer à demander l'avis avant toute action à fort impact (déploiement, architecture, migration de données) et exécuter vite dès validation courte reçue.
