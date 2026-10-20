@@ -192,6 +192,13 @@ qui demande encore une action :
   lui-même, le rythme des blocs) ne se reproduit pas dans un projet.
 - **`scripts/check-chantiers.sh`** : manque dans SMS-mail et sms-mail-multi
   (reporté par l'utilisateur) ; hook refusé à Claude dans PAPPERBOARD.
+- **`chiffres-diffuses.md` / règle 33** (20/10/2026) : propagée à GDINV2
+  (section « Chiffres diffusés », 5 familles de tests posées). NEWGEN : tests
+  de concordance ajoutés (PR #35), écart de « taux de présence » entre
+  Historique/mail mensuel (50 %) et bilan trimestriel (75 %) **à trancher par
+  l'utilisateur** ; NextStep porte les mêmes fichiers, pas encore vérifié.
+  Pas propagée : PAPPERBOARD (projet personnel, chiffres vus des participants,
+  audits Codex déjà passés), autres projets sans chiffre diffusé aux élus.
 - **Test d'auto-suffisance du §9** non passé pour SMS-mail, sms-mail-multi,
   pptx-creator, FICHES_MEMO_ACTION_KOLB et PAPPERBOARD.
 
