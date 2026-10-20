@@ -1,6 +1,16 @@
 # CHANTIERS — relais vers le projet
 
-État au **19/10/2026**, mesuré et consigné à la demande de l’utilisateur.
+État au **20/10/2026**, mesuré ; la passation WoocLight ci-dessous date du 19/10/2026.
+
+## Propagation des consignes Codex — intégration restante
+
+- PAPPERBOARD : adaptation de `AGENTS.md` poussée sur
+  `codex/regles-collaboration`, commit `4aff306` (20/10/2026).
+- Reste : vérifier le contrôle CI `tests` sur ce commit, puis intégrer à
+  `main` en avance rapide selon le `CLAUDE.md` du projet. Ne pas contourner
+  la protection de `main`. L’accès à l’API GitHub Actions a renvoyé HTTP 403
+  dans cette session ; résultat de CI non vérifié.
+- SMS-mail reste gelé : aucune propagation dans ce dépôt.
 
 ## Reprise WoocLight / PAPPERBOARD
 
