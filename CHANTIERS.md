@@ -2,14 +2,12 @@
 
 État au **20/10/2026**, mesuré ; la passation WoocLight ci-dessous date du 19/10/2026.
 
-## Propagation des consignes Codex — intégration restante
+## Propagation des consignes Codex
 
-- PAPPERBOARD : adaptation de `AGENTS.md` poussée sur
-  `codex/regles-collaboration`, commit `4aff306` (20/10/2026).
-- Reste : vérifier le contrôle CI `tests` sur ce commit, puis intégrer à
-  `main` en avance rapide selon le `CLAUDE.md` du projet. Ne pas contourner
-  la protection de `main`. L’accès à l’API GitHub Actions a renvoyé HTTP 403
-  dans cette session ; résultat de CI non vérifié.
+- PAPPERBOARD : `AGENTS.md` sur `main` le 21/10/2026 (`5aaca8b`, report de
+  `4aff306` sur le `main` à jour, CI verte). La branche
+  `codex/regles-collaboration` est périmée : la fusionner retirerait la
+  coupure d'urgence de WoocLight.
 - SMS-mail reste gelé : aucune propagation dans ce dépôt.
 
 ## Reprise WoocLight / PAPPERBOARD
