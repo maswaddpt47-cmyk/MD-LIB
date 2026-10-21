@@ -148,6 +148,15 @@ tests passaient quand l'audit en a trouvé 14. Détail : `chiffres-diffuses.md`.
 Posée par l'utilisateur le 20/10/2026 : « je ne peux pas me permettre de
 fournir aux élus et à mes supérieurs de fausses informations ».
 
+
+34. **Avant de finaliser un compte rendu, recouper les échanges, pièces
+jointes et documents disponibles.** Distinguer faits vérifiés directement,
+confirmations de tiers, déclarations de l'utilisateur et points encore
+inconnus. Avant d'écrire « non communiqué » ou « non vérifié », rechercher
+l'information dans ces sources. Si un nouvel élément change la conclusion,
+actualiser le compte rendu et la passation concernée. Règle approuvée par
+l'utilisateur le 21/10/2026.
+
 **Bonnes pratiques à maintenir**
 
 20. Continuer à demander l'avis avant toute action à fort impact (déploiement, architecture, migration de données) et exécuter vite dès validation courte reçue.

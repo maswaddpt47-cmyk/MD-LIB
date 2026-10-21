@@ -1,6 +1,13 @@
 # CHANTIERS — relais vers le projet
 
-État au **20/10/2026**, mesuré ; la passation WoocLight ci-dessous date du 19/10/2026.
+État au **21/10/2026**, mesuré ; la passation WoocLight ci-dessous date du 19/10/2026.
+
+## Propagation de la règle sur les comptes rendus
+
+- Règle 34 de `collaboration.md`, approuvée le 21/10/2026 : recouper les
+  sources avant de finaliser un compte rendu et réviser la passation si un
+  nouvel élément change la conclusion. Propagation aux projets consommateurs
+  en attente de décision de l'utilisateur ; aucune copie modifiée.
 
 ## Propagation des consignes Codex
 
