@@ -202,6 +202,15 @@ qui demande encore une action :
 - **Règles 35 à 37 de `collaboration.md`** (22/10/2026 : attribution dans un
   compte rendu, passages réels d'une tâche programmée, moyen d'arrêt essayé en
   réel) : propagation à demander à l'utilisateur.
+- **Phrase de relais nommant le dépôt** (`agora.md` §4, corrigé le 22/10/2026,
+  commit `d51effe`) : inscrite dans l'`AGORA.md` de GDINV2 seulement. Manque
+  dans NEWGEN, NextStep, SMS-mail, sms-mail-multi, PAPPERBOARD,
+  FICHES_MEMO_ACTION_KOLB et PPTX-CREATOR. **À faire au fil des sessions**,
+  quand on travaille déjà dans le projet (choix de l'utilisateur, 22/10/2026 —
+  ne pas attacher sept dépôts pour une ligne). Une session qui ouvre un bloc
+  sans cette phrase sous les yeux omet le dépôt : le contradicteur ouvre alors
+  l'AGORA de l'endroit où il se trouve, et chaque projet a sa propre
+  numérotation.
 - **Test d'auto-suffisance du §9** non passé pour SMS-mail, sms-mail-multi,
   pptx-creator, FICHES_MEMO_ACTION_KOLB et PAPPERBOARD.
 
