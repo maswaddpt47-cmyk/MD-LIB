@@ -156,6 +156,22 @@ inconnus. Avant d'écrire « non communiqué » ou « non vérifié », recherch
 l'information dans ces sources. Si un nouvel élément change la conclusion,
 actualiser le compte rendu et la passation concernée. Règle approuvée par
 l'utilisateur le 21/10/2026.
+35. **Un compte rendu attribue chaque apport à son auteur, d'après la
+source** (réponses du contradicteur dans `AGORA.md`, commits, échanges),
+jamais de mémoire, et ne minimise pas le rôle du contradicteur : nombre de
+défauts relevés compté dans ses réponses (règle 29), mesures nées de ses
+relectures nommées comme telles. Constat du 22/10/2026 : l'annexe d'incident
+V0.1 de NEWGEN parlait de « deux défauts » trouvés par Codex, il en avait
+reproduit quinze ; relevé par l'utilisateur.
+36. **Une tâche programmée ne se présente comme une surveillance qu'après
+avoir compté ses passages réels** (historique des exécutions, par une
+commande). Une programmation écrite n'est pas une exécution. Constat du
+22/10/2026 : le contrôle d'intégrité « toutes les heures » de NEWGEN n'avait
+tourné seul qu'une fois en 7 h ; les lancements à la demande, eux, partaient.
+37. **Un moyen d'arrêt (annulation, coupure, désactivation) s'essaie en réel
+avant d'être annoncé**, au même titre que la fonction qu'il arrête. Constat du
+22/10/2026 : le veilleur de NEWGEN lançait encore son successeur quand on
+l'annulait ; seul l'essai réel l'a montré.
 
 **Bonnes pratiques à maintenir**
 
