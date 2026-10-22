@@ -199,6 +199,9 @@ qui demande encore une action :
   l'utilisateur** ; NextStep porte les mêmes fichiers, pas encore vérifié.
   Pas propagée : PAPPERBOARD (projet personnel, chiffres vus des participants,
   audits Codex déjà passés), autres projets sans chiffre diffusé aux élus.
+- **Règles 35 à 37 de `collaboration.md`** (22/10/2026 : attribution dans un
+  compte rendu, passages réels d'une tâche programmée, moyen d'arrêt essayé en
+  réel) : propagation à demander à l'utilisateur.
 - **Test d'auto-suffisance du §9** non passé pour SMS-mail, sms-mail-multi,
   pptx-creator, FICHES_MEMO_ACTION_KOLB et PAPPERBOARD.
 
