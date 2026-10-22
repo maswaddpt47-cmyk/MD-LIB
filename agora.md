@@ -83,13 +83,23 @@ signalement RGPD de `rgpd-securite.md` :
 
 > ⚖️ AGORA : critère 1 (ferme une porte) — le format de stockage retenu.
 > Bloc AG-004 commité. À coller dans l'autre session :
-> « pull, lis AGORA.md, réponds à AG-004, tu es la session B ».
+> « pull **<owner/dépôt>**, lis son `AGORA.md`, réponds à AG-004, tu es la
+> session B ».
 
-**La phrase de relais porte toujours le libellé de la session qui répond.**
-Il sert à remplir le champ `Auteur`, qui reste utile à la lecture humaine du
-fichier. Ce n'est **pas** ce qui prouve qu'une session ne répond pas à son
-propre bloc : cette preuve est le trailer `Claude-Session:` des commits, qui
-distingue deux sessions même sous une identité GitHub unique (§10).
+**La phrase de relais nomme toujours le dépôt.** Chaque projet a son propre
+`AGORA.md` avec sa propre numérotation : deux dépôts peuvent porter un AG-002
+qui n'a rien à voir. Sans le nom, la session qui répond ouvre l'AGORA du
+dépôt qu'elle a sous la main. Constaté le 22/10/2026 : une phrase de relais
+sans dépôt a envoyé le contradicteur dans MD-LIB au lieu de GDINV2 — il y a
+trouvé un AG-002 déjà tranché et pas d'AG-003, et a demandé au lieu de
+répondre au mauvais bloc. Écrire le dépôt au format `owner/nom`, comme
+GitHub l'affiche.
+
+**Elle porte aussi le libellé de la session qui répond.** Il sert à remplir le
+champ `Auteur`, qui reste utile à la lecture humaine du fichier. Ce n'est
+**pas** ce qui prouve qu'une session ne répond pas à son propre bloc : cette
+preuve est le trailer `Claude-Session:` des commits, qui distingue deux
+sessions même sous une identité GitHub unique (§10).
 
 **L'AGORA ne bloque jamais.** Claude continue le travail en parallèle : rien ne
 garantit qu'une réponse arrive un jour.
