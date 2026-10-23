@@ -172,6 +172,15 @@ tourné seul qu'une fois en 7 h ; les lancements à la demande, eux, partaient.
 avant d'être annoncé**, au même titre que la fonction qu'il arrête. Constat du
 22/10/2026 : le veilleur de NEWGEN lançait encore son successeur quand on
 l'annulait ; seul l'essai réel l'a montré.
+38. **Vérifier l'élément exact nommé par l'utilisateur, pas un élément voisin
+supposé équivalent.** Deux éléments qui partagent une classe, un style ou un
+comportement visuel proche (un badge de compteur et la tuile qu'il résume,
+par exemple) ne partagent pas forcément le même correctif — une règle CSS
+plus spécifique peut écraser l'un sans toucher l'autre. Constat du
+20/10/2026 (sms-mail-multi) : un clignotement vérifié et annoncé validé sur
+le badge du menu ; l'utilisateur a dû préciser que c'était la tuile qui
+devait clignoter, et elle ne clignotait pas (une règle de la refonte UI
+l'écrasait silencieusement, sans lien avec le badge).
 
 **Bonnes pratiques à maintenir**
 
