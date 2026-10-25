@@ -8,10 +8,17 @@
   25/10/2026 : anticiper les besoins, proposer des améliorations et fonctions
   utiles avec une recommandation nette, évaluer leur bénéfice et leur charge,
   examiner aussi ce qui mérite d'être simplifié ou retiré.
-- Source canonique mise à jour sur `main`. Propagation dans les copies des
-  projets consommateurs à soumettre à l'utilisateur, conformément au
-  `CLAUDE.md` de MD-LIB ; les anciennes copies de la règle 22 restent à mettre
-  à jour après accord.
+- Propagation approuvée par l'utilisateur le 25/10/2026. Règle copiée dans
+  les `CLAUDE.md` des sept projets actifs, rappels de `CHANTIERS.md` alignés
+  et contenus relus sur `main` :
+  ATELIERS_NEWGEN `00f5d00`,
+  ateliers-cd47_NextStep `3727a91`,
+  GDINV2 `0c07ede`, sms-mail-multi `691d97b`,
+  PPTX-CREATOR `a82ee4b`,
+  FICHES_MEMO_ACTION_KOLB `09238e7`,
+  PAPPERBOARD `1eb4cfe`.
+- PAPPERBOARD : contrôle `tests` vert avant l'avance rapide de `main`.
+  SMS-mail reste gelé ; FICHES-GENERATOR reste en lecture seule.
 
 ## Propagation de la règle sur les comptes rendus
 
