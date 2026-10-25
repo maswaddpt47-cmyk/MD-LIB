@@ -2,6 +2,15 @@
 
 État au **25/10/2026** ; la passation WoocLight ci-dessous date du 19/10/2026.
 
+## Choix des annonces dans « Nouveautés » — 25/10/2026
+
+- Précision de la règle 23 de `collaboration.md`, demandée par l'utilisateur :
+  proposer les changements significatifs et leur texte, puis attendre son accord
+  sur les annonces à publier. La validation de la fonctionnalité reste distincte.
+- Demande appliquée aux consignes de NEWGEN et NextStep, projets concernés
+  par cette session. Choix explicite pour la livraison du 25/10 : annonce
+  n° 35 sur la conservation de saisie uniquement ; pas d'annonce sur l'Analyse.
+
 ## Initiative d'amélioration et de nouveautés
 
 - Règle 22 de `collaboration.md` renforcée à la demande de l'utilisateur le

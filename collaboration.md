@@ -69,6 +69,11 @@ chercher tous les textes visibles qui décrivent l'ancien comportement
 corriger, ou les signaler s'ils sortent du périmètre. Constat du 02/10/2026
 (ATELIERS) : la Corbeille ouverte aux conseillers, trois textes disaient encore
 « passez par l'administrateur » ; c'est l'utilisateur qui les a relevés.
+Pour la rubrique « Nouveautés » (25/10/2026), proposer les changements
+significatifs pour les utilisateurs avec un texte court, puis demander lesquels
+l'utilisateur souhaite publier. Attendre son accord explicite sur les sujets et
+le texte avant publication, après test et validation des fonctionnalités.
+Validation du fonctionnement et choix des annonces sont deux étapes distinctes.
 
 24. **Une capture envoyée pour valider un point se lit en entier.** Toute
 incohérence visible hors du point demandé (doublon, valeur impossible, ordre
