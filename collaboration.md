@@ -44,18 +44,24 @@ l'utilisateur comme entre deux sessions dans un `AGORA.md` (règle 3 de sa
 section « Sincérité », établie le 27/09/2026 après 12 verdicts « amendé »
 d'affilée sans un seul « confirmé » ni « contredit »).
 
-22. **Proposer des pistes d'amélioration à des moments fixés, pas au fil de
-l'eau** (demande du 03/10/2026). À la fin d'une fonctionnalité livrée et
-validée par l'utilisateur, et sur toute demande de revue de l'interface : au
-plus 3 pistes, classées par utilité, non développées. Chercher **dans**
-l'outil (écran confus, saisie en double, clics inutiles) **et autour** : ce
-que l'équipe fait encore à côté (tableur, mail, papier), ce que la hiérarchie
-redemande — l'angle qu'on rate en ne lisant que le code (rubriques Tickets et
-Nouveautés d'ATELIERS, jamais proposées). S'appuyer sur des faits (compteurs
-d'usage, remontées de l'équipe, `CHANTIERS.md`), pas une impression. Consigner
-chaque piste dans la section « Pistes » du `CHANTIERS.md` : *proposées, en
-attente*, ou *écartées*, avec date et raison ; une piste écartée ne se
-repropose pas sans fait nouveau.
+22. **Prendre l'initiative de propositions d'amélioration et de nouveautés**
+(demande du 03/10/2026, renforcée le 25/10/2026). Pendant l'analyse d'une
+demande, lors d'une revue et après une livraison validée, proposer sans
+attendre qu'on le demande **au plus 3 pistes, classées par utilité**, présentées
+brièvement. Anticiper les besoins encore non exprimés et chercher les fonctions
+manquantes. Examiner aussi la pertinence de l'existant : recommander de
+simplifier, réunir ou retirer ce qui encombre, lorsqu'un constat le justifie.
+Chercher **dans** l'outil et **autour** : tâches encore faites sur tableur,
+par mail ou sur papier, demandes répétées de l'équipe ou de la hiérarchie.
+Pour chaque piste, préciser le problème observé, le bénéfice attendu et
+**le choix recommandé**, en évaluant aussi la complexité ou la charge ajoutée
+pour l'utilisateur. Donner un avis net et argumenté, appuyé sur les usages,
+les retours et les chantiers ; signaler les hypothèses. Éviter les idées
+forcées pour remplir un quota et le flux permanent de suggestions.
+L'utilisateur décide de la réalisation des changements supplémentaires.
+Consigner chaque piste dans « Pistes » de `CHANTIERS.md` : *proposée, en
+attente* ou *écartée*, avec date et raison ; ne pas reproposer une piste
+écartée sans fait nouveau.
 
 23. **Un comportement qui change emporte ses textes.** Dans la même livraison,
 chercher tous les textes visibles qui décrivent l'ancien comportement

@@ -1,6 +1,17 @@
 # CHANTIERS — relais vers le projet
 
-État au **21/10/2026**, mesuré ; la passation WoocLight ci-dessous date du 19/10/2026.
+État au **25/10/2026** ; la passation WoocLight ci-dessous date du 19/10/2026.
+
+## Initiative d'amélioration et de nouveautés
+
+- Règle 22 de `collaboration.md` renforcée à la demande de l'utilisateur le
+  25/10/2026 : anticiper les besoins, proposer des améliorations et fonctions
+  utiles avec une recommandation nette, évaluer leur bénéfice et leur charge,
+  examiner aussi ce qui mérite d'être simplifié ou retiré.
+- Source canonique mise à jour sur `main`. Propagation dans les copies des
+  projets consommateurs à soumettre à l'utilisateur, conformément au
+  `CLAUDE.md` de MD-LIB ; les anciennes copies de la règle 22 restent à mettre
+  à jour après accord.
 
 ## Propagation de la règle sur les comptes rendus
 
