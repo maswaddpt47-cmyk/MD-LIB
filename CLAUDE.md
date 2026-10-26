@@ -199,7 +199,7 @@ qui demande encore une action :
   l'utilisateur** ; NextStep porte les mêmes fichiers, pas encore vérifié.
   Pas propagée : PAPPERBOARD (projet personnel, chiffres vus des participants,
   audits Codex déjà passés), autres projets sans chiffre diffusé aux élus.
-- **Critère 7 d'`agora.md`** (26/10/2026 : tout calcul ou chiffre affiché ouvre un bloc AGORA, contradicteur Codex) : propagé à NEWGEN et NextStep ; propagation aux autres projets à demander à l'utilisateur.
+- **Critère 7 d'`agora.md`** (26/10/2026 : tout calcul ou chiffre affiché ouvre un bloc AGORA, contradicteur Codex) : propagé à NEWGEN, NextStep, GDINV2 (`98ce116`) et PAPPERBOARD (`dd4fe81`) le 26/10/2026 ; non propagé aux projets sans chiffre affiché (SMS-mail gelé, sms-mail-multi, pptx-creator, FICHES_MEMO_ACTION_KOLB) — à reposer si l'un d'eux se met à calculer.
 - **Règles 35 à 37 de `collaboration.md`** (22/10/2026 : attribution dans un
   compte rendu, passages réels d'une tâche programmée, moyen d'arrêt essayé en
   réel) : propagation à demander à l'utilisateur.
