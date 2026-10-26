@@ -20,7 +20,7 @@ ce projet, sans avoir à attacher MD-LIB à chaque fois.
 | `rgpd-securite.md` | Checklist RGPD/sécurité + note sur la routine d'audit trimestriel planifiée |
 | `pwa-service-worker.md` | Garde-fous PWA/service worker : pas de cache quand un `?v=N` existe, pas de `respondWith`, et le rechargement forcé impossible en mode installé |
 | `hygiene-instructions.md` | Empêcher le millefeuille d'instructions : une contrainte testable devient un test, tester le coût et pas seulement la justesse, dater/qualifier chaque affirmation, budget fermé, pas de changelog dans le code |
-| `agora.md` | Faire contredire une proposition par une autre session via un `AGORA.md` commité dans le projet : six critères de déclenchement observables, rôle du contradicteur, gabarit de bloc, entretien ; §12 : Codex (OpenAI) comme contradicteur des blocs de sécurité et auditeur trimestriel, et règle « l'IA qui écrit ne relit pas » |
+| `agora.md` | Faire contredire une proposition par une autre session via un `AGORA.md` commité dans le projet : sept critères de déclenchement (le 7ᵉ : tout calcul ou chiffre affiché, 26/10/2026) observables, rôle du contradicteur, gabarit de bloc, entretien ; §12 : Codex (OpenAI) comme contradicteur des blocs de sécurité et auditeur trimestriel, et règle « l'IA qui écrit ne relit pas » |
 | `consigne-audit-externe.md` | Modèle de consigne d'audit par Codex (OpenAI) : lecture seule, sans nos conclusions, chaque point avec fichier:ligne et scénario. Usage : `agora.md` §12 |
 | `AGORA.md` | L'AGORA de **ce dépôt** : les blocs ouverts et tranchés sur les règles elles-mêmes (`agora.md` est la règle, `AGORA.md` est l'instance) |
 | `charte-ia-cd47.md` | Résumé des 11 consignes d'utilisation de l'IA du CD47 (données personnelles, identifiants, relecture humaine, sobriété…) et ce qu'elles changent dans nos projets. Le PDF interne fait foi, non publié ici (dépôt public). Référence, pas une règle à copier |
@@ -199,6 +199,7 @@ qui demande encore une action :
   l'utilisateur** ; NextStep porte les mêmes fichiers, pas encore vérifié.
   Pas propagée : PAPPERBOARD (projet personnel, chiffres vus des participants,
   audits Codex déjà passés), autres projets sans chiffre diffusé aux élus.
+- **Critère 7 d'`agora.md`** (26/10/2026 : tout calcul ou chiffre affiché ouvre un bloc AGORA, contradicteur Codex) : propagé à NEWGEN et NextStep ; propagation aux autres projets à demander à l'utilisateur.
 - **Règles 35 à 37 de `collaboration.md`** (22/10/2026 : attribution dans un
   compte rendu, passages réels d'une tâche programmée, moyen d'arrêt essayé en
   réel) : propagation à demander à l'utilisateur.

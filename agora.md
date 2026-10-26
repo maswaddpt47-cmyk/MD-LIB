@@ -37,7 +37,7 @@ Donc : des **critères observables**, constatables sans avoir à s'auto-évaluer
 Même logique que `hygiene-instructions.md` §1 — ce qui peut se formuler en
 critère vérifiable devient un critère, pas un paragraphe qui espère être lu.
 
-## 2. Les six déclencheurs
+## 2. Les sept déclencheurs
 
 Soumettre à l'AGORA dès qu'un de ces faits est constaté :
 
@@ -60,8 +60,17 @@ avancée — et l'omission se voit dans le diff.
    `CHANTIERS.md`, commentaire de décision). Vérifiable.
 6. **Coût irréversible côté usager** — suppression de données, migration,
    rupture d'une PWA déjà installée sur des postes.
+7. **Le changement touche un calcul ou un chiffre affiché** — indicateur,
+   total, taux, moyenne, filtre ou définition qui produit un chiffre, à
+   l'écran, dans un export ou un document imprimé. **Systématique, quelle que
+   soit la taille du changement** (décision de l'utilisateur, 26/10/2026, après
+   AG-032 de NEWGEN : un bilan trimestriel à suite verte présentait de faux
+   zéros et deux dénominateurs pour la même question). Contradicteur : **Codex**
+   (`chiffres-diffuses.md` §1, l'IA qui écrit ne relit pas). Le bloc est ouvert
+   **avant** la correction ; les définitions métier y sont séparées des défauts
+   démontrés et tranchées par l'utilisateur.
 
-Ces six critères sont **vérifiables après coup dans le diff** : l'utilisateur
+Ces sept critères sont **vérifiables après coup dans le diff** : l'utilisateur
 peut reprocher un critère rempli resté silencieux. Un ressenti, non.
 
 ## 3. Ce qui ne va PAS à l'AGORA
@@ -70,7 +79,8 @@ Sans cette liste, l'AGORA devient un péage qui double le coût de chaque
 décision :
 
 - changement de rendu pur (cf. `collaboration.md` règle 17) ;
-- correctif localisé appuyé sur une preuve (log, test rouge puis vert) ;
+- correctif localisé appuyé sur une preuve (log, test rouge puis vert) —
+  **sauf s'il touche un calcul ou un chiffre affiché** : critère 7, toujours ;
 - tout ce qui se défait en un commit.
 
 ## 4. Qui déclenche, qui tranche, à quel moment
@@ -288,7 +298,7 @@ l'ensemble est moins bien appliqué, pas mieux.
    passe d'un compte à l'autre**. *Supposé, pas mesuré* (22/09/2026) : sans
    lui, rien n'indique à une session isolée que le second temps dépend de
    l'utilisateur. À retirer si une copie s'en passe sans dommage.
-2. Dans le `CLAUDE.md` du projet : les **six critères du §2**, la liste du §3,
+2. Dans le `CLAUDE.md` du projet : les **sept critères du §2**, la liste du §3,
    la phrase « soumettre d'office, ne jamais bloquer, pousser sur `main` », et
    un renvoi vers `AGORA.md`.
 
@@ -433,7 +443,7 @@ le geste, et la contradiction n'a jamais lieu.
    (§9 et §10), tableau « Blocs tranchés » vide. Copie de référence la plus courte
    et à jour : `PAPPERBOARD/AGORA.md` (17/10/2026), à adapter sur une seule chose,
    la ligne « append-only / où pousser » selon la convention git du projet.
-2. Section « AGORA » dans le `CLAUDE.md` du projet (35 à 50 lignes) : les six
+2. Section « AGORA » dans le `CLAUDE.md` du projet (35 à 50 lignes) : les sept
    critères, la liste « ne va pas à l'AGORA », « soumet d'office, ne bloque
    jamais », le renvoi « `MD-LIB/agora.md` non requis pour répondre », la mention
    de Codex pour sécurité / données personnelles (§12).
