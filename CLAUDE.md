@@ -204,6 +204,11 @@ qui demande encore une action :
   attribué, passages réels d'une tâche programmée, moyen d'arrêt essayé en
   réel) et **38** (élément exact nommé) : propagées les 26 et 27/10/2026 dans
   les sept projets actifs (SMS-mail gelé, non touché).
+- **Règle 39** (promesse d'action à l'usager) : propagée le 27/10/2026 à
+  NEWGEN, NextStep et sms-mail-multi seulement, les seuls qui envoient mails ou
+  rappels (choix de l'utilisateur). À reposer si un autre projet se met à en
+  envoyer. **Règles 40 à 42** (format serveur et pages ouvertes, identité réelle
+  avant de conclure à une fuite, effets d'un interrupteur) : pas encore propagées.
 - **Phrase de relais nommant le dépôt** (`agora.md` §4, corrigé le 22/10/2026,
   commit `d51effe`) : inscrite dans l'`AGORA.md` de GDINV2 seulement. Manque
   dans NEWGEN, NextStep, SMS-mail, sms-mail-multi, PAPPERBOARD,

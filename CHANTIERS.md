@@ -28,5 +28,5 @@ n'en duplique pas l'état. SMS-mail reste gelé : aucune propagation.
   alors que la CI tournait (workflows non vus depuis l'environnement). Le
   faire sortir en erreur quand il ne voit aucun workflow ou ne peut pas `cd`,
   et nommer le sha dans le ✅. En attendant : vérifier la CI dans GitHub.
-- Règle 39 de `collaboration.md` (28/10/2026) : propagation à demander.
+- Règles 40 à 42 de `collaboration.md` (27/10/2026) : propagation à demander.
 
