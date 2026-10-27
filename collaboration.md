@@ -199,6 +199,21 @@ chose sinon. Constat du 27/10/2026 (ATELIERS) : « un mail de rappel sera
 envoyé » demandé dans la fenêtre « fiche bilan » aurait été faux pour un
 interrupteur éteint, un animateur sans adresse ou un atelier antérieur au
 01/11 ; la page reçoit désormais de l'API qui le recevra vraiment.
+40. **Un changement de format de données côté serveur protège les pages déjà
+ouvertes** : une page chargée avant le déploiement continue d'envoyer l'ancien
+format. Marquer le format (numéro de version) et faire refuser l'ancien par un
+message qui invite à recharger, plutôt que de l'accepter et de l'enregistrer de
+travers. Constat du 27/10/2026 (ATELIERS, AG-035, relevé par Codex) : les sujets
+d'avis à choix multiples, une page restée ouverte aurait envoyé un sujet unique.
+41. **Avant de conclure à une fuite d'accès d'après une capture, vérifier
+l'identité réelle de la session** (jeton, rôle côté serveur), pas le nom ou le
+sélecteur affichés à l'écran. Constat du 27/10/2026 (ATELIERS) : des ateliers
+« visibles sous Cynthia » venaient d'une session Admin avec le sélecteur de
+conseiller, pas d'une fuite.
+42. **Avant de faire basculer un interrupteur à l'utilisateur, dire tous ses
+effets**, pas seulement celui qu'il cherche. Constat du 27/10/2026 (ATELIERS) :
+couper « les rappels » pour suspendre les fiches bilan aurait aussi coupé les
+rappels de changement de statut ; l'utilisateur l'a relevé avant Claude.
 
 **Bonnes pratiques à maintenir**
 
