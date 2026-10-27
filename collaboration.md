@@ -192,6 +192,13 @@ plus spécifique peut écraser l'un sans toucher l'autre. Constat du
 le badge du menu ; l'utilisateur a dû préciser que c'était la tuile qui
 devait clignoter, et elle ne clignotait pas (une règle de la refonte UI
 l'écrasait silencieusement, sans lien avec le badge).
+39. **Un texte qui promet une action à l'usager (mail, rappel, envoi) ne
+s'affiche que si cette action aura lieu dans ce cas précis** : vérifier les
+conditions réelles (interrupteur, adresse, date de départ, rôle) et dire autre
+chose sinon. Constat du 27/10/2026 (ATELIERS) : « un mail de rappel sera
+envoyé » demandé dans la fenêtre « fiche bilan » aurait été faux pour un
+interrupteur éteint, un animateur sans adresse ou un atelier antérieur au
+01/11 ; la page reçoit désormais de l'API qui le recevra vraiment.
 
 **Bonnes pratiques à maintenir**
 
