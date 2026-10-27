@@ -202,9 +202,8 @@ qui demande encore une action :
 - **Critère 7 d'`agora.md`** (26/10/2026 : tout calcul ou chiffre affiché ouvre un bloc AGORA, contradicteur Codex) : propagé à NEWGEN, NextStep, GDINV2 (`98ce116`) et PAPPERBOARD (`dd4fe81`) le 26/10/2026 ; non propagé aux projets sans chiffre affiché (SMS-mail gelé, sms-mail-multi, pptx-creator, FICHES_MEMO_ACTION_KOLB) — à reposer si l'un d'eux se met à calculer.
 - **Règles 34 à 37 de `collaboration.md`** (compte rendu recoupé et
   attribué, passages réels d'une tâche programmée, moyen d'arrêt essayé en
-  réel) : propagées le 26/10/2026 dans les sept projets actifs (SMS-mail gelé,
-  non touché). Reste la **règle 38**, déjà dans sms-mail-multi seulement :
-  propagation à demander à l'utilisateur.
+  réel) et **38** (élément exact nommé) : propagées les 26 et 27/10/2026 dans
+  les sept projets actifs (SMS-mail gelé, non touché).
 - **Phrase de relais nommant le dépôt** (`agora.md` §4, corrigé le 22/10/2026,
   commit `d51effe`) : inscrite dans l'`AGORA.md` de GDINV2 seulement. Manque
   dans NEWGEN, NextStep, SMS-mail, sms-mail-multi, PAPPERBOARD,
