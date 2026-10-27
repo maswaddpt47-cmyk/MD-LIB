@@ -208,7 +208,9 @@ qui demande encore une action :
   NEWGEN, NextStep et sms-mail-multi seulement, les seuls qui envoient mails ou
   rappels (choix de l'utilisateur). À reposer si un autre projet se met à en
   envoyer. **Règles 40 à 42** (format serveur et pages ouvertes, identité réelle
-  avant de conclure à une fuite, effets d'un interrupteur) : pas encore propagées.
+  avant de conclure à une fuite, effets d'un interrupteur) : propagées le
+  27/10/2026 à NEWGEN et NextStep ; la 42 seule à sms-mail-multi (ni API ni
+  connexion). Les autres projets : à reposer s'ils en prennent le contexte.
 - **Phrase de relais nommant le dépôt** (`agora.md` §4, corrigé le 22/10/2026,
   commit `d51effe`) : inscrite dans l'`AGORA.md` de GDINV2 seulement. Manque
   dans NEWGEN, NextStep, SMS-mail, sms-mail-multi, PAPPERBOARD,
