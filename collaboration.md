@@ -215,6 +215,44 @@ effets**, pas seulement celui qu'il cherche. Constat du 27/10/2026 (ATELIERS) :
 couper « les rappels » pour suspendre les fiches bilan aurait aussi coupé les
 rappels de changement de statut ; l'utilisateur l'a relevé avant Claude.
 
+43. **Ne jamais chaîner un commit derrière un `git pull` avec `&&`, et relire
+`git log --oneline -2` après le push.** Constat du 27/10/2026 (GDINV2) :
+`git pull --rebase -q && git add … && git commit …` a échoué au pull
+(modifications non indexées). La chaîne s'est interrompue, un second bloc de
+commandes a poussé quand même, et **un test renforcé est parti sans le
+correctif qu'il devait valider** — l'inverse exact de ce qui était annoncé.
+Découvert par hasard dans un `git status` de tâche de fond. Séparer les
+commandes par des sauts de ligne, et vérifier que les commits attendus sont
+dans `HEAD` avant d'annoncer quoi que ce soit.
+
+44. **Un inventaire de ce qui existe ne prouve pas ce qui est impossible.**
+Constat du 27/10/2026 (GDINV2) : une note remise à une DSI affirmait
+qu'« aucun code n'est capable d'émettre une donnée ». Le recensement des
+mécanismes d'émission écrits dans le source était exact ; la conclusion était
+fausse, parce qu'un mécanisme peut être **introduit par les données
+elles-mêmes**. Une injection HTML par un champ importé a été démontrée le
+jour même par le contradicteur. Écrire ce qui a été vérifié et par quel
+moyen — jamais une impossibilité. Vaut pour tout document remis à un tiers :
+une affirmation trop large oblige à un rectificatif, plus coûteux que la
+prudence initiale.
+
+45. **Faire décrire l'environnement avant d'en analyser les contraintes.**
+Constat du 27/10/2026 (GDINV2) : « le site sera lancé depuis le cloud du
+CD47 » a été compris comme un hébergement web. Toute une analyse — en-têtes
+`Cache-Control`, cache-busting, configuration serveur — a été produite puis
+jetée : le « cloud » était un espace de stockage de fichiers, sans serveur.
+« Cloud », « serveur », « hébergement », « en ligne » ne désignent pas la même
+chose selon l'interlocuteur. Demander **comment le fichier s'ouvre**, pas où
+il est rangé.
+
+46. **Avant de produire un document de plus, demander s'il remplace ou s'il
+s'ajoute.** Constat du 27/10/2026 (GDINV2) : un rectificatif, puis une
+synthèse, puis une note consolidée ont été enchaînés sur le même sujet, et
+c'est l'utilisateur qui a dû demander « on a besoin de tous ces
+justificatifs ? ». Un destinataire qui reçoit trois documents doit réconcilier
+lui-même ce qu'ils disent : c'est son travail, pas le nôtre. Un document qui
+en remplace un autre le dit en tête et annule explicitement le précédent.
+
 **Bonnes pratiques à maintenir**
 
 20. Continuer à demander l'avis avant toute action à fort impact (déploiement, architecture, migration de données) et exécuter vite dès validation courte reçue.
