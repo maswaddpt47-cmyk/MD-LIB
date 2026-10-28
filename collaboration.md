@@ -253,6 +253,16 @@ justificatifs ? ». Un destinataire qui reçoit trois documents doit réconcilie
 lui-même ce qu'ils disent : c'est son travail, pas le nôtre. Un document qui
 en remplace un autre le dit en tête et annule explicitement le précédent.
 
+47. **Une règle se propage là où son contexte existe, pas partout par
+défaut.** Avant de propager, dire pour chaque projet si la règle s'y applique
+et pourquoi, puis proposer la liste ; les projets écartés sont notés dans
+`CLAUDE.md` (« Reste à propager ») avec la condition qui la rendrait utile.
+Constat du 27/10/2026 : la règle 39 (promesse d'un mail à l'usager) était
+insérée dans sept `CLAUDE.md` quand l'utilisateur a demandé « pourquoi les 7,
+elle ne concerne que cette session ? » ; seuls trois projets envoient des
+mails ou des rappels. Une règle sans objet dans un projet alourdit son
+`CLAUDE.md` sans rien protéger (`hygiene-instructions.md`).
+
 **Bonnes pratiques à maintenir**
 
 20. Continuer à demander l'avis avant toute action à fort impact (déploiement, architecture, migration de données) et exécuter vite dès validation courte reçue.
