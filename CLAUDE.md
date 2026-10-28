@@ -215,9 +215,8 @@ qui demande encore une action :
   GDINV2 du 27/10/2026) : chaînage git derrière un `pull` qui échoue, un
   inventaire ne prouve pas une impossibilité, décrire l'environnement avant
   d'en analyser les contraintes, un document de plus remplace ou s'ajoute.
-  **Propagation à demander à l'utilisateur.** La 44 et la 46 concernent tout
-  projet produisant des documents pour un tiers ; la 43 et la 45 valent
-  partout.
+  **Propagées le 28/10/2026** dans les sept projets actifs ; sms-mail-multi
+  n'a reçu que la 43 et la 45 (il ne produit pas de document pour un tiers).
 
 - **Phrase de relais nommant le dépôt** (`agora.md` §4, corrigé le 22/10/2026,
   commit `d51effe`) : inscrite dans l'`AGORA.md` de GDINV2 seulement. Manque
