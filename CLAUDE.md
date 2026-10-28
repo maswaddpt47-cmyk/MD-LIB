@@ -217,6 +217,9 @@ qui demande encore une action :
   d'en analyser les contraintes, un document de plus remplace ou s'ajoute.
   **Propagées le 28/10/2026** dans les sept projets actifs ; sms-mail-multi
   n'a reçu que la 43 et la 45 (il ne produit pas de document pour un tiers).
+- **Règle 47** (une règle se propage là où son contexte existe, 28/10/2026) :
+  elle porte sur la propagation elle-même, donc sur MD-LIB ; **reste ici**,
+  comme les règles 28 et 31.
 
 - **Phrase de relais nommant le dépôt** (`agora.md` §4, corrigé le 22/10/2026,
   commit `d51effe`) : inscrite dans l'`AGORA.md` de GDINV2 seulement. Manque
