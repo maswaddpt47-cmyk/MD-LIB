@@ -25,11 +25,14 @@ n'est pas fini, revérifier plus tard.
   l'utilisateur, une fois, dans les réglages de l'environnement).
 - **À la main**, si le hook n'a rien dit (session locale, environnement sans
   le Setup script) : `bash /home/user/MD-LIB/outils/attendre-deploiement.sh
-  <dossier-du-dépôt> [branche]`.
+  <dossier-du-dépôt> [branche|sha]`.
 
 Le script lit l'API GitHub Actions (jeton `$GITHUB_TOKEN` de la session s'il
-existe) ; il attend 8 minutes au plus, et répond « aucun workflow » au bout de
-90 s pour un dépôt sans CI.
+existe) et attend 8 minutes au plus. Il ignore les tâches planifiées et les
+lancements à la main, qui tournent sur le même sha. **Seul le code 0 (✅, sha
+nommé) autorise « en ligne »** : 1 échec, 2 pas fini, 3 rien vérifié (aucun
+workflow vu au bout de 90 s, branche ou sha introuvable, dépôt hors GitHub).
+Avant le 28/10/2026, ces derniers cas sortaient 0 en silence.
 
 ## Dans les projets
 
