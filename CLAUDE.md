@@ -217,6 +217,13 @@ qui demande encore une action :
   d'en analyser les contraintes, un document de plus remplace ou s'ajoute.
   **Propagées le 28/10/2026** dans les sept projets actifs ; sms-mail-multi
   n'a reçu que la 43 et la 45 (il ne produit pas de document pour un tiers).
+- **Règles 48 à 50 de `collaboration.md`** (28/10/2026, nées de la session
+  GDINV2 du 28/10/2026) : pas de statut dans un nom de fichier, document non
+  remis corrigé sur place, visibilité d'un dépôt vérifiée avant d'y archiver.
+  **Propagation à proposer à l'utilisateur** (règle 47) : 48 et 49 là où l'on
+  produit des documents pour un tiers (GDINV2, et sans doute NEWGEN et
+  NextStep) ; 50 dans GDINV2 (public, Pages publie `path: '.'`), ailleurs
+  seulement si un dépôt public y reçoit des documents.
 - **Règle 47** (une règle se propage là où son contexte existe, 28/10/2026) :
   elle porte sur la propagation elle-même, donc sur MD-LIB ; **reste ici**,
   comme les règles 28 et 31.

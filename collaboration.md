@@ -263,6 +263,30 @@ elle ne concerne que cette session ? » ; seuls trois projets envoient des
 mails ou des rappels. Une règle sans objet dans un projet alourdit son
 `CLAUDE.md` sans rien protéger (`hygiene-instructions.md`).
 
+48. **Pas de statut dans un nom de fichier.** Le nom dit ce qu'est le
+document (« Note technique V1 », « Rectificatif »), jamais ce qu'il est
+devenu (« REMPLACE », « PERIMEE ») : le statut est porté par le dossier
+(« Historique — ne pas rediffuser ») et par le sommaire. Constat du
+28/10/2026 (GDINV2, dossier DSI) : les suffixes « REMPLACE » ont égaré
+l'utilisateur, d'autant que le document de remplacement ne portait pas le
+libellé d'origine.
+
+49. **Un document pas encore remis se corrige sur place.** Ni numéro de
+version supplémentaire, ni mention « mise à jour le… », ni brouillon gardé en
+historique : on ne date, ne numérote et n'archive que ce qui a été remis à
+quelqu'un. Demander d'abord « a-t-il déjà été remis ? ». Constat du
+28/10/2026 (GDINV2) : une note V2 corrigée avant remise a failli devenir une
+« V3 », avec deux brouillons rangés en historique et une mention de mise à
+jour qui ne signifiait rien pour un destinataire n'ayant jamais vu la
+version précédente.
+
+50. **Avant d'archiver un document dans un dépôt, vérifier sa visibilité et
+ce que son déploiement publie.** Constat du 28/10/2026 (GDINV2) : le dépôt
+est public et son déploiement GitHub Pages publie tout le dépôt
+(`path: '.'`) ; un PDF destiné au DSI y aurait été lisible sur Internet. Un
+document pour un tiers va dans un dépôt privé (pour GDINV2 :
+`GDINV2-BACKUP`), et jamais une donnée personnelle, même là.
+
 **Bonnes pratiques à maintenir**
 
 20. Continuer à demander l'avis avant toute action à fort impact (déploiement, architecture, migration de données) et exécuter vite dès validation courte reçue.
