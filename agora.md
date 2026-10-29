@@ -427,7 +427,9 @@ l'utilisateur (aucune notification entre les deux outils), deux IA qui
 modifient le même code se défont l'une l'autre, Codex qui lirait nos
 conclusions perdrait son regard neuf, et la charte IA du CD47 demande la
 sobriété (§10) et la vérification des outils autorisés (§8, question ouverte
-au 06/10/2026). Codex ne modifie jamais le code : il relit, Claude corrige.
+au 06/10/2026). Codex ne modifie jamais le code : il relit, Claude corrige —
+**sauf demande explicite de l'utilisateur** (29/10/2026, retrait du `motif` et
+du JSON dans GDINV2) : Claude relit alors le diff de Codex avant publication.
 
 ## 13. Installation systématique dans chaque projet (17/10/2026)
 
