@@ -287,6 +287,20 @@ est public et son déploiement GitHub Pages publie tout le dépôt
 document pour un tiers va dans un dépôt privé (pour GDINV2 :
 `GDINV2-BACKUP`), et jamais une donnée personnelle, même là.
 
+51. **Pas plus de 60 secondes sans nouvelles pendant une tâche.** Donner un
+point utile (acquis, obstacle, prochaine action) au moins toutes les minutes,
+même quand rien ne bloque. Constat du 19/10/2026 (PAPPERBOARD) : six minutes de
+travail muet sur le ménage de `CHANTIERS.md`, l'utilisateur a cru la session
+bloquée et a refusé la commande suivante.
+
+52. **Une attente longue se fait en arrière-plan, la main rendue à
+l'utilisateur.** CI, déploiement, file d'attente : annoncer la durée attendue,
+lancer la surveillance en arrière-plan, répondre tout de suite, revenir quand
+elle se termine. Jamais une boucle d'attente de plusieurs minutes au premier
+plan. Constat du 19/10/2026 (PAPPERBOARD) : deux attentes de CI au premier plan
+interrompues par l'utilisateur (« ça prend trop de temps », « tu es en train
+de bloquer Codex »).
+
 **Bonnes pratiques à maintenir**
 
 20. Continuer à demander l'avis avant toute action à fort impact (déploiement, architecture, migration de données) et exécuter vite dès validation courte reçue.
