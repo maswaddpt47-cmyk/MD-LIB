@@ -237,6 +237,11 @@ qui demande encore une action :
   sans cette phrase sous les yeux omet le dépôt : le contradicteur ouvre alors
   l'AGORA de l'endroit où il se trouve, et chaque projet a sa propre
   numérotation.
+- **Exception Codex du §12** (29/10/2026 : Codex modifie le code sur demande
+  explicite de l'utilisateur, diff relu par Claude avant publication) : à
+  propager dans GDINV2 seulement (`AGORA.md:113`, « Codex ne modifie jamais le
+  code »), choix de l'utilisateur ; pas faite le 29/10, GDINV2 n'était ouvert
+  qu'en lecture dans la session.
 - **Test d'auto-suffisance du §9** non passé pour SMS-mail, sms-mail-multi,
   pptx-creator, FICHES_MEMO_ACTION_KOLB et PAPPERBOARD.
 
