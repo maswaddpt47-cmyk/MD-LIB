@@ -104,3 +104,7 @@ Référentiel : `maswaddpt47-cmyk/MD-LIB`, notamment `collaboration.md`,
 `git-workflow.md`, `hygiene-instructions.md`, `rgpd-securite.md`,
 `deploiement.md` et `agora.md`. Les outils ou hooks propres à Claude Code
 ne sont pas supposés installés dans Codex ; vérifier les capacités disponibles.
+
+Références canoniques communes aux projets actuels et futurs (choix de
+l'utilisateur du 29/10/2026) : `archivage-cd47.md`, `charte-ia-cd47.md`,
+`charte-graphique-cd47.md`, `rgpd-securite.md`. Index et portée : `README.md`.

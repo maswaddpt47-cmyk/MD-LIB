@@ -1,6 +1,6 @@
 # CHANTIERS — relais vers le projet
 
-État au **28/10/2026**.
+État au **29/10/2026**.
 
 **Ménage du 26/10/2026** : récits des propagations des 21 et 25/10 (règles 22
 et 23 de `collaboration.md`, choix des annonces « Nouveautés ») retirés —

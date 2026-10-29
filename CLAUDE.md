@@ -240,9 +240,13 @@ qui demande encore une action :
 - **Test d'auto-suffisance du §9** non passé pour SMS-mail, sms-mail-multi,
   pptx-creator, FICHES_MEMO_ACTION_KOLB et PAPPERBOARD.
 
-Tranché et à ne pas reproposer : les résumés `charte-ia-cd47.md` et
-`archivage-cd47.md` ne sont renvoyés que depuis NEWGEN et NextStep — ailleurs
-la ligne de `rgpd-securite.md` suffit (choix de l'utilisateur, 06/10/2026).
+**Références communes — choix de l'utilisateur du 29/10/2026** :
+`archivage-cd47.md`, `charte-ia-cd47.md`, `charte-graphique-cd47.md` et
+`rgpd-securite.md` servent de références à tous les projets actuels et futurs,
+pas seulement GDINV2. Cela remplace la restriction du 06/10/2026 à NEWGEN et
+NextStep. Leur index canonique est dans `README.md` ; ne pas dupliquer les
+résumés. Les règles institutionnelles et la charte graphique s'appliquent
+selon le contexte du projet, sans imposer l'identité CD47 aux projets personnels.
 
 ## Workflow git de ce repo
 
