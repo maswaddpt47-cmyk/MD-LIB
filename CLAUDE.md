@@ -224,6 +224,12 @@ qui demande encore une action :
   produit des documents pour un tiers (GDINV2, et sans doute NEWGEN et
   NextStep) ; 50 dans GDINV2 (public, Pages publie `path: '.'`), ailleurs
   seulement si un dépôt public y reçoit des documents.
+- **Règles 53 et 54 de `collaboration.md`** (29/10/2026, nées de la session
+  GDINV2 : test de sécurité par la vraie voie d'entrée avec assertion de garde ;
+  état de remise écrit d'après la déclaration de l'utilisateur) : **propagation à
+  proposer à l'utilisateur** (règle 47) : 53 dans GDINV2, NEWGEN, NextStep (ils ont
+  un test « contenu hostile ») et PAPPERBOARD ; 54 dans GDINV2, NEWGEN, NextStep
+  (documents remis au DSI). Pas faite.
 - **Règle 47** (une règle se propage là où son contexte existe, 28/10/2026) :
   elle porte sur la propagation elle-même, donc sur MD-LIB ; **reste ici**,
   comme les règles 28 et 31.

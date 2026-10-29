@@ -301,6 +301,23 @@ plan. Constat du 19/10/2026 (PAPPERBOARD) : deux attentes de CI au premier plan
 interrompues par l'utilisateur (« ça prend trop de temps », « tu es en train
 de bloquer Codex »).
 
+53. **Un test de sécurité emprunte la vraie voie d'entrée et prouve qu'il est
+arrivé à l'endroit testé.** Importer par le même chemin que l'utilisateur
+(fichier réel, pas une injection de données directe), choisir des valeurs
+réellement proposées par l'interface, et ajouter une assertion de garde (l'écran
+visé est ouvert, le texte attendu est affiché) : sans elle, un test qui sort en
+silence valide du code vulnérable. Constat du 29/10/2026 (GDINV2) : le test
+« contenu hostile » importait un JSON et choisissait une structure absente de la
+liste, le Diapo rapport ne s'ouvrait pas ; trois injections dans le bilan sont
+passées, relevées ensuite par l'audit Codex.
+54. **Un état de remise ou de dépôt s'écrit d'après la déclaration de
+l'utilisateur, jamais d'après un document.** « Remis au DSI », « déposé sur le
+cloud », « en ligne chez un tiers » : le dire comme *déclaré, non vérifié*, et
+demander avant de choisir entre corriger sur place (règle 49) et publier une
+version qui annule la précédente. Constat du 29/10/2026 (GDINV2) : le
+`SOMMAIRE.txt` écrivait « V2 pas encore remise », elle l'était ; corriger sur
+place aurait laissé deux versions contradictoires chez le destinataire.
+
 **Bonnes pratiques à maintenir**
 
 20. Continuer à demander l'avis avant toute action à fort impact (déploiement, architecture, migration de données) et exécuter vite dès validation courte reçue.

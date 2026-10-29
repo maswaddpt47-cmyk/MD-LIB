@@ -7,6 +7,13 @@ et 23 de `collaboration.md`, choix des annonces « Nouveautés ») retirés —
 commits listés dans `git log -p CHANTIERS.md`. Ce qui reste à propager est
 tenu dans `CLAUDE.md`, section « Reste à propager » (règle 34 comprise).
 
+## Reprise GDINV2 (29/10/2026)
+
+La passation est dans **`GDINV2/CHANTIERS.md` sur `main`** (en tête : « À faire en
+premier ») et dans `GDINV2-BACKUP/INVENTAIRE.md`. Ici : règles **53 et 54** de
+`collaboration.md` inscrites, **propagation à proposer** (voir `CLAUDE.md`,
+« Reste à propager »). L'exception Codex du §12 est propagée dans GDINV2.
+
 ## Branches à ne pas reprendre
 
 - **PAPPERBOARD `codex/regles-collaboration`** : périmée. `AGENTS.md` est sur
