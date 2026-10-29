@@ -431,6 +431,14 @@ au 06/10/2026). Codex ne modifie jamais le code : il relit, Claude corrige —
 **sauf demande explicite de l'utilisateur** (29/10/2026, retrait du `motif` et
 du JSON dans GDINV2) : Claude relit alors le diff de Codex avant publication.
 
+**Exception pour la réponse elle-même** (décision de l'utilisateur, 29/10/2026) :
+recopier à la main chaque réponse de Codex ne se justifiait plus. L'utilisateur peut
+l'autoriser, dans la phrase de relais, à **ajouter sa réponse dans `AGORA.md`** et à
+la pousser sur `main` : un seul fichier, ajout seulement, jamais le code. La session
+qui a ouvert le bloc contrôle `git show --stat` (seul `AGORA.md`) et `git diff` (aucune
+ligne retirée) avant de commenter ; sinon elle annule et inscrit la réponse à la main.
+Phrase type : `AGORA.md` de GDINV2, section « Contradicteur Codex ».
+
 ## 13. Installation systématique dans chaque projet (17/10/2026)
 
 Décision de l'utilisateur, 17/10/2026 : **tout projet a son AGORA**, installée à
