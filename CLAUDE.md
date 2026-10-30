@@ -182,8 +182,10 @@ qui demande encore une action :
 - **`deploiement.md`** : ligne de rappel posée dans SMS-mail, sms-mail-multi,
   GDINV2 et PAPPERBOARD seulement ; manque dans les autres. **Script de
   configuration** (nom français du Setup script) **collé le 30/10/2026 dans
-  l'environnement « Micky »** d'après l'utilisateur, non vérifié : à la
-  prochaine session, contrôler `grep attendre-deploiement ~/.claude/settings.json`.
+  l'environnement « Micky »** ; **vérifié le 30/10/2026** dans une session
+  neuve : hook `PostToolUse` présent dans `~/.claude/settings.json`, script
+  trouvé, muet hors `git push` et sans push récent. Reste à le voir rapporter
+  après un vrai push sur une branche publiée.
 - **Règles 2 et 17 de `collaboration.md`** : pas propagées à PPTX-CREATOR
   (attache refusée par la plateforme ; l'utilisateur y renonce le 17/10/2026, ne plus le
   proposer).
