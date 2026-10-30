@@ -186,6 +186,10 @@ qui demande encore une action :
   neuve : hook `PostToolUse` présent dans `~/.claude/settings.json`, script
   trouvé, muet hors `git push` et sans push récent, et rapport ✅ reçu
   automatiquement après le push de `d0b4b71` sur `main` (Pages : success).
+  Le script vaut **par environnement et par compte** : à coller aussi dans
+  l'environnement utilisé sur le **second compte** de l'utilisateur (non fait
+  au 30/10/2026). Les trois autres environnements du compte « Micky »
+  (deux « Claude », « Michel Aswad ») ne l'ont pas.
 - **Règles 2 et 17 de `collaboration.md`** : pas propagées à PPTX-CREATOR
   (attache refusée par la plateforme ; l'utilisateur y renonce le 17/10/2026, ne plus le
   proposer).
