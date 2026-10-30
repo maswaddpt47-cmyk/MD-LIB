@@ -220,23 +220,24 @@ qui demande encore une action :
 - **Règles 48 à 50 de `collaboration.md`** (28/10/2026, nées de la session
   GDINV2 du 28/10/2026) : pas de statut dans un nom de fichier, document non
   remis corrigé sur place, visibilité d'un dépôt vérifiée avant d'y archiver.
-  **Propagation à proposer à l'utilisateur** (règle 47) : 48 et 49 là où l'on
-  produit des documents pour un tiers (GDINV2, et sans doute NEWGEN et
-  NextStep) ; 50 dans GDINV2 (public, Pages publie `path: '.'`), ailleurs
-  seulement si un dépôt public y reçoit des documents.
+  **Propagées le 30/10/2026** : 48 et 49 à GDINV2 (`c52ee0b`), NEWGEN
+  (règles 40 et 41, `3729d77`) et NextStep (règles 40 et 41, `6cbcac6`) ; 50 à
+  GDINV2 seul (public, Pages publie `path: '.'`). Ailleurs : à reposer si un
+  projet se met à produire des documents pour un tiers ou à en archiver dans
+  un dépôt public.
 - **Règles 53 et 54 de `collaboration.md`** (29/10/2026, nées de la session
   GDINV2) : **propagées le 29/10/2026** à GDINV2 (puces, `c2bb3d9`), NEWGEN
-  (règles 38 et 39, `2929a95`) et NextStep (règles 38 et 39, `7ecd158`). Non
-  propagées : PAPPERBOARD (53 : il a un test hostile, à reposer à la prochaine
-  session dessus), les autres projets (pas de document remis à un tiers).
+  (règles 38 et 39, `2929a95`) et NextStep (règles 38 et 39, `7ecd158`) ; la
+  53 à PAPPERBOARD le 30/10/2026 (`5779223`, son test hostile). Non propagées
+  ailleurs (pas de document remis à un tiers, pas de test de sécurité).
 - **Règle 47** (une règle se propage là où son contexte existe, 28/10/2026) :
   elle porte sur la propagation elle-même, donc sur MD-LIB ; **reste ici**,
   comme les règles 28 et 31.
 
 - **Règles 55 et 56 de `collaboration.md`** (30/10/2026, nées de la session sms-mail-multi, **inscrites sur accord de l'utilisateur**) + précision de la règle 8bis (conversion horaire par
-  commande) : un test se vérifie par mutation ; « pull » après des modifications hors session met `CHANTIERS.md` à jour. Copiées dans le `CLAUDE.md` de sms-mail-multi seulement.
-  **Propagation à proposer** aux autres projets (règle 47) : la 55 vaut partout où l'on écrit des tests de calcul (NEWGEN, NextStep, GDINV2, PAPPERBOARD) ; la 56 partout où un
-  `CHANTIERS.md` existe (tous les projets actifs) ; la précision 8bis partout.
+  commande) : un test se vérifie par mutation ; « pull » après des modifications hors session met `CHANTIERS.md` à jour. **Propagées le 30/10/2026** dans les sept
+  projets actifs : la 55 là où l'on écrit des tests de calcul (sms-mail-multi, NEWGEN, NextStep, GDINV2, PAPPERBOARD) ; la 56 et la précision 8bis partout
+  (FICHES_MEMO_ACTION_KOLB et PPTX-CREATOR compris, pptx-creator attaché sans refus cette fois). La 55 est à reposer si FICHES ou PPTX-CREATOR se dotent de tests de calcul.
 - **Phrase de relais nommant le dépôt** (`agora.md` §4, corrigé le 22/10/2026,
   commit `d51effe`) : inscrite dans l'`AGORA.md` de GDINV2 et de sms-mail-multi
   (30/10/2026, `0585761`). Manque
