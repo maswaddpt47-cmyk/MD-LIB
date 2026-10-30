@@ -233,9 +233,10 @@ qui demande encore une action :
   elle porte sur la propagation elle-même, donc sur MD-LIB ; **reste ici**,
   comme les règles 28 et 31.
 
-- **Consigne « pull après des modifications hors session »** (30/10/2026, posée par l'utilisateur dans le `CLAUDE.md` de sms-mail-multi : sur « pull », lire le diff arrivé
-  depuis la base de `CHANTIERS.md` et le mettre à jour, en-tête compris ; l'utilisateur dit aussi ce qui reste hors dépôt) : **propagation à proposer à l'utilisateur** (règle 47) ; en
-  attente aussi, deux règles proposées le même jour (`CHANTIERS.md` de sms-mail-multi, « Décisions à trancher ») : un test se vérifie par mutation ; une heure se convertit par commande.
+- **Règles 55 et 56 de `collaboration.md`** (30/10/2026, nées de la session sms-mail-multi, **inscrites sur accord de l'utilisateur**) + précision de la règle 8bis (conversion horaire par
+  commande) : un test se vérifie par mutation ; « pull » après des modifications hors session met `CHANTIERS.md` à jour. Copiées dans le `CLAUDE.md` de sms-mail-multi seulement.
+  **Propagation à proposer** aux autres projets (règle 47) : la 55 vaut partout où l'on écrit des tests de calcul (NEWGEN, NextStep, GDINV2, PAPPERBOARD) ; la 56 partout où un
+  `CHANTIERS.md` existe (tous les projets actifs) ; la précision 8bis partout.
 - **Phrase de relais nommant le dépôt** (`agora.md` §4, corrigé le 22/10/2026,
   commit `d51effe`) : inscrite dans l'`AGORA.md` de GDINV2 et de sms-mail-multi
   (30/10/2026, `0585761`). Manque
