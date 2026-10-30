@@ -184,8 +184,8 @@ qui demande encore une action :
   configuration** (nom français du Setup script) **collé le 30/10/2026 dans
   l'environnement « Micky »** ; **vérifié le 30/10/2026** dans une session
   neuve : hook `PostToolUse` présent dans `~/.claude/settings.json`, script
-  trouvé, muet hors `git push` et sans push récent. Reste à le voir rapporter
-  après un vrai push sur une branche publiée.
+  trouvé, muet hors `git push` et sans push récent, et rapport ✅ reçu
+  automatiquement après le push de `d0b4b71` sur `main` (Pages : success).
 - **Règles 2 et 17 de `collaboration.md`** : pas propagées à PPTX-CREATOR
   (attache refusée par la plateforme ; l'utilisateur y renonce le 17/10/2026, ne plus le
   proposer).
