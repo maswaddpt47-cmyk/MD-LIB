@@ -199,7 +199,7 @@ qui demande encore une action :
   l'utilisateur** ; NextStep porte les mêmes fichiers, pas encore vérifié.
   Pas propagée : PAPPERBOARD (projet personnel, chiffres vus des participants,
   audits Codex déjà passés), autres projets sans chiffre diffusé aux élus.
-- **Critère 7 d'`agora.md`** (26/10/2026 : tout calcul ou chiffre affiché ouvre un bloc AGORA, contradicteur Codex) : propagé à NEWGEN, NextStep, GDINV2 (`98ce116`) et PAPPERBOARD (`dd4fe81`) le 26/10/2026 ; non propagé aux projets sans chiffre affiché (SMS-mail gelé, sms-mail-multi, pptx-creator, FICHES_MEMO_ACTION_KOLB) — à reposer si l'un d'eux se met à calculer.
+- **Critère 7 d'`agora.md`** (26/10/2026 : tout calcul ou chiffre affiché ouvre un bloc AGORA, contradicteur Codex) : propagé à NEWGEN, NextStep, GDINV2 (`98ce116`) et PAPPERBOARD (`dd4fe81`) le 26/10/2026 ; **sms-mail-multi le 30/10/2026** (`0585761` : il calcule des taux et un bilan imprimé ; 9 blocs AG-004 à AG-011, Codex contradicteur) ; non propagé aux projets sans chiffre affiché (SMS-mail gelé, pptx-creator, FICHES_MEMO_ACTION_KOLB) — à reposer si l'un d'eux se met à calculer.
 - **Règles 34 à 37 de `collaboration.md`** (compte rendu recoupé et
   attribué, passages réels d'une tâche programmée, moyen d'arrêt essayé en
   réel) et **38** (élément exact nommé) : propagées les 26 et 27/10/2026 dans
@@ -233,9 +233,13 @@ qui demande encore une action :
   elle porte sur la propagation elle-même, donc sur MD-LIB ; **reste ici**,
   comme les règles 28 et 31.
 
+- **Consigne « pull après des modifications hors session »** (30/10/2026, posée par l'utilisateur dans le `CLAUDE.md` de sms-mail-multi : sur « pull », lire le diff arrivé
+  depuis la base de `CHANTIERS.md` et le mettre à jour, en-tête compris ; l'utilisateur dit aussi ce qui reste hors dépôt) : **propagation à proposer à l'utilisateur** (règle 47) ; en
+  attente aussi, deux règles proposées le même jour (`CHANTIERS.md` de sms-mail-multi, « Décisions à trancher ») : un test se vérifie par mutation ; une heure se convertit par commande.
 - **Phrase de relais nommant le dépôt** (`agora.md` §4, corrigé le 22/10/2026,
-  commit `d51effe`) : inscrite dans l'`AGORA.md` de GDINV2 seulement. Manque
-  dans NEWGEN, NextStep, SMS-mail, sms-mail-multi, PAPPERBOARD,
+  commit `d51effe`) : inscrite dans l'`AGORA.md` de GDINV2 et de sms-mail-multi
+  (30/10/2026, `0585761`). Manque
+  dans NEWGEN, NextStep, SMS-mail, PAPPERBOARD,
   FICHES_MEMO_ACTION_KOLB et PPTX-CREATOR. **À faire au fil des sessions**,
   quand on travaille déjà dans le projet (choix de l'utilisateur, 22/10/2026 —
   ne pas attacher sept dépôts pour une ligne). Une session qui ouvre un bloc
