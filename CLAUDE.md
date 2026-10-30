@@ -180,8 +180,10 @@ qui demande encore une action :
 - **Captures envoyées à Claude** (`rgpd-securite.md`) : pas propagée à
   FICHES_MEMO_ACTION_KOLB (dépôt non attaché le 06/10/2026).
 - **`deploiement.md`** : ligne de rappel posée dans SMS-mail, sms-mail-multi,
-  GDINV2 et PAPPERBOARD seulement ; manque dans les autres. **Hook non
-  installé** (Setup script pas encore collé par l'utilisateur).
+  GDINV2 et PAPPERBOARD seulement ; manque dans les autres. **Script de
+  configuration** (nom français du Setup script) **collé le 30/10/2026 dans
+  l'environnement « Micky »** d'après l'utilisateur, non vérifié : à la
+  prochaine session, contrôler `grep attendre-deploiement ~/.claude/settings.json`.
 - **Règles 2 et 17 de `collaboration.md`** : pas propagées à PPTX-CREATOR
   (attache refusée par la plateforme ; l'utilisateur y renonce le 17/10/2026, ne plus le
   proposer).
