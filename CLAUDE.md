@@ -210,7 +210,7 @@ qui demande encore une action :
   lui-même, le rythme des blocs) ne se reproduit pas dans un projet.
 - **`scripts/check-chantiers.sh`** : manque dans SMS-mail et sms-mail-multi
   (reporté par l'utilisateur) ; hook refusé à Claude dans PAPPERBOARD.
-- **Règle 57 — conception des statistiques (31/10/2026)** : source canonique dans `collaboration.md` et `chiffres-diffuses.md` §0 ; création des nouveaux projets couverte ci-dessus. Pas de propagation aux projets existants dans cette livraison ; examiner leur contexte avant toute copie, conformément à la règle 47. Le chantier statistique de sms-mail-multi reste en réflexion séparée, sans modification de son code.
+- **Règle 57 — conception des statistiques (31/10/2026)**, précisée le même jour (section « Chiffres » contrôlable, format de date unique et tests au déploiement, nouvelle donnée d'un projet existant) : **propagée le 31/10/2026** sous la forme « nouvelle donnée enregistrée » à sms-mail-multi (8trevicies, `1e825b2`), GDINV2 (`14288d8`), NEWGEN (règle 44, `d3e57e3`), NextStep (règle 44, `e207c10`) et PAPPERBOARD (`34689f4`). Non propagée : FICHES_MEMO_ACTION_KOLB et PPTX-CREATOR (aucune donnée enregistrée qu'on compte ; à reposer s'ils en enregistrent), SMS-mail (gelé). La section « Chiffres » ne s'impose qu'aux nouveaux projets.
 - **`chiffres-diffuses.md` / règle 33** (20/10/2026) : propagée à GDINV2
   (section « Chiffres diffusés », 5 familles de tests posées). NEWGEN : tests
   de concordance ajoutés (PR #35), écart de « taux de présence » entre
