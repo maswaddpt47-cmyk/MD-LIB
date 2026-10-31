@@ -6,10 +6,34 @@ supprimait 76 demandes, un réimport qui ajoutait 41 % de lignes, un « taux de
 complétion » à 100 % qui mesurait la présence d'une date). Des élus et la
 hiérarchie lisent ces chiffres : une suite verte ne suffit pas.
 
-**S'applique à tout projet dont un écran, un export ou une diapositive projette
-des calculs ou des statistiques** vers d'autres personnes que l'utilisateur
-(GDINV2, ATELIERS_NEWGEN, NextStep, WoocLight…). Un projet sans chiffre diffusé
-n'en a pas besoin — ne pas copier par principe (`hygiene-instructions.md`).
+**Deux portées complémentaires** : le §0 s’applique à la conception de tout
+nouveau projet (règle 57 de `collaboration.md`). Les §1 à §4 s’appliquent aux
+projets dont un écran, un export ou une diapositive diffuse des calculs ou
+statistiques à d’autres personnes que l’utilisateur. L’examen à la conception
+n’impose pas un audit de diffusion à un projet qui ne diffuse aucun chiffre.
+
+## 0. Dès la conception : préserver la possibilité de chiffres fiables
+
+Principe utilisateur du 31/10/2026, à la suite des retours de GDINV2 et
+sms-mail-multi : examiner les besoins de mesure possibles avant de figer le
+modèle de données, même sans écran de statistiques prévu. Pour les besoins
+pertinents, consigner dans le projet :
+
+- les faits comptés, unités, populations et dates de référence de chaque
+  indicateur envisagé ; distinguer rendez-vous, personnes, places et actions ;
+- les identités stables et la provenance des faits ; distinguer préparation,
+  copie, envoi confirmé et information inconnue, sans les déduire les uns des autres ;
+- la validation avant écriture, le traitement des échecs d’enregistrement et
+  la préservation des données lors des imports, réimports et archivages ;
+- les contrôles permettant de recompter les résultats et de vérifier la valeur
+  réellement affichée ; pour les agrégats conservés, définition/version,
+  numérateurs, dénominateurs et inconnus nécessaires à leur justification.
+
+Le dispositif reste proportionné aux besoins du projet. Cet examen n’impose
+ni tableau de bord, ni journal exhaustif, ni nouvelle dépendance. Respecter
+la minimisation et les durées de conservation : ne pas accumuler de données
+personnelles « au cas où ». Une origine historique inconnue reste inconnue ;
+la règle n’autorise aucune reconstruction de faits anciens.
 
 ## 1. Codex audite avant toute diffusion
 

@@ -26,7 +26,7 @@ ce projet, sans avoir à attacher MD-LIB à chaque fois.
 | `charte-ia-cd47.md` | Résumé des 11 consignes d'utilisation de l'IA du CD47 (données personnelles, identifiants, relecture humaine, sobriété…) et ce qu'elles changent dans nos projets. Le PDF interne fait foi, non publié ici (dépôt public). Référence, pas une règle à copier |
 | `archivage-cd47.md` | Résumé du guide « Archivage et protection des données personnelles » du CD47 : DUC/DUA, tableau de gestion, visa des Archives départementales pour toute élimination (purges automatiques comprises), nommage V0.x/V1. Le PDF interne fait foi, non publié ici. Référence, pas une règle à copier |
 | `charte-graphique-cd47.md` | Charte graphique du CD47 en texte : couleurs officielles (bleu `#4389BD`…), polices (Capriola, Verdana), règles du logo, fichiers à utiliser. **À lire avant toute production aux couleurs du CD47.** Le PDF source `charte-graphique-cd47.pdf` fait foi. Référence, pas une règle à copier : un projet la cite et s'y conforme |
-| `chiffres-diffuses.md` | Tout projet dont les calculs ou statistiques sont montrés aux élus ou à la hiérarchie : audit Codex sur l'export réel avant diffusion, cinq familles de tests (parcours idempotent, même population, recomptage indépendant, provenance, unité), tableau « affiché / recompté / écart ». Posé le 20/10/2026 après l'audit de GDINV2 (251 tests verts, 14 défauts de calcul). Règle 33 de `collaboration.md` |
+| `chiffres-diffuses.md` | §0 : anticiper les statistiques dès la conception de tout nouveau projet (règle 57). §1–4 : audit Codex avant diffusion, cinq familles de tests et tableau « affiché / recompté / écart » (règle 33). La conception est proportionnée ; l’audit de diffusion garde sa portée propre. |
 | `deploiement.md` + `outils/` | Ne jamais annoncer « en ligne » avant le ✅ de `outils/attendre-deploiement.sh` (workflows GitHub Actions du commit poussé). Déclenché après chaque `git push` par un hook que le Setup script de l'environnement installe (`outils/script-demarrage.sh`, à coller par l'utilisateur). Rien à copier dans les projets : une ligne de rappel dans leur `CLAUDE.md` suffit |
 
 **À lire en premier** quand on s'apprête à ajouter une règle quelque part :
@@ -48,6 +48,13 @@ Tout projet a son `AGORA.md` et sa section « AGORA » dans son `CLAUDE.md`
 avant le premier commit de code ; une session qui découvre un projet sans AGORA
 l'installe et le dit au premier message. Seule exception : un jumeau qui partage
 l'`AGORA.md` de l'autre et le dit dans son `CLAUDE.md`.
+
+**Nouveau projet — statistiques anticipées dès la conception** : appliquer
+`collaboration.md` règle 57 et `chiffres-diffuses.md` §0 avant de figer le
+modèle de données. Consigner les choix pertinents dans les instructions du
+projet, même si aucun tableau de bord n’est demandé ; dispositif proportionné,
+sans collecte préventive inutile. Cette anticipation complète l’audit avant
+diffusion, elle ne le remplace pas.
 
 ## Règle de propagation — la plus importante
 
@@ -200,6 +207,7 @@ qui demande encore une action :
   lui-même, le rythme des blocs) ne se reproduit pas dans un projet.
 - **`scripts/check-chantiers.sh`** : manque dans SMS-mail et sms-mail-multi
   (reporté par l'utilisateur) ; hook refusé à Claude dans PAPPERBOARD.
+- **Règle 57 — conception des statistiques (31/10/2026)** : source canonique dans `collaboration.md` et `chiffres-diffuses.md` §0 ; création des nouveaux projets couverte ci-dessus. Pas de propagation aux projets existants dans cette livraison ; examiner leur contexte avant toute copie, conformément à la règle 47. Le chantier statistique de sms-mail-multi reste en réflexion séparée, sans modification de son code.
 - **`chiffres-diffuses.md` / règle 33** (20/10/2026) : propagée à GDINV2
   (section « Chiffres diffusés », 5 familles de tests posées). NEWGEN : tests
   de concordance ajoutés (PR #35), écart de « taux de présence » entre

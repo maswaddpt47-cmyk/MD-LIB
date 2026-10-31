@@ -1,11 +1,21 @@
 # CHANTIERS — relais vers le projet
 
-État au **29/10/2026**.
+État au **31/10/2026**, base `main` (`9d06ff1`).
 
 **Ménage du 26/10/2026** : récits des propagations des 21 et 25/10 (règles 22
 et 23 de `collaboration.md`, choix des annonces « Nouveautés ») retirés —
 commits listés dans `git log -p CHANTIERS.md`. Ce qui reste à propager est
 tenu dans `CLAUDE.md`, section « Reste à propager » (règle 34 comprise).
+
+## Conception des statistiques — règle commune du 31/10/2026
+
+Principe demandé par l’utilisateur : tout nouveau projet peut produire des
+statistiques ; y réfléchir dès la conception. Source canonique :
+`collaboration.md` règle 57 et `chiffres-diffuses.md` §0 ; rappel dans la
+création des projets de `CLAUDE.md`. Conserver une approche proportionnée,
+la minimisation des données et le traitement explicite des inconnus.
+L’audit avant diffusion (règle 33) reste distinct. Les projets existants
+n’ont pas été modifiés ; suivi de propagation dans `CLAUDE.md`.
 
 ## Reprise GDINV2 (29/10/2026)
 
