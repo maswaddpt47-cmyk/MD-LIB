@@ -268,7 +268,7 @@ qui demande encore une action :
   l'AGORA de l'endroit où il se trouve, et chaque projet a sa propre
   numérotation.
   **Phrase de relais pour Codex** (autorisation limitée à l'ajout de sa réponse
-  dans `AGORA.md`, 29/10/2026, `agora.md` §12) : inscrite dans GDINV2 seulement,
+  dans `AGORA.md`, 29/10/2026, `agora.md` §12) : inscrite dans GDINV2 et sms-mail-multi (31/10/2026),
   à reprendre de la même façon au fil des sessions.
 - **Test d'auto-suffisance du §9** non passé pour SMS-mail, sms-mail-multi,
   pptx-creator, FICHES_MEMO_ACTION_KOLB et PAPPERBOARD.
