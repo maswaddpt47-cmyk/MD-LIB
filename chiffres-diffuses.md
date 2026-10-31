@@ -27,7 +27,21 @@ pertinents, consigner dans le projet :
   la préservation des données lors des imports, réimports et archivages ;
 - les contrôles permettant de recompter les résultats et de vérifier la valeur
   réellement affichée ; pour les agrégats conservés, définition/version,
-  numérateurs, dénominateurs et inconnus nécessaires à leur justification.
+  numérateurs, dénominateurs et inconnus nécessaires à leur justification ;
+- **un seul format de date enregistré, fuseau explicite** : date civile en
+  heure de Paris, instant en ISO avec fuseau ; jamais de date en texte
+  localisé (`toLocaleString`) ni de « date du jour » prise en UTC
+  (`toISOString().slice(0,10)`) — deux défauts de sms-mail-multi (31/10/2026) ;
+- **les tests de calcul lancés au déploiement**, qui le bloquent s'ils
+  échouent : un test que la mise en ligne n'attend pas ne protège rien
+  (sms-mail-multi déployait sans test, GDINV2 bloque déjà).
+
+**Trace contrôlable** : à la création, le `CLAUDE.md` du projet reçoit une
+section « Chiffres » — les définitions prévues, ou « aucun chiffre prévu au
+JJ/MM/AAAA, parce que… ». **Projet existant** : le même examen s'applique à
+toute nouvelle donnée enregistrée (import, statut, type de fiche, champ),
+avant de la figer, et sa conclusion rejoint la section « Chiffres » ou
+`CHANTIERS.md`.
 
 Le dispositif reste proportionné aux besoins du projet. Cet examen n’impose
 ni tableau de bord, ni journal exhaustif, ni nouvelle dépendance. Respecter

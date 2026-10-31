@@ -54,7 +54,10 @@ l'`AGORA.md` de l'autre et le dit dans son `CLAUDE.md`.
 modèle de données. Consigner les choix pertinents dans les instructions du
 projet, même si aucun tableau de bord n’est demandé ; dispositif proportionné,
 sans collecte préventive inutile. Cette anticipation complète l’audit avant
-diffusion, elle ne le remplace pas.
+diffusion, elle ne le remplace pas. **Trace** : le `CLAUDE.md` du nouveau
+projet reçoit une section « Chiffres » (définitions prévues, ou « aucun chiffre
+prévu au JJ/MM/AAAA, parce que… »), installée avant le premier commit de code,
+comme l'AGORA.
 
 ## Règle de propagation — la plus importante
 
