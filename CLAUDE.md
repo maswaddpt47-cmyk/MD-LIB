@@ -250,6 +250,7 @@ qui demande encore une action :
   53 à PAPPERBOARD le 30/10/2026 (`5779223`, son test hostile). Non propagées
   ailleurs (pas de document remis à un tiers, pas de test de sécurité).
 - **Règles 58 et 59 de `collaboration.md`** (01/11/2026, nées de sms-mail-multi, inscrites sur accord de l'utilisateur) : circuit de contradiction proportionné ; sauvegardes réelles jamais lues. **Propagées le 01/11/2026** : sms-mail-multi (8quatervicies et 8quinvicies, `b20c38b`), NEWGEN (règles 45 et 46, `8c86be0`), NextStep (règles 45 et 46, `69797fc`), GDINV2 (puces, `70da024`). Non propagées : PAPPERBOARD (projet personnel, sa propre politique de données), FICHES_MEMO_ACTION_KOLB et PPTX-CREATOR (pas de données d'usagers ni de calculs soumis à l'AGORA) — à reposer si le contexte apparaît ; SMS-mail (gelé).
+- **Règle 60 de `collaboration.md` et « Main toujours » de `git-workflow.md` §3** (01/11/2026, nées de sms-mail-multi, inscrites sur accord de l'utilisateur) : tous les tests du déploiement avant de pousser ; avance rapide sur `main` à chaque livraison malgré une branche imposée, quand le projet prescrit `main`. **Déjà dans sms-mail-multi** (`CLAUDE.md`, `a081c1c`). Propagation aux autres projets : **à demander à l'utilisateur**.
 - **Règle 47** (une règle se propage là où son contexte existe, 28/10/2026) :
   elle porte sur la propagation elle-même, donc sur MD-LIB ; **reste ici**,
   comme les règles 28 et 31.
