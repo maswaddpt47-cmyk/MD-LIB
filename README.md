@@ -4,6 +4,8 @@ Bibliothèque de règles de travail réutilisables, écrites pour être **copié
 dans le `CLAUDE.md` de chaque projet plutôt que référencées — voir
 [`CLAUDE.md`](CLAUDE.md) pour le fonctionnement et la règle de propagation.
 
+Pour présenter l'auteur à une autre IA : [`Auteur.md`](Auteur.md).
+
 ## Références communes à tous les projets
 
 Désignées par l'utilisateur le 29/10/2026 pour les projets actuels et futurs,
