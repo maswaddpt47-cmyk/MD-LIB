@@ -49,4 +49,12 @@ Dans ce cas, deux flux possibles selon le projet — vérifier lequel s'applique
   ```
 - **PR + merge** (ex. quand un outil GitHub — `create_pull_request`/`merge_pull_request` — est disponible dans la session) : ouvrir une pull request depuis la branche vers `main`, puis la merger sans attendre la fin de session — un commit distinct par modification logique, comme en local.
 
-Dans les deux cas : le déploiement (GitHub Pages ou autre) ne se déclenche généralement que sur `main`. Travailler uniquement sur une branche de feature rend les changements invisibles en production.
+- **Avance rapide à chaque livraison (« Main toujours »)**, quand le `CLAUDE.md` du projet prescrit la publication sur `main` : la branche imposée ne l'emporte pas sur cette consigne. Après chaque livraison vérifiée, sans attendre la fin de session ni redemander :
+  ```bash
+  git fetch origin main
+  git merge-base --is-ancestor origin/main HEAD && git push origin HEAD:main
+  git push origin HEAD   # branche de session gardée alignée
+  ```
+  Si `origin/main` a divergé : `git pull origin main` (fusion, jamais `rebase` de commits déjà poussés), relancer les tests, puis pousser. Consigne de l'utilisateur du 01/11/2026 (sms-mail-multi) : « Main toujours », après qu'une session soit restée sur sa branche imposée et ait demandé la permission de fusionner.
+
+Dans tous les cas : le déploiement (GitHub Pages ou autre) ne se déclenche généralement que sur `main`. Travailler uniquement sur une branche de feature rend les changements invisibles en production.
