@@ -249,6 +249,7 @@ qui demande encore une action :
   (règles 38 et 39, `2929a95`) et NextStep (règles 38 et 39, `7ecd158`) ; la
   53 à PAPPERBOARD le 30/10/2026 (`5779223`, son test hostile). Non propagées
   ailleurs (pas de document remis à un tiers, pas de test de sécurité).
+- **Règles 58 et 59 de `collaboration.md`** (01/11/2026, nées de sms-mail-multi, inscrites sur accord de l'utilisateur) : circuit de contradiction proportionné ; sauvegardes réelles jamais lues. **Déjà dans sms-mail-multi** (`CLAUDE.md`, 8quatervicies et 8quinvicies, `b20c38b`). Ailleurs : propagation à demander à l'utilisateur (la 59 vaut pour les projets CD47 manipulant des données d'usagers : NEWGEN, NextStep, GDINV2).
 - **Règle 47** (une règle se propage là où son contexte existe, 28/10/2026) :
   elle porte sur la propagation elle-même, donc sur MD-LIB ; **reste ici**,
   comme les règles 28 et 31.
