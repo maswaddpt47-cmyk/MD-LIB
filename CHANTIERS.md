@@ -1,6 +1,11 @@
 # CHANTIERS — relais vers le projet
 
-État au **31/10/2026**, base `main` (`9d06ff1`).
+État au **02/11/2026**, base `main` (`201e6f1`).
+
+**Depuis le 31/10/2026** : règles 58 à 60 de `collaboration.md`, « Main
+toujours » (`git-workflow.md` §3) et `Auteur.md` inscrits. Leur propagation
+(faite pour 58-59, à demander pour 60 et « Main toujours ») est tenue dans
+`CLAUDE.md`, « Reste à propager ».
 
 **Ménage du 26/10/2026** : récits des propagations des 21 et 25/10 (règles 22
 et 23 de `collaboration.md`, choix des annonces « Nouveautés ») retirés —
