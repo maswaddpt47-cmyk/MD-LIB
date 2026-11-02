@@ -183,6 +183,10 @@ peuvent diverger d'un projet à l'autre.
 
 ## Reste à propager
 
+- **Règle 18 — suite explicite en fin de message (02/11/2026)** : demandée
+  par l'utilisateur et inscrite dans collaboration.md ; appliquée dans
+  MentiAnalyser pendant cette session. Autres projets non modifiés.
+
 Les comptes rendus de propagation ont été retirés le 17/10/2026 (AG-002,
 amendé) : qui a propagé quoi, quand et dans quel commit est dans `git log`,
 ici et dans chaque projet — `hygiene-instructions.md` §5. Ne subsiste que ce

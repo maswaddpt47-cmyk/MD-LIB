@@ -1,6 +1,6 @@
 # CHANTIERS — relais vers le projet
 
-État au **02/11/2026**, base `main` (`201e6f1`).
+État au **02/11/2026**, base relue `main` (`f201e61`).
 
 **Depuis le 31/10/2026** : règles 58 à 60 de `collaboration.md`, « Main
 toujours » (`git-workflow.md` §3) et `Auteur.md` inscrits. Leur propagation
@@ -11,6 +11,12 @@ toujours » (`git-workflow.md` §3) et `Auteur.md` inscrits. Leur propagation
 et 23 de `collaboration.md`, choix des annonces « Nouveautés ») retirés —
 commits listés dans `git log -p CHANTIERS.md`. Ce qui reste à propager est
 tenu dans `CLAUDE.md`, section « Reste à propager » (règle 34 comprise).
+
+## Communication — précision du 02/11/2026
+
+La règle 18 de collaboration.md précise la suite concrète à la fin de chaque
+message, y compris la réponse finale. Application à MentiAnalyser pendant la
+session ; autres projets inchangés, suivi dans CLAUDE.md « Reste à propager ».
 
 ## Conception des statistiques — règle commune du 31/10/2026
 
