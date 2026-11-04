@@ -96,6 +96,14 @@ signalement RGPD de `rgpd-securite.md` :
 > « pull **<owner/dépôt>**, lis son `AGORA.md`, réponds à AG-004, tu es la
 > session B ».
 
+**L'annonce se voit : ligne à part, en tête du message, marquée 🔴 et en
+gras** — `🔴 **⚖️ AGORA : critère N — <sujet>. Bloc AG-00N commité. → Dis
+« pull » à Codex.**` (ou la phrase de relais pour une session B). Jamais noyée
+dans un compte rendu. Le terminal n'affiche pas de couleur : 🔴 et le gras en
+tiennent lieu. Constat du 04/11/2026 (ATELIERS, AG-042) : « dis pull à Codex »
+glissé au milieu d'un long message, l'utilisateur ne l'a pas vu et Codex n'a
+jamais été lancé ; demande de l'utilisateur : « mettre le pull en rouge ».
+
 **La phrase de relais nomme toujours le dépôt.** Chaque projet a son propre
 `AGORA.md` avec sa propre numérotation : deux dépôts peuvent porter un AG-002
 qui n'a rien à voir. Sans le nom, la session qui répond ouvre l'AGORA du
