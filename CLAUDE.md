@@ -2,6 +2,18 @@
 
 **Reprise de session : lire `CHANTIERS.md`**, qui contient la passation courante demandée par l’utilisateur.
 
+## Règles communes chargées automatiquement (essai du 04/11/2026)
+
+MD-LIB est attaché à toutes les sessions de l'utilisateur (sa déclaration du
+04/11/2026). La ligne ci-dessous fait charger `collaboration.md` avec ce
+fichier, dans toute session où MD-LIB est attaché, sans propagation :
+
+@collaboration.md
+
+**Essai en cours** : à confirmer dans une session neuve (règle 62 citée sans
+lire de fichier). Tant que l'essai n'est pas concluant, les copies dans les
+projets restent la règle ; Codex ne suit pas cet import (`AGENTS.md` garde sa copie).
+
 ## Objectif du repo
 
 Bibliothèque de mémoire générale et réutilisable pour Claude, valable sur
