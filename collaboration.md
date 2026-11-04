@@ -86,14 +86,16 @@ vérifier — sans corriger d'office. Constat du 02/10/2026 (ATELIERS) : des
 numéros en double sur une capture de la Corbeille ont révélé une faute de
 l'API (numéro d'un nouvel atelier calculé sans la Corbeille).
 
-25. **Bug de données signalé par capture : consulter le repo privé de
-sauvegarde réel (`*-backups`) avant de formuler une hypothèse.** Une capture
-d'écran seule ne distingue pas un bug de rendu d'un bug de données — relire
-l'export JSON réel (historique, horodatage) permet de confirmer ou d'écarter
-l'hypothèse avant de corriger. Constat du 01-02/10/2026 (SMS-mail/sms-mail-multi) :
-un doublon d'historique et une double-réservation sur un même créneau n'ont
-été confirmés qu'en relisant `backups/<profil>/backup-*.json`, pas sur la
-seule foi de la capture.
+25. **Bug de données signalé par capture : vérifier les données avant de
+formuler une hypothèse — sans jamais lire les sauvegardes réelles (règle 59).**
+Une capture d'écran seule ne distingue pas un bug de rendu d'un bug de données :
+faire calculer le diagnostic dans l'application, dans le navigateur de
+l'utilisateur (nombres seulement à l'écran), ou lui demander de lire la valeur,
+avant de corriger. Constat du 01-02/10/2026 (SMS-mail/sms-mail-multi) : un
+doublon d'historique et une double-réservation n'ont été confirmés qu'en
+relisant les données, pas sur la seule foi de la capture ; la lecture directe
+des sauvegardes faite alors est interdite depuis le 01/11/2026 (règle 59,
+charte IA du CD47 §4). Corrigé le 04/11/2026 sur décision de l'utilisateur.
 
 26. **UI qui semble en retard sur ce qui vient d'être poussé : vérifier le
 déploiement réel avant de conclure.** Ni au bug de code, ni au cache
