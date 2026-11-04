@@ -1,6 +1,6 @@
 # CHANTIERS — relais vers le projet
 
-État au **04/11/2026**, base `main` (`96757fa`) : règles 61-62 et « pull » pour Codex propagés aux projets actifs (MentiAnalyser restant, voir `CLAUDE.md`). Précédemment, base relue `main` (`bcfed2e`) : précision de la règle 18 (prochaine étape en fin de message) reçue du 02/11, appliquée à MentiAnalyser seulement.
+État au **04/11/2026 à 20:55**, base `main` `96bf7a8` (relue par « pull ») : `collaboration.md` **chargé d'office** par `@collaboration.md` (essai concluant, plus de propagation de ses règles dans les `CLAUDE.md`, `26093d6`/`bdd7505`) ; ménage des `CLAUDE.md` des projets (`62a0890`, `09e792b`) ; règle 25 accordée à la 59 (`149fe70`) ; prompts de bilan dans `prompts-bilan-collaboration.md` (`1ec0a90`) ; annonce AGORA 🔴 en gras (`agora.md` §4, `6d07cfd`, propagée `9e73ed0`) ; règles 63 à 65 (`dbccfa0`) et précisions des règles 5, 55 et 58 (`96bf7a8`). Reste ouvert : « Main toujours » et copie de la règle 60 dans les `AGENTS.md`, à demander (`CLAUDE.md`, « Reste à propager »).
 
 **Depuis le 31/10/2026** : règles 58 à 60 de `collaboration.md`, « Main
 toujours » (`git-workflow.md` §3) et `Auteur.md` inscrits. Leur propagation
