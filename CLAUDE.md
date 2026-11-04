@@ -2,7 +2,7 @@
 
 **Reprise de session : lire `CHANTIERS.md`**, qui contient la passation courante demandée par l’utilisateur.
 
-## Règles communes chargées automatiquement (essai du 04/11/2026)
+## Règles communes chargées automatiquement (depuis le 04/11/2026)
 
 MD-LIB est attaché à toutes les sessions de l'utilisateur (sa déclaration du
 04/11/2026). La ligne ci-dessous fait charger `collaboration.md` avec ce
@@ -10,9 +10,11 @@ fichier, dans toute session où MD-LIB est attaché, sans propagation :
 
 @collaboration.md
 
-**Essai en cours** : à confirmer dans une session neuve (règle 62 citée sans
-lire de fichier). Tant que l'essai n'est pas concluant, les copies dans les
-projets restent la règle ; Codex ne suit pas cet import (`AGENTS.md` garde sa copie).
+**Essai concluant le 04/11/2026** : une session neuve, MD-LIB seul attaché, a
+cité la règle 62 sans ouvrir de fichier. **Décision de l'utilisateur du même
+jour** : les sessions se mettent à jour depuis MD-LIB, sans propagation des
+règles de `collaboration.md`. Codex ne suit pas cet import : les `AGENTS.md`
+gardent leur copie.
 
 ## Objectif du repo
 
@@ -73,6 +75,13 @@ prévu au JJ/MM/AAAA, parce que… »), installée avant le premier commit de co
 comme l'AGORA.
 
 ## Règle de propagation — la plus importante
+
+**Depuis le 04/11/2026, une règle de `collaboration.md` ne se propage plus dans
+les `CLAUDE.md`** : elle est chargée d'office par la section ci-dessus dans
+toute session où MD-LIB est attaché. Restent à reporter à la main : la copie
+des `AGENTS.md` (Codex) quand la règle le concerne, et ce qui est propre à un
+projet (règle 47). Ce qui suit vaut pour ces deux cas et pour les autres
+fichiers de MD-LIB, qui ne sont pas importés.
 
 **Il n'y a pas de lien automatique entre ce repo et les `CLAUDE.md` des
 projets consommateurs.** Modifier un fichier ici ne met à jour aucun
