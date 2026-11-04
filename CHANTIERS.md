@@ -28,6 +28,14 @@ la minimisation des données et le traitement explicite des inconnus.
 L’audit avant diffusion (règle 33) reste distinct. Les projets existants
 n’ont pas été modifiés ; suivi de propagation dans `CLAUDE.md`.
 
+## Session ATELIERS du 04/11/2026
+
+Règles **63 à 65** de `collaboration.md` inscrites (`git fetch` + `merge --ff-only`
+jamais `pull` ; tests à toute heure ; une action sans effet dit pourquoi). La reprise
+du travail est dans **`ATELIERS_NEWGEN/CHANTIERS.md` sur `main`** (en tête : « À
+reprendre en premier »). `ateliers-backups` a été attaché en lecture seule pour
+préparer la mise à jour des registres (rien modifié).
+
 ## Reprise GDINV2 (29/10/2026)
 
 La passation est dans **`GDINV2/CHANTIERS.md` sur `main`** (en tête : « À faire en
