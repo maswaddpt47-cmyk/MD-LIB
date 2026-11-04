@@ -183,6 +183,12 @@ peuvent diverger d'un projet à l'autre.
 
 ## Reste à propager
 
+- **Règles 61 et 62 de `collaboration.md` et « dire « pull » à Codex suffit »
+  (`agora.md` §12, section « AGORA — ce que « pull » veut dire » des `AGENTS.md`)**
+  (04/11/2026, nées de la session NEWGEN du 02-03/11, inscrites sur accord de
+  l'utilisateur, **à propager à tous les projets actifs** à sa demande ; SMS-mail
+  gelé exclu). Avancement : voir les commits du 04/11/2026 de chaque projet.
+
 - **Règle 18 — suite explicite en fin de message (02/11/2026)** : demandée
   par l'utilisateur et inscrite dans collaboration.md ; appliquée dans
   MentiAnalyser pendant cette session. Autres projets non modifiés.

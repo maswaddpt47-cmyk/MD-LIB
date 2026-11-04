@@ -191,6 +191,7 @@ validation qui donne une fausse garantie — exactement ce que
 **Auteur** : session <libellé donné par l'utilisateur> — lu sur `<sha court>`
 **Proposition** : ce qui est proposé, en 3 lignes maximum.
 **Critère déclencheur** : n° et lequel.
+**Contradicteur** : Codex | session B (Codex répond seul au « pull » de l'utilisateur, §12)
 **Ce que ça engage** : ce qui serait coûteux à défaire.
 **Non vérifié par l'auteur** : ...
 **Si personne ne répond, je fais quoi ?** ← si la réponse est « je continue
@@ -438,6 +439,18 @@ la pousser sur `main` : un seul fichier, ajout seulement, jamais le code. La ses
 qui a ouvert le bloc contrôle `git show --stat` (seul `AGORA.md`) et `git diff` (aucune
 ligne retirée) avant de commenter ; sinon elle annule et inscrit la réponse à la main.
 Phrase type : `AGORA.md` de GDINV2, section « Contradicteur Codex ».
+
+**Dire « pull » suffit** (décision de l'utilisateur, 03/11/2026, éprouvée le même
+jour sur ATELIERS_NEWGEN, AG-041) : plus de phrase à coller. Le fichier
+`AGENTS.md` du projet, que Codex lit à chaque session, porte une section « AGORA
+— ce que « pull » veut dire » : après le pull, répondre à chaque bloc ouvert dont
+la ligne **Contradicteur** dit « Codex » et qui n'a pas encore de réponse de
+Codex, selon le gabarit, dans `AGORA.md` seulement, puis commit et push sur
+`main` ; ne jamais répondre à un bloc qu'il a ouvert ; aucun bloc en attente :
+le dire en une ligne. Le gabarit du projet gagne la ligne
+`**Contradicteur** : Codex | session B`. **La session qui ouvre un bloc
+l'annonce quand même à l'utilisateur**, en une ligne, dès qu'il est en ligne :
+c'est lui qui dit « pull ». Le contrôle `git show --stat` ci-dessus reste dû.
 
 ## 13. Installation systématique dans chaque projet (17/10/2026)
 
