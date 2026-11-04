@@ -238,6 +238,7 @@ peuvent diverger d'un projet à l'autre.
   MentiAnalyser (attache refusée par le contrôle des autorisations de la session,
   à reprendre depuis une session où il est attaché), SMS-mail (gelé).
 
+- **Annonce AGORA 🔴 (`agora.md` §4, 04/11/2026)** : propagée le 04/11/2026 dans NEWGEN (`4cd145a`), NextStep (`3cd86dd`), GDINV2 (`07cd106`), sms-mail-multi (`9b1b062`), PAPPERBOARD (`df3dcf6`), FICHES_MEMO_ACTION_KOLB (`351af2d`), PPTX-CREATOR (`6bd3de1`). Non faits : MentiAnalyser (non attaché), SMS-mail (gelé).
 - **Ménage des `CLAUDE.md` (04/11/2026)** : sms-mail-multi fait le 04/11/2026 (ligne d'import ajoutée, deux copies de `collaboration.md` retirées, prompts déplacés dans `prompts-bilan-collaboration.md`). Les autres projets : à leur prochain « pull ».
 - **Règle 18 — suite explicite en fin de message (02/11/2026)** : demandée
   par l'utilisateur et inscrite dans collaboration.md ; appliquée dans
