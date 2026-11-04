@@ -1,6 +1,6 @@
 # CHANTIERS — relais vers le projet
 
-État au **03/11/2026**, base relue `main` (`bcfed2e`) : précision de la règle 18 (prochaine étape en fin de message) reçue du 02/11, appliquée à MentiAnalyser seulement.
+État au **04/11/2026**, base `main` (`96757fa`) : règles 61-62 et « pull » pour Codex propagés aux projets actifs (MentiAnalyser restant, voir `CLAUDE.md`). Précédemment, base relue `main` (`bcfed2e`) : précision de la règle 18 (prochaine étape en fin de message) reçue du 02/11, appliquée à MentiAnalyser seulement.
 
 **Depuis le 31/10/2026** : règles 58 à 60 de `collaboration.md`, « Main
 toujours » (`git-workflow.md` §3) et `Auteur.md` inscrits. Leur propagation

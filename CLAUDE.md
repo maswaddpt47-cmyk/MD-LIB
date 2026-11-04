@@ -186,8 +186,13 @@ peuvent diverger d'un projet à l'autre.
 - **Règles 61 et 62 de `collaboration.md` et « dire « pull » à Codex suffit »
   (`agora.md` §12, section « AGORA — ce que « pull » veut dire » des `AGENTS.md`)**
   (04/11/2026, nées de la session NEWGEN du 02-03/11, inscrites sur accord de
-  l'utilisateur, **à propager à tous les projets actifs** à sa demande ; SMS-mail
-  gelé exclu). Avancement : voir les commits du 04/11/2026 de chaque projet.
+  l'utilisateur, **propagées le 04/11/2026** à sa demande dans NEWGEN (règles 47-48,
+  `35a2fe3` ; « pull » déjà en place), NextStep (`9f68787`, « pull » renvoyé à
+  l'AGORA de NEWGEN), GDINV2 (`9e32f02`, `1312571`), sms-mail-multi (`fa7666a`,
+  `0ea5f52`), PAPPERBOARD (`9bb9986`, `f0a4351`), FICHES_MEMO_ACTION_KOLB
+  (`c354ead`, `ee15b38`), PPTX-CREATOR (`5b08126`, `cf1d2c9`). **Non faits** :
+  MentiAnalyser (attache refusée par le contrôle des autorisations de la session,
+  à reprendre depuis une session où il est attaché), SMS-mail (gelé).
 
 - **Règle 18 — suite explicite en fin de message (02/11/2026)** : demandée
   par l'utilisateur et inscrite dans collaboration.md ; appliquée dans
