@@ -16,6 +16,16 @@ jour** : les sessions se mettent à jour depuis MD-LIB, sans propagation des
 règles de `collaboration.md`. Codex ne suit pas cet import : les `AGENTS.md`
 gardent leur copie.
 
+**Contrôle à chaque session** (demande de l'utilisateur, 04/11/2026) : avant de
+travailler sur un projet, vérifier que son `CLAUDE.md` a été allégé, c'est-à-dire
+qu'il porte la ligne « Règles communes de collaboration : MD-LIB/collaboration.md,
+chargé automatiquement par MD-LIB/CLAUDE.md (04/11/2026). Ici, seulement ce qui
+est propre au projet. » Si elle manque : le dire à l'utilisateur en une ligne et
+proposer le ménage (retirer les copies de règles communes sans rien de propre au
+projet, garder le spécifique, ne toucher ni `AGENTS.md`, ni `AGORA.md`, ni
+`CHANTIERS.md`, liste soumise à son accord avant commit). SMS-mail, gelé, est
+exclu.
+
 ## Objectif du repo
 
 Bibliothèque de mémoire générale et réutilisable pour Claude, valable sur
