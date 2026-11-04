@@ -16,15 +16,27 @@ jour** : les sessions se mettent à jour depuis MD-LIB, sans propagation des
 règles de `collaboration.md`. Codex ne suit pas cet import : les `AGENTS.md`
 gardent leur copie.
 
-**Contrôle à chaque session** (demande de l'utilisateur, 04/11/2026) : avant de
-travailler sur un projet, vérifier que son `CLAUDE.md` a été allégé, c'est-à-dire
-qu'il porte la ligne « Règles communes de collaboration : MD-LIB/collaboration.md,
-chargé automatiquement par MD-LIB/CLAUDE.md (04/11/2026). Ici, seulement ce qui
-est propre au projet. » Si elle manque : le dire à l'utilisateur en une ligne et
-proposer le ménage (retirer les copies de règles communes sans rien de propre au
-projet, garder le spécifique, ne toucher ni `AGENTS.md`, ni `AGORA.md`, ni
-`CHANTIERS.md`, liste soumise à son accord avant commit). SMS-mail, gelé, est
-exclu.
+**Ménage au prochain « pull » de chaque projet** (décision de l'utilisateur,
+04/11/2026 : pas de ménage groupé, chaque session le fait chez elle). Au premier
+`pull` d'une session sur un projet, vérifier que son `CLAUDE.md` porte la ligne
+« Règles communes de collaboration : MD-LIB/collaboration.md, chargé
+automatiquement par MD-LIB/CLAUDE.md (04/11/2026). Ici, seulement ce qui est
+propre au projet. » Si elle manque, faire le ménage avant toute autre tâche :
+
+1. retirer du `CLAUDE.md` les règles qui recopient `collaboration.md` sans rien
+   ajouter de propre au projet ;
+2. garder ce qui est propre au projet (workflow git et branches, tests et
+   commandes, déploiement, RGPD/sécurité, architecture, AGORA et ses critères,
+   décisions datées) et la partie spécifique d'une règle commune adaptée
+   (constat du projet, commande à lancer) ;
+3. ajouter la ligne ci-dessus en tête des règles de collaboration ;
+4. ne toucher ni `AGENTS.md` (Codex ne suit pas l'import), ni `AGORA.md`, ni
+   `CHANTIERS.md` ;
+5. présenter en un message la liste de ce qui est retiré et gardé (lignes avant
+   et après) et attendre l'accord de l'utilisateur ; puis un commit, publié selon
+   la règle du projet, et une ligne ajoutée ici dans « Reste à propager ».
+
+SMS-mail, gelé, est exclu.
 
 ## Objectif du repo
 
