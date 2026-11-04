@@ -49,7 +49,7 @@ copier depuis `MD-LIB/AGENTS.md`, **sans redemander** (accord déjà donné) :
   projet prescrit la publication sur `main`.
 Puis un commit, publié selon la règle du projet, une ligne dans son
 `CHANTIERS.md`, et le projet coché ici dans « Reste à propager ». Fait le
-04/11/2026 : sms-mail-multi.
+04/11/2026 : sms-mail-multi, NEWGEN (`0fbb4c4`) et NextStep (`cb9985e`).
 
 SMS-mail, gelé, est exclu.
 
@@ -327,8 +327,8 @@ qui demande encore une action :
   53 à PAPPERBOARD le 30/10/2026 (`5779223`, son test hostile). Non propagées
   ailleurs (pas de document remis à un tiers, pas de test de sécurité).
 - **Règles 58 et 59 de `collaboration.md`** (01/11/2026, nées de sms-mail-multi, inscrites sur accord de l'utilisateur) : circuit de contradiction proportionné ; sauvegardes réelles jamais lues. **Propagées le 01/11/2026** : sms-mail-multi (8quatervicies et 8quinvicies, `b20c38b`), NEWGEN (règles 45 et 46, `8c86be0`), NextStep (règles 45 et 46, `69797fc`), GDINV2 (puces, `70da024`). Non propagées : PAPPERBOARD (projet personnel, sa propre politique de données), FICHES_MEMO_ACTION_KOLB et PPTX-CREATOR (pas de données d'usagers ni de calculs soumis à l'AGORA) — à reposer si le contexte apparaît ; SMS-mail (gelé).
-- **Règle 60 de `collaboration.md` et « Main toujours » de `git-workflow.md` §3** (01/11/2026, nées de sms-mail-multi, inscrites sur accord de l'utilisateur) : tous les tests du déploiement avant de pousser ; avance rapide sur `main` à chaque livraison malgré une branche imposée, quand le projet prescrit `main`. **Déjà dans sms-mail-multi** (`CLAUDE.md`, `a081c1c`). **Règle 60** : chargée par l'import ; sa copie dans les `AGENTS.md` et « Main toujours » se font **au prochain « pull » de chaque projet** (section « `AGENTS.md` au même « pull » », décision du 04/11/2026). Faits : sms-mail-multi.
-- **Section « Autorisations — accès complet » des `AGENTS.md`** (04/11/2026, demande de l'utilisateur : Codex ne demande plus de permission, quatre exceptions, trois interdits) : posée dans `MD-LIB/AGENTS.md` et sms-mail-multi. Autres projets ayant un `AGENTS.md` : **au prochain « pull » de chacun** (même section, décision du 04/11/2026).
+- **Règle 60 de `collaboration.md` et « Main toujours » de `git-workflow.md` §3** (01/11/2026, nées de sms-mail-multi, inscrites sur accord de l'utilisateur) : tous les tests du déploiement avant de pousser ; avance rapide sur `main` à chaque livraison malgré une branche imposée, quand le projet prescrit `main`. **Déjà dans sms-mail-multi** (`CLAUDE.md`, `a081c1c`). **Règle 60** : chargée par l'import ; sa copie dans les `AGENTS.md` et « Main toujours » se font **au prochain « pull » de chaque projet** (section « `AGENTS.md` au même « pull » », décision du 04/11/2026). Faits : sms-mail-multi ; NEWGEN (`0fbb4c4`) et NextStep (`cb9985e`), le 04/11/2026.
+- **Section « Autorisations — accès complet » des `AGENTS.md`** (04/11/2026, demande de l'utilisateur : Codex ne demande plus de permission, quatre exceptions, trois interdits) : posée dans `MD-LIB/AGENTS.md`, sms-mail-multi, NEWGEN (`0fbb4c4`) et NextStep (`cb9985e`). Autres projets ayant un `AGENTS.md` : **au prochain « pull » de chacun** (même section, décision du 04/11/2026).
 - **Règle 47** (une règle se propage là où son contexte existe, 28/10/2026) :
   elle porte sur la propagation elle-même, donc sur MD-LIB ; **reste ici**,
   comme les règles 28 et 31.
