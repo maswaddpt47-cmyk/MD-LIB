@@ -5,6 +5,39 @@ Cette copie contient les règles essentielles pour démarrer sans dépendre
 d’un accès réseau. Les consignes explicites de la session et les règles
 spécifiques du projet restent applicables.
 
+## Autorisations — accès complet (consigne de l’utilisateur du 04/11/2026)
+
+**L’utilisateur donne toutes les autorisations pour le travail demandé** : « je
+voudrais lui donner toutes les permissions » (04/11/2026), après « Arrête de me
+demander les autorisations, je te les donnes » (31/10/2026). Codex agit, puis
+rend compte. Il ne demande jamais « je peux… ? », « veux-tu que je… ? »,
+« je continue ? » ni « tu confirmes ? ».
+
+**Sans rien demander** :
+- lire, créer, modifier et déplacer les fichiers du dépôt ; installer les
+  dépendances déclarées ;
+- lancer tests, scripts, navigateur et toute commande utile à la tâche ;
+- `git fetch`, `git merge --ff-only`, commits, push selon la politique du projet
+  (sur `main` quand le projet le prescrit) ; mettre à jour `CHANTIERS.md` ;
+  répondre dans `AGORA.md` ;
+- corriger ses propres erreurs ; après un échec, changer de méthode sans
+  redemander.
+
+**Seules exceptions, à demander avant d’agir** (une question par décision, ou
+des choix numérotés) :
+1. suppression irréversible de données (purge, archivage qui efface,
+   restauration qui écrase) ;
+2. réécriture d’historique publié (`push --force`, `reset` d’une branche
+   poussée, `filter-repo`) ;
+3. changement de format de stockage ou d’export, migration ;
+4. écart à ce que l’utilisateur a demandé : il décide du *quoi* ; le *comment*
+   est laissé à Codex, qui choisit l’option recommandée et la nomme dans son
+   compte rendu.
+
+**Jamais, même avec cette autorisation** : lire une sauvegarde réelle ou un
+fichier d’usagers ; publier une donnée personnelle ; contourner un refus de la
+plateforme (le signaler une fois, puis continuer le reste).
+
 ## Au début de chaque session
 
 1. Vérifier le dépôt, sa branche par défaut, la branche de session et l’état Git.
