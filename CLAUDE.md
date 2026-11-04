@@ -64,6 +64,7 @@ ce projet, sans avoir à attacher MD-LIB à chaque fois.
 | `charte-graphique-cd47.md` | Charte graphique du CD47 en texte : couleurs officielles (bleu `#4389BD`…), polices (Capriola, Verdana), règles du logo, fichiers à utiliser. **À lire avant toute production aux couleurs du CD47.** Le PDF source `charte-graphique-cd47.pdf` fait foi. Référence, pas une règle à copier : un projet la cite et s'y conforme |
 | `chiffres-diffuses.md` | §0 : anticiper les statistiques dès la conception de tout nouveau projet (règle 57). §1–4 : audit Codex avant diffusion, cinq familles de tests et tableau « affiché / recompté / écart » (règle 33). La conception est proportionnée ; l’audit de diffusion garde sa portée propre. |
 | `Auteur.md` | Présentation de l'utilisateur à donner à une autre IA (profil, outils, style de réponse, façon de travailler, projets). Créé le 01/11/2026 à sa demande. **Dépôt public** : ni e-mail ni données de tiers (choix de l'utilisateur). Référence, pas une règle à copier |
+| `prompts-bilan-collaboration.md` | Trois prompts pour recueillir et synthétiser des comptes rendus de collaboration avec une IA (déplacés du `CLAUDE.md` de sms-mail-multi le 04/11/2026). Référence, pas une règle à copier |
 | `deploiement.md` + `outils/` | Ne jamais annoncer « en ligne » avant le ✅ de `outils/attendre-deploiement.sh` (workflows GitHub Actions du commit poussé). Déclenché après chaque `git push` par un hook que le Setup script de l'environnement installe (`outils/script-demarrage.sh`, à coller par l'utilisateur). Rien à copier dans les projets : une ligne de rappel dans leur `CLAUDE.md` suffit |
 
 **À lire en premier** quand on s'apprête à ajouter une règle quelque part :
@@ -237,6 +238,7 @@ peuvent diverger d'un projet à l'autre.
   MentiAnalyser (attache refusée par le contrôle des autorisations de la session,
   à reprendre depuis une session où il est attaché), SMS-mail (gelé).
 
+- **Ménage des `CLAUDE.md` (04/11/2026)** : sms-mail-multi fait le 04/11/2026 (ligne d'import ajoutée, deux copies de `collaboration.md` retirées, prompts déplacés dans `prompts-bilan-collaboration.md`). Les autres projets : à leur prochain « pull ».
 - **Règle 18 — suite explicite en fin de message (02/11/2026)** : demandée
   par l'utilisateur et inscrite dans collaboration.md ; appliquée dans
   MentiAnalyser pendant cette session. Autres projets non modifiés.
