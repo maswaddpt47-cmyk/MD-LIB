@@ -1,6 +1,6 @@
 # CHANTIERS — relais vers le projet
 
-État au **05/11/2026 à 11:41**, base `main` `a8f1cb0` (relue par « pull ») : `collaboration.md` **chargé d'office** par `@collaboration.md` (essai concluant, plus de propagation de ses règles dans les `CLAUDE.md`, `26093d6`/`bdd7505`) ; ménage des `CLAUDE.md` des projets (`62a0890`, `09e792b`) ; règle 25 accordée à la 59 (`149fe70`) ; prompts de bilan dans `prompts-bilan-collaboration.md` (`1ec0a90`) ; annonce AGORA 🔴 en gras (`agora.md` §4, `6d07cfd`, propagée `9e73ed0`) ; règles 63 à 65 (`dbccfa0`) et précisions des règles 5, 55 et 58 (`96bf7a8`). Le 04/11, décision de l'utilisateur : section « Autorisations », règle 60 et « Main toujours » reportées dans l'`AGENTS.md` de chaque projet **à son prochain « pull »** (`CLAUDE.md`, « `AGENTS.md` au même « pull » ») ; fait dans sms-mail-multi, NEWGEN (`0fbb4c4`) et NextStep (`cb9985e`).
+État au **05/11/2026 à 17:35**, base `main` `8eec418` (relue par « pull ») : `collaboration.md` **chargé d'office** par `@collaboration.md` (essai concluant, plus de propagation de ses règles dans les `CLAUDE.md`, `26093d6`/`bdd7505`) ; ménage des `CLAUDE.md` des projets (`62a0890`, `09e792b`) ; règle 25 accordée à la 59 (`149fe70`) ; prompts de bilan dans `prompts-bilan-collaboration.md` (`1ec0a90`) ; annonce AGORA 🔴 en gras (`agora.md` §4, `6d07cfd`, propagée `9e73ed0`) ; règles 63 à 65 (`dbccfa0`) et précisions des règles 5, 55 et 58 (`96bf7a8`). Le 04/11, décision de l'utilisateur : section « Autorisations », règle 60 et « Main toujours » reportées dans l'`AGENTS.md` de chaque projet **à son prochain « pull »** (`CLAUDE.md`, « `AGENTS.md` au même « pull » ») ; fait dans sms-mail-multi, NEWGEN (`0fbb4c4`) et NextStep (`cb9985e`).
 
 **Depuis le 31/10/2026** : règles 58 à 60 de `collaboration.md`, « Main
 toujours » (`git-workflow.md` §3) et `Auteur.md` inscrits. Leur propagation
@@ -33,13 +33,21 @@ la minimisation des données et le traitement explicite des inconnus.
 L’audit avant diffusion (règle 33) reste distinct. Les projets existants
 n’ont pas été modifiés ; suivi de propagation dans `CLAUDE.md`.
 
-## Session ATELIERS du 04/11/2026
+## Reprise ATELIERS — 05/11/2026
 
-Règles **63 à 65** de `collaboration.md` inscrites (`git fetch` + `merge --ff-only`
-jamais `pull` ; tests à toute heure ; une action sans effet dit pourquoi). La reprise
-du travail est dans **`ATELIERS_NEWGEN/CHANTIERS.md` sur `main`** (en tête : « À
-reprendre en premier »). `ateliers-backups` a été attaché en lecture seule pour
-préparer la mise à jour des registres (rien modifié).
+Passation publiée sur `main` : **`ATELIERS_NEWGEN/CHANTIERS.md`** (`eedbb61`),
+avec le relais propre à NextStep dans **`ateliers-cd47_NextStep/CHANTIERS.md`**
+(`5c09453`). Aucun bloc AGORA ouvert au contrôle du 05/11/2026 ; AG-047 à AG-051
+clos. Les derniers ajouts (statut groupé, volet Détail) ne sont pas présentés comme
+audités par Codex ; validations, CI et limites sont consignées dans NEWGEN.
+
+Les consignes récentes sont déjà enregistrées : règle 18 et `AGENTS.md` commun
+pour **✅ TÂCHE TERMINÉE** (`9c4f349`), règle 66 pour la mise en forme ciblée,
+règle 67 pour pousser le SHA testé après une attente en arrière-plan (`8eec418`).
+Aucune nouvelle règle à inscrire lors de ce changement de session. Une session
+déjà ouverte doit relire explicitement MD-LIB et les consignes du projet ; les
+projets consommateurs se mettent à jour au prochain pull, sans propagation groupée.
+Repartir de `main` actualisé et d'une copie propre, sans reprendre d'anciens brouillons.
 
 ## Reprise GDINV2 (29/10/2026)
 
