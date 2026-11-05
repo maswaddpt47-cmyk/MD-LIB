@@ -45,8 +45,12 @@ copier depuis `MD-LIB/AGENTS.md`, **sans redemander** (accord déjà donné) :
   chaque session ») ;
 - la puce « Avant de pousser, lancer tous les tests que le déploiement
   exécutera » (section « Vérifications et livraison ») ;
+- la puce « Fin de tâche » (ajout du 05/11/2026 : annonce **✅ TÂCHE TERMINÉE**
+  dans le message final d'un travail réellement terminé) ;
 - « Main toujours » (`git-workflow.md` §3), **seulement** si le `CLAUDE.md` du
   projet prescrit la publication sur `main`.
+La nouvelle puce « Fin de tâche » se vérifie au prochain pull, y compris dans
+les projets déjà cochés pour les autres consignes.
 Puis un commit, publié selon la règle du projet, une ligne dans son
 `CHANTIERS.md`, et le projet coché ici dans « Reste à propager ». Fait le
 04/11/2026 : sms-mail-multi, NEWGEN (`0fbb4c4`) et NextStep (`cb9985e`).
@@ -241,6 +245,13 @@ Vérifier leur `CLAUDE.md` respectif avant de propager, les conventions
 peuvent diverger d'un projet à l'autre.
 
 ## Reste à propager
+
+- **Annonce de fin « ✅ TÂCHE TERMINÉE » (05/11/2026)** : règle 18 de
+  `collaboration.md` et modèle `AGENTS.md` à jour. Déjà présente dans les
+  `AGENTS.md` de NEWGEN et NextStep ; les autres se mettent à jour à leur
+  prochain pull. Pour une session déjà ouverte, demander explicitement la
+  relecture de MD-LIB et des consignes du projet ; aucune activation
+  automatique dans toutes les sessions n'est établie.
 
 - **Règles 61 et 62 de `collaboration.md` et « dire « pull » à Codex suffit »
   (`agora.md` §12, section « AGORA — ce que « pull » veut dire » des `AGENTS.md`)**
