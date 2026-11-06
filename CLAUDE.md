@@ -250,7 +250,7 @@ peuvent diverger d'un projet à l'autre.
   `collaboration.md` et modèle `AGENTS.md` à jour. Déjà présente dans les
   `AGENTS.md` de NEWGEN, NextStep et PAPPERBOARD (05/11/2026, `b33d8fc` :
   autorisations, tests avant push et « Main toujours » selon son ruleset
-  également synchronisés). Les autres se mettent à jour à leur prochain
+  également synchronisés) ; sms-mail-multi le 06/11/2026 (`41d4cd6`). Les autres se mettent à jour à leur prochain
   pull. Pour une session déjà ouverte, demander explicitement la
   relecture de MD-LIB et des consignes du projet ; aucune activation
   automatique dans toutes les sessions n'est établie.
