@@ -55,7 +55,8 @@ Les puces « Fin de tâche » et « Champ de jeton » se vérifient au prochain 
 y compris dans les projets déjà cochés pour les autres consignes.
 Puis un commit, publié selon la règle du projet, une ligne dans son
 `CHANTIERS.md`, et le projet coché ici dans « Reste à propager ». Fait le
-04/11/2026 : sms-mail-multi, NEWGEN (`0fbb4c4`) et NextStep (`cb9985e`).
+04/11/2026 : sms-mail-multi, NEWGEN (`0fbb4c4`) et NextStep (`cb9985e`) ;
+MentiAnalyser le 13/11/2026 (`43ef075`, les cinq éléments).
 
 SMS-mail, gelé, est exclu.
 
@@ -281,7 +282,8 @@ peuvent diverger d'un projet à l'autre.
   de mots de passe, 13/11/2026) : modèle `MD-LIB/AGENTS.md` à jour ; chaque projet
   la reçoit **à son prochain « pull »** (décision de l'utilisateur, 13/11/2026),
   Fait : SpeedDial (13/11/2026, `f68d6a2`), NEWGEN (`309764c`) et NextStep (`51d7f1f`) le 13/11/2026,
-  avec la règle appliquée à leurs écrans de connexion (`bd643ef`, `eb5db57`).
+  avec la règle appliquée à leurs écrans de connexion (`bd643ef`, `eb5db57`) ; MentiAnalyser
+  (`43ef075`) le 13/11/2026, avec ses deux champs « Mot de passe IA » (`6b2e720`).
 - **Règle 18 — suite explicite en fin de message (02/11/2026)** : demandée
   par l'utilisateur et inscrite dans collaboration.md ; appliquée dans
   MentiAnalyser pendant cette session. Autres projets non modifiés.
