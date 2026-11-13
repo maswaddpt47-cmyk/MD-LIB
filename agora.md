@@ -471,9 +471,13 @@ le geste, et la contradiction n'a jamais lieu.
 
 **Installation, en un seul commit** (dans cet ordre) :
 1. `AGORA.md` à la racine : règles de réponse, sincérité, cycle de relais, gabarit
-   (§9 et §10), tableau « Blocs tranchés » vide. Copie de référence la plus courte
-   et à jour : `PAPPERBOARD/AGORA.md` (17/10/2026), à adapter sur une seule chose,
-   la ligne « append-only / où pousser » selon la convention git du projet.
+   (§9 et §10), tableau « Blocs tranchés » vide. **Copie de référence :
+   `MD-LIB/AGORA.md`** (décision de l'utilisateur, 13/11/2026 : MD-LIB est attaché
+   à toutes les sessions, PAPPERBOARD ne l'est pas — attache refusée ce jour-là).
+   En recopier les sections d'en-tête, « Pour répondre à un bloc », « Sincérité »
+   et le gabarit, **sans ses blocs** ; adapter le titre, le nom du dépôt dans la
+   phrase de relais, la ligne « append-only / où pousser » selon la convention
+   git du projet, et les renvois à `agora.md` (le projet renvoie à son `CLAUDE.md`).
 2. Section « AGORA » dans le `CLAUDE.md` du projet (35 à 50 lignes) : les sept
    critères, la liste « ne va pas à l'AGORA », « soumet d'office, ne bloque
    jamais », le renvoi « `MD-LIB/agora.md` non requis pour répondre », la mention

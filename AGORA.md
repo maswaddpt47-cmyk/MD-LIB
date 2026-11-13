@@ -31,9 +31,25 @@ Le reste — les trois verdicts, la règle de preuve — est **dans le gabarit
 ci-dessous**, il n'a pas à être répété ici.
 
 **Le cycle** : une session dépose un bloc et le pousse sur `main`, donne à
-l'utilisateur la phrase à coller ailleurs, l'autre session répond, l'utilisateur
-tranche. **Aucune notification ne passe d'un compte à l'autre** : le relais par
+l'utilisateur la phrase à coller ailleurs (« pull **<owner/dépôt>**, lis son
+`AGORA.md`, réponds à AG-00N, tu es la session B ») ou lui dit de dire « pull »
+à Codex (`AGENTS.md`), le contradicteur répond, l'utilisateur tranche. **Aucune
+notification ne passe d'un compte ou d'un outil à l'autre** : le relais par
 l'utilisateur est obligatoire, et c'est pour ça que l'AGORA ne bloque jamais.
+
+## Sincérité
+
+1. **« Amendé » n'est valable que s'il nomme ce qui serait faux, manquant ou
+   coûteux** si la proposition était appliquée telle quelle. Un amendement qui
+   ne change ni code, ni décision, ni chiffre est un « confirmé ».
+2. **« Confirmé » est une réponse pleine**, pas un aveu d'inutilité. Ne jamais
+   chercher un amendement pour justifier sa présence.
+3. **Aucune appréciation** de la proposition ni de son auteur : une réponse
+   commence par un constat.
+
+Le tableau des blocs tranchés porte le verdict et le total des trois issues.
+**Le total est une alerte, pas un objectif** : le verdict découle de la
+contrainte 1 appliquée au bloc, jamais de la série.
 
 ## Gabarit
 
@@ -42,6 +58,7 @@ l'utilisateur est obligatoire, et c'est pour ça que l'AGORA ne bloque jamais.
 **Auteur** : session <8 car. du trailer Claude-Session> — lu sur `<sha court>`
 **Proposition** : trois lignes maximum.
 **Critère déclencheur** : n° et lequel (`agora.md` §2).
+**Contradicteur** : Codex | session B
 **Ce que ça engage** : ce qui serait coûteux à défaire.
 **Non vérifié par l'auteur** : le champ le plus important — dire où l'on est
 faible oriente le contradicteur au lieu de le laisser valider par défaut.
@@ -65,6 +82,8 @@ bloc n'avait pas lieu d'être.
 Aucun.
 
 # Blocs tranchés
+
+Total : 0 confirmé, 2 amendé, 0 contredit.
 
 - **AG-002** — Dégraisser `agora.md` et le suivi de propagation du
   `CLAUDE.md`. Ouvert et **tranché le 17/10/2026 : amendé.** Les six comptes
