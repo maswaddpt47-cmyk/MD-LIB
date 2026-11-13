@@ -241,6 +241,13 @@ projet. Quand l'utilisateur demande une modification :
   CI verte, puis `git push origin <sha>:main` en avance rapide ; le
   déploiement part tout seul.
 
+- `maswaddpt47-cmyk/SpeedDial` — page de raccourcis personnelle (bundle
+  React auto-dépaquetant, GitHub Pages, push direct sur `main`). **AGORA
+  installée le 13/11/2026** (`f8aba07`) ; test d'auto-suffisance du §9 pas
+  encore passé. Le même jour : ligne d'import des règles communes (`34d57fe`,
+  rien à retirer) et `AGENTS.md` complété (`5406af5`, « Fin de tâche » et
+  « Main toujours » compris).
+
 Vérifier leur `CLAUDE.md` respectif avant de propager, les conventions
 peuvent diverger d'un projet à l'autre.
 
@@ -250,7 +257,7 @@ peuvent diverger d'un projet à l'autre.
   `collaboration.md` et modèle `AGENTS.md` à jour. Déjà présente dans les
   `AGENTS.md` de NEWGEN, NextStep et PAPPERBOARD (05/11/2026, `b33d8fc` :
   autorisations, tests avant push et « Main toujours » selon son ruleset
-  également synchronisés) ; sms-mail-multi le 06/11/2026 (`41d4cd6`). Les autres se mettent à jour à leur prochain
+  également synchronisés) ; sms-mail-multi le 06/11/2026 (`41d4cd6`) ; SpeedDial le 13/11/2026 (`5406af5`, avec les autres consignes du « pull »). Les autres se mettent à jour à leur prochain
   pull. Pour une session déjà ouverte, demander explicitement la
   relecture de MD-LIB et des consignes du projet ; aucune activation
   automatique dans toutes les sessions n'est établie.
@@ -267,7 +274,7 @@ peuvent diverger d'un projet à l'autre.
   à reprendre depuis une session où il est attaché), SMS-mail (gelé).
 
 - **Annonce AGORA 🔴 (`agora.md` §4, 04/11/2026)** : propagée le 04/11/2026 dans NEWGEN (`4cd145a`), NextStep (`3cd86dd`), GDINV2 (`07cd106`), sms-mail-multi (`9b1b062`), PAPPERBOARD (`df3dcf6`), FICHES_MEMO_ACTION_KOLB (`351af2d`), PPTX-CREATOR (`6bd3de1`). Non faits : MentiAnalyser (non attaché), SMS-mail (gelé).
-- **Ménage des `CLAUDE.md` (04/11/2026)** : sms-mail-multi fait le 04/11/2026 (ligne d'import ajoutée, deux copies de `collaboration.md` retirées, prompts déplacés dans `prompts-bilan-collaboration.md`) ; PAPPERBOARD fait le 04/11/2026 (`06d2bb9`, 257 → 122 lignes, section 2 réduite à la ligne d'import et à cinq points propres au projet, accord de l'utilisateur). Les autres projets : à leur prochain « pull ».
+- **Ménage des `CLAUDE.md` (04/11/2026)** : sms-mail-multi fait le 04/11/2026 (ligne d'import ajoutée, deux copies de `collaboration.md` retirées, prompts déplacés dans `prompts-bilan-collaboration.md`) ; PAPPERBOARD fait le 04/11/2026 (`06d2bb9`, 257 → 122 lignes, section 2 réduite à la ligne d'import et à cinq points propres au projet, accord de l'utilisateur) ; SpeedDial fait le 13/11/2026 (`34d57fe`, ligne ajoutée, rien à retirer). Les autres projets : à leur prochain « pull ».
 - **Règle 18 — suite explicite en fin de message (02/11/2026)** : demandée
   par l'utilisateur et inscrite dans collaboration.md ; appliquée dans
   MentiAnalyser pendant cette session. Autres projets non modifiés.
