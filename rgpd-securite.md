@@ -170,3 +170,11 @@ l'utilisateur.
 
 **Contrôle à faire** : si aucune notification n'est arrivée depuis plus de
 3-4 mois, vérifier avec `list_triggers` et reprogrammer.
+
+## Règle de mot de passe imposée à la connexion (13/11/2026)
+
+Une règle vérifiée seulement au **choix** d'un mot de passe laisse passer les anciens (repris à un import, provisoires) :
+le serveur la vérifie **aussi à chaque connexion** ; hors règle, le compte passe en « doit changer », **le serveur refuse
+toute autre action** que le changement (pas seulement l'écran), et les sessions déjà ouvertes tombent au passage, sous
+verrou. Constat : ATELIERS (AG-059/060), un compte superviseur encore sur un ancien mot de passe devinable, l'Admin
+ignorait « doit changer ».
