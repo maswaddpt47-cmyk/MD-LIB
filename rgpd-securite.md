@@ -44,6 +44,12 @@ où elle est constatée).
 - **Secrets en clair** : clé API, mot de passe, token, URL de webhook non
   publique — jamais commités en clair dans le code ou poussés sur un repo
   public. Vérifier avant chaque commit/push (cf. règle git déjà en place).
+- **Indice de mot de passe** : aucun aide-mémoire, indice ou description de la
+  construction d'un mot de passe ou d'une clé dans une page ou un dépôt public ;
+  la mémoire, c'est le gestionnaire de mots de passe (`collaboration.md`
+  règle 69). Constat du 13/11/2026 (MentiAnalyser) : un aide-mémoire 💡
+  décrivait publiquement le mot de passe IA ; retiré, le texte reste dans
+  l'historique Git, et seul un changement du mot de passe l'annule.
 - **Contrôle d'accès** : une action sensible (suppression, export massif,
   administration) est-elle protégée par une authentification/autorisation
   réelle, ou accessible à qui a l'URL ?
