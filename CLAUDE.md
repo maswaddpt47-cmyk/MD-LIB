@@ -254,8 +254,9 @@ projet. Quand l'utilisateur demande une modification :
 - `maswaddpt47-cmyk/CRConum-V10` — pages HTML de compte rendu de réunion
   (API Anthropic depuis le navigateur). **Main toujours** (décision du
   13/11/2026). `CLAUDE.md`, `CHANTIERS.md` et **AGORA installés le 13/11/2026**
-  (`168c125`) ; `AGENTS.md` complet (`b520308`, `844dacb`). Aucun workflow de
-  déploiement vu. Test d'auto-suffisance du §9 pas encore passé.
+  (`168c125`) ; `AGENTS.md` complet (`b520308`, `844dacb`). GitHub Pages depuis
+  `main` ; règle 69 confirmée sur téléphone le 13/11/2026. Test d'auto-suffisance
+  du §9 pas encore passé.
 
 Vérifier leur `CLAUDE.md` respectif avant de propager, les conventions
 peuvent diverger d'un projet à l'autre.
@@ -294,6 +295,9 @@ peuvent diverger d'un projet à l'autre.
   (13/11/2026)** : `collaboration.md` chargé d'office ; puce « Fin de tâche » des
   `AGENTS.md` mise à jour dans le modèle et dans CRConum-V10, les autres projets
   à leur prochain « pull ».
+- **Règle 69 — bouton qui lance l'application** (13/11/2026) : précision dans
+  `collaboration.md` et le modèle `AGENTS.md` ; CRConum-V10 la porte déjà, les
+  autres `AGENTS.md` à leur prochain « pull ».
 - **Règle 18 — suite explicite en fin de message (02/11/2026)** : demandée
   par l'utilisateur et inscrite dans collaboration.md ; appliquée dans
   MentiAnalyser pendant cette session. Autres projets non modifiés.

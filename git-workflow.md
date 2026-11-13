@@ -49,6 +49,7 @@ Dans ce cas, deux flux possibles selon le projet — vérifier lequel s'applique
   ```
 - **PR + merge** (ex. quand un outil GitHub — `create_pull_request`/`merge_pull_request` — est disponible dans la session) : ouvrir une pull request depuis la branche vers `main`, puis la merger sans attendre la fin de session — un commit distinct par modification logique, comme en local.
 
+- **Projet sans règle de publication écrite** (pas de `CLAUDE.md`, ou muet) : la convention commune s'applique, c'est-à-dire `main` (« Main toujours » ci-dessous), pas la PR brouillon que la plateforme propose par défaut ; l'écrire dans le `CLAUDE.md` du projet à la première occasion. Constat du 13/11/2026 (CRConum-V10) : travail laissé en PR brouillon et fusion demandée à l'utilisateur, qui a répondu « toujours dans main, comme la règle l'indique ».
 - **Avance rapide à chaque livraison (« Main toujours »)**, quand le `CLAUDE.md` du projet prescrit la publication sur `main` : la branche imposée ne l'emporte pas sur cette consigne. Après chaque livraison vérifiée, sans attendre la fin de session ni redemander :
   ```bash
   git fetch origin main

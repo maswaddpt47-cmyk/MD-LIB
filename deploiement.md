@@ -25,6 +25,16 @@ cloud. Incident confirmé : programmer **une** relance après le délai annoncé
 Constat : trois exécutions en échec pendant l'incident Actions du 09/11
 (19:12–19:45, heure de Paris), puis succès à la relance programmée.
 
+**➖ « aucun workflow vu » ne prouve pas l'absence de déploiement** (13/11/2026,
+CRConum-V10) : lister les exécutions passées du dépôt (`list_workflow_runs`).
+S'il existe des « pages build and deployment », Pages est actif et la
+construction manquante est un blocage : la page en ligne reste l'ancienne. Ne
+rien pousser pour « débloquer » ; l'utilisateur relance par Settings → Pages,
+Branch « None » puis « main » / root, et le ✅ sur le sha poussé précède tout
+essai de sa part. Constat : quatre pushes sans construction (dernière le
+23/05/2026), « aucun déploiement » écrit dans le `CLAUDE.md` du projet, et un
+essai Proton Pass fait sur l'ancienne page.
+
 ## Comment il se déclenche
 
 - **Automatiquement, dans toutes les sessions cloud** : le « Setup script »
