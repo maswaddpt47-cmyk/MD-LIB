@@ -35,6 +35,15 @@ essai de sa part. Constat : quatre pushes sans construction (dernière le
 23/05/2026), « aucun déploiement » écrit dans le `CLAUDE.md` du projet, et un
 essai Proton Pass fait sur l'ancienne page.
 
+**Pages refusé « in progress » alors que la demande est annulée** (02/11/2026,
+MentiAnalyser) : `deploy-pages` répond « Please cancel <sha> first » alors que
+l'API Pages dit déjà `deployment_cancelled` pour ce sha. Le verrou est chez
+GitHub : rien à annuler de notre côté. Ne pas ajouter d'étape de récupération
+au workflow ni enchaîner les relances : attendre une vingtaine de minutes, puis
+relancer **une fois** le workflow existant (`run_workflow` sur `main`). Constat :
+trois relances et deux workflows de récupération refusés entre 20:25 et 20:39
+(heure de Paris) ; la relance de 21:06 est passée.
+
 ## Comment il se déclenche
 
 - **Automatiquement, dans toutes les sessions cloud** : le « Setup script »
