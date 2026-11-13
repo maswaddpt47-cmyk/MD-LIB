@@ -280,7 +280,7 @@ peuvent diverger d'un projet à l'autre.
 - **Règle 69 dans les `AGENTS.md`** (champ de secret reconnu par un gestionnaire
   de mots de passe, 13/11/2026) : modèle `MD-LIB/AGENTS.md` à jour ; chaque projet
   la reçoit **à son prochain « pull »** (décision de l'utilisateur, 13/11/2026),
-  SpeedDial compris. Aucun fait au 13/11/2026.
+  Fait : SpeedDial (13/11/2026, `f68d6a2`).
 - **Règle 18 — suite explicite en fin de message (02/11/2026)** : demandée
   par l'utilisateur et inscrite dans collaboration.md ; appliquée dans
   MentiAnalyser pendant cette session. Autres projets non modifiés.
