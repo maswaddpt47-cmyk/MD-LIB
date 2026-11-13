@@ -48,9 +48,11 @@ copier depuis `MD-LIB/AGENTS.md`, **sans redemander** (accord déjà donné) :
 - la puce « Fin de tâche » (ajout du 05/11/2026 : annonce **✅ TÂCHE TERMINÉE**
   dans le message final d'un travail réellement terminé) ;
 - « Main toujours » (`git-workflow.md` §3), **seulement** si le `CLAUDE.md` du
-  projet prescrit la publication sur `main`.
-La nouvelle puce « Fin de tâche » se vérifie au prochain pull, y compris dans
-les projets déjà cochés pour les autres consignes.
+  projet prescrit la publication sur `main` ;
+- la puce « Champ de jeton, de clé ou de mot de passe » (règle 69, ajout du
+  13/11/2026, section « Sécurité, audit et instructions »).
+Les puces « Fin de tâche » et « Champ de jeton » se vérifient au prochain pull,
+y compris dans les projets déjà cochés pour les autres consignes.
 Puis un commit, publié selon la règle du projet, une ligne dans son
 `CHANTIERS.md`, et le projet coché ici dans « Reste à propager ». Fait le
 04/11/2026 : sms-mail-multi, NEWGEN (`0fbb4c4`) et NextStep (`cb9985e`).
@@ -275,6 +277,10 @@ peuvent diverger d'un projet à l'autre.
 
 - **Annonce AGORA 🔴 (`agora.md` §4, 04/11/2026)** : propagée le 04/11/2026 dans NEWGEN (`4cd145a`), NextStep (`3cd86dd`), GDINV2 (`07cd106`), sms-mail-multi (`9b1b062`), PAPPERBOARD (`df3dcf6`), FICHES_MEMO_ACTION_KOLB (`351af2d`), PPTX-CREATOR (`6bd3de1`). Non faits : MentiAnalyser (non attaché), SMS-mail (gelé).
 - **Ménage des `CLAUDE.md` (04/11/2026)** : sms-mail-multi fait le 04/11/2026 (ligne d'import ajoutée, deux copies de `collaboration.md` retirées, prompts déplacés dans `prompts-bilan-collaboration.md`) ; PAPPERBOARD fait le 04/11/2026 (`06d2bb9`, 257 → 122 lignes, section 2 réduite à la ligne d'import et à cinq points propres au projet, accord de l'utilisateur) ; SpeedDial fait le 13/11/2026 (`34d57fe`, ligne ajoutée, rien à retirer). Les autres projets : à leur prochain « pull ».
+- **Règle 69 dans les `AGENTS.md`** (champ de secret reconnu par un gestionnaire
+  de mots de passe, 13/11/2026) : modèle `MD-LIB/AGENTS.md` à jour ; chaque projet
+  la reçoit **à son prochain « pull »** (décision de l'utilisateur, 13/11/2026),
+  SpeedDial compris. Aucun fait au 13/11/2026.
 - **Règle 18 — suite explicite en fin de message (02/11/2026)** : demandée
   par l'utilisateur et inscrite dans collaboration.md ; appliquée dans
   MentiAnalyser pendant cette session. Autres projets non modifiés.
