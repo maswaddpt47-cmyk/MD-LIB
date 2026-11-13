@@ -251,6 +251,12 @@ projet. Quand l'utilisateur demande une modification :
   rien à retirer) et `AGENTS.md` complété (`5406af5`, « Fin de tâche » et
   « Main toujours » compris).
 
+- `maswaddpt47-cmyk/CRConum-V10` — pages HTML de compte rendu de réunion
+  (API Anthropic depuis le navigateur). **Main toujours** (décision du
+  13/11/2026). `CLAUDE.md`, `CHANTIERS.md` et **AGORA installés le 13/11/2026**
+  (`168c125`) ; `AGENTS.md` complet (`b520308`, `844dacb`). Aucun workflow de
+  déploiement vu. Test d'auto-suffisance du §9 pas encore passé.
+
 Vérifier leur `CLAUDE.md` respectif avant de propager, les conventions
 peuvent diverger d'un projet à l'autre.
 
@@ -282,8 +288,12 @@ peuvent diverger d'un projet à l'autre.
   de mots de passe, 13/11/2026) : modèle `MD-LIB/AGENTS.md` à jour ; chaque projet
   la reçoit **à son prochain « pull »** (décision de l'utilisateur, 13/11/2026),
   Fait : SpeedDial (13/11/2026, `f68d6a2`), NEWGEN (`309764c`) et NextStep (`51d7f1f`) le 13/11/2026,
-  avec la règle appliquée à leurs écrans de connexion (`bd643ef`, `eb5db57`). CRConum-V10 le 13/11/2026 (`331de48` connexion des 5 pages, `b520308` AGENTS.md ; branche de session, PR #1 brouillon, pas encore sur `main`).
+  avec la règle appliquée à leurs écrans de connexion (`bd643ef`, `eb5db57`). CRConum-V10 le 13/11/2026 (`331de48` connexion des 5 pages, `b520308` AGENTS.md, sur `main`).
   MentiAnalyser (`43ef075`) le 13/11/2026, avec ses deux champs « Mot de passe IA » (`6b2e720`).
+- **Règle 18 — « la tâche, c'est le travail demandé dans le message »
+  (13/11/2026)** : `collaboration.md` chargé d'office ; puce « Fin de tâche » des
+  `AGENTS.md` mise à jour dans le modèle et dans CRConum-V10, les autres projets
+  à leur prochain « pull ».
 - **Règle 18 — suite explicite en fin de message (02/11/2026)** : demandée
   par l'utilisateur et inscrite dans collaboration.md ; appliquée dans
   MentiAnalyser pendant cette session. Autres projets non modifiés.

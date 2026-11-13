@@ -40,7 +40,12 @@ terminé, le dire. Ne pas attendre une relance pour expliquer la suite.
 **Fin de tâche (04/11/2026, portée commune précisée le 05/11/2026)** : après
 les opérations et revues nécessaires, conclure le message final par une ligne
 distincte : **✅ TÂCHE TERMINÉE**. Si un traitement reste en cours ou bloque
-la livraison, préciser son état sans annoncer la tâche terminée.
+la livraison, préciser son état sans annoncer la tâche terminée. **La tâche,
+c'est le travail demandé dans le message** (précision de l'utilisateur,
+13/11/2026, CRConum-V10) : l'annonce conclut chaque réponse dont ce travail est
+fait, même si l'objectif d'ensemble reste ouvert ou attend une décision de
+l'utilisateur. Constat : deux réponses sans annonce, au motif que la mise en
+ligne attendait sa décision.
 
 19. **Pas de compliment, un constat.** Ne pas ouvrir une réponse en jugeant la
 qualité de ce qui vient d'être dit ou proposé (« bien vu », « excellente
