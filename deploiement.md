@@ -14,6 +14,17 @@ avant que `outils/attendre-deploiement.sh` ait répondu ✅ pour le commit
 poussé. ❌ : dire l'échec à l'utilisateur et corriger. ⏳ : dire que ce
 n'est pas fini, revérifier plus tard.
 
+**Échec sans aucune étape exécutée** (09/11/2026, sms-mail-multi) : une
+tâche « sautée » ou absente de l'exécution, sans journal d'étape, alors que les
+tests passent en local, n'est pas un défaut du dépôt. Ne rien corriger ni
+pousser pour « débloquer » (pas de commit vide) : relancer **une fois** la même
+exécution (`rerun_workflow_run`), puis faire vérifier https://www.githubstatus.com
+(Actions, Pages) par l'utilisateur, la page étant bloquée depuis l'environnement
+cloud. Incident confirmé : programmer **une** relance après le délai annoncé
+(`send_later`) au lieu de boucler, et noter l'état réel dans `CHANTIERS.md`.
+Constat : trois exécutions en échec pendant l'incident Actions du 09/11
+(19:12–19:45, heure de Paris), puis succès à la relance programmée.
+
 ## Comment il se déclenche
 
 - **Automatiquement, dans toutes les sessions cloud** : le « Setup script »
