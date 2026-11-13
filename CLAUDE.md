@@ -281,7 +281,7 @@ peuvent diverger d'un projet à l'autre.
   de mots de passe, 13/11/2026) : modèle `MD-LIB/AGENTS.md` à jour ; chaque projet
   la reçoit **à son prochain « pull »** (décision de l'utilisateur, 13/11/2026),
   Fait : SpeedDial (13/11/2026, `f68d6a2`), NEWGEN (`309764c`) et NextStep (`51d7f1f`) le 13/11/2026,
-  avec la règle appliquée à leurs écrans de connexion (`bd643ef`, `eb5db57`).
+  avec la règle appliquée à leurs écrans de connexion (`bd643ef`, `eb5db57`). CRConum-V10 le 13/11/2026 (`331de48` connexion des 5 pages, `b520308` AGENTS.md ; branche de session, PR #1 brouillon, pas encore sur `main`).
 - **Règle 18 — suite explicite en fin de message (02/11/2026)** : demandée
   par l'utilisateur et inscrite dans collaboration.md ; appliquée dans
   MentiAnalyser pendant cette session. Autres projets non modifiés.
