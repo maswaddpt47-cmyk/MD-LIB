@@ -291,6 +291,7 @@ peuvent diverger d'un projet à l'autre.
   Fait : SpeedDial (13/11/2026, `f68d6a2`), NEWGEN (`309764c`) et NextStep (`51d7f1f`) le 13/11/2026,
   avec la règle appliquée à leurs écrans de connexion (`bd643ef`, `eb5db57`). CRConum-V10 le 13/11/2026 (`331de48` connexion des 5 pages, `b520308` AGENTS.md, sur `main`).
   MentiAnalyser (`43ef075`) le 13/11/2026, avec ses deux champs « Mot de passe IA » (`6b2e720`).
+  PAPPERBOARD le 15/11/2026 (`76291bf`, avec les précisions « bouton qui lance l'application » et « Fin de tâche » ; sa connexion animateur n'est pas encore mise en conformité : `name`, identifiant caché et `autocomplete="on"` manquent, `admin.php:90-92`).
 - **Règle 18 — « la tâche, c'est le travail demandé dans le message »
   (13/11/2026)** : `collaboration.md` chargé d'office ; puce « Fin de tâche » des
   `AGENTS.md` mise à jour dans le modèle et dans CRConum-V10, les autres projets
