@@ -1,6 +1,6 @@
 # CHANTIERS — état courant de MD-LIB
 
-État au **16/11/2026 à 21:57** (Paris), base `main` `5b7c258`.
+État au **16/11/2026 à 22:01** (Paris), base `main` `c8cd55e`.
 Périmètre : MD-LIB uniquement ; aucun projet consommateur modifié par cette
 session. La réorganisation et le circuit Claude/Codex symétrique sont approuvés
 par l'utilisateur le 16/11/2026. Les anciennes passations restent dans Git.
@@ -20,8 +20,9 @@ par l'utilisateur le 16/11/2026. Les anciennes passations restent dans Git.
   Les trois pertes démontrées sont corrigées : question CD47 et particularités
   des copies reportées ci-dessous, relecture du diff restaurée dans `agora.md`
   §12. Traitement de l'auteur ajouté dans `AGORA.md`, sans auto-réponse ni
-  nouveau verdict. Aucun second tour de relecture demandé (règle 58) ; la
-  décision du bloc reste à l'utilisateur.
+  nouveau verdict. Aucun second tour de relecture demandé (règle 58).
+  Point 1 tranché le 16/11/2026 (Codex autorisé) ; clôture du bloc par
+  l'utilisateur encore à faire.
 
 ## Invariants à ne pas défaire
 
@@ -50,13 +51,8 @@ par l'utilisateur le 16/11/2026. Les anciennes passations restent dans Git.
   du 26/10/2026 ; archive seulement.
 - `maswaddpt47-cmyk/fiches-generator` est une référence en lecture seule de
   FICHES_MEMO_ACTION_KOLB : ne jamais la modifier.
-
-## Décisions en attente
-
-- **Outils IA autorisés au CD47** : vérifier les instructions de service pour
-  Claude et Codex (`charte-ia-cd47.md`, consigne 8). Question ouverte depuis le
-  06/10/2026, réponse non consignée dans les sources lues au 16/11/2026 ; aucun
-  constat d'autorisation ou d'interdiction n'est établi ici.
+- **Codex est un outil autorisé au CD47** (charte IA, consigne 8) : décision de
+  l'utilisateur du 16/11/2026, consignée dans AG-003. Ne pas rouvrir la question.
 
 ## Projets consommateurs — repères
 

@@ -181,6 +181,14 @@ Corrections des écarts démontrés sous l'autorisation de refonte du 16/11/2026
 aucune nouvelle relecture demandée (règle 58). Ceci consigne le traitement de
 l'auteur, sans auto-réponse, nouveau verdict ni décision attribuée à l'utilisateur.
 
+### Tranché le 16/11/2026 — point 1 : Codex est un outil autorisé
+Décision de l'utilisateur, relayée dans la session Claude du 16/11/2026 :
+Codex (OpenAI) est un outil autorisé au sens de la charte IA du CD47
+(consigne 8). La question ouverte du 06/10/2026 est close ; l'entrée
+« Décisions en attente » de `CHANTIERS.md` (`c8cd55e`) devient un invariant.
+Les points 2 et 3 sont déjà corrigés par l'auteur dans `c8cd55e` ; le bloc
+reste ouvert jusqu'à la clôture par l'utilisateur.
+
 # Blocs tranchés
 
 Total cumulé : 0 confirmé, 2 amendé, 0 contredit. Récits et preuves dans Git.
