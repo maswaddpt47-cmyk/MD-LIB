@@ -1,72 +1,79 @@
 # Vérifier le déploiement avant d'annoncer « en ligne »
 
-Règle établie le 13/10/2026 : ce jour-là, deux déploiements de NextStep ont
-échoué (un test e2e bloquait la mise en ligne) et ont été annoncés « en
-ligne » à l'utilisateur, qui a testé une version qui n'était pas déployée.
-La règle « ne jamais déclarer en ligne sans vérification » existait déjà
-(`collaboration.md`) : écrite, elle n'a pas suffi. D'où un contrôle
-automatique plutôt qu'une phrase de plus (`hygiene-instructions.md`).
+Règle établie le 13/10/2026 après deux déploiements de NextStep en échec,
+annoncés à tort comme disponibles. Le contrôle porte sur le commit publié et
+sur les étapes qui le mettent réellement en ligne.
 
 ## La règle
 
-Ne jamais écrire « c'est en ligne », « c'est déployé » ou « à recharger »
-avant que `outils/attendre-deploiement.sh` ait répondu ✅ pour le commit
-poussé. ❌ : dire l'échec à l'utilisateur et corriger. ⏳ : dire que ce
-n'est pas fini, revérifier plus tard.
+Avant d'écrire « c'est en ligne », « c'est déployé » ou « à recharger », obtenir
+la preuve que le déploiement attendu du **commit poussé** a réussi. Un test local
+ou un push réussi ne constitue pas cette preuve.
 
-**Échec sans aucune étape exécutée** (09/11/2026, sms-mail-multi) : une
-tâche « sautée » ou absente de l'exécution, sans journal d'étape, alors que les
-tests passent en local, n'est pas un défaut du dépôt. Ne rien corriger ni
-pousser pour « débloquer » (pas de commit vide) : relancer **une fois** la même
-exécution (`rerun_workflow_run`), puis faire vérifier https://www.githubstatus.com
-(Actions, Pages) par l'utilisateur, la page étant bloquée depuis l'environnement
-cloud. Incident confirmé : programmer **une** relance après le délai annoncé
-(`send_later`) au lieu de boucler, et noter l'état réel dans `CHANTIERS.md`.
-Constat : trois exécutions en échec pendant l'incident Actions du 09/11
-(19:12–19:45, heure de Paris), puis succès à la relance programmée.
+Pour GitHub Actions, utiliser `outils/attendre-deploiement.sh` ; si l'environnement
+ne permet pas son exécution ou son accès à l'API, vérifier les mêmes éléments
+avec le connecteur GitHub disponible : SHA, workflows attendus, étapes de
+publication et résultats. Nommer le moyen utilisé et les limites éventuelles.
 
-**➖ « aucun workflow vu » ne prouve pas l'absence de déploiement** (13/11/2026,
-CRConum-V10) : lister les exécutions passées du dépôt (`list_workflow_runs`).
-S'il existe des « pages build and deployment », Pages est actif et la
-construction manquante est un blocage : la page en ligne reste l'ancienne. Ne
-rien pousser pour « débloquer » ; l'utilisateur relance par Settings → Pages,
-Branch « None » puis « main » / root, et le ✅ sur le sha poussé précède tout
-essai de sa part. Constat : quatre pushes sans construction (dernière le
-23/05/2026), « aucun déploiement » écrit dans le `CLAUDE.md` du projet, et un
-essai Proton Pass fait sur l'ancienne page.
+- **✅ Succès vérifié pour le SHA nommé** : l'annonce est possible.
+- **❌ Échec** : signaler l'étape en échec ; corriger une cause établie, sans
+  inventer un défaut du dépôt ni une panne de la plateforme.
+- **⏳ En cours** : le dire et surveiller la suite en arrière-plan.
+- **➖ / rien vérifié** : ne pas annoncer « en ligne » ; rechercher ce qui manque.
 
-**Pages refusé « in progress » alors que la demande est annulée** (02/11/2026,
-MentiAnalyser) : `deploy-pages` répond « Please cancel <sha> first » alors que
-l'API Pages dit déjà `deployment_cancelled` pour ce sha. Le verrou est chez
-GitHub : rien à annuler de notre côté. Ne pas ajouter d'étape de récupération
-au workflow ni enchaîner les relances : attendre une vingtaine de minutes, puis
-relancer **une fois** le workflow existant (`run_workflow` sur `main`). Constat :
-trois relances et deux workflows de récupération refusés entre 20:25 et 20:39
-(heure de Paris) ; la relance de 21:06 est passée.
+**Échec sans étape exécutée** : regarder l'état de l'exécution, la définition du
+workflow et les journaux disponibles. Des tests locaux verts ne prouvent pas
+que le dépôt est hors de cause. Ne pas pousser de commit vide pour débloquer.
+Relancer **une fois** la même exécution si une relance est pertinente, puis
+vérifier https://www.githubstatus.com (Actions, Pages). Si cette page est
+inaccessible depuis la session, demander à l'utilisateur de la consulter.
+Incident confirmé : programmer une relance avec l'outil disponible après le
+délai annoncé, sans boucle, et consigner l'état réel dans `CHANTIERS.md`.
+
+**« Aucun workflow vu » ne prouve pas l'absence de déploiement** : lire les
+exécutions passées et la configuration d'hébergement. Si Pages est attendu mais
+aucune construction n'est partie pour le commit, la publication reste non
+vérifiée ; comparer le commit réellement servi avant de conclure sur sa version.
+Ne rien pousser pour débloquer. Quand le réglage Pages est en cause, la relance
+par Settings → Pages, Branch « None » puis branche publiée / root, se fait selon
+la configuration du projet ; vérifier ensuite la publication du SHA attendu.
+
+**Pages refusé « in progress » malgré une demande annulée** : comparer le SHA
+de l'erreur et l'état de cette demande dans l'API Pages. Ne pas ajouter de
+workflow de récupération ni enchaîner les relances. Pour le cas déjà constaté
+où l'API indique `deployment_cancelled`, attendre environ vingt minutes, puis
+relancer **une fois** le workflow existant sur la branche publiée. Ce délai
+vient d'un incident ; il ne garantit pas le temps de résolution du suivant.
 
 ## Comment il se déclenche
 
-- **Automatiquement, dans toutes les sessions cloud** : le « Setup script »
-  de l'environnement Claude Code installe un hook (`PostToolUse`, outil Bash)
-  qui, après chaque commande contenant `git push`, lance le script sur les
-  dépôts de la session dont `main`, `master`, `sandbox` ou `gh-pages` vient
-  d'être poussé. Le résultat revient à Claude dans la réponse de la commande.
-  Texte du Setup script : `outils/script-demarrage.sh` (à coller par
-  l'utilisateur, une fois, dans les réglages de l'environnement).
-- **À la main**, si le hook n'a rien dit (session locale, environnement sans
-  le Setup script) : `bash /home/user/MD-LIB/outils/attendre-deploiement.sh
-  <dossier-du-dépôt> [branche|sha]`.
+- **Claude Code, hook effectivement installé** : le Setup script
+  `outils/script-demarrage.sh` installe un hook `PostToolUse` sur Bash. Après une
+  commande contenant `git push`, il recherche les dépôts voisins dont `main`,
+  `master`, `sandbox` ou `gh-pages` vient d'être poussé. Vérifier l'installation
+  et les chemins dans cet environnement ; le mécanisme n'est pas garanti dans
+  toutes les sessions cloud.
+- **Codex, session locale ou absence de rapport du hook** : lancer explicitement
+  le script depuis la copie de MD-LIB présente dans la session, ou utiliser le
+  contrôle GitHub décrit ci-dessus si le script n'est pas utilisable.
 
-Le script lit l'API GitHub Actions (jeton `$GITHUB_TOKEN` de la session s'il
-existe) et attend 8 minutes au plus. Il ignore les tâches planifiées et les
-lancements à la main, qui tournent sur le même sha. **Seul le code 0 (✅, sha
-nommé) autorise « en ligne »** : 1 échec, 2 pas fini, 3 rien vérifié (aucun
-workflow vu au bout de 90 s, branche ou sha introuvable, dépôt hors GitHub).
-Avant le 28/10/2026, ces derniers cas sortaient 0 en silence.
+Exemple depuis la racine de MD-LIB, avec le chemin réel du dépôt et son SHA :
+
+```bash
+bash outils/attendre-deploiement.sh /chemin/du-depot SHA_COMMIT
+```
+
+Le script lit GitHub Actions (avec `$GITHUB_TOKEN` s'il est disponible). Son
+délai de surveillance par défaut est de 8 minutes ; les attentes longues se
+surveillent en arrière-plan (`collaboration.md`, règle 52). Il ignore les tâches
+planifiées et les lancements manuels : vérifier explicitement une publication
+qui dépend de ces déclencheurs. Avec ce script, **seul le code 0 (✅, SHA nommé)**
+appuie l'annonce : 1 = échec, 2 = pas fini, 3 = rien vérifié (aucun workflow vu
+au bout de 90 s, branche ou SHA introuvable, dépôt hors GitHub).
 
 ## Dans les projets
 
-Rien à copier : le hook vient de l'environnement, le script de MD-LIB, cloné
-dans chaque session. Une ligne dans le `CLAUDE.md` d'un projet suffit à le
-rappeler là où l'on décrit le workflow git (« avant d'écrire « en ligne »,
-`MD-LIB/outils/attendre-deploiement.sh` doit avoir dit ✅ »).
+Ne pas recopier cette procédure. Le projet indique sa branche publiée, son
+hébergeur et ses étapes de publication, puis renvoie ici. Le hook dépend de
+l'environnement Claude Code ; Codex ne le suppose jamais installé. Le contrôle
+réel du commit reste nécessaire quel que soit l'outil.

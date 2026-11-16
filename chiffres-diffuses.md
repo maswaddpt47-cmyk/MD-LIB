@@ -1,10 +1,8 @@
 # Chiffres diffusés — ne jamais laisser passer une fausse information
 
-Posé par l'utilisateur le 20/10/2026, après l'audit Codex de GDINV2 : 251 tests
-verts, et pourtant 14 défauts de calcul sur le fichier réel (une fusion qui
-supprimait 76 demandes, un réimport qui ajoutait 41 % de lignes, un « taux de
-complétion » à 100 % qui mesurait la présence d'une date). Des élus et la
-hiérarchie lisent ces chiffres : une suite verte ne suffit pas.
+Règle utilisateur du 20/10/2026 : une suite verte ne garantit pas les chiffres
+diffusés. Conception complétée le 31/10/2026 ; méthode de données et rôles
+Claude/Codex harmonisés le 16/11/2026 avec `collaboration.md` règle 59.
 
 **Deux portées complémentaires** : le §0 s’applique à la conception de tout
 nouveau projet (règle 57 de `collaboration.md`). Les §1 à §4 s’appliquent aux
@@ -31,10 +29,9 @@ pertinents, consigner dans le projet :
 - **un seul format de date enregistré, fuseau explicite** : date civile en
   heure de Paris, instant en ISO avec fuseau ; jamais de date en texte
   localisé (`toLocaleString`) ni de « date du jour » prise en UTC
-  (`toISOString().slice(0,10)`) — deux défauts de sms-mail-multi (31/10/2026) ;
+  (`toISOString().slice(0,10)`) ;
 - **les tests de calcul lancés au déploiement**, qui le bloquent s'ils
-  échouent : un test que la mise en ligne n'attend pas ne protège rien
-  (sms-mail-multi déployait sans test, GDINV2 bloque déjà).
+  échouent.
 
 **Trace contrôlable** : à la création, le `CLAUDE.md` du projet reçoit une
 section « Chiffres » — les définitions prévues, ou « aucun chiffre prévu au
@@ -49,21 +46,29 @@ la minimisation et les durées de conservation : ne pas accumuler de données
 personnelles « au cas où ». Une origine historique inconnue reste inconnue ;
 la règle n’autorise aucune reconstruction de faits anciens.
 
-## 1. Codex audite avant toute diffusion
+## 1. Une IA d'un autre éditeur audite avant toute diffusion
 
-Avant qu'un chiffre parte vers les élus ou la hiérarchie :
+Avant diffusion dans le périmètre défini ci-dessus, notamment vers les élus
+ou la hiérarchie :
 
-- **Audit Codex sur l'export réel**, en lecture seule, avec le modèle
-  `consigne-audit-externe.md` adapté aux calculs : il rejoue le parcours réel
-  (import, fusion, enrichissement, sauvegarde, rechargement, réimport) et
-  recompte chaque indicateur par un chemin indépendant. L'IA qui écrit ne relit
-  pas (`agora.md` §12) : Claude ne s'auto-certifie pas.
+- **Audit indépendant en lecture seule** : auteur Claude → Codex ; auteur
+  Codex → Claude. Adapter `consigne-audit-externe.md` aux calculs et rejouer
+  le parcours réel de l'application sur des **jeux fictifs autorisés**
+  (import, fusion, enrichissement, sauvegarde, rechargement, réimport).
+  Recompter chaque indicateur par un chemin indépendant. L'IA qui écrit
+  ne s'auto-certifie pas (`agora.md` §12).
+- **Aucune lecture de sauvegarde ni de fichier réel d'usagers par l'IA**,
+  y compris hors dépôt public. Si le cas réel doit trancher, fournir un
+  diagnostic exécuté dans l'application de l'utilisateur, sans transférer
+  les lignes réelles à l'IA : chiffres seuls à l'écran, lus et rapportés par
+  l'utilisateur. Distinguer résultat fictif, contrôle réel déclaré par lui
+  et vérification directe du code ; nommer toute limite restante.
 - **Quand** : première diffusion d'un projet ; tout changement qui touche
   l'import, la fusion, un calcul, un filtre ou une définition d'indicateur ;
   chaque trimestre.
-- Le fichier réel et le rapport restent **hors du dépôt public**. Chaque point
-  est vérifié dans le code avant d'être retenu ; un point « haute » non traité
-  se dit à l'utilisateur avant la diffusion, jamais après.
+- Le rapport vérifié reste **hors du dépôt public**. Chaque point est vérifié
+  dans le code avant d'être retenu ; un point « haute » non traité se dit à
+  l'utilisateur avant la diffusion, jamais après.
 
 ## 2. Cinq familles de tests, toutes écrites avant de se dire « testé »
 
@@ -87,7 +92,9 @@ Livré à l'utilisateur avec la version, hors dépôt public :
 |---|---|---|---|---|
 
 Tout écart non nul porte son explication ; une explication qui n'existe pas
-est un défaut, pas un arrondi.
+est un défaut, pas un arrondi. Le tableau précise le jeu fictif ou le contrôle
+réel effectué par l'utilisateur, la période, le périmètre et les limites ;
+il ne contient aucune ligne de données d'usagers.
 
 ## 4. Ce que cette règle ne remplace pas
 
@@ -95,4 +102,4 @@ est un défaut, pas un arrondi.
 - L'AGORA pour les décisions de structure (identité des lignes, format de
   stockage, migration) : elles restent soumises avant d'être mises en œuvre.
 - Les définitions métier (« 48 h », « réalisé », « bénéficiaire ») : elles se
-  font trancher par l'utilisateur, jamais par Claude (règle 4).
+  font trancher par l'utilisateur, jamais par l'IA (règle 4).

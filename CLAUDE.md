@@ -1,427 +1,119 @@
 # Règles de travail — MD-LIB
 
-**Reprise de session : lire `CHANTIERS.md`**, qui contient la passation courante demandée par l’utilisateur.
+**Reprise de session : lire [`CHANTIERS.md`](CHANTIERS.md).**
+Index des fiches à consulter selon la tâche : [`README.md`](README.md).
 
 ## Règles communes chargées automatiquement (depuis le 04/11/2026)
 
-MD-LIB est attaché à toutes les sessions de l'utilisateur (sa déclaration du
-04/11/2026). La ligne ci-dessous fait charger `collaboration.md` avec ce
-fichier, dans toute session où MD-LIB est attaché, sans propagation :
-
 @collaboration.md
 
-**Essai concluant le 04/11/2026** : une session neuve, MD-LIB seul attaché, a
-cité la règle 62 sans ouvrir de fichier. **Décision de l'utilisateur du même
-jour** : les sessions se mettent à jour depuis MD-LIB, sans propagation des
-règles de `collaboration.md`. Codex ne suit pas cet import : les `AGENTS.md`
-gardent leur copie.
+Cet import concerne Claude lorsque MD-LIB est attaché et que l'environnement
+charge ce `CLAUDE.md`. L'essai du 04/11/2026 a confirmé ce fonctionnement dans
+une session ; il ne prouve pas le chargement dans tous les environnements.
+Si nécessaire, lire `collaboration.md` explicitement. Codex ne suit pas cet
+import : il lit `AGENTS.md` et ouvre lui-même les règles communes.
 
-**Ménage au prochain « pull » de chaque projet** (décision de l'utilisateur,
-04/11/2026 : pas de ménage groupé, chaque session le fait chez elle). Au premier
-`pull` d'une session sur un projet, vérifier que son `CLAUDE.md` porte la ligne
-« Règles communes de collaboration : MD-LIB/collaboration.md, chargé
-automatiquement par MD-LIB/CLAUDE.md (04/11/2026). Ici, seulement ce qui est
-propre au projet. » Si elle manque, faire le ménage avant toute autre tâche :
-
-1. retirer du `CLAUDE.md` les règles qui recopient `collaboration.md` sans rien
-   ajouter de propre au projet ;
-2. garder ce qui est propre au projet (workflow git et branches, tests et
-   commandes, déploiement, RGPD/sécurité, architecture, AGORA et ses critères,
-   décisions datées) et la partie spécifique d'une règle commune adaptée
-   (constat du projet, commande à lancer) ;
-3. ajouter la ligne ci-dessus en tête des règles de collaboration ;
-4. ne toucher ni `AGORA.md` ni `CHANTIERS.md` ; pour `AGENTS.md`, seulement la
-   mise à jour décrite ci-dessous ;
-5. présenter en un message la liste de ce qui est retiré et gardé (lignes avant
-   et après) et attendre l'accord de l'utilisateur ; puis un commit, publié selon
-   la règle du projet, et une ligne ajoutée ici dans « Reste à propager ».
-
-**`AGENTS.md` au même « pull »** (décision de l'utilisateur, 04/11/2026 : pas de
-propagation groupée, chaque session le fait chez elle). Codex ne suit pas l'import :
-son `AGENTS.md` doit porter lui-même ce qui le concerne. Au premier `pull` d'une
-session sur un projet qui a un `AGENTS.md`, vérifier qu'il contient, sinon les
-copier depuis `MD-LIB/AGENTS.md`, **sans redemander** (accord déjà donné) :
-- la section « Autorisations — accès complet » (en tête, avant « Au début de
-  chaque session ») ;
-- la puce « Avant de pousser, lancer tous les tests que le déploiement
-  exécutera » (section « Vérifications et livraison ») ;
-- la puce « Fin de tâche » (ajout du 05/11/2026 : annonce **✅ TÂCHE TERMINÉE**
-  dans le message final d'un travail réellement terminé) ;
-- « Main toujours » (`git-workflow.md` §3), **seulement** si le `CLAUDE.md` du
-  projet prescrit la publication sur `main` ;
-- la puce « Champ de jeton, de clé ou de mot de passe » (règle 69, ajout du
-  13/11/2026, section « Sécurité, audit et instructions »).
-Les puces « Fin de tâche » et « Champ de jeton » se vérifient au prochain pull,
-y compris dans les projets déjà cochés pour les autres consignes.
-Puis un commit, publié selon la règle du projet, une ligne dans son
-`CHANTIERS.md`, et le projet coché ici dans « Reste à propager ». Fait le
-04/11/2026 : sms-mail-multi, NEWGEN (`0fbb4c4`) et NextStep (`cb9985e`) ;
-MentiAnalyser le 13/11/2026 (`43ef075`, les cinq éléments).
-
-SMS-mail, gelé, est exclu.
+Au démarrage, vérifier dépôt, branche, état Git et demande actuelle ; actualiser
+par `git fetch` puis `git merge --ff-only` selon `git-workflow.md`. Préserver les
+éditions locales. Lire la passation et les consignes propres au projet avant
+d'intervenir. Ne pas demander à nouveau une autorisation déjà donnée ; exposer
+les conflits non résolus avant l'action concernée.
 
 ## Objectif du repo
 
-Bibliothèque de mémoire générale et réutilisable pour Claude, valable sur
-tous les projets de l'utilisateur (actuels et futurs) — pas un dépôt de
-code. Chaque fichier ici est une règle ou une routine destinée à être
-**copiée** (pas juste référencée) dans le `CLAUDE.md` de chaque projet
-consommateur, pour qu'elle soit lue automatiquement à chaque session sur
-ce projet, sans avoir à attacher MD-LIB à chaque fois.
-
-## Fichiers actuels
-
-| Fichier | Contenu |
-|---|---|
-| `collaboration.md` | Règles de collaboration avec Claude (comportement attendu des deux côtés), dont la tenue d'un `CHANTIERS.md` par projet pour qu'une session sans historique puisse reprendre |
-| `git-workflow.md` | Pull avant intervention, commits conventionnels, push sur `main`, gestion de branche imposée par la plateforme |
-| `rgpd-securite.md` | Checklist RGPD/sécurité + note sur la routine d'audit trimestriel planifiée |
-| `pwa-service-worker.md` | Garde-fous PWA/service worker : pas de cache quand un `?v=N` existe, pas de `respondWith`, et le rechargement forcé impossible en mode installé |
-| `hygiene-instructions.md` | Empêcher le millefeuille d'instructions : une contrainte testable devient un test, tester le coût et pas seulement la justesse, dater/qualifier chaque affirmation, budget fermé, pas de changelog dans le code |
-| `agora.md` | Faire contredire une proposition par une autre session via un `AGORA.md` commité dans le projet : sept critères de déclenchement (le 7ᵉ : tout calcul ou chiffre affiché, 26/10/2026) observables, rôle du contradicteur, gabarit de bloc, entretien ; §12 : Codex (OpenAI) comme contradicteur des blocs de sécurité et auditeur trimestriel, et règle « l'IA qui écrit ne relit pas » |
-| `consigne-audit-externe.md` | Modèle de consigne d'audit par Codex (OpenAI) : lecture seule, sans nos conclusions, chaque point avec fichier:ligne et scénario. Usage : `agora.md` §12 |
-| `AGORA.md` | L'AGORA de **ce dépôt** : les blocs ouverts et tranchés sur les règles elles-mêmes (`agora.md` est la règle, `AGORA.md` est l'instance) |
-| `charte-ia-cd47.md` | Résumé des 11 consignes d'utilisation de l'IA du CD47 (données personnelles, identifiants, relecture humaine, sobriété…) et ce qu'elles changent dans nos projets. Le PDF interne fait foi, non publié ici (dépôt public). Référence, pas une règle à copier |
-| `archivage-cd47.md` | Résumé du guide « Archivage et protection des données personnelles » du CD47 : DUC/DUA, tableau de gestion, visa des Archives départementales pour toute élimination (purges automatiques comprises), nommage V0.x/V1. Le PDF interne fait foi, non publié ici. Référence, pas une règle à copier |
-| `charte-graphique-cd47.md` | Charte graphique du CD47 en texte : couleurs officielles (bleu `#4389BD`…), polices (Capriola, Verdana), règles du logo, fichiers à utiliser. **À lire avant toute production aux couleurs du CD47.** Le PDF source `charte-graphique-cd47.pdf` fait foi. Référence, pas une règle à copier : un projet la cite et s'y conforme |
-| `chiffres-diffuses.md` | §0 : anticiper les statistiques dès la conception de tout nouveau projet (règle 57). §1–4 : audit Codex avant diffusion, cinq familles de tests et tableau « affiché / recompté / écart » (règle 33). La conception est proportionnée ; l’audit de diffusion garde sa portée propre. |
-| `Auteur.md` | Présentation de l'utilisateur à donner à une autre IA (profil, outils, style de réponse, façon de travailler, projets). Créé le 01/11/2026 à sa demande. **Dépôt public** : ni e-mail ni données de tiers (choix de l'utilisateur). Référence, pas une règle à copier |
-| `prompts-bilan-collaboration.md` | Trois prompts pour recueillir et synthétiser des comptes rendus de collaboration avec une IA (déplacés du `CLAUDE.md` de sms-mail-multi le 04/11/2026). Référence, pas une règle à copier |
-| `deploiement.md` + `outils/` | Ne jamais annoncer « en ligne » avant le ✅ de `outils/attendre-deploiement.sh` (workflows GitHub Actions du commit poussé). Déclenché après chaque `git push` par un hook que le Setup script de l'environnement installe (`outils/script-demarrage.sh`, à coller par l'utilisateur). Rien à copier dans les projets : une ligne de rappel dans leur `CLAUDE.md` suffit |
-
-**À lire en premier** quand on s'apprête à ajouter une règle quelque part :
-`hygiene-instructions.md`. Les autres fichiers disent quoi faire, celui-là dit
-où l'écrire — et quand ne pas l'écrire du tout.
+Bibliothèque documentaire partagée par Claude et Codex pour les projets actuels
+et futurs. `collaboration.md` porte les règles communes ; les fiches du README
+portent les procédures détaillées. Les projets gardent leurs exceptions
+validées, commandes, branches, tests et modes de publication.
 
 ## Convention de nommage
 
-Nommer chaque fichier **d'après son contenu**, pas d'après le projet
-d'origine d'où il a été extrait la première fois (ex. `collaboration.md`,
-pas `ATELIERS_NEWGEN.md`) — l'objectif est la réutilisation multi-projets,
-un nom lié à un repo précis n'a pas de sens ici et crée un risque de
-collision quand on ajoute d'autres projets.
+Nommer les fichiers d'après leur contenu, sans nom de projet d'origine ni
+statut dans le nom. Garder les noms actuels et les numéros des règles/sections
+cités par les autres dépôts. Lire `hygiene-instructions.md` avant tout ajout.
 
 ## Nouveau projet — AGORA installée dès la création
 
-Tout projet a son `AGORA.md` et sa section « AGORA » dans son `CLAUDE.md`
-(`agora.md` §13, décidé le 17/10/2026). Une session qui crée un projet l'installe
-avant le premier commit de code ; une session qui découvre un projet sans AGORA
-l'installe et le dit au premier message. Seule exception : un jumeau qui partage
-l'`AGORA.md` de l'autre et le dit dans son `CLAUDE.md`.
-
-**Nouveau projet — statistiques anticipées dès la conception** : appliquer
-`collaboration.md` règle 57 et `chiffres-diffuses.md` §0 avant de figer le
-modèle de données. Consigner les choix pertinents dans les instructions du
-projet, même si aucun tableau de bord n’est demandé ; dispositif proportionné,
-sans collecte préventive inutile. Cette anticipation complète l’audit avant
-diffusion, elle ne le remplace pas. **Trace** : le `CLAUDE.md` du nouveau
-projet reçoit une section « Chiffres » (définitions prévues, ou « aucun chiffre
-prévu au JJ/MM/AAAA, parce que… »), installée avant le premier commit de code,
-comme l'AGORA.
+Installer `AGORA.md` et sa section de consignes avant le premier commit de code
+(`agora.md` §13). Un projet découvert sans AGORA la reçoit au premier passage ;
+seule exception : un jumeau qui partage celle de l'autre et le précise.
+Prévoir les chiffres avant de figer le modèle de données : section « Chiffres »
+avec définitions ou « aucun chiffre prévu au JJ/MM/AAAA, parce que… »
+(`collaboration.md` règle 57, `chiffres-diffuses.md` §0).
 
 ## Règle de propagation — la plus importante
 
-**Depuis le 04/11/2026, une règle de `collaboration.md` ne se propage plus dans
-les `CLAUDE.md`** : elle est chargée d'office par la section ci-dessus dans
-toute session où MD-LIB est attaché. Restent à reporter à la main : la copie
-des `AGENTS.md` (Codex) quand la règle le concerne, et ce qui est propre à un
-projet (règle 47). Ce qui suit vaut pour ces deux cas et pour les autres
-fichiers de MD-LIB, qui ne sont pas importés.
+Une modification de MD-LIB ne modifie aucun autre dépôt et ne garantit pas sa
+lecture par une session ouverte. Actualiser puis relire les sources dans les
+sessions concernées. Il n'y a aucune communication automatique entre comptes.
 
-**Il n'y a pas de lien automatique entre ce repo et les `CLAUDE.md` des
-projets consommateurs.** Modifier un fichier ici ne met à jour aucun
-projet. Quand l'utilisateur demande une modification :
+- Depuis le 04/11/2026, ne plus recopier `collaboration.md` dans les `CLAUDE.md`
+  consommateurs : utiliser le chargement commun, avec lecture explicite si
+  l'import n'est pas disponible.
+- Les `AGENTS.md` gardent une copie autonome des consignes essentielles Codex.
+  Les procédures non importées et les exceptions locales se reportent seulement
+  dans les projets où leur contexte existe (règle 47).
+- Pour une modification de source : commit et publication dans MD-LIB d'abord.
+  Hors mises à jour déjà autorisées ci-dessous, proposer la liste des projets
+  concernés et obtenir l'accord avant toute propagation. Respecter ensuite les
+  consignes de chaque dépôt ; ne pas appliquer le workflow de MD-LIB partout.
+- Les références CD47 restent des références : ne pas en dupliquer les résumés.
 
-1. Modifier d'abord le fichier ici (source canonique).
-2. Committer et pousser sur MD-LIB.
-3. **Demander explicitement à l'utilisateur** s'il veut que le changement
-   soit répercuté dans les projets consommateurs — ne pas le faire par
-   défaut, mais ne pas non plus présumer que « source canonique à jour »
-   suffit : sans propagation, les projets restent sur l'ancienne version.
-4. Si oui, éditer manuellement la section correspondante dans le
-   `CLAUDE.md` de chaque projet concerné, en respectant la convention de
-   branche/commit propre à **ce projet-là** (voir son propre `CLAUDE.md`,
-   pas celui de MD-LIB).
+**Ménage au prochain « pull » de chaque projet** (accord du 04/11/2026) :
+si sa ligne commune manque, préparer le retrait des seules copies sans apport
+local de `collaboration.md`. Garder exceptions, workflow, commandes, sécurité,
+AGORA et décisions propres au projet. Ajouter la ligne :
+
+> Règles communes de collaboration : MD-LIB/collaboration.md, chargé
+> automatiquement par MD-LIB/CLAUDE.md (04/11/2026). Ici, seulement ce qui est
+> propre au projet.
+
+Présenter les éléments retirés/gardés et les lignes avant/après ; attendre
+l'accord pour ce ménage, puis publier selon le projet. Ne pas modifier son
+`AGORA.md` ou `CHANTIERS.md` pour ce seul ménage.
+
+**`AGENTS.md` au même « pull »**, sans redemander (accord du 04/11/2026) :
+vérifier autorisations, tous les tests du déploiement avant push, fin de tâche,
+champ de secret/gestionnaire de mots de passe et, si le projet prescrit `main`,
+« Main toujours » (`git-workflow.md` §3). Les précisions récentes se vérifient
+aussi dans les copies déjà complétées. Publier selon le projet et noter l'état
+dans sa passation ; actualiser le suivi ici. SMS-mail, gelé, est exclu.
 
 ## Projets consommateurs actuels
 
-- `maswaddpt47-cmyk/ATELIERS_NEWGEN` — développe sur une branche dédiée
-  imposée par la plateforme, merge dans `main` en fin de session. **Projet
-  pilote pour `agora.md`** : `AGORA.md` créé à la racine et résumé propagé en
-  section 8 de son `CLAUDE.md` le 21/09/2026. Format à éprouver ici avant
-  propagation ailleurs (plate-forme non déployée, et jumeau de NextStep —
-  le cas `hygiene-instructions.md` §6).
-- `maswaddpt47-cmyk/ateliers-cd47_NextStep` — push direct sur `main`, pas
-  de branche intermédiaire.
-- `maswaddpt47-cmyk/GDINV2` — **`agora.md` propagé le 21/09/2026**, après
-  validation du format par le pilote NEWGEN : `AGORA.md` à la racine, section
-  « AGORA » dans son `CLAUDE.md`, chantier ouvert dans son `CHANTIERS.md`
-  jusqu'au premier bloc tranché. Son `AGORA.md` porte aussi les règles de
-  réponse : ce n'est plus un écart, **le §9 a été corrigé le 22/09/2026**
-  (AG-001 de MD-LIB) — la copie doit porter le gabarit *et* les trois règles
-  qui ne s'en déduisent pas. Copie **relue le 21/09/2026 depuis une
-  session tierce : test du §9 passé**, les deux fichiers suffisent à ouvrir un
-  bloc et à y répondre sans MD-LIB. Le libellé de la phrase de relais
-  (« …réponds à AG-00N, **tu es la session B** ») reste utile pour remplir le
-  champ `Auteur`, mais ce n'est **pas** la distinction qui fait foi : le
-  trailer `Claude-Session:` des commits distingue deux sessions même sous une
-  identité GitHub unique (§10, corrigé le 21/09/2026 après AG-001). **Aligné le
-  22/09/2026** sur les deux améliorations retenues : rappel accroché aux
-  « décisions à trancher » de `CHANTIERS.md`, et ligne « si personne ne
-  répond, je fais quoi ? » dans le gabarit. **Liste canonique du §9 propagée
-  le 22/09/2026** : les deux puces dupliquées par le gabarit (les trois
-  verdicts, la règle de preuve) retirées, le cycle de relais et l'absence de
-  notification inter-comptes ajoutés. **Écart assumé** : la copie garde ses
-  sections « Entretien » et la posture « compléter, pas réécrire », que le §9
-  ne liste pas — la première n'est pas une règle de réponse, la seconde ne se
-  déduit pas du gabarit. La borne de 35-50 lignes n'a rien demandé : la
-  section AGORA de son `CLAUDE.md` fait 37 lignes (mesuré le 22/09/2026,
-  `GDINV2/CLAUDE.md:122-158`).
-  Branche de travail `main`, branche de session
-  imposée à merger dans `main` en fin de session (le déploiement GitHub
-  Pages ne part que depuis `main`). Règles propagées le 20/09/2026 dans la
-  section « Règles générales adaptées à ce projet » de son `CLAUDE.md` ;
-  les règles 14 à 17 le 21/09/2026, dans sa section « Ce que coûte un test ».
-
-- `maswaddpt47-cmyk/SMS-mail` et `maswaddpt47-cmyk/sms-mail-multi` —
-  **ne sont plus des jumeaux depuis le 20/10/2026** : SMS-mail (solo) est
-  **gelé** sur décision de l'utilisateur, plus aucun développement ni
-  portage ; `sms-mail-multi` est désormais le seul actif. **`agora.md` et la
-  tenue de `CHANTIERS.md` propagés le 26/09/2026** : `AGORA.md` et
-  `CHANTIERS.md` à la racine de chacun, sections « Reprise de session » et
-  « AGORA » dans leur `CLAUDE.md`. Chaque repo garde son propre `AGORA.md`.
-  `scripts/check-chantiers.sh` et son hook `SessionStart` : **en place dans
-  sms-mail-multi** (`7a8aad7`, 06/11/2026 ; constaté par « pull » le 16/11/2026,
-  cette note disait encore « non fait »). Test
-  d'auto-suffisance du §9 **pas encore passé** sur sms-mail-multi (sans
-  objet pour SMS-mail, gelé). Branche de session imposée, mergée dans `main`
-  en fin de session.
-
-- `maswaddpt47-cmyk/pptx-creator` — **`CHANTIERS.md` et `agora.md`/`AGORA.md`
-  propagés le 28/09/2026** : `CHANTIERS.md` et `AGORA.md` créés à la racine,
-  section « AGORA » ajoutée à son `CLAUDE.md` (six critères, exclusions,
-  phrase « soumet d'office, ne bloque jamais »), renvoi vers `CHANTIERS.md`
-  en tête de son `CLAUDE.md`. Premier chantier consigné : la décision à
-  trancher sur l'import `.doc`/`.docx` dans le mode « Adapter un PPTX
-  existant ». **Écart assumé** : la règle §7 d'`agora.md` (push direct sur
-  `main` pour un bloc AGORA, exception au workflow de branche) n'a pas été
-  appliquée à ce premier commit — la session qui a propagé était contrainte
-  par sa plateforme à ne pousser que sur sa branche de session imposée, avec
-  merge dans `main` en fin de session, conformément au `CLAUDE.md` du projet.
-  À corriger dès qu'un vrai bloc AGORA (pas la mise en place initiale) doit
-  circuler entre deux sessions. Test d'auto-suffisance du §9 **pas encore
-  passé** (aucune session tierce n'a relu la copie). Branche de session
-  imposée par la plateforme, mergée dans `main` en fin de session.
-
-- `maswaddpt47-cmyk/FICHES_MEMO_ACTION_KOLB` — générateur Word de fiches
-  Action / Mémo / Kolb (GitHub Pages). **Tenue de `CHANTIERS.md` (règle 8ter
-  de `collaboration.md`) propagée le 29/09/2026** : `CHANTIERS.md` à la racine,
-  `CLAUDE.md` minimal qui y renvoie, et `scripts/check-chantiers.sh` copié
-  depuis NEWGEN avec son hook `SessionStart` (rappel de ménage seul, sans les
-  tests propres à NEWGEN ; testé muet sur un fichier à jour, alertant sur un
-  en-tête vieilli et une tâche barrée). **Non propagés** : les autres règles
-  de `collaboration.md` et `agora.md`. Branche de session imposée par la
-  plateforme, `main` mis à jour en avance rapide (GitHub Pages ne déploie que
-  `main`). `maswaddpt47-cmyk/fiches-generator` y sert de référence en lecture
-  seule : ne jamais le modifier.
-  **AGORA installée le 17/10/2026** (`AGORA.md` + section « AGORA » dans son
-  `CLAUDE.md`, qui disait « Pas d'AGORA ici » ; l'encart Codex est conservé).
-  Test d'auto-suffisance du §9 pas encore passé.
-
-- `maswaddpt47-cmyk/PAPPERBOARD` — application **WoocLight** (participation
-  en direct type Wooclap, PHP + JSON). Créé le 09/10/2026 : `CLAUDE.md` avec
-  les règles copiées (git, collaboration, tests dosés, RGPD/sécurité),
-  `CHANTIERS.md` et `scripts/check-chantiers.sh` copié depuis NEWGEN.
-  **Projet personnel depuis le 14/10/2026** : hors obligations du CD47,
-  compte Alwaysdata personnel `wooclight`, charte propre « Papier & Terre »
-  (conçue dans Claude Design, validée le 15/10/2026 ; plus de charte CD47),
-  l'utilisateur est responsable de traitement. En ligne le 14/10/2026.
-  **Non fait** : le hook `SessionStart`, refusé à Claude par la plateforme,
-  à créer par l'utilisateur. Références au CD47 retirées de tout le dépôt le 14/10/2026 (`fae9607`).
-  **`AGORA.md` créé le 17/10/2026** (section 6 de son `CLAUDE.md`, blocs AG-001
-  et AG-002 ouverts après coup, test d'auto-suffisance du §9 pas encore passé) ;
-  la sécurité reste à Codex (`agora.md` §12, règle 4), deux audits passés le 10/10/2026. `main` protégée par
-  un ruleset (contrôle `tests`) : pousser la branche de session, attendre la
-  CI verte, puis `git push origin <sha>:main` en avance rapide ; le
-  déploiement part tout seul.
-
-- `maswaddpt47-cmyk/SpeedDial` — page de raccourcis personnelle (bundle
-  React auto-dépaquetant, GitHub Pages, push direct sur `main`). **AGORA
-  installée le 13/11/2026** (`f8aba07`) ; test d'auto-suffisance du §9 pas
-  encore passé. Le même jour : ligne d'import des règles communes (`34d57fe`,
-  rien à retirer) et `AGENTS.md` complété (`5406af5`, « Fin de tâche » et
-  « Main toujours » compris).
-
-- `maswaddpt47-cmyk/CRConum-V10` — pages HTML de compte rendu de réunion
-  (API Anthropic depuis le navigateur). **Main toujours** (décision du
-  13/11/2026). `CLAUDE.md`, `CHANTIERS.md` et **AGORA installés le 13/11/2026**
-  (`168c125`) ; `AGENTS.md` complet (`b520308`, `844dacb`). GitHub Pages depuis
-  `main` ; règle 69 confirmée sur téléphone le 13/11/2026. Test d'auto-suffisance
-  du §9 pas encore passé.
-
-Vérifier leur `CLAUDE.md` respectif avant de propager, les conventions
-peuvent diverger d'un projet à l'autre.
+Leurs particularités utiles et les seules actions restantes sont regroupées
+dans [`CHANTIERS.md`](CHANTIERS.md#projets-consommateurs--repères).
+Toujours relire les consignes du projet avant de le modifier.
 
 ## Reste à propager
 
-- **Annonce de fin « ✅ TÂCHE TERMINÉE » (05/11/2026)** : règle 18 de
-  `collaboration.md` et modèle `AGENTS.md` à jour. Déjà présente dans les
-  `AGENTS.md` de NEWGEN, NextStep et PAPPERBOARD (05/11/2026, `b33d8fc` :
-  autorisations, tests avant push et « Main toujours » selon son ruleset
-  également synchronisés) ; sms-mail-multi le 06/11/2026 (`41d4cd6`) ; SpeedDial le 13/11/2026 (`5406af5`, avec les autres consignes du « pull »). Les autres se mettent à jour à leur prochain
-  pull. Pour une session déjà ouverte, demander explicitement la
-  relecture de MD-LIB et des consignes du projet ; aucune activation
-  automatique dans toutes les sessions n'est établie.
-
-- **Règles 61 et 62 de `collaboration.md` et « dire « pull » à Codex suffit »
-  (`agora.md` §12, section « AGORA — ce que « pull » veut dire » des `AGENTS.md`)**
-  (04/11/2026, nées de la session NEWGEN du 02-03/11, inscrites sur accord de
-  l'utilisateur, **propagées le 04/11/2026** à sa demande dans NEWGEN (règles 47-48,
-  `35a2fe3` ; « pull » déjà en place), NextStep (`9f68787`, « pull » renvoyé à
-  l'AGORA de NEWGEN), GDINV2 (`9e32f02`, `1312571`), sms-mail-multi (`fa7666a`,
-  `0ea5f52`), PAPPERBOARD (`9bb9986`, `f0a4351`), FICHES_MEMO_ACTION_KOLB
-  (`c354ead`, `ee15b38`), PPTX-CREATOR (`5b08126`, `cf1d2c9`). **Non faits** :
-  MentiAnalyser (attache refusée par le contrôle des autorisations de la session,
-  à reprendre depuis une session où il est attaché), SMS-mail (gelé).
-
-- **Annonce AGORA 🔴 (`agora.md` §4, 04/11/2026)** : propagée le 04/11/2026 dans NEWGEN (`4cd145a`), NextStep (`3cd86dd`), GDINV2 (`07cd106`), sms-mail-multi (`9b1b062`), PAPPERBOARD (`df3dcf6`), FICHES_MEMO_ACTION_KOLB (`351af2d`), PPTX-CREATOR (`6bd3de1`). Non faits : MentiAnalyser (non attaché), SMS-mail (gelé).
-- **Ménage des `CLAUDE.md` (04/11/2026)** : sms-mail-multi fait le 04/11/2026 (ligne d'import ajoutée, deux copies de `collaboration.md` retirées, prompts déplacés dans `prompts-bilan-collaboration.md`) ; PAPPERBOARD fait le 04/11/2026 (`06d2bb9`, 257 → 122 lignes, section 2 réduite à la ligne d'import et à cinq points propres au projet, accord de l'utilisateur) ; SpeedDial fait le 13/11/2026 (`34d57fe`, ligne ajoutée, rien à retirer). Les autres projets : à leur prochain « pull ».
-- **Règle 69 dans les `AGENTS.md`** (champ de secret reconnu par un gestionnaire
-  de mots de passe, 13/11/2026) : modèle `MD-LIB/AGENTS.md` à jour ; chaque projet
-  la reçoit **à son prochain « pull »** (décision de l'utilisateur, 13/11/2026),
-  Fait : SpeedDial (13/11/2026, `f68d6a2`), sms-mail-multi (16/11/2026, `c8d7c72`), NEWGEN (`309764c`) et NextStep (`51d7f1f`) le 13/11/2026,
-  avec la règle appliquée à leurs écrans de connexion (`bd643ef`, `eb5db57`). CRConum-V10 le 13/11/2026 (`331de48` connexion des 5 pages, `b520308` AGENTS.md, sur `main`).
-  MentiAnalyser (`43ef075`) le 13/11/2026, avec ses deux champs « Mot de passe IA » (`6b2e720`).
-  PAPPERBOARD le 15/11/2026 (`76291bf`, avec les précisions « bouton qui lance l'application » et « Fin de tâche » ; sa connexion animateur n'est pas encore mise en conformité : `name`, identifiant caché et `autocomplete="on"` manquent, `admin.php:90-92`).
-- **Règle 18 — « la tâche, c'est le travail demandé dans le message »
-  (13/11/2026)** : `collaboration.md` chargé d'office ; puce « Fin de tâche » des
-  `AGENTS.md` mise à jour dans le modèle et dans CRConum-V10, les autres projets
-  à leur prochain « pull ».
-- **Règle 69 — bouton qui lance l'application** (13/11/2026) : précision dans
-  `collaboration.md` et le modèle `AGENTS.md` ; CRConum-V10 la porte déjà, les
-  autres `AGENTS.md` à leur prochain « pull ».
-- **Règle 18 — suite explicite en fin de message (02/11/2026)** : demandée
-  par l'utilisateur et inscrite dans collaboration.md ; appliquée dans
-  MentiAnalyser pendant cette session. Autres projets non modifiés.
-
-Les comptes rendus de propagation ont été retirés le 17/10/2026 (AG-002,
-amendé) : qui a propagé quoi, quand et dans quel commit est dans `git log`,
-ici et dans chaque projet — `hygiene-instructions.md` §5. Ne subsiste que ce
-qui demande encore une action :
-
-- **Captures envoyées à Claude** (`rgpd-securite.md`) : pas propagée à
-  FICHES_MEMO_ACTION_KOLB (dépôt non attaché le 06/10/2026).
-- **`deploiement.md`** : ligne de rappel posée dans SMS-mail, sms-mail-multi,
-  GDINV2 et PAPPERBOARD seulement ; manque dans les autres. **Script de
-  configuration** (nom français du Setup script) **collé le 30/10/2026 dans
-  l'environnement « Micky »** ; **vérifié le 30/10/2026** dans une session
-  neuve : hook `PostToolUse` présent dans `~/.claude/settings.json`, script
-  trouvé, muet hors `git push` et sans push récent, et rapport ✅ reçu
-  automatiquement après le push de `d0b4b71` sur `main` (Pages : success).
-  Le script vaut **par environnement et par compte** : à coller aussi dans
-  l'environnement utilisé sur le **second compte** de l'utilisateur (non fait
-  au 30/10/2026). Les trois autres environnements du compte « Micky »
-  (deux « Claude », « Michel Aswad ») ne l'ont pas.
-- **Règles 2 et 17 de `collaboration.md`** : pas propagées à PPTX-CREATOR
-  (attache refusée par la plateforme ; l'utilisateur y renonce le 17/10/2026, ne plus le
-  proposer).
-- **Règles 27 à 31 de `collaboration.md`** : 27, 29 et 30 propagées le
-  17/10/2026 dans les **huit** projets (NEWGEN, NextStep, GDINV2, SMS-mail,
-  sms-mail-multi, PAPPERBOARD, FICHES_MEMO_ACTION_KOLB, PPTX-CREATOR), au
-  format propre à chacun. **28 et 31 restent ici** : leur contexte (l'AGORA
-  lui-même, le rythme des blocs) ne se reproduit pas dans un projet.
-- **`scripts/check-chantiers.sh`** : en place dans sms-mail-multi (`7a8aad7`,
-  06/11/2026) ; manque dans SMS-mail (gelé) ; hook refusé à Claude dans PAPPERBOARD.
-  **Seuil de 30 Ko** (16/11/2026, règle 8ter) : posé dans la copie de sms-mail-multi ; reporté le 16/11/2026 dans la copie canonique (ATELIERS_NEWGEN) et dans NextStep ; reste GDINV2, FICHES_MEMO_ACTION_KOLB et PAPPERBOARD, au prochain « pull » de chacun.
-- **Règle 57 — conception des statistiques (31/10/2026)**, précisée le même jour (section « Chiffres » contrôlable, format de date unique et tests au déploiement, nouvelle donnée d'un projet existant) : **propagée le 31/10/2026** sous la forme « nouvelle donnée enregistrée » à sms-mail-multi (8trevicies, `1e825b2`), GDINV2 (`14288d8`), NEWGEN (règle 44, `d3e57e3`), NextStep (règle 44, `e207c10`) et PAPPERBOARD (`34689f4`). Non propagée : FICHES_MEMO_ACTION_KOLB et PPTX-CREATOR (aucune donnée enregistrée qu'on compte ; à reposer s'ils en enregistrent), SMS-mail (gelé). La section « Chiffres » ne s'impose qu'aux nouveaux projets.
-- **`chiffres-diffuses.md` / règle 33** (20/10/2026) : propagée à GDINV2
-  (section « Chiffres diffusés », 5 familles de tests posées). NEWGEN : tests
-  de concordance ajoutés (PR #35), écart de « taux de présence » entre
-  Historique/mail mensuel (50 %) et bilan trimestriel (75 %) **à trancher par
-  l'utilisateur** ; NextStep porte les mêmes fichiers, pas encore vérifié.
-  Pas propagée : PAPPERBOARD (projet personnel, chiffres vus des participants,
-  audits Codex déjà passés), autres projets sans chiffre diffusé aux élus.
-- **Critère 7 d'`agora.md`** (26/10/2026 : tout calcul ou chiffre affiché ouvre un bloc AGORA, contradicteur Codex) : propagé à NEWGEN, NextStep, GDINV2 (`98ce116`) et PAPPERBOARD (`dd4fe81`) le 26/10/2026 ; **sms-mail-multi le 30/10/2026** (`0585761` : il calcule des taux et un bilan imprimé ; 9 blocs AG-004 à AG-011, Codex contradicteur) ; non propagé aux projets sans chiffre affiché (SMS-mail gelé, pptx-creator, FICHES_MEMO_ACTION_KOLB) — à reposer si l'un d'eux se met à calculer.
-- **Règles 34 à 37 de `collaboration.md`** (compte rendu recoupé et
-  attribué, passages réels d'une tâche programmée, moyen d'arrêt essayé en
-  réel) et **38** (élément exact nommé) : propagées les 26 et 27/10/2026 dans
-  les sept projets actifs (SMS-mail gelé, non touché).
-- **Règle 39** (promesse d'action à l'usager) : propagée le 27/10/2026 à
-  NEWGEN, NextStep et sms-mail-multi seulement, les seuls qui envoient mails ou
-  rappels (choix de l'utilisateur). À reposer si un autre projet se met à en
-  envoyer. **Règles 40 à 42** (format serveur et pages ouvertes, identité réelle
-  avant de conclure à une fuite, effets d'un interrupteur) : propagées le
-  27/10/2026 à NEWGEN et NextStep ; la 42 seule à sms-mail-multi (ni API ni
-  connexion). Les autres projets : à reposer s'ils en prennent le contexte.
-- **Règles 43 à 46 de `collaboration.md`** (28/10/2026, nées de la session
-  GDINV2 du 27/10/2026) : chaînage git derrière un `pull` qui échoue, un
-  inventaire ne prouve pas une impossibilité, décrire l'environnement avant
-  d'en analyser les contraintes, un document de plus remplace ou s'ajoute.
-  **Propagées le 28/10/2026** dans les sept projets actifs ; sms-mail-multi
-  n'a reçu que la 43 et la 45 (il ne produit pas de document pour un tiers).
-- **Règles 48 à 50 de `collaboration.md`** (28/10/2026, nées de la session
-  GDINV2 du 28/10/2026) : pas de statut dans un nom de fichier, document non
-  remis corrigé sur place, visibilité d'un dépôt vérifiée avant d'y archiver.
-  **Propagées le 30/10/2026** : 48 et 49 à GDINV2 (`c52ee0b`), NEWGEN
-  (règles 40 et 41, `3729d77`) et NextStep (règles 40 et 41, `6cbcac6`) ; 50 à
-  GDINV2 seul (public, Pages publie `path: '.'`). Ailleurs : à reposer si un
-  projet se met à produire des documents pour un tiers ou à en archiver dans
-  un dépôt public.
-- **Règles 53 et 54 de `collaboration.md`** (29/10/2026, nées de la session
-  GDINV2) : **propagées le 29/10/2026** à GDINV2 (puces, `c2bb3d9`), NEWGEN
-  (règles 38 et 39, `2929a95`) et NextStep (règles 38 et 39, `7ecd158`) ; la
-  53 à PAPPERBOARD le 30/10/2026 (`5779223`, son test hostile). Non propagées
-  ailleurs (pas de document remis à un tiers, pas de test de sécurité).
-- **Règles 58 et 59 de `collaboration.md`** (01/11/2026, nées de sms-mail-multi, inscrites sur accord de l'utilisateur) : circuit de contradiction proportionné ; sauvegardes réelles jamais lues. **Propagées le 01/11/2026** : sms-mail-multi (8quatervicies et 8quinvicies, `b20c38b`), NEWGEN (règles 45 et 46, `8c86be0`), NextStep (règles 45 et 46, `69797fc`), GDINV2 (puces, `70da024`). Non propagées : PAPPERBOARD (projet personnel, sa propre politique de données), FICHES_MEMO_ACTION_KOLB et PPTX-CREATOR (pas de données d'usagers ni de calculs soumis à l'AGORA) — à reposer si le contexte apparaît ; SMS-mail (gelé).
-- **Règle 60 de `collaboration.md` et « Main toujours » de `git-workflow.md` §3** (01/11/2026, nées de sms-mail-multi, inscrites sur accord de l'utilisateur) : tous les tests du déploiement avant de pousser ; avance rapide sur `main` à chaque livraison malgré une branche imposée, quand le projet prescrit `main`. **Déjà dans sms-mail-multi** (`CLAUDE.md`, `a081c1c`). **Règle 60** : chargée par l'import ; sa copie dans les `AGENTS.md` et « Main toujours » se font **au prochain « pull » de chaque projet** (section « `AGENTS.md` au même « pull » », décision du 04/11/2026). Faits : sms-mail-multi ; NEWGEN (`0fbb4c4`) et NextStep (`cb9985e`), le 04/11/2026.
-- **Section « Autorisations — accès complet » des `AGENTS.md`** (04/11/2026, demande de l'utilisateur : Codex ne demande plus de permission, quatre exceptions, trois interdits) : posée dans `MD-LIB/AGENTS.md`, sms-mail-multi, NEWGEN (`0fbb4c4`) et NextStep (`cb9985e`). Autres projets ayant un `AGENTS.md` : **au prochain « pull » de chacun** (même section, décision du 04/11/2026).
-- **Règle 47** (une règle se propage là où son contexte existe, 28/10/2026) :
-  elle porte sur la propagation elle-même, donc sur MD-LIB ; **reste ici**,
-  comme les règles 28 et 31.
-
-- **Règles 55 et 56 de `collaboration.md`** (30/10/2026, nées de la session sms-mail-multi, **inscrites sur accord de l'utilisateur**) + précision de la règle 8bis (conversion horaire par
-  commande) : un test se vérifie par mutation ; « pull » après des modifications hors session met `CHANTIERS.md` à jour. **Propagées le 30/10/2026** dans les sept
-  projets actifs : la 55 là où l'on écrit des tests de calcul (sms-mail-multi, NEWGEN, NextStep, GDINV2, PAPPERBOARD) ; la 56 et la précision 8bis partout
-  (FICHES_MEMO_ACTION_KOLB et PPTX-CREATOR compris, pptx-creator attaché sans refus cette fois). La 55 est à reposer si FICHES ou PPTX-CREATOR se dotent de tests de calcul.
-- **Phrase de relais nommant le dépôt** (`agora.md` §4, corrigé le 22/10/2026,
-  commit `d51effe`) : inscrite dans l'`AGORA.md` de GDINV2 et de sms-mail-multi
-  (30/10/2026, `0585761`). Manque
-  dans NEWGEN, NextStep, SMS-mail, PAPPERBOARD,
-  FICHES_MEMO_ACTION_KOLB et PPTX-CREATOR. **À faire au fil des sessions**,
-  quand on travaille déjà dans le projet (choix de l'utilisateur, 22/10/2026 —
-  ne pas attacher sept dépôts pour une ligne). Une session qui ouvre un bloc
-  sans cette phrase sous les yeux omet le dépôt : le contradicteur ouvre alors
-  l'AGORA de l'endroit où il se trouve, et chaque projet a sa propre
-  numérotation.
-  **Phrase de relais pour Codex** (autorisation limitée à l'ajout de sa réponse
-  dans `AGORA.md`, 29/10/2026, `agora.md` §12) : inscrite dans GDINV2 et sms-mail-multi (31/10/2026),
-  à reprendre de la même façon au fil des sessions.
-- **Test d'auto-suffisance du §9** non passé pour SMS-mail, sms-mail-multi,
-  pptx-creator, FICHES_MEMO_ACTION_KOLB et PAPPERBOARD.
-
-**Références communes — choix de l'utilisateur du 29/10/2026** :
-`archivage-cd47.md`, `charte-ia-cd47.md`, `charte-graphique-cd47.md` et
-`rgpd-securite.md` servent de références à tous les projets actuels et futurs,
-pas seulement GDINV2. Cela remplace la restriction du 06/10/2026 à NEWGEN et
-NextStep. Leur index canonique est dans `README.md` ; ne pas dupliquer les
-résumés. Les règles institutionnelles et la charte graphique s'appliquent
-selon le contexte du projet, sans imposer l'identité CD47 aux projets personnels.
+Voir [`CHANTIERS.md`](CHANTIERS.md#reste-à-propager). Les opérations se font au
+prochain passage dans chaque projet, sans propagation groupée. Les preuves des
+opérations achevées restent dans Git ; ne pas rétablir leur récit ici.
 
 ## Workflow git de ce repo
 
-Pas de suite de tests, pas de CI bloquante ici — repo purement
-documentaire. Un commit par modification logique, message conventionnel
-(`feat:`, `fix:`, `refactor:`, `docs:`, `chore:`). Push direct sur `main`
-sauf si la plateforme impose une branche de session, auquel cas merger
-dans `main` en fin de session (`git checkout main && git merge <branche>
---no-ff && git push origin main`).
+Dépôt documentaire public : aucun fichier d'usagers ni secret. Publier sur
+`main`, un commit conventionnel en français par modification logique. Aucune
+suite de tests ni CI bloquante n'est configurée ici. Vérifier contenu, renvois,
+numéros conservés et `git diff --check` ; si des scripts changent, les vérifier.
+Actualisation et intégration explicite : `git-workflow.md`. Après publication,
+vérifier le commit distant ; ne pas annoncer un site « en ligne » pour une
+simple mise à jour documentaire. Preuve de déploiement : `deploiement.md`.
+
+## AGORA et passation
+
+Chaque projet garde son `AGORA.md` et son `CHANTIERS.md`. Le contradicteur lit
+les vrais fichiers depuis le dépôt ; l'utilisateur garde la décision. Auteur
+Claude → relecteur Codex ; auteur Codex → relecteur Claude pour les critères
+prévus par `agora.md` §12. Identité et indépendance doivent être traçables.
+Sur « pull » de contradiction : répondre seulement aux blocs destinés à
+l'assistant courant, dans `AGORA.md` uniquement ; jamais à son propre bloc.
+Une seule relecture de livraison, sans boucle systématique (règle 58).
 
 ## Audit de sécurité trimestriel
 
-Une routine planifiée (voir `rgpd-securite.md`) tourne indépendamment de
-toute session pour auditer ATELIERS_NEWGEN, NextStep, GDINV2 (ajouté le
-20/09/2026), SMS-mail/sms-mail-multi (ajoutés le 23/09/2026) et les
-workflows d'`ateliers-backups` (ajoutés le 30/09/2026, consigne mise à jour
-pour l'API PHP ce jour-là). Elle n'a pas
-besoin que ce repo soit attaché — vérifier avec `list_triggers` si son état
-est en doute.
+La procédure et le dernier état consigné sont dans `rgpd-securite.md` ; l'état
+réel d'une routine se vérifie dans son environnement. Ne pas supposer que les
+outils de routine, hooks Claude ou connecteurs existent dans Codex. Une note de
+configuration ne prouve aucune exécution.

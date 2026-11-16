@@ -1,179 +1,139 @@
 # Consignes de travail pour Codex
 
-Consignes de l’utilisateur du 19/10/2026, adaptées des règles de MD-LIB.
-Cette copie contient les règles essentielles pour démarrer sans dépendre
-d’un accès réseau. Les consignes explicites de la session et les règles
-spécifiques du projet restent applicables.
+Copie autonome des consignes essentielles, issue de MD-LIB. Lire explicitement
+`collaboration.md` pour les règles communes complètes ; Codex ne suit pas
+l'import `@collaboration.md` de Claude. Si cette source manque, le signaler une
+fois et poursuivre avec cette copie, sans inventer son contenu.
 
-## Autorisations — accès complet (consigne de l’utilisateur du 04/11/2026)
+## Autorisations — accès complet (consigne de l'utilisateur du 04/11/2026)
 
-**L’utilisateur donne toutes les autorisations pour le travail demandé** : « je
-voudrais lui donner toutes les permissions » (04/11/2026), après « Arrête de me
-demander les autorisations, je te les donnes » (31/10/2026). Codex agit, puis
-rend compte. Il ne demande jamais « je peux… ? », « veux-tu que je… ? »,
-« je continue ? » ni « tu confirmes ? ».
+L'utilisateur autorise tout le travail demandé : lire/éditer les fichiers,
+installer les dépendances déclarées, exécuter les outils utiles, vérifier,
+committer et pousser selon le projet, tenir `CHANTIERS.md`, répondre aux blocs
+AGORA destinés à Codex et corriger ses propres erreurs. Agir puis rendre compte,
+sans redemander une autorisation déjà donnée.
 
-**Sans rien demander** :
-- lire, créer, modifier et déplacer les fichiers du dépôt ; installer les
-  dépendances déclarées ;
-- lancer tests, scripts, navigateur et toute commande utile à la tâche ;
-- `git fetch`, `git merge --ff-only`, commits, push selon la politique du projet
-  (sur `main` quand le projet le prescrit) ; mettre à jour `CHANTIERS.md` ;
-  répondre dans `AGORA.md` ;
-- corriger ses propres erreurs ; après un échec, changer de méthode sans
-  redemander.
+**Exceptions à soumettre avant l'action**, une décision par question :
 
-**Seules exceptions, à demander avant d’agir** (une question par décision, ou
-des choix numérotés) :
-1. suppression irréversible de données (purge, archivage qui efface,
-   restauration qui écrase) ;
-2. réécriture d’historique publié (`push --force`, `reset` d’une branche
-   poussée, `filter-repo`) ;
-3. changement de format de stockage ou d’export, migration ;
-4. écart à ce que l’utilisateur a demandé : il décide du *quoi* ; le *comment*
-   est laissé à Codex, qui choisit l’option recommandée et la nomme dans son
-   compte rendu.
+1. Suppression irréversible de données ou restauration qui écrase.
+2. Réécriture d'historique publié (`push --force`, reset d'une branche publiée).
+3. Changement de format de stockage/export ou migration.
+4. Écart à la demande : l'utilisateur décide du quoi, Codex choisit le comment.
 
-**Jamais, même avec cette autorisation** : lire une sauvegarde réelle ou un
-fichier d’usagers ; publier une donnée personnelle ; contourner un refus de la
-plateforme (le signaler une fois, puis continuer le reste).
+Ne jamais publier de données personnelles ni de secrets, ni contourner un refus
+de la plateforme. Ne pas lire de sauvegarde réelle ou de fichier d'usagers ;
+faire calculer le diagnostic dans l'application de l'utilisateur, chiffres
+seuls à l'écran. Portée CD47 et politiques des projets personnels : règle 59
+de `collaboration.md`, à appliquer selon les consignes explicites du projet.
 
 ## Au début de chaque session
 
-1. Vérifier le dépôt, sa branche par défaut, la branche de session et l’état Git.
-   Actualiser depuis GitHub avant d’intervenir, sans écraser le travail local.
-2. Lire `CLAUDE.md`, `CHANTIERS.md` et les instructions des sous-dossiers
-   lorsqu’ils existent. Respecter leurs règles de branche, tests et publication.
-   Un chantier ancien ne remplace pas la demande actuelle de l’utilisateur.
-3. Avant toute intervention, lire intégralement le `collaboration.md` local
-   et appliquer ses règles pendant toute la session, y compris après une
-   reprise de contexte. À défaut de copie locale, lire celui de
-   `maswaddpt47-cmyk/MD-LIB` si cet accès est disponible.
-   Consulter les autres documents selon la tâche : Git, hygiène,
-   déploiement, sécurité, AGORA, PWA. Les références CD47 ne s’appliquent
-   qu’aux projets concernés, jamais automatiquement aux projets personnels.
-4. Si une ressource manque, le signaler une fois, sans inventer son contenu.
-   Appliquer cette copie locale et poursuivre le travail qui reste possible.
+1. Vérifier dépôt, branche par défaut, branche de session, journal et état Git.
+   Actualiser sans écraser les éditions : `git fetch`, puis `git merge --ff-only`
+   sur la branche correspondante ; en cas de divergence, suivre l'intégration
+   explicite du projet (`git-workflow.md`). « Pull » n'impose pas la commande
+   `git pull`.
+2. Lire intégralement le `collaboration.md` local, sinon celui de
+   `maswaddpt47-cmyk/MD-LIB`. Lire `CLAUDE.md`, `CHANTIERS.md` et les consignes
+   des sous-dossiers concernés. La demande actuelle prime sur un vieux chantier.
+3. Consulter selon la tâche Git, hygiène, sécurité, déploiement, AGORA, chiffres
+   ou PWA (index : `README.md`). Ne pas imposer les règles CD47 sans objet à
+   un projet personnel. Les hooks/outils de Claude ne sont pas présumés présents.
 
 ## Communication et blocages
 
-- Annoncer l’action et le résultat attendu ; répondre court, clairement,
-  sans compliments automatiques ni explications techniques inutiles.
-- Donner un point utile au plus toutes les 60 secondes pendant le travail.
-- Signaler immédiatement un blocage : cause connue ou « cause inconnue »,
-  résultat acquis, solution proposée et éventuelle action précise de l’utilisateur.
-- Borner les commandes réseau à 15 secondes. Après un échec, changer de
-  méthode seulement avec une raison ; ne pas répéter les tentatives bloquées.
-  Préférer un connecteur fonctionnel. Ne pas contourner un refus d’accès.
-- Continuer les tâches indépendantes d’une réponse manquante. Respecter les
-  autorisations déjà accordées et les limites explicites, dont la lecture seule.
-- Fin de tâche (04/11/2026) : vérifier que les opérations et revues nécessaires
-  sont terminées, puis conclure le message final par une ligne distincte :
-  **✅ TÂCHE TERMINÉE**. Si un traitement reste en cours ou bloque la livraison,
-  préciser son état sans annoncer la tâche terminée. La tâche est le travail
-  demandé dans le message, pas l’objectif d’ensemble (13/11/2026).
+- Annoncer l'action, répondre court et clairement, sans compliment automatique.
+  Donner un point utile au moins toutes les 60 secondes et la suite concrète.
+- Signaler un blocage dès sa constatation : cause connue ou inconnue, acquis,
+  solution proposée et action précise éventuelle de l'utilisateur.
+- Borner les commandes réseau à 15 secondes. Après un échec, changer de méthode
+  avec une raison ; préférer un connecteur fonctionnel, sans contourner un refus.
+- Continuer le travail indépendant d'une réponse manquante. Mettre les attentes
+  longues en arrière-plan si l'outil le permet et rendre la main.
+- **Fin de tâche** : après les opérations et revues nécessaires, conclure par
+  une ligne distincte **✅ TÂCHE TERMINÉE**. Si un traitement bloque encore la
+  livraison, dire son état sans annoncer la fin. La tâche est le travail du
+  message, même si l'objectif d'ensemble reste ouvert (13/11/2026).
 
 ## Décisions, preuves et périmètre
 
-- L’utilisateur décide des déviations à une spécification ou référence :
-  exposer la proposition et demander l’arbitrage avant de changer le périmètre.
-- Signaler toute contradiction entre les consignes avant l’action concernée.
-  Proposer toute nouvelle règle de collaboration à l’utilisateur et attendre
-  son accord avant de l’ajouter aux fichiers d’instructions.
-- Poser une question si une ambiguïté réelle empêche de choisir correctement ;
-  les tâches indépendantes continuent pendant l’attente.
-- Distinguer fait mesuré et « hypothèse non vérifiée ». Lire une capture entière
-  et signaler une incohérence sans la corriger hors du périmètre autorisé.
-- Avant un correctif, suivre la valeur sur tout son chemin : appelants,
-  valeurs par défaut, promesses et erreurs. Vérifier le déploiement réel
-  avant de diagnostiquer un ancien affichage comme un problème de cache.
-- Ne dire « testé », « réparé » ou « en ligne » qu’avec une vérification réelle
-  du chemin concerné. Une suite verte ne vaut pas validation par l’utilisateur.
-- Compter les nombres annoncés avec une commande ou un outil ; qualifier
-  une estimation comme telle. Dater les constats et utiliser l’heure de Paris.
+- Respecter la spécification. Proposer une nouvelle règle ou un écart avant
+  de l'inscrire. Résoudre les contradictions par les décisions explicites et
+  les exceptions de projet validées ; sinon demander l'arbitrage avant l'action.
+- Distinguer fait, estimation et « hypothèse non vérifiée ». Lire une capture
+  entière ; signaler ce qui sort du périmètre sans le corriger d'office.
+- Avant une correction, suivre appelants, valeurs par défaut, promesses et
+  erreurs ; pour un bug calcul/latence, examiner tous les points d'impact.
+- Dire « testé », « réparé » ou « en ligne » après vérification du chemin réel.
+  Compter les nombres annoncés avec un outil. Dates explicites et heures de Paris
+  converties par commande, jamais de tête.
 
 ## Git et mémoire de session
 
-- Respecter le workflow du projet, sa branche par défaut et les contraintes
-  de la plateforme. Ne pas imposer `main` à un dépôt configuré autrement.
-- Un commit conventionnel en français par modification logique. Aucun
-  force-push ni écrasement d’un changement concurrent.
-- Juste avant de modifier un fichier partagé, actualiser et relire son état.
-  Préserver les modifications des autres sessions et les règles déjà présentes.
-- Mettre `CHANTIERS.md` à jour à chaque avancée significative : état vérifié,
-  référence, reste à faire et invariants. Retirer les tâches achevées en gardant
-  les décisions utiles ; l’historique détaillé appartient à Git.
-- Lors d’une passation, consigner code poussé, branche, tests réellement passés,
-  blocages et prochaine action. Écrire aussi les nouvelles règles convenues
-  au bon endroit ; ne pas dépendre de l’historique de conversation.
+- En multi-dépôts : `cd /chemin/complet &&` avant chaque commande du dépôt.
+  Respecter branches, protections et workflow ; un commit conventionnel en
+  français par modification logique, aucun écrasement concurrent.
+- **Main toujours** : si le projet prescrit `main`, publier chaque livraison
+  vérifiée sur cette branche, en respectant ses protections et la procédure
+  explicite du projet. Ne pas laisser le travail sur une branche imposée sans
+  effectuer l'intégration prévue (`git-workflow.md` §3).
+- Avant de rédiger un fichier partagé, refaire `git fetch` et le relire. Avant
+  le push, contrôler le diff sortant ; après, vérifier le commit distant.
+  Après une attente, publier le SHA testé et figé, pas un `HEAD` qui a avancé.
+- Actualiser `CHANTIERS.md` à chaque avancée significative : référence, état
+  vérifié, reste, blocages et invariants. Retirer les tâches finies, conserver
+  les décisions utiles ; l'historique appartient à Git. Lors d'une passation,
+  consigner branche, contenu publié, contrôles passés et prochaine action.
 
 ## Vérifications et livraison
 
-- Doser les tests à ce qui change. Réutiliser le harnais existant et vérifier
-  son bon fonctionnement avant de conclure à un défaut du produit.
-- Pour calcul, données ou appels serveur : tests ciblés, coût et non-régression
-  utiles ; suite complète une fois avant livraison lorsque le projet l’exige.
-- Pour un changement de rendu pur : pas de nouveaux tests ou captures par
-  défaut. Mesurer débordements, chevauchements et contrastes aux tailles du
-  projet ; à défaut, 390 px et 1280×720. Le contrôle utilisateur reste nécessaire.
-- La fonction livrée doit être visible là où l’utilisateur teste, démo comprise.
-  Dire où cliquer et adapter les textes qui décrivent le comportement modifié.
-- Distinguer code local, code poussé, aperçu et production. Avant toute annonce
-  « en ligne », vérifier le commit réellement déployé et les étapes de publication.
-  Suivre `MD-LIB/deploiement.md` et son vérificateur lorsqu’ils s’appliquent.
-- **Avant de pousser, lancer tous les tests que le déploiement exécutera, dans
-  ses conditions** (chaque script listé par le workflow, chaque fuseau), pas
-  seulement ceux du changement : il casse aussi les tests de son voisinage
-  (MD-LIB `collaboration.md` règle 60, 01/11/2026).
-- Ne pas désactiver un contrôle requis pour faire passer une livraison.
+- Doser les tests au changement, vérifier le harnais et le réutiliser. Pour
+  calcul/données/serveur, tests ciblés et non-régression utile ; vérifier les
+  nouveaux tests par échec provoqué, avec une mutation lisant la copie mutée.
+- Pour un rendu pur : pas de nouveau test/capture par défaut. Mesurer les
+  débordements, chevauchements et contrastes aux tailles du projet, sinon
+  390 px et 1280×720. Le contrôle de l'utilisateur reste nécessaire.
+- Montrer la fonction là où l'utilisateur teste, démo comprise ; dire où cliquer
+  et mettre à jour les textes décrivant le comportement.
+- **Avant de pousser, lancer tous les tests du déploiement, dans ses conditions**
+  (chaque script et fuseau). Respecter une exception de projet validée qui
+  confie cette suite à une CI de branche bloquant la production (règle 60).
+- Distinguer local, poussé, aperçu et production. Avant « en ligne », vérifier
+  le SHA déployé et les étapes attendues selon `deploiement.md` : script s'il
+  est utilisable, sinon contrôle GitHub équivalent. Ne pas désactiver un contrôle.
 
 ## Sécurité, audit et instructions
 
-- Ne pas afficher ni committer de secrets ou de données personnelles. Préserver
-  les protections existantes et limiter les lectures aux données nécessaires.
-- Sur une mission d’audit ou de contradiction en lecture seule, ne pas modifier
-  le code ; fournir les preuves `fichier:ligne`, scénario ou mesure.
-- Appliquer l’AGORA du projet lorsqu’elle existe ; ne pas répondre à son propre
-  bloc. Les constats de sécurité suivent le circuit prévu par le projet.
-- Champ de jeton, de clé ou de mot de passe (MD-LIB `collaboration.md` règle 69,
-  13/11/2026) : dans un vrai `<form autocomplete="on" action="#">`, avec un
-  identifiant fixe `name="username"` `autocomplete="username"` `readonly`
-  `tabindex="-1"` `aria-hidden="true"` sorti de l’écran par
-  `position:absolute;left:-9999px` (jamais `display:none`), le champ en
-  `type="password"` `name="password"` `autocomplete="current-password"` avec un
-  `id` unique, et un bouton `type="submit"` ; sur `submit`, `preventDefault()`,
-  même enregistrement qu’à la frappe et message de confirmation. Sinon Proton
-  Pass ne propose pas la clé. Bouton qui lance l’application : il devient le
-  `submit`, garde son libellé, et les `onkeydown` / `onclick` d’origine sont
-  retirés (sinon l’action part deux fois).
-- Lire les instructions locales des dépôts de sauvegarde avant tout accès aux
-  copies. Aucun export, déchiffrement ou changement de visibilité hors demande.
-- Garder les instructions courtes : fusionner les doublons, dater les hypothèses
-  et préférer un contrôle utile à une nouvelle couche de règles.
+- Préserver les protections et lire seulement les données nécessaires et
+  autorisées. Pas d'export, déchiffrement ou changement de visibilité hors demande.
+- Pour un audit en lecture seule, ne pas modifier le code ; donner fichier:ligne
+  et scénario/mesure. Appliquer l'AGORA et ses critères, sans auto-réponse.
+  Claude auteur → Codex relecteur ; Codex auteur → Claude relecteur selon §12.
+- **Champ de secret** (règle 69) : vrai `<form autocomplete="on" action="#">`,
+  identifiant fixe `type="text" name="username" autocomplete="username"`
+  `readonly tabindex="-1" aria-hidden="true"`, hors écran par
+  `position:absolute;left:-9999px` (jamais `display:none`) ; secret
+  `type="password" name="password" autocomplete="current-password"`, `id`
+  unique ; bouton `type="submit"`. Sur `submit` : `preventDefault()`, même
+  enregistrement qu'à la frappe, confirmation visible ; stockage inchangé.
+  Si le bouton lance l'application, garder son libellé et retirer ses anciens
+  `onclick`/`onkeydown` pour que clic/Entrée passent par l'unique `submit`.
+- Garder les instructions courtes ; fusionner les doublons et consulter
+  `hygiene-instructions.md` avant d'ajouter une règle.
 
 ## AGORA — ce que « pull » veut dire (03/11/2026)
 
-Décision de l'utilisateur du 03/11/2026 (`agora.md` §12) : il ne colle plus de
-phrase de relais, il dit seulement « pull ». Après le pull :
-
-1. Ouvrir `AGORA.md`, section des blocs ouverts. Pour chaque bloc dont la ligne
-   **Contradicteur** dit « Codex » et qui n'a pas encore de réponse
-   `### Réponse — Codex`, y répondre selon le gabarit du fichier, avec
-   `fichier:ligne`, mesure ou rejeu, sous `### Réponse — Codex — JJ/MM/AAAA`.
-2. N'écrire que dans `AGORA.md`, ne modifier aucun autre fichier, puis commit et
-   push sur `main`. Une réponse ne modifie jamais le code et n'autorise rien :
-   l'utilisateur tranche.
-3. Ne jamais répondre à un bloc ouvert par Codex lui-même.
-4. Aucun bloc en attente : le dire en une ligne et s'arrêter là, sauf autre
-   demande de l'utilisateur.
+Après synchronisation, lire les blocs ouverts. Pour chaque bloc destiné à
+Codex et sans réponse Codex, vérifier auteur et indépendance selon `agora.md`,
+puis répondre avec preuves sous `### Réponse — Codex — JJ/MM/AAAA`.
+N'écrire que dans `AGORA.md`, committer et publier selon le projet ; une réponse
+ne change pas le code et n'autorise rien : l'utilisateur tranche.
+Ne jamais répondre à un bloc ouvert par Codex lui-même. Aucun bloc en attente :
+le dire en une ligne et s'arrêter, sauf autre demande. Le relais entre comptes
+passe par l'utilisateur et le dépôt ; aucune conversation directe n'est supposée.
 
 ## Sources communes
 
-Référentiel : `maswaddpt47-cmyk/MD-LIB`, notamment `collaboration.md`,
-`git-workflow.md`, `hygiene-instructions.md`, `rgpd-securite.md`,
-`deploiement.md` et `agora.md`. Les outils ou hooks propres à Claude Code
-ne sont pas supposés installés dans Codex ; vérifier les capacités disponibles.
-
-Références canoniques communes aux projets actuels et futurs (choix de
-l'utilisateur du 29/10/2026) : `archivage-cd47.md`, `charte-ia-cd47.md`,
-`charte-graphique-cd47.md`, `rgpd-securite.md`. Index et portée : `README.md`.
+`maswaddpt47-cmyk/MD-LIB` : index et portée dans `README.md`, règles complètes
+dans `collaboration.md`. Références canoniques : `archivage-cd47.md`,
+`charte-ia-cd47.md`, `charte-graphique-cd47.md`, `rgpd-securite.md`.

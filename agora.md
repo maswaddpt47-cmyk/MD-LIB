@@ -1,213 +1,119 @@
 # AGORA — faire contredire une proposition par une autre session
 
-Mémoire générale, valable pour tous les projets (actuels et futurs). Établie le
-21/09/2026.
+Méthode commune aux projets, établie le 21/09/2026 ; clarifiée pour Claude et
+Codex sur accord de l'utilisateur le 16/11/2026. Les numéros §1 à §13 restent
+stables pour les renvois des projets.
 
-## Le problème que ça résout
-
-Deux sessions Claude ne partagent aucun contexte : ni conversation, ni mémoire,
-ni conteneur. Elles ne partagent que le dépôt. Mais elles n'ont pas lu les mêmes
-fichiers, dans le même ordre, avec le même historique — et c'est précisément ce
-qui rend leurs raisonnements différents. Cette divergence est exploitable.
-
-Le relais manuel (copier un prompt d'une session à l'autre, rapporter la
-réponse) fonctionne déjà, mais il a un défaut structurel : **la seconde session
-juge une reformulation, pas le code.** Cette reformulation contient le cadrage
-de l'auteur, ses hypothèses, et surtout ses angles morts — qu'il ne peut pas y
-écrire, par définition. Le contradicteur part donc handicapé.
-
-L'AGORA corrige ça : la proposition est déposée **dans le dépôt**, le
-contradicteur lit **le vrai code** avec son propre contexte. C'est le seul gain
-réel ; le reste (trace écrite, moins de copier-coller) est du confort.
+Le contradicteur lit la proposition et les vrais fichiers du dépôt, avec un
+contexte distinct. L'AGORA porte le débat ; `CHANTIERS.md` porte les travaux,
+décisions en attente et invariants. Le relais entre comptes reste utilisateur.
 
 ## 1. Le déclenchement ne repose pas sur un ressenti
 
-**Claude ne peut pas se fier à « je sens que j'ai besoin d'un autre avis ».**
-Sa confiance est mal calibrée : il est souvent le plus fluide et le plus assuré
-précisément là où il raisonne sur ce qu'il n'a pas vérifié — le mécanisme décrit
-dans `hygiene-instructions.md` §3.
-
-Deux échecs symétriques si on fonde le déclenchement sur l'impression :
-- la main se lève sur les cas d'hésitation visible — mais ceux-là, l'utilisateur
-  les voit aussi, il n'a besoin de personne ;
-- elle ne se lève jamais sur les décisions assurées et fausses, qui sont
-  exactement la population que l'AGORA existe pour attraper.
-
-Donc : des **critères observables**, constatables sans avoir à s'auto-évaluer.
-Même logique que `hygiene-instructions.md` §1 — ce qui peut se formuler en
-critère vérifiable devient un critère, pas un paragraphe qui espère être lu.
+Ouvrir un bloc sur un **fait observable** du §2, plutôt que sur la confiance
+de l'auteur. L'utilisateur doit pouvoir retrouver le déclencheur dans le diff.
+Une affirmation technique conserve son statut mesuré ou supposé
+(`hygiene-instructions.md` §3).
 
 ## 2. Les sept déclencheurs
 
-Soumettre à l'AGORA dès qu'un de ces faits est constaté :
+Chaque entrée « décision à trancher » dans `CHANTIERS.md` est candidate : dire
+au moment de l'écrire pourquoi un bloc est ouvert ou non.
 
-**Rappel accroché à une habitude existante :** toute entrée **« décision à
-trancher »** écrite dans le `CHANTIERS.md` d'un projet est par définition un
-candidat. Au moment de l'écrire, dire pourquoi on ouvre un bloc ou non. Ça
-n'ajoute aucune vigilance nouvelle — `CHANTIERS.md` se met déjà à jour à chaque
-avancée — et l'omission se voit dans le diff.
-
-1. **La décision ferme une porte** — schéma de données, format de stockage,
-   nouvelle dépendance, contrat entre modules. Défaire coûte une migration.
-2. **Deux options ont été envisagées, une seule a été écrite, sans arbitrage
-   extérieur.** Fait observable, pas une impression (prolonge la règle 4 de
-   `collaboration.md`).
-3. **Trois itérations sans résolution** sur le même problème. C'est un compteur
-   (prolonge la règle 10).
-4. **Proposition de défaire un existant dont la raison d'être n'est pas
-   retrouvée** — le cas `keepAlive` supprimé puis remis.
-5. **La proposition contredit une note datée du dépôt** (`CLAUDE.md`,
-   `CHANTIERS.md`, commentaire de décision). Vérifiable.
-6. **Coût irréversible côté usager** — suppression de données, migration,
-   rupture d'une PWA déjà installée sur des postes.
-7. **Le changement touche un calcul ou un chiffre affiché** — indicateur,
-   total, taux, moyenne, filtre ou définition qui produit un chiffre, à
-   l'écran, dans un export ou un document imprimé. **Systématique, quelle que
-   soit la taille du changement** (décision de l'utilisateur, 26/10/2026, après
-   AG-032 de NEWGEN : un bilan trimestriel à suite verte présentait de faux
-   zéros et deux dénominateurs pour la même question). Contradicteur : **Codex**
-   (`chiffres-diffuses.md` §1, l'IA qui écrit ne relit pas). Le bloc est ouvert
-   **avant** la correction ; les définitions métier y sont séparées des défauts
-   démontrés et tranchées par l'utilisateur.
-
-Ces sept critères sont **vérifiables après coup dans le diff** : l'utilisateur
-peut reprocher un critère rempli resté silencieux. Un ressenti, non.
+1. **La décision ferme une porte** : schéma de données, format de stockage,
+   nouvelle dépendance ou contrat entre modules dont l'abandon coûte une migration.
+2. **Deux options ont été envisagées, une seule écrite sans arbitrage extérieur**
+   (`collaboration.md` règle 4).
+3. **Trois itérations sans résolution** du même problème (règle 10).
+4. **Défaire un existant dont la raison d'être n'est pas retrouvée.**
+5. **Contredire une note datée du dépôt** : `CLAUDE.md`, `CHANTIERS.md` ou
+   commentaire de décision.
+6. **Coût irréversible pour l'usager** : suppression de données, migration,
+   rupture d'une PWA installée.
+7. **Toucher un calcul ou un chiffre affiché** : indicateur, total, taux,
+   moyenne, filtre ou définition, à l'écran, dans un export ou un imprimé.
+   Systématique, quelle que soit la taille du changement. Ouvrir le bloc
+   **avant la correction** ; séparer les défauts démontrés des définitions
+   métier, que tranche l'utilisateur. Auteur Claude : contradicteur Codex ;
+   auteur Codex : contradicteur Claude (§12, `chiffres-diffuses.md` §1).
 
 ## 3. Ce qui ne va PAS à l'AGORA
 
-Sans cette liste, l'AGORA devient un péage qui double le coût de chaque
-décision :
+- Rendu pur (`collaboration.md` règle 17).
+- Correctif localisé appuyé sur une preuve : log, test rouge puis vert.
+- Changement qui se défait en un commit.
 
-- changement de rendu pur (cf. `collaboration.md` règle 17) ;
-- correctif localisé appuyé sur une preuve (log, test rouge puis vert) —
-  **sauf s'il touche un calcul ou un chiffre affiché** : critère 7, toujours ;
-- tout ce qui se défait en un commit.
+Ces exclusions valent **en l'absence d'un déclencheur du §2** ; elles ne
+dispensent jamais du critère 7. L'installation du dispositif est exemptée (§13).
 
 ## 4. Qui déclenche, qui tranche, à quel moment
 
-**L'utilisateur, en priorité.** « Soumets-le à l'AGORA » sur n'importe quel
-sujet : c'est le seul déclencheur fiable à 100 %.
+L'utilisateur peut demander un bloc sur tout sujet. Sur critère rempli,
+**l'auteur le soumet d'office**, sans demander l'autorisation, au moment du
+choix et avant le code. Le publier selon le §7, puis l'annoncer en tête du
+message, sur une ligne distincte :
 
-**Claude, sur critère rempli.** Il l'annonce en une ligne, sur le modèle du
-signalement RGPD de `rgpd-securite.md` :
+> 🔴 **⚖️ AGORA : critère N — <sujet>. Bloc AG-00N publié dans <owner/dépôt>.
+> → Dis « pull » à <Codex ou Claude>.**
 
-> ⚖️ AGORA : critère 1 (ferme une porte) — le format de stockage retenu.
-> Bloc AG-004 commité. À coller dans l'autre session :
-> « pull **<owner/dépôt>**, lis son `AGORA.md`, réponds à AG-004, tu es la
-> session B ».
+Le relais nomme le dépôt au format GitHub `owner/nom` et le contradicteur.
+Phrase complète si nécessaire : « pull <owner/dépôt>, lis son `AGORA.md`,
+réponds à AG-00N, tu es <Codex ou Claude, session B> ». Le libellé ne prouve
+pas l'identité de session (§10).
 
-**L'annonce se voit : ligne à part, en tête du message, marquée 🔴 et en
-gras** — `🔴 **⚖️ AGORA : critère N — <sujet>. Bloc AG-00N commité. → Dis
-« pull » à Codex.**` (ou la phrase de relais pour une session B). Jamais noyée
-dans un compte rendu. Le terminal n'affiche pas de couleur : 🔴 et le gras en
-tiennent lieu. Constat du 04/11/2026 (ATELIERS, AG-042) : « dis pull à Codex »
-glissé au milieu d'un long message, l'utilisateur ne l'a pas vu et Codex n'a
-jamais été lancé ; demande de l'utilisateur : « mettre le pull en rouge ».
+**L'utilisateur tranche.** Le contradicteur apporte un constat, pas une
+autorisation. Cycle : dépôt du bloc → relais utilisateur → réponse dans le
+dépôt → décision de l'utilisateur.
 
-**La phrase de relais nomme toujours le dépôt.** Chaque projet a son propre
-`AGORA.md` avec sa propre numérotation : deux dépôts peuvent porter un AG-002
-qui n'a rien à voir. Sans le nom, la session qui répond ouvre l'AGORA du
-dépôt qu'elle a sous la main. Constaté le 22/10/2026 : une phrase de relais
-sans dépôt a envoyé le contradicteur dans MD-LIB au lieu de GDINV2 — il y a
-trouvé un AG-002 déjà tranché et pas d'AG-003, et a demandé au lieu de
-répondre au mauvais bloc. Écrire le dépôt au format `owner/nom`, comme
-GitHub l'affiche.
-
-**Elle porte aussi le libellé de la session qui répond.** Il sert à remplir le
-champ `Auteur`, qui reste utile à la lecture humaine du fichier. Ce n'est
-**pas** ce qui prouve qu'une session ne répond pas à son propre bloc : cette
-preuve est le trailer `Claude-Session:` des commits, qui distingue deux
-sessions même sous une identité GitHub unique (§10).
-
-**L'AGORA ne bloque jamais.** Claude continue le travail en parallèle : rien ne
-garantit qu'une réponse arrive un jour.
-
-**Claude soumet d'office, sans demander l'autorisation** — sinon c'est un
-aller-retour de plus à chaque fois. Il écrit le bloc, le commite, et fournit la
-phrase de relais. **C'est l'utilisateur qui décide de la coller ou non** ;
-ignorer un bloc ne coûte rien.
-
-**Le moment : quand le choix est fait, pas après l'implémentation.** Une
-proposition soumise une fois le code écrit arrive devant un contradicteur qui
-lit du code existant : il hérite d'un biais de statu quo et valide ce qui est
-là. Soumettre avant, ou sur un brouillon.
-
-**Qui tranche in fine : l'utilisateur.** La réponse du contradicteur n'est pas
-un vote bloquant.
+**L'AGORA ne bloque jamais le travail indépendant.** Pour un enrichissement
+réversible, ouvrir le bloc au choix, livrer la version testée autorisée, puis
+faire vérifier la livraison **une seule fois**. Corriger et livrer les écarts
+démontrés sans nouvelle relecture d'office (`collaboration.md` règle 58).
+Un contrat irréversible reste soumis **avant le code** ; l'attente ne vaut
+jamais accord de l'utilisateur. Le champ « Si personne ne répond » précise
+la suite autorisée et ce qui reste à trancher.
 
 ## 5. Le rôle du contradicteur — compléter, pas refaire
 
-La session qui répond **ne réécrit pas la proposition**. Elle cherche ce qui
-manque. Deux propositions concurrentes n'augmentent pas la qualité, elles
-augmentent la charge d'arbitrage de l'utilisateur.
+Lire les fichiers et chercher ce qui serait faux, manquant ou coûteux sans
+réécrire la proposition. Trois verdicts possibles :
 
-Trois issues possibles, jamais « d'accord / pas d'accord » :
+- **confirmé**, en nommant aussi ce qui n'a pas pu être vérifié ;
+- **amendé**, en nommant l'écart qui change le code, une décision ou un chiffre ;
+- **contredit**, avec le constat qui le prouve.
 
-- **confirmé** — et dire explicitement ce qui n'a pas pu être vérifié ;
-- **amendé** — la proposition tient, mais il manque X. *C'est l'issue la plus
-  fréquente et la plus utile ;*
-- **contredit** — avec le constat qui le prouve.
-
-**Une session ne répond jamais à un bloc qu'elle a ouvert.** Le dispositif
-n'existe que pour faire lire le code par un autre contexte ; s'auto-répondre
-produit un tampon de validation, pas une contradiction. Si la session ne peut
-pas déterminer si le bloc est le sien — reprise, résumé de contexte,
-changement de compte — elle demande à l'utilisateur avant de répondre.
+**Jamais de réponse à son propre bloc.** Vérifier l'identité selon le §10.
+Une réponse sans `fichier:ligne`, mesure ou log ne compte pas ; aucune donnée
+d'usager ne sert de preuve publiée.
 
 ### Sincérité — trois contraintes contre la politesse
 
-Au 27/09/2026, sur 15 blocs tranchés dans ATELIERS_NEWGEN : **12 « amendé »,
-0 « confirmé », 0 « contredit »**, 3 tranchés sans réponse (recompté sur
-l'historique git). Un contradicteur qui n'emploie jamais les
-deux autres verdicts a cessé de contredire : il rend un service de politesse
-qui donne une fausse garantie.
+1. **« Amendé » exige un écart réel.** Si l'amendement ne change ni code, ni
+   décision, ni chiffre, le verdict est « confirmé ».
+2. **« Confirmé » est une réponse pleine.** Ne pas chercher un amendement
+   pour justifier sa présence.
+3. **Aucune appréciation de la proposition ou de son auteur.** Commencer par
+   un constat, sans compliment.
 
-1. **« Amendé » n'est valable que s'il nomme ce qui serait faux, manquant ou
-   coûteux si la proposition était appliquée telle quelle.** Un amendement qui
-   ne change ni le code, ni une décision, ni un chiffre n'est pas un
-   amendement : le verdict est alors **« confirmé »**.
-2. **« Confirmé » est une réponse pleine et utile**, pas un aveu d'inutilité :
-   elle libère l'auteur pour agir, et c'est souvent ce qu'on attend d'elle. Ne
-   jamais chercher un amendement pour justifier sa présence.
-3. **Aucune appréciation de la proposition ni de son auteur** — ni compliment,
-   ni encouragement, ni « bien vu ». Une réponse commence par un constat, pas
-   par un jugement de qualité : le compliment est le véhicule de la
-   complaisance.
-
-Contrainte structurelle qui rend le biais visible plutôt que de compter sur la
-bonne volonté : **le tableau des blocs tranchés porte une colonne « Verdict »**
-et le total des trois issues. Une colonne d'un seul verdict se voit d'un coup
-d'œil par toute session qui ouvre le fichier.
-
-**Le total est une alerte, pas un objectif** (ajouté le 27/09/2026). Afficher
-la série crée la pression inverse : rendre « confirmé » pour la casser. Le
-verdict découle de la contrainte 1 appliquée au bloc, jamais du total. Pour
-savoir si une série est de la politesse, relire ce que chaque « amendé » a
-changé — code, décision ou chiffre : celui qui n'a rien changé était un
-« confirmé » ; celui qui a changé le code n'est pas suspect parce qu'il est le
-treizième.
-
-**Règle de preuve : une réponse sans `fichier:ligne`, mesure ou log ne compte
-pas.** Sans elle, deux textes s'accordent poliment et on obtient un tampon de
-validation qui donne une fausse garantie — exactement ce que
-`hygiene-instructions.md` §3 dénonce.
+Le bilan des blocs tranchés porte leurs verdicts et le total des trois issues.
+**Le total est une alerte, pas un objectif** : juger chaque bloc sur ses preuves,
+jamais sur la série des verdicts précédents.
 
 ## 6. Le gabarit d'un bloc
 
 ```markdown
-## AG-003 — Titre court — ouvert le 21/09/2026
-**Auteur** : session <libellé donné par l'utilisateur> — lu sur `<sha court>`
-**Proposition** : ce qui est proposé, en 3 lignes maximum.
+## AG-00N — Titre court — ouvert le JJ/MM/AAAA
+**Auteur** : <Claude ou Codex, trace de session/travail> — lu sur `<sha court>`
+**Proposition** : trois lignes maximum.
 **Critère déclencheur** : n° et lequel.
-**Contradicteur** : Codex | session B (Codex répond seul au « pull » de l'utilisateur, §12)
+**Contradicteur** : Codex | Claude (session B)
 **Ce que ça engage** : ce qui serait coûteux à défaire.
-**Non vérifié par l'auteur** : ...
-**Si personne ne répond, je fais quoi ?** ← si la réponse est « je continue
-pareil », le bloc n'avait pas lieu d'être.
+**Non vérifié par l'auteur** : limites de la vérification.
+**Si personne ne répond, je fais quoi ?** : suite autorisée et décision restante.
 **Où regarder** : fichier.js:120-180
 
-### Réponse — 21/09/2026
-**Auteur** : session <autre libellé> — lu sur `<sha court>`
+### Réponse — <Codex ou Claude> — JJ/MM/AAAA
+**Auteur** : <autre session/travail, trace disponible> — lu sur `<sha court>`
 **Verdict** : confirmé | amendé | contredit
 **Constat** : avec fichier:ligne, mesure ou log.
 **Amendement** : ...
@@ -215,284 +121,177 @@ pareil », le bloc n'avait pas lieu d'être.
 ### Tranché le JJ/MM/AAAA — décision : ...
 ```
 
-**`Auteur`** n'est pas de la politesse : sans lui, rien n'empêche une session
-de répondre à son propre bloc, et tout le bénéfice disparaît. Y inscrire les
-**8 premiers caractères de l'identifiant de session** — celui que Claude pose
-déjà dans le trailer `Claude-Session:` de chacun de ses commits. Il est unique
-par session, y compris entre deux sessions d'un même compte poussant sous la
-même identité GitHub (vérifié le 21/09/2026 : `0168bGSA` pour l'auteur d'AG-001,
-`017sTFys` pour son contradicteur).
-
-**La preuve est le trailer, pas le champ.** Avant de répondre, comparer le
-`Claude-Session:` du commit qui a déposé le bloc
-(`git log -1 --format=%B <sha du bloc>`) à celui de la session courante :
-identiques, elle ne répond pas. Le champ `Auteur` n'est qu'un libellé de
-lecture — recopié à la main, il ne survit pas à un compactage de contexte et
-ne prouve rien. Quand le trailer est absent (commit fait à la main), demander
-à l'utilisateur. Plus besoin de libellé fourni au relais.
-
-**`lu sur <sha court>`** = le commit que la session avait sous les yeux. Une
-réponse écrite sur un état du code différent de la proposition ne vaut pas
-grand-chose, et c'est invisible autrement. `git log --oneline -1`.
-
-Le champ **« non vérifié par l'auteur »** est le plus important du gabarit :
-c'est lui qui transforme le duel en coopération. L'auteur y écrit honnêtement où
-il est faible, ce qui oriente le contradicteur là où il est utile au lieu de le
-laisser chercher au hasard ou valider par défaut.
+`lu sur <sha court>` désigne le commit réellement lu (`git log --oneline -1`).
+« Non vérifié par l'auteur » oriente la contradiction vers les limites connues.
+Le champ `Auteur` renvoie à la trace du §10 ; un nom différent ne suffit pas.
 
 ## 7. Le fichier doit circuler, donc il vit sur `main`
 
-Deux sessions sur deux branches de session différentes **ne se voient pas**.
+Publier le bloc ou la réponse **sur `main` immédiatement**, avec les contrôles
+et protections du projet ; une branche de session seule ne le rend pas
+accessible aux autres sessions. Ne jamais contourner une protection.
 
-Le commit AGORA se pousse donc **directement sur `main`, immédiatement**, pas en
-fin de session. C'est une exception assumée au workflow de branche de
-`git-workflow.md` : c'est du texte, ça ne peut casser aucun déploiement.
+Écriture **append-only** pendant le débat : ajouter son bloc ou sa réponse,
+ne pas réécrire le texte d'une autre session. L'entretien du §8 vient ensuite.
+Juste avant de rédiger, synchroniser puis relire le fichier :
 
-Écriture **append-only** : une session n'édite jamais le bloc d'une autre, elle
-ajoute le sien. Ça évite les conflits de fusion. **`git pull --rebase origin
-main` juste avant de pousser** : deux sessions qui poussent en même temps —
-a fortiori depuis deux comptes — produisent sinon un rejet non-fast-forward. Si les collisions deviennent
-fréquentes, passer à un dossier `agora/` avec un fichier par débat.
+```bash
+git fetch origin main
+git merge --ff-only origin/main
+```
+
+Préserver les modifications locales. Avant le push, vérifier le diff complet
+par rapport à `origin/main` : il ne doit publier que le travail voulu. Pousser
+le commit vérifié, pas un `HEAD` qui aurait changé pendant une attente.
+Si la branche diverge ou si un push concurrent est rejeté, préserver le
+travail et reporter l'ajout relu depuis une copie à jour ; aucun force-push,
+aucun rebase de commits publiés. Détails : `git-workflow.md`.
 
 ## 8. Entretien — sinon plus personne ne le lit
 
-- **Un bloc sort du fichier dès qu'il n'y a plus rien à décider** —
-  proposition tranchée ou réfutée, amendements appliqués. **Une mesure encore
-  à faire n'est pas une décision** : elle appartient à `CHANTIERS.md`. Un bloc
-  laissé ouvert signale « quelqu'un doit agir » et égare la session suivante.
-- **Un bloc tranché sort du fichier.** Sa conclusion remonte dans le
-  `CHANTIERS.md` du projet (points à ne pas défaire), ou dans son `CLAUDE.md` si
-  elle devient une règle. Le récit appartient à `git log`. Un AGORA qui
-  accumule des débats clos devient le millefeuille que `hygiene-instructions.md`
-  §4 cherche à éviter.
-- **Péremption.** Un bloc resté sans réponse quand le sujet revient : soit
-  l'utilisateur relance, soit Claude le ferme en « tranché sans contradiction le
-  JJ/MM/AAAA », avec la décision retenue. Sans ça, le fichier se remplit de
-  débats fantômes.
-- **Désaccord non tranchable.** Si les deux sessions campent, la sortie n'est
-  **pas** un troisième avis — ça tourne en rond et ça coûte. La question devient
-  **quelle observation départagerait** (une mesure, un log, un essai court). Si
-  aucune observation ne le peut, c'est un choix de goût : l'utilisateur tranche,
-  la raison est notée, on n'y revient plus.
-- **Fichier commité** : pas de log contenant des données d'usagers collé dans un
-  bloc (cf. `rgpd-securite.md`).
+- Sortir un bloc dès que la décision est prise et ses amendements appliqués.
+  Conserver sa décision utile dans `CHANTIERS.md` (invariant) ou les consignes
+  du projet ; le récit reste dans Git. Garder un bilan compact des verdicts.
+- Une mesure restant à faire va dans `CHANTIERS.md`, pas dans un débat laissé
+  ouvert alors qu'il n'y a plus de décision.
+- Quand un sujet sans réponse revient, l'utilisateur peut relancer ; sinon
+  noter « tranché sans contradiction le JJ/MM/AAAA » avec la décision retenue.
+  Cette mention ne donne aucune autorisation d'action irréversible.
+- Pour un désaccord persistant, chercher l'observation qui départagerait les
+  avis : mesure, log ou essai court. Si aucune ne le peut, l'utilisateur
+  tranche ; ne pas ajouter un troisième avis par défaut.
+- Aucun export, log brut ou fichier réel d'usagers dans un bloc
+  (`rgpd-securite.md`, `collaboration.md` règle 59).
 
 ## 9. Ce qu'on copie dans un projet consommateur
 
-Deux fichiers, et rien de plus : au-delà, le `CLAUDE.md` du projet enfle et
-l'ensemble est moins bien appliqué, pas mieux.
+Les fichiers du projet doivent suffire, même sans MD-LIB :
 
-1. Un `AGORA.md` à la racine du projet, portant **le gabarit du §6 *et* les
-   trois règles qui ne s'en déduisent pas** :
-   - **ne jamais répondre à un bloc qu'on a ouvert soi-même**, avec la
-     vérification du trailer `Claude-Session:` (§10) ;
-   - **append-only, `git pull --rebase` puis push direct sur `main`** (§7) ;
-   - **aucune donnée d'usager** dans un bloc (`rgpd-securite.md`).
+1. **`AGORA.md`** : gabarit (§6) ; interdiction de l'auto-réponse et preuve
+   d'identité (§10) ; append-only et circulation (§7) ; absence de données
+   d'usagers ; trois contraintes de Sincérité et total des verdicts (§5) ;
+   cycle de relais utilisateur et absence de notification automatique (§4).
+2. **Consignes de démarrage du projet** : sept déclencheurs (§2), exclusions
+   (§3), soumission d'office, poursuite du travail indépendant et réserve sur
+   l'irréversible (§4), publication sur `main`, rôle du contradicteur (§12)
+   et renvoi vers `AGORA.md`. `CLAUDE.md` les porte pour Claude ; `AGENTS.md`
+   contient ce dont Codex a besoin sans supposer un import automatique.
 
-   Ces trois-là parmi les règles de réponse : mesuré le 21/09/2026 sur AG-001/GDINV2
-   (`2351a0f`, `0bb0495`), une session qui s'est vu refuser l'accès à MD-LIB
-   en a eu besoin pour répondre. **Les trois verdicts et la règle de preuve
-   sont déjà portés par le gabarit** — les réécrire en prose les duplique
-   sans rien ajouter. Confirmé le 22/09/2026 par AG-001/MD-LIB, qui avait
-   d'abord proposé l'inverse.
+La section AGORA du `CLAUDE.md` tient en **35 à 50 lignes**. Ne pas répéter en
+prose les champs explicites du gabarit. Toute adaptation propre au projet
+conserve sa raison dans ses consignes ; l'état de propagation va dans le suivi
+des projets de MD-LIB.
 
-   Y ajouter la **section « Sincérité »** du §5 (les trois contraintes, le
-   total des verdicts sous « Blocs tranchés » et « le total est une alerte,
-   pas un objectif ») : elle ne se déduit pas du gabarit, qui ne dit pas
-   quand « amendé » cesse d'en être un. Ajoutée à la liste le 27/09/2026,
-   copiée dans les quatre `AGORA.md` consommateurs.
+**Test d'auto-suffisance** : une autre session, sur un autre compte et sans
+MD-LIB, doit pouvoir ouvrir un bloc et y répondre avec les fichiers du projet
+seuls. Tant qu'elle a besoin de MD-LIB pour agir, la copie est incomplète.
+Les renvois vers `MD-LIB/agora.md` indiquent « non requis pour répondre ».
+Les explications restent ici, sans recopier toute cette méthode.
 
-   Y ajouter le **cycle de relais** (dépôt du bloc → phrase à coller →
-   réponse → l'utilisateur tranche), et **le fait qu'aucune notification ne
-   passe d'un compte à l'autre**. *Supposé, pas mesuré* (22/09/2026) : sans
-   lui, rien n'indique à une session isolée que le second temps dépend de
-   l'utilisateur. À retirer si une copie s'en passe sans dommage.
-2. Dans le `CLAUDE.md` du projet : les **sept critères du §2**, la liste du §3,
-   la phrase « soumettre d'office, ne jamais bloquer, pousser sur `main` », et
-   un renvoi vers `AGORA.md`.
+## 10. Fonctionner entre deux comptes et identifier les sessions
 
-**Combien de lignes, mesuré et non supposé (22/09/2026).** Le plafond « une
-quinzaine de lignes » qui figurait ici était une estimation, et les deux seules
-copies existantes le dépassent de 2,5× à 3,5× : `GDINV2/CLAUDE.md:122-159` =
-**38 lignes**, `ATELIERS_NEWGEN/CLAUDE.md:246-297` = **51 lignes**. Un plafond
-que 100 % des copies violent n'est pas un plafond, c'est une note que personne
-n'applique. La borne est donc **35 à 50 lignes**. Au-delà de 50, couper.
+Le canal commun est le dépôt Git, comme pour `CHANTIERS.md`. Chaque compte
+doit avoir accès au dépôt et les copies doivent suffire sans MD-LIB (§9).
+Sans droit d'écriture, l'utilisateur rapporte la réponse, conservée telle
+quelle ; ne pas prétendre qu'elle a été publiée automatiquement.
 
-**Une seule liste, pas une variante par projet.** Les deux copies ont divergé
-sans raison — NEWGEN porte le cycle de relais que GDINV2 n'a pas, GDINV2 porte
-l'entretien que NEWGEN n'a pas. La troisième copie ne doit pas être une
-troisième version : partir de la liste ci-dessus, et si on s'en écarte, écrire
-pourquoi dans le `CLAUDE.md` de MD-LIB.
+**Avant une réponse, identifier l'auteur du bloc et le contradicteur.** Lire
+le commit de dépôt avec `git log -1 --format=%B <sha du bloc>` :
 
-**Test d'auto-suffisance avant de clore la propagation :** une session qui
-n'aurait que le projet sous les yeux — autre compte, MD-LIB non attaché —
-doit pouvoir ouvrir un bloc et y répondre correctement avec ces deux fichiers
-seuls. Si elle a besoin d'ouvrir `MD-LIB/agora.md` pour agir, la copie est
-incomplète (cf. §10).
+- **Claude** : conserver son vrai trailer `Claude-Session:` lorsqu'il existe
+  et l'identifiant de session correspondant.
+- **Codex** : consigner l'éditeur (OpenAI), le commit de dépôt et la trace de
+  tâche/conversation réellement disponible. À défaut d'identifiant natif,
+  un identifiant de travail peut être enregistré sous `Codex-Session: local:<id>` ;
+  le qualifier explicitement de **local**, jamais d'identifiant de plateforme.
 
-Le reste de ce fichier (le pourquoi, la calibration, le rôle du contradicteur)
-reste ici : c'est ce qui justifie la règle, pas ce qui l'exécute.
+Le trailer et le champ `Auteur` relient le travail au commit ; un identifiant
+local ou deux libellés différents ne prouvent pas à eux seuls l'éditeur ni
+l'indépendance. Recouper avec la provenance du relais utilisateur et l'outil
+de la session qui répond. Même auteur : ne pas répondre à son propre bloc.
+**Identité ou indépendance non démontrable**, trailer absent sans autre trace,
+reprise incertaine : signaler la limite et demander l'arbitrage de l'utilisateur
+avant la réponse. Consigner sa confirmation comme telle, sans l'appeler preuve
+technique. Ne pas inventer d'identifiant natif ni de capacité indisponible.
 
-## 10. Fonctionner entre deux comptes Claude différents
-
-C'est le mode d'emploi normal, pas un cas limite : deux comptes n'ont ni
-mémoire, ni préférences, ni sessions en commun. Le dispositif tient quand même
-parce que **le canal est le dépôt Git, pas le compte Claude** — exactement
-comme `CHANTIERS.md`.
-
-**Ce qui le rend possible, et les conditions à remplir :**
-
-- Le second compte doit avoir **accès en écriture au dépôt GitHub** (compte
-  GitHub collaborateur du dépôt, application Claude autorisée dessus). C'est
-  une condition GitHub, rien à configurer côté Claude.
-- **`AGORA.md` et la section du `CLAUDE.md` doivent suffire à répondre sans
-  MD-LIB.** Un second compte n'aura pas ce dépôt attaché. C'est la raison
-  d'être du §9 : on copie les critères et le gabarit dans le projet, on ne
-  renvoie pas vers une règle que l'autre ne peut pas ouvrir. Tout renvoi vers
-  `MD-LIB/agora.md` porte la mention « non requis pour répondre ».
-- **`git pull --rebase origin main` avant de pousser un bloc.** Deux comptes
-  qui poussent sur `main` en même temps produisent un rejet non-fast-forward.
-  L'écriture étant append-only en fin de fichier, le rebase passe sans
-  conflit.
-
-**Ce qui n'est pas possible, et ne le sera pas :** aucune notification d'un
-compte vers l'autre. Les sessions, les routines planifiées et les messages
-inter-sessions sont cloisonnés par compte. **Le relais reste humain** — c'est
-une limite dure du support, pas un raffinement à ajouter plus tard. Elle est
-sans gravité ici : le dispositif a été conçu asynchrone et non bloquant dès
-le §4.
-
-**Deux sessions se distinguent par le trailer `Claude-Session:` de leurs
-commits, même sous une identité GitHub unique.** Corrigé le 21/09/2026 : la
-version précédente affirmait que `git log` ne distingue rien dans ce cas et
-que le champ `Auteur` était la seule distinction disponible. Faux, mesuré sur
-GDINV2 (bloc `a1f0ac3` et sa réponse `2351a0f`, trailers différents sous le
-même compte GitHub) — c'est la session contradictrice d'AG-001 qui l'a relevé.
-
-**Avant de répondre à un bloc, comparer `git log -1 --format=%B <sha du bloc>`
-au trailer de la session courante.** C'est la vérification qui fait foi. Le
-champ `Auteur` n'est qu'un libellé de lecture : attribué à l'oral au moment du
-relais, il ne survit pas à un compactage de contexte et n'est contraint par
-rien. Il reste utile à la lecture humaine du fichier, et le libellé doit
-toujours figurer dans la phrase de relais (§4).
-
-**Réserve** : ce trailer vient d'une consigne de session, pas de git. Un commit
-fait à la main, ou une session sans cette consigne, n'en portera pas — dans ce
-cas, demander à l'utilisateur avant de répondre.
+Aucune notification intercomptes ou entre Claude et Codex n'est assurée par
+ce protocole. **L'utilisateur fait le relais** (§4) ; Git ne lance pas l'autre
+outil et ne transmet pas le contexte de conversation.
 
 ## 11. Le point faible connu du dispositif
 
-**C'est Claude qui oublie.** Aucun mécanisme ne le réveille, aucun test n'
-échoue si un critère rempli reste silencieux. La seule vérification réelle est
-que l'utilisateur le reprenne quand le diff montre un critère rempli sans
-signalement — d'où l'exigence du §2 que les critères soient constatables dans le
-diff, et celle du §9 que la copie tienne dans la borne mesurée de 35 à 50
-lignes du fichier lu au démarrage.
+Les instructions seules ne garantissent pas qu'un déclencheur sera remarqué.
+L'annonce doit se voir, les critères doivent être vérifiables dans le diff,
+et le fichier de démarrage doit rester court. Ne pas annoncer de surveillance
+ou de communication entre sessions sans mécanisme réellement vérifié.
 
-## 12. Un contradicteur d'un autre éditeur : Codex (06/10/2026)
+## 12. Un contradicteur d'un autre éditeur : Claude et Codex
 
-**Le constat.** Sur les 23 blocs de NEWGEN entre deux sessions Claude :
-18 « amendé », 1 « confirmé », **0 « contredit »**. Deux Claude partagent les
-mêmes angles morts. Le 06/10/2026, Codex (OpenAI), lancé une seule fois en
-lecture seule sur NEWGEN et NextStep, a trouvé ce que Claude et l'AGORA
-avaient manqué : changement de mot de passe sans l'ancien, deux services
-externes absents des registres, noms d'agents dans le code public.
+**L'IA qui écrit ne se certifie pas elle-même.** La relecture d'un contenu
+produit par IA (code, texte, questions de quiz) revient à une IA **d'un autre
+éditeur** ; une nouvelle conversation du même modèle n'est pas cette relecture.
 
-**Les quatre règles** (décision de l'utilisateur, 06/10/2026) :
+| Auteur du travail | Contradicteur indépendant |
+|---|---|
+| Claude | Codex |
+| Codex | Claude, dans une autre session |
 
-1. **L'AGORA entre sessions Claude reste la règle** pour les décisions
-   courantes : écrans, données, organisation du code. Rapide, et la session B
-   connaît le contexte.
-2. **Un bloc qui touche à la sécurité, à l'authentification ou aux données
-   personnelles va à Codex au lieu de la session B.** L'utilisateur colle le
-   bloc dans Codex (autorisations « Lecture seule », réflexion au plus haut),
-   en ajoutant : « Réponds selon le gabarit de AGORA.md, avec fichier:ligne ;
-   ne modifie rien. » Il rapporte la réponse ; la session qui a ouvert le bloc
-   l'inscrit **telle quelle** sous `### Réponse — Codex — JJ/MM/AAAA`, sans la
-   reformuler ni la juger : l'utilisateur tranche. Même règle de preuve.
-3. **Audit Codex trimestriel**, le jour de l'audit automatique de Claude, avec
-   une consigne écrite fixe (modèle : `consigne-audit-externe.md`) qui ne lui
-   donne **pas nos conclusions** : il ne lit ni `CLAUDE.md`, ni `CHANTIERS.md`,
-   ni `AGORA.md` avant d'avoir fini son relevé. Chaque point est vérifié dans
-   le code avant d'être retenu ; le rapport vérifié est rangé hors de tout
-   dépôt public.
-4. **Audit Codex ponctuel** après tout changement structurant de sécurité :
-   connexion ou mots de passe, nouvelle page publique, changement
-   d'hébergement.
-5. **L'IA qui écrit ne relit pas** (décision de l'utilisateur, 14/10/2026),
-   pour tout contenu produit par une IA (questions de quiz, textes, code) :
-   la relecture se fait avec une IA **d'un autre éditeur**, jamais dans une
-   nouvelle conversation de la même IA. Mesuré le 14/10/2026 (PAPPERBOARD,
-   4 versions anonymisées d'un même quiz, chaque IA classant les 4) : ChatGPT
-   et Claude se sont classés premiers ; Gemini et Mistral, qui se sont classés
-   dernier et troisième, ont donné le classement retenu. La consigne de
-   relecture impose l'ordre public → fond → sources → forme, et exige des
-   sources précises avec « pas de source sûre » plutôt qu'une référence
-   inventée (trois IA y ont cité trois lois différentes sur un même sujet).
-   L'utilisateur ouvre les liens et tranche ; pas de seconde relecture par IA.
+Le champ `Contradicteur` nomme cet outil. L'ancien libellé « session B »
+désigne la session externe de relecture, sans dispenser d'identifier son
+éditeur. Le contradicteur lit et répond ; **l'auteur corrige**, sauf demande
+explicite de correction par l'utilisateur. En lecture seule, aucun changement
+de code.
 
-**Pas plus.** Pas de collaboration quotidienne : chaque échange passe par
-l'utilisateur (aucune notification entre les deux outils), deux IA qui
-modifient le même code se défont l'une l'autre, Codex qui lirait nos
-conclusions perdrait son regard neuf, et la charte IA du CD47 demande la
-sobriété (§10) et la vérification des outils autorisés (§8, question ouverte
-au 06/10/2026). Codex ne modifie jamais le code : il relit, Claude corrige —
-**sauf demande explicite de l'utilisateur** (29/10/2026, retrait du `motif` et
-du JSON dans GDINV2) : Claude relit alors le diff de Codex avant publication.
+- **Sécurité, authentification, données personnelles et chiffres** : circuit
+  indépendant ci-dessus (§2 critère 7, `chiffres-diffuses.md`).
+- **Audit trimestriel** : audit externe, le jour prévu par la routine d'audit,
+  avec `consigne-audit-externe.md`. Audit ponctuel après une évolution
+  structurante de connexion, mots de passe, page publique ou hébergement.
+- **Regard indépendant** : lire les consignes obligatoires de fonctionnement
+  et de sûreté ; faire son relevé sur le code avant de consulter les conclusions
+  d'anciens audits. Dire si elles étaient déjà connues. Rapport vérifié hors
+  dépôt public.
+- **Données** : aucune lecture de sauvegarde ni de fichier réel d'usagers.
+  Rejouer sur jeux fictifs autorisés ; les contrôles réels restent dans
+  l'application de l'utilisateur, chiffres seuls (`chiffres-diffuses.md` §1).
+- **Relecture de contenu** : public → fond → sources → forme. Sources précises
+  ou « pas de source sûre » ; l'utilisateur ouvre les liens et tranche.
+  Une seule relecture, puis correction des écarts démontrés, sans second tour
+  d'office (`collaboration.md` règle 58).
 
-**Exception pour la réponse elle-même** (décision de l'utilisateur, 29/10/2026) :
-recopier à la main chaque réponse de Codex ne se justifiait plus. L'utilisateur peut
-l'autoriser, dans la phrase de relais, à **ajouter sa réponse dans `AGORA.md`** et à
-la pousser sur `main` : un seul fichier, ajout seulement, jamais le code. La session
-qui a ouvert le bloc contrôle `git show --stat` (seul `AGORA.md`) et `git diff` (aucune
-ligne retirée) avant de commenter ; sinon elle annule et inscrit la réponse à la main.
-Phrase type : `AGORA.md` de GDINV2, section « Contradicteur Codex ».
+**Réponse directement dans `AGORA.md`** : l'utilisateur peut autoriser le
+contradicteur à ajouter sa réponse et la publier sur `main`, sans modifier
+d'autre fichier. Contrôler `git show --stat` et le diff de ce commit : seul
+`AGORA.md`, aucune ligne retirée. Sinon préserver les changements, signaler
+l'écart et corriger selon le workflow, sans annulation destructive improvisée.
 
-**Dire « pull » suffit** (décision de l'utilisateur, 03/11/2026, éprouvée le même
-jour sur ATELIERS_NEWGEN, AG-041) : plus de phrase à coller. Le fichier
-`AGENTS.md` du projet, que Codex lit à chaque session, porte une section « AGORA
-— ce que « pull » veut dire » : après le pull, répondre à chaque bloc ouvert dont
-la ligne **Contradicteur** dit « Codex » et qui n'a pas encore de réponse de
-Codex, selon le gabarit, dans `AGORA.md` seulement, puis commit et push sur
-`main` ; ne jamais répondre à un bloc qu'il a ouvert ; aucun bloc en attente :
-le dire en une ligne. Le gabarit du projet gagne la ligne
-`**Contradicteur** : Codex | session B`. **La session qui ouvre un bloc
-l'annonce quand même à l'utilisateur**, en une ligne, dès qu'il est en ligne :
-c'est lui qui dit « pull ». Le contrôle `git show --stat` ci-dessus reste dû.
+**Dire « pull » suffit** : après synchronisation (§7), Codex traite les blocs
+ouverts qui le désignent et n'ont pas de réponse Codex, sous
+`### Réponse — Codex — JJ/MM/AAAA`, dans `AGORA.md` seulement, puis commit et
+push sur `main`. Son `AGENTS.md` porte ce geste. Symétriquement, Claude répond
+aux blocs qui le désignent, selon les consignes du projet. Aucun ne répond à
+son propre bloc (§10). Sans bloc en attente, le dire en une ligne.
+L'auteur annonce toujours le bloc publié : l'utilisateur déclenche le relais.
 
 ## 13. Installation systématique dans chaque projet (17/10/2026)
 
-Décision de l'utilisateur, 17/10/2026 : **tout projet a son AGORA**, installée à
-sa création et non à la demande. « Pas d'AGORA ici » n'est plus une position
-valable (FICHES_MEMO_ACTION_KOLB l'avait ; corrigé le jour même). Pourquoi : la
-règle ne marche que si le dépôt porte tout ce qu'il faut pour ouvrir un bloc et y
-répondre sans MD-LIB (test du §9) ; un projet sans AGORA n'a ni les critères ni
-le geste, et la contradiction n'a jamais lieu.
+Tout projet a son AGORA dès sa création. Une session découvrant un projet
+sans AGORA l'installe et le signale. Installation en un commit, avant le premier
+code d'un nouveau projet :
 
-**Installation, en un seul commit** (dans cet ordre) :
-1. `AGORA.md` à la racine : règles de réponse, sincérité, cycle de relais, gabarit
-   (§9 et §10), tableau « Blocs tranchés » vide. **Copie de référence :
-   `MD-LIB/AGORA.md`** (décision de l'utilisateur, 13/11/2026 : MD-LIB est attaché
-   à toutes les sessions, PAPPERBOARD ne l'est pas — attache refusée ce jour-là).
-   En recopier les sections d'en-tête, « Pour répondre à un bloc », « Sincérité »
-   et le gabarit, **sans ses blocs** ; adapter le titre, le nom du dépôt dans la
-   phrase de relais, la ligne « append-only / où pousser » selon la convention
-   git du projet, et les renvois à `agora.md` (le projet renvoie à son `CLAUDE.md`).
-2. Section « AGORA » dans le `CLAUDE.md` du projet (35 à 50 lignes) : les sept
-   critères, la liste « ne va pas à l'AGORA », « soumet d'office, ne bloque
-   jamais », le renvoi « `MD-LIB/agora.md` non requis pour répondre », la mention
-   de Codex pour sécurité / données personnelles (§12).
-3. Dans `CHANTIERS.md` : une ligne « AGORA installée le JJ/MM/AAAA » et le rappel
-   « chaque décision à trancher est candidate à un bloc ».
-4. Dans MD-LIB `CLAUDE.md`, l'entrée du projet : date d'installation, test du §9
-   « pas encore passé » tant qu'aucune session tierce n'a répondu à un bloc.
+1. **`AGORA.md` à la racine** : partir de `MD-LIB/AGORA.md`, sections d'en-tête,
+   règles de réponse, Sincérité et gabarit, **sans ses blocs ni ses totaux**.
+   Adapter le titre, le dépôt du relais, le workflow Git et les renvois locaux.
+2. **Section AGORA du `CLAUDE.md`** (35 à 50 lignes) : §2, §3, soumission
+   d'office, poursuite du travail indépendant et réserve sur l'irréversible,
+   renvoi local, rôles symétriques du §12. Son renvoi éventuel vers MD-LIB dit
+   « non requis pour répondre ». L'`AGENTS.md` porte les consignes utiles à Codex.
+3. **`CHANTIERS.md`** : date d'installation et rappel « chaque décision à
+   trancher est candidate à un bloc ».
+4. **Suivi des projets de MD-LIB** : date et état du test d'auto-suffisance du
+   §9, « pas encore passé » tant qu'aucune session indépendante n'a répondu.
 
-**Jumeaux** : deux dépôts qui partagent le code (NEWGEN / NextStep) peuvent partager
-un seul `AGORA.md`, à condition que le `CLAUDE.md` du second le dise explicitement
-(c'est le cas de NextStep). **Blocs d'installation** : on n'ouvre pas de bloc pour
-l'installation elle-même ; les premiers blocs sont les décisions déjà prises dont
-la porte est fermée, signalées « soumis après coup » (biais de statu quo noté).
-**Session à venir** : toute session qui crée un projet applique ce §13 avant le
-premier commit de code ; une session sur un projet sans `AGORA.md` l'installe et le
-dit à l'utilisateur au premier message.
-
+**Jumeaux** : des dépôts partageant le code peuvent partager une AGORA si
+les consignes du second nomment explicitement le dépôt de référence.
+**Pas de bloc pour l'installation elle-même.** Les décisions déjà prises qui
+ferment une porte peuvent être soumises ensuite, marquées « soumis après coup ».

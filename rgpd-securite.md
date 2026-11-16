@@ -1,8 +1,10 @@
 # Routine RGPD & sécurité des accès/données
 
-Mémoire générale, valable pour tous les projets (actuels et futurs). Objectif :
-que Claude alerte systématiquement, sans attendre d'être interrogé, si une
-règle RGPD ou de sécurité n'est manifestement pas garantie.
+Mémoire générale pour Claude et Codex, valable pour tous les projets (actuels
+et futurs). Objectif : signaler sans attendre d'être interrogé une règle RGPD
+ou de sécurité manifestement non garantie. Les obligations institutionnelles
+du CD47 s'appliquent aux projets concernés ; les projets personnels suivent
+leur propre politique de données.
 
 ## Quand vérifier
 
@@ -47,9 +49,8 @@ où elle est constatée).
 - **Indice de mot de passe** : aucun aide-mémoire, indice ou description de la
   construction d'un mot de passe ou d'une clé dans une page ou un dépôt public ;
   la mémoire, c'est le gestionnaire de mots de passe (`collaboration.md`
-  règle 69). Constat du 13/11/2026 (MentiAnalyser) : un aide-mémoire 💡
-  décrivait publiquement le mot de passe IA ; retiré, le texte reste dans
-  l'historique Git, et seul un changement du mot de passe l'annule.
+  règle 69). Retirer un indice publié n'efface pas l'historique Git : changer
+  le secret concerné.
 - **Contrôle d'accès** : une action sensible (suppression, export massif,
   administration) est-elle protégée par une authentification/autorisation
   réelle, ou accessible à qui a l'URL ?
@@ -65,16 +66,17 @@ où elle est constatée).
   minimum de droits nécessaires, ou hérite-t-il par défaut de droits larges ?
 - **Logs** : les logs (erreurs, exécutions GAS, etc.) contiennent-ils des
   données personnelles en clair qui ne devraient pas y être ?
-- **Captures d'écran et fichiers envoyés à Claude** (charte d'utilisation de
+- **Captures d'écran et fichiers envoyés à une IA** (charte d'utilisation de
   l'IA du CD47, §4 : pas de données personnelles ni confidentielles dans les
   outils d'IA ; ajouté le 06/10/2026) : captures faites dans un bac à sable ou
   sur des données fictives, sinon recadrées ; fichiers de test anonymisés.
   Une capture qui montre des données réelles se signale en une ligne :
   rappel d'habitude, pas alerte RGPD. Ne jamais dramatiser une donnée
   anonyme : la règle vise l'identifiable.
-- **Durées et purges** : une purge automatique est une élimination
-  d'archives publiques, soumise au tableau de gestion et au visa des Archives
-  départementales (`archivage-cd47.md`). Consignes IA : `charte-ia-cd47.md`.
+- **Durées et purges** : pour les projets soumis aux règles des archives
+  publiques, une purge automatique est une élimination soumise au tableau de
+  gestion et au visa des Archives départementales (`archivage-cd47.md`).
+  Consignes IA du CD47 : `charte-ia-cd47.md`.
 
 ## Format du signalement
 
@@ -94,82 +96,50 @@ doit être signalé immédiatement, avant de continuer la tâche en cours.
 En complément de la vigilance légère ci-dessus (déclenchée au fil de l'eau
 sur ce qui est touché en session), un audit plus poussé est prévu tous les
 trois mois sur ATELIERS_NEWGEN, Ateliers CD47 NextStep, GDINV2, SMS-mail et
-sms-mail-multi (ajoutés le 23/09/2026) et `ateliers-backups` (ajouté le
-30/09/2026 : workflows de copie chiffrée seulement, jamais le dossier
-`copies/`) :
-`/security-review`
-sur `main` (injection, XSS, secrets, contrôle d'accès, dépendances
-vulnérables) + repassage complet de la checklist RGPD/sécurité sur tout le
-repo, pas seulement les derniers changements.
+sms-mail-multi et `ateliers-backups` (**workflows de copie chiffrée seulement,
+jamais le dossier `copies/`**). Périmètre : `main`, injection, XSS, secrets,
+contrôle d'accès, dépendances vulnérables et checklist RGPD/sécurité sur tout
+le dépôt, pas seulement les derniers changements. Dans Claude,
+`/security-review` désigne ce parcours lorsqu'il est disponible ; ce n'est
+pas une commande Codex. Le circuit de contradiction indépendante suit
+`agora.md` §12 et `consigne-audit-externe.md`.
 
-C'est une routine planifiée (id **`trig_01J6ZMsLHKbgXAQsRYgQL16q`**, créée
-par l'utilisateur dans l'interface Routines le 01/10/2026, **6 dépôts
-attachés** ; l'ancienne `trig_018quyGJKmHRXRWYxpw9ous4`, sans dépôt, a été
-supprimée le 01/10/2026 à la demande de l'utilisateur, cron `0 8 1 1,4,7,10 *` — évalué en
-**UTC**, soit 09 h ou 10 h heure française selon la saison), configurée en mode
-**session neuve à chaque déclenchement** (`create_new_session_on_fire`) — donc
-indépendante de toute session de travail : la supprimer, la fermer ou la
-laisser expirer n'affecte pas la routine. Notification push + email à chaque
-exécution.
+Inclure les workflows GitHub Actions (secrets, `permissions:`, accès SSH par
+clé), la non-régression des tests RGPD-01 à RGPD-18 des Ateliers et la
+confrontation du code au registre de sécurité (`ateliers-backups/documents/`) : une mesure
+décrite qui n'est plus vraie est une trouvaille. Vérifier les points ouverts
+du registre et le maintien des corrections déjà apportées, sans présumer
+qu'un état ancien est encore vrai. Quand l'architecture change, actualiser
+la consigne d'audit dans la foulée.
 
-⚠️ **La routine a disparu une première fois.** Recréée le 23/09/2026 : un
-`list_triggers` ce jour-là n'a renvoyé **aucune** routine, alors que ce
-fichier et les trois `CLAUDE.md` consommateurs affirmaient depuis le
-20/09/2026 qu'un audit trimestriel tournait. L'id précédent
-(`trig_018SBR4ihGT8Y2ud7sP5kxYm`) n'existait plus. Cause inconnue — jamais
-créée, ou supprimée depuis. **Leçon : cette note ne prouve rien par
-elle-même.** Le seul contrôle qui vaut est `list_triggers`.
+**Dernier état consigné (01–10/10/2026), relu le 16/11/2026** :
 
-⚠️ **Limite connue de la routine recréée** : elle a été créée depuis une
-session qui ne portait aucun connecteur, donc les sessions qu'elle déclenche
-tournent **sans les outils `mcp__*`** — notamment l'attachement de dépôts et
-l'API GitHub. Conséquence possible : l'audit ne couvre que les dépôts déjà
-attachés par défaut à l'environnement. **Non vérifié** — à constater au
-premier déclenchement (01/10/2026). Si le rapport ne couvre pas les cinq
-dépôts, recréer la routine depuis l'interface Routines de claude.ai, ou depuis
-une session qui porte les connecteurs.
+- La routine **`trig_01J6ZMsLHKbgXAQsRYgQL16q`** a été créée le 01/10/2026
+  par l'utilisateur dans l'interface Routines de Claude, avec les dépôts
+  attachés à la création. Configuration consignée : cron `0 8 1 1,4,7,10 *`
+  en UTC, session neuve à chaque déclenchement
+  (`create_new_session_on_fire`), notifications push et e-mail.
+- L'ancienne routine `trig_018SBR4ihGT8Y2ud7sP5kxYm`, à consigne GAS
+  périmée, a été **désactivée le 10/10/2026, pas supprimée**.
+- Au contrôle du 10/10/2026, la routine créée dans l'interface n'apparaissait
+  pas dans `list_triggers` : **cet outil ne permet pas de vérifier toutes les
+  routines**. Pour celle-ci, consulter l'interface Routines et le rapport
+  d'exécution ; son absence dans un outil ne prouve pas sa disparition.
+- PAPPERBOARD a été ajouté le 10/10/2026 aux rappels d'audit Codex ; son
+  ajout à la routine Claude restait à faire par l'utilisateur, avec le texte
+  de `PAPPERBOARD/docs/routine-audit-trimestriel.md`.
 
-**Consigne mise à jour le 30/09/2026** (`update_trigger`, même id) : elle
-décrivait encore Google Apps Script (endpoints sans jeton, `PropertiesService`)
-alors que les Ateliers tournent sur l'API PHP d'Alwaysdata depuis le 25/09.
-Elle porte désormais : l'architecture actuelle ; les workflows GitHub Actions
-(secrets, `permissions:`, accès SSH par clé) ; la non-régression des tests
-RGPD-01 à RGPD-18 ; la confrontation du code au registre de sécurité
-(`ateliers-backups/documents/`, une mesure décrite qui n'est plus vraie est
-une trouvaille) ; les points ouverts du §9 du registre (faille ACME
-d'Alwaysdata, DPA, GitHub sur la liste DPF). Réalignée le soir même :
-l'historique des copies et l'ancien secret SSH, soldés le 30/09, y sont
-devenus des points à vérifier qu'ils restent soldés. Le texte fait foi dans la routine elle-même : le relire par
-`get_trigger`, pas ici. **Quand l'architecture d'un projet audité change,
-mettre à jour la consigne dans la foulée** — elle a eu cinq jours de retard
-cette fois.
+**État actuel et exécutions réelles : non vérifiés au 16/11/2026.** Cette
+note décrit une configuration, pas une surveillance démontrée. Lors du
+contrôle trimestriel, ou sans notification depuis plus de 3–4 mois, vérifier
+dans l'interface concernée les passages réels, les dépôts effectivement
+audités et les omissions du rapport avant d'envisager une reprogrammation.
+Ne pas supposer que les outils de routines de Claude existent dans Codex.
 
-⚠️ La routine n'a **aucun dépôt attaché** (`sources` vide) ni connecteur :
-l'audit dépend de `add_repo` dans la session déclenchée. Premier
-déclenchement le 01/10/2026 : vérifier en tête du rapport la liste des dépôts
-non audités.
-
-**Leçon du 01/10/2026** : la première exécution (ancienne routine, aucun
-dépôt attaché, aucun connecteur) a tourné 4 minutes sans rien consigner ;
-l'audit a été refait en session. Une routine d'audit doit avoir ses dépôts
-attachés à la création (champ « Sélectionner un dépôt » de l'interface,
-introuvable ensuite) ; aucun connecteur n'est nécessaire. Une routine créée dans l'interface **ne peut pas
-être modifiée par Claude** (`update_trigger` refusé) : toute mise à jour de
-la consigne passe par l'utilisateur (champ « Instructions », seul champ
-modifiable). Claude prépare le texte complet, l'utilisateur le colle.
-
-**Constat du 10/10/2026** : `list_triggers` montre encore active l'ancienne
-routine `trig_018SBR4ihGT8Y2ud7sP5kxYm` (consigne GAS périmée), que la note du
-23/09/2026 disait introuvable ; elle a tourné le 01/10/2026. **Désactivée** le
-10/10/2026 (pas supprimée, à la demande de l'utilisateur). La routine en vigueur,
-`trig_01J6ZMsLHKbgXAQsRYgQL16q`, n'apparaît pas dans `list_triggers` depuis une
-session : seule l'interface Routines fait foi pour elle. PAPPERBOARD (WoocLight)
-ajouté le même jour aux deux rappels d'audit Codex ; son bloc pour la routine
-d'audit est dans `PAPPERBOARD/docs/routine-audit-trimestriel.md`, à coller par
-l'utilisateur.
-
-**Contrôle à faire** : si aucune notification n'est arrivée depuis plus de
-3-4 mois, vérifier avec `list_triggers` et reprogrammer.
+**Limite consignée le 01/10/2026** : une routine créée dans l'interface ne
+pouvait pas être modifiée par `update_trigger`. Dans ce cas, l'IA prépare
+la consigne complète et l'utilisateur la colle dans le champ « Instructions ».
+L'historique détaillé des anciennes routines et incidents reste dans Git.
 
 ## Règle de mot de passe imposée à la connexion (13/11/2026)
 

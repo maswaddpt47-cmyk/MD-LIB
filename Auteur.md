@@ -34,22 +34,29 @@ fichiers de mes dépôts. **Dépôt public** : ni adresse e-mail ni données de 
   d'être faite ; en attendant, le travail qui n'en dépend pas continue.
 - **Preuve avant affirmation** : rien n'est « réparé », « testé » ou « en ligne »
   sans vérification réelle ; une hypothèse est dite comme telle.
-- **Chiffres** : tout calcul ou chiffre affiché est contredit par une seconde IA
-  (Codex) via un fichier `AGORA.md` dans le projet ; les définitions métier, c'est
-  moi qui les tranche.
-- **Données personnelles** : jamais de données réelles d'usagers transmises à
-  l'IA ni publiées dans un dépôt public (charte IA du CD47).
+- **Chiffres** : tout calcul ou chiffre affiché suit le circuit de contradiction
+  d'`agora.md` et de `chiffres-diffuses.md`, par une autre IA que celle qui a
+  écrit ; les définitions métier, c'est moi qui les tranche.
+- **Données personnelles** : dans les projets CD47, jamais de données réelles
+  d'usagers transmises à l'IA ; les projets personnels suivent leur politique
+  propre. Jamais de données personnelles publiées dans un dépôt public.
 - **Reprise de session** : chaque projet a un `CHANTIERS.md` (état, décisions à
   trancher, points à ne pas défaire), à lire en premier.
 - Publication : souvent directement sur `main`, après les tests du projet.
 - Règles détaillées : `collaboration.md`, `agora.md`, `rgpd-securite.md`,
   `charte-ia-cd47.md` de ce dépôt.
+- **Chargement** : Claude charge les règles communes par `@collaboration.md`
+  dans `MD-LIB/CLAUDE.md` lorsque MD-LIB est attaché et que l'environnement
+  charge cet import ; sinon, lire le fichier explicitement. Codex lit
+  explicitement `collaboration.md` ; son `AGENTS.md` garde les consignes essentielles.
+  Les instructions du projet et les autorisations de la session restent
+  applicables ; ne pas présumer qu'un import fonctionne dans les deux outils.
 
-## Mes projets (au 01/11/2026)
+## Mes projets (liste indicative)
 
 | Projet | Objet |
 |---|---|
-| `MD-LIB` | Ce dépôt : règles et routines réutilisables pour l'IA, copiées dans chaque projet |
+| `MD-LIB` | Ce dépôt : source commune des règles, importées par Claude et lues explicitement par Codex ; consignes essentielles dans les `AGENTS.md` |
 | `sms-mail-multi` | Prise de RDV et envoi de SMS/mails pour les permanences des centres médico-sociaux, statistiques et bilan mensuel |
 | `SMS-mail` | Version mono-profil, gelée depuis le 20/10/2026 |
 | `ATELIERS_NEWGEN`, `ateliers-cd47_NextStep` | Gestion d'ateliers numériques |

@@ -1,73 +1,122 @@
-# CHANTIERS — relais vers le projet
+# CHANTIERS — état courant de MD-LIB
 
-État au **16/11/2026 à 21:02**, base `main` `770bd2c` : fin de session NEWGEN/NextStep (règle 32) : précision de la règle 40 (écriture directe en base et pages ouvertes) et règle 72 (portée d'une opération sur des données dite en clair), chargées d'office, rien à reporter dans les `AGENTS.md` ; seuil de 30 Ko reporté dans NEWGEN et NextStep. Avant : état au 16/11/2026 à 20:35, base `684671d` : règle 8ter complétée (seuil de 30 Ko pour `check-chantiers.sh`, posé dans sms-mail-multi, à reporter dans les autres copies au prochain « pull », `CLAUDE.md` « Reste à propager »). Avant : relu par « pull » le 16/11/2026 à 19:51, base `225e844` (rien d'arrivé depuis `9981de5` hors la règle 69 reportée dans l'`AGENTS.md` de sms-mail-multi ; `CLAUDE.md` corrigé : `check-chantiers.sh` est en place dans sms-mail-multi depuis le 06/11). Avant : base `51d1da8` : arrivées depuis, les règles 70 (contrôle régulier automatisé d'office) et 71 (un défaut signalé dit sa voie d'entrée), chargées d'office par l'import, rien à reporter dans les `AGENTS.md`. Avant : état au **15/11/2026, fin de session** : principe « chaque règle s'adapte au projet » (`b31410e`) et précisions des règles 1, 16 et 52 (fin de session, règle 32). Avant : base `main` `170302a` (relu par « pull » ; arrivés après `5215f6f` : règle 19 « pas de soupçon envers l'utilisateur », règle de mot de passe imposée et pas d'indice dans une page publique (`rgpd-securite.md`), précision de la règle 55 (score de mutation), `deploiement.md` (Pages « in progress », ➖ sans preuve d'absence), règle 18 « la tâche est le travail demandé », règle 69 « bouton qui lance l'application », CRConum-V10 et MentiAnalyser inscrits ; puis règle 69 reportée dans l'`AGENTS.md` de PAPPERBOARD le 15/11/2026). Avant, état au 13/11/2026, base `5215f6f` (arrivé par « pull » : précision de la règle 5 et « échec sans étape exécutée » dans `deploiement.md`, autre session) + règle 69 reportée au prochain « pull » de chaque projet (SpeedDial fait). Avant : règle 69 de `collaboration.md` (champ de secret reconnu par un gestionnaire de mots de passe) ; `agora.md` §13 prend `MD-LIB/AGORA.md` comme copie de référence (complété : Sincérité, ligne Contradicteur, total) ; SpeedDial inscrit dans `CLAUDE.md` (AGORA installée, ménage et `AGENTS.md` faits). Accord de l'utilisateur pour les deux règles.
+État au **16/11/2026 à 21:43** (Paris), base `main` `c69194a`.
+Périmètre : MD-LIB uniquement ; aucun projet consommateur modifié par cette
+session. La réorganisation et le circuit Claude/Codex symétrique sont approuvés
+par l'utilisateur le 16/11/2026. Les anciennes passations restent dans Git.
 
-Précédent : état au **06/11/2026 à 09:57**, base `main` `e1fbd7a` + règle 68 et précision de la 55 (fin de session du 06/11, accord de l'utilisateur) (relue par « pull » ; sms-mail-multi : puce « Fin de tâche » ajoutée à son AGENTS.md) : `collaboration.md` **chargé d'office** par `@collaboration.md` (essai concluant, plus de propagation de ses règles dans les `CLAUDE.md`, `26093d6`/`bdd7505`) ; ménage des `CLAUDE.md` des projets (`62a0890`, `09e792b`) ; règle 25 accordée à la 59 (`149fe70`) ; prompts de bilan dans `prompts-bilan-collaboration.md` (`1ec0a90`) ; annonce AGORA 🔴 en gras (`agora.md` §4, `6d07cfd`, propagée `9e73ed0`) ; règles 63 à 65 (`dbccfa0`) et précisions des règles 5, 55 et 58 (`96bf7a8`). Le 04/11, décision de l'utilisateur : section « Autorisations », règle 60 et « Main toujours » reportées dans l'`AGENTS.md` de chaque projet **à son prochain « pull »** (`CLAUDE.md`, « `AGENTS.md` au même « pull » ») ; fait dans sms-mail-multi, NEWGEN (`0fbb4c4`) et NextStep (`cb9985e`).
+## Contrôles et reprise
 
-**Depuis le 31/10/2026** : règles 58 à 60 de `collaboration.md`, « Main
-toujours » (`git-workflow.md` §3) et `Auteur.md` inscrits. Leur propagation
-(faite pour 58-59 ; pour 60 et « Main toujours », au prochain « pull » de chaque projet) est tenue dans
-`CLAUDE.md`, « Reste à propager ».
+- Réorganisation documentaire : règles numérotées conservées, entrées Claude
+  et Codex distinctes, index dans README, suivi courant ici. Arbitrages Git
+  et données d'usagers harmonisés selon les décisions existantes.
+- Contrôles effectués : 19 Markdown, liens locaux, 71 identifiants de règles,
+  sections numérotées et cinq familles de tests conservés ; `git diff --check`
+  et syntaxe des exemples Bash vérifiés. Aucun script ni format applicatif
+  modifié ; aucune suite de tests ou CI bloquante configurée dans ce dépôt.
+  Destination de publication : `main`. Le commit de refonte se retrouve dans
+  `git log --oneline -- CHANTIERS.md` ; vérifier sa présence sur `origin/main`.
+- AG-003 dans `AGORA.md` : une relecture de la livraison par Claude reste à
+  faire (critère 5, règles/procédures datées harmonisées). Le principe est déjà
+  autorisé ; la relecture vise les écarts de la livraison, sans réouvrir le
+  circuit à chaque correction. Relais : « pull maswaddpt47-cmyk/MD-LIB, lis
+  AGORA.md et réponds à AG-003 ». Aucun échange automatique entre comptes.
 
-**Ménage du 26/10/2026** : récits des propagations des 21 et 25/10 (règles 22
-et 23 de `collaboration.md`, choix des annonces « Nouveautés ») retirés —
-commits listés dans `git log -p CHANTIERS.md`. Ce qui reste à propager est
-tenu dans `CLAUDE.md`, section « Reste à propager » (règle 34 comprise).
+## Invariants à ne pas défaire
 
-## Communication — précision du 02/11/2026
+- La demande actuelle prime sur les anciennes passations. Lire les consignes
+  du projet cible et ses faits actuels ; ce fichier n'atteste aucun déploiement
+  ni état courant des autres projets.
+- `collaboration.md` est la source commune ; conserver ses identifiants de
+  règles, ainsi que les sections citées des procédures. Claude utilise l'import
+  disponible ; Codex lit explicitement et garde un `AGENTS.md` essentiel autonome.
+- Chaque projet conserve `AGORA.md` et `CHANTIERS.md`. L'utilisateur tranche,
+  le contradicteur ne se répond pas. L'IA d'un autre éditeur relit selon §12 ;
+  une seule vérification de livraison (règle 58), sans boucle systématique.
+- Pas de propagation groupée. Les copies Codex et les adaptations pertinentes
+  se vérifient au prochain passage dans chaque projet ; une session ouverte
+  doit être invitée à relire les sources mises à jour.
+- Pas de lecture de sauvegardes ou de fichiers réels d'usagers. Contrôles réels
+  dans l'application de l'utilisateur, chiffres seuls ; politique propre aux
+  projets personnels selon les consignes applicables.
+- Ne pas réactiver SMS-mail, gelé le 20/10/2026. Ne plus proposer les anciennes
+  propagations des règles 2/17 à pptx-creator refusées le 17/10/2026.
+- Ne pas reprendre PAPPERBOARD `codex/regles-collaboration` : sa fusion
+  retirerait la coupure d'urgence (constat du 21/10/2026, `5aaca8b`).
+  `codex/interface-simulation-fidele` (`f19df16`) est déjà intégrée au constat
+  du 26/10/2026 ; archive seulement.
+- `maswaddpt47-cmyk/fiches-generator` est une référence en lecture seule de
+  FICHES_MEMO_ACTION_KOLB : ne jamais la modifier.
 
-La règle 18 de collaboration.md précise la suite concrète à la fin de chaque
-message, y compris la réponse finale. Application à MentiAnalyser pendant la
-session ; autres projets inchangés, suivi dans CLAUDE.md « Reste à propager ».
-Le 05/11/2026, la consigne **✅ TÂCHE TERMINÉE**, déjà dans les deux projets
-ATELIERS, est ajoutée à la règle 18 et au modèle `AGENTS.md` commun. Les autres
-`AGENTS.md` se mettent à jour au prochain pull, même si leur projet était déjà
-coché pour les autres consignes. Une session déjà ouverte doit être invitée à
-relire les sources ; leur seule modification ne garantit pas cette relecture.
+## Projets consommateurs — repères
 
-## Conception des statistiques — règle commune du 31/10/2026
+Particularités consignées avant cette refonte, à revérifier dans chaque projet.
+Les preuves détaillées et anciens commits de propagation sont dans Git.
 
-Principe demandé par l’utilisateur : tout nouveau projet peut produire des
-statistiques ; y réfléchir dès la conception. Source canonique :
-`collaboration.md` règle 57 et `chiffres-diffuses.md` §0 ; rappel dans la
-création des projets de `CLAUDE.md`. Conserver une approche proportionnée,
-la minimisation des données et le traitement explicite des inconnus.
-L’audit avant diffusion (règle 33) reste distinct. Les projets existants
-n’ont pas été modifiés ; suivi de propagation dans `CLAUDE.md`.
+| Projet `maswaddpt47-cmyk/…` | Particularité utile à la reprise |
+|---|---|
+| ATELIERS_NEWGEN | Projet pilote AGORA ; branche imposée selon plateforme, intégration dans `main` ; passation locale fait foi. |
+| ateliers-cd47_NextStep | Jumeau de NEWGEN ; publication sur `main`, relais local de passation. |
+| GDINV2 | Pages depuis `main` ; passation locale et documents privés séparés du dépôt public. |
+| sms-mail-multi | Seul SMS-mail actif ; branche imposée selon plateforme, livraison sur `main` ; contrôle CHANTIERS présent depuis `7a8aad7`. |
+| SMS-mail | Gelé : aucun développement ni portage. |
+| pptx-creator | Workflow de branche imposée selon plateforme ; relire ses règles avant publication. |
+| FICHES_MEMO_ACTION_KOLB | Pages depuis `main` ; référence fiches-generator strictement en lecture seule. |
+| PAPPERBOARD | WoocLight, projet personnel depuis le 14/10/2026, politique/charte propres ; `main` protégée par `tests`, CI de branche verte puis SHA précis publié. |
+| SpeedDial | Projet personnel, Pages, publication directe sur `main`. |
+| CRConum-V10 | Pages et « Main toujours » décidés le 13/11/2026. |
+| MentiAnalyser | Relire sa passation ; modèle AGENTS actualisé au constat du 13/11/2026 (`43ef075`). |
 
-## Reprise ATELIERS — 05/11/2026
+## Reste à propager
 
-Passation publiée sur `main` : **`ATELIERS_NEWGEN/CHANTIERS.md`** (`eedbb61`),
-avec le relais propre à NextStep dans **`ateliers-cd47_NextStep/CHANTIERS.md`**
-(`5c09453`). Aucun bloc AGORA ouvert au contrôle du 05/11/2026 ; AG-047 à AG-051
-clos. Les derniers ajouts (statut groupé, volet Détail) ne sont pas présentés comme
-audités par Codex ; validations, CI et limites sont consignées dans NEWGEN.
+Ce sont des actions à vérifier **dans les sessions des projets concernés**,
+pas une autorisation de les ouvrir tous. États ci-dessous issus des notes
+antérieures ; aucun contrôle distant de ces projets effectué par cette refonte.
 
-Les consignes récentes sont déjà enregistrées : règle 18 et `AGENTS.md` commun
-pour **✅ TÂCHE TERMINÉE** (`9c4f349`), règle 66 pour la mise en forme ciblée,
-règle 67 pour pousser le SHA testé après une attente en arrière-plan (`8eec418`).
-Aucune nouvelle règle à inscrire lors de ce changement de session. Une session
-déjà ouverte doit relire explicitement MD-LIB et les consignes du projet ; les
-projets consommateurs se mettent à jour au prochain pull, sans propagation groupée.
-Repartir de `main` actualisé et d'une copie propre, sans reprendre d'anciens brouillons.
+1. **Entrées et copies de consignes** au prochain « pull » : vérifier le ménage
+   des `CLAUDE.md` et les puces `AGENTS.md` définies dans `CLAUDE.md` de MD-LIB.
+   Ménage déjà consigné pour sms-mail-multi, PAPPERBOARD et SpeedDial ; autres
+   projets actifs à vérifier. Autorisations/tests/Main/fin de tâche déjà
+   consignés dans NEWGEN, NextStep, sms-mail-multi, PAPPERBOARD, SpeedDial,
+   CRConum-V10 et MentiAnalyser selon leurs spécificités ; vérifier aussi les
+   précisions récentes dans ces copies. Ne pas recréer des copies communes
+   intégrales dans les `CLAUDE.md`.
+2. **Gestionnaire de mots de passe, règle 69** : copie consignée dans les
+   projets ci-dessus. PAPPERBOARD : connexion animateur encore indiquée non
+   conforme au 15/11/2026 (`admin.php:90-92` : `name`, identifiant et
+   `autocomplete="on"` manquants) ; vérifier avant correction. Autres copies
+   actives à vérifier au passage, ainsi que « bouton qui lance l'application ».
+3. **Contrôle CHANTIERS, seuil de 30 Ko** : reporté le 16/11 dans NEWGEN et
+   NextStep et présent dans sms-mail-multi ; reste GDINV2, FICHES_MEMO_ACTION_KOLB
+   et PAPPERBOARD au prochain passage. Hook PAPPERBOARD auparavant refusé par
+   la plateforme : ne pas contourner ; son installation reste à l'utilisateur.
+4. **Déploiement** : rappel consigné dans SMS-mail, sms-mail-multi, GDINV2 et
+   PAPPERBOARD ; autres projets actifs à vérifier. Installation du hook
+   vérifiée le 30/10/2026 dans un environnement « Micky » seulement ; second
+   compte et autres environnements non vérifiés. Détecter les outils présents,
+   ne pas supposer un hook universel.
+5. **AGORA, autonomie et relais** : test du §9 encore non consigné pour
+   sms-mail-multi, pptx-creator, FICHES_MEMO_ACTION_KOLB, PAPPERBOARD, SpeedDial
+   et CRConum-V10. Relais nommant le dépôt consigné dans GDINV2 et sms-mail-multi ;
+   vérifier les autres actifs quand un bloc doit circuler. MentiAnalyser :
+   ancienne propagation des règles 61/62, du relais « pull » et de l'annonce
+   AGORA 🔴 non consignée, à vérifier dans sa session. Adapter aussi les copies
+   aux rôles symétriques aux prochains passages, en gardant les garanties (§9/§13).
+6. **FICHES_MEMO_ACTION_KOLB** : règle de confidentialité des captures indiquée
+   non reportée au constat du 06/10/2026, à vérifier dans son contexte.
+7. **Chiffres diffusés** : NEWGEN, écart de définition du taux de présence
+   consigné entre Historique/mail mensuel (50 %) et bilan trimestriel (75 %) :
+   décision métier à retrouver ou demander, pas de correction par déduction.
+   NextStep porte une copie à vérifier. Voir les passations locales actuelles.
 
-## Reprise GDINV2 (29/10/2026)
+Les règles sur données enregistrées, chiffres affichés, mails ou archives se
+reportent seulement si leur contexte existe. FICHES_MEMO_ACTION_KOLB et
+pptx-creator ne nécessitaient pas les règles de calcul sans données/chiffres
+concernés ; réexaminer si leur usage change. Les projets personnels gardent
+leur politique propre ; les références institutionnelles restent conditionnelles.
 
-La passation est dans **`GDINV2/CHANTIERS.md` sur `main`** (en tête : « À faire en
-premier ») et dans `GDINV2-BACKUP/INVENTAIRE.md`. Ici : règles **53 et 54** de
-`collaboration.md` inscrites et **propagées** le 29/10 à GDINV2, NEWGEN, NextStep
-(`CLAUDE.md`, « Reste à propager » : reste PAPPERBOARD). L'exception Codex du §12 est propagée dans GDINV2.
+## Pistes
 
-## Branches à ne pas reprendre
-
-- **PAPPERBOARD `codex/regles-collaboration`** : périmée. `AGENTS.md` est sur
-  `main` depuis le 21/10/2026 (`5aaca8b`) ; fusionner cette branche retirerait
-  la coupure d'urgence de WoocLight.
-- **PAPPERBOARD `codex/interface-simulation-fidele`** (`f19df16`) : intégrée à
-  `main` (vérifié le 26/10/2026), archive seulement.
-
-## Reprise WoocLight / PAPPERBOARD
-
-La passation est dans **`PAPPERBOARD/CHANTIERS.md` sur `main`** : ce fichier
-n'en duplique pas l'état. SMS-mail reste gelé : aucune propagation.
+Aucune piste supplémentaire proposée par cette refonte. Les actions ci-dessus
+restent à traiter dans le périmètre de chaque projet, avec son état actualisé.
 
