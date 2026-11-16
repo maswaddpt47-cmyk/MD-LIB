@@ -1,6 +1,6 @@
 # CHANTIERS — état courant de MD-LIB
 
-État au **16/11/2026 à 22:01** (Paris), base `main` `c8cd55e`.
+État au **16/11/2026 à 22:05** (Paris), base `main` `b1e8aa2`.
 Périmètre : MD-LIB uniquement ; aucun projet consommateur modifié par cette
 session. La réorganisation et le circuit Claude/Codex symétrique sont approuvés
 par l'utilisateur le 16/11/2026. Les anciennes passations restent dans Git.
@@ -16,13 +16,8 @@ par l'utilisateur le 16/11/2026. Les anciennes passations restent dans Git.
   modifié ; aucune suite de tests ou CI bloquante configurée dans ce dépôt.
   Destination de publication : `main`. Le commit de refonte se retrouve dans
   `git log --oneline -- CHANTIERS.md` ; vérifier sa présence sur `origin/main`.
-- AG-003 : relecture Claude reçue dans `5b7c258`, verdict **amendé**.
-  Les trois pertes démontrées sont corrigées : question CD47 et particularités
-  des copies reportées ci-dessous, relecture du diff restaurée dans `agora.md`
-  §12. Traitement de l'auteur ajouté dans `AGORA.md`, sans auto-réponse ni
-  nouveau verdict. Aucun second tour de relecture demandé (règle 58).
-  Point 1 tranché le 16/11/2026 (Codex autorisé) ; clôture du bloc par
-  l'utilisateur encore à faire.
+- AG-003 clos le 16/11/2026 (amendé) : relecture Claude `5b7c258`, corrections
+  `c8cd55e`, décision « Codex autorisé » `b1e8aa2`. Récit dans Git.
 
 ## Invariants à ne pas défaire
 
