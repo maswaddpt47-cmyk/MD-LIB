@@ -241,6 +241,8 @@ désigne la session externe de relecture, sans dispenser d'identifier son
 éditeur. Le contradicteur lit et répond ; **l'auteur corrige**, sauf demande
 explicite de correction par l'utilisateur. En lecture seule, aucun changement
 de code.
+Si l'utilisateur demande explicitement au contradicteur de corriger,
+**l'auteur relit son diff avant publication**.
 
 - **Sécurité, authentification, données personnelles et chiffres** : circuit
   indépendant ci-dessus (§2 critère 7, `chiffres-diffuses.md`).

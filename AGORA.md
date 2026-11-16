@@ -166,6 +166,21 @@ perte de règle.
 **Non vérifié** : les dépôts autres que NEWGEN et NextStep ; le chargement
 effectif de l'import `@collaboration.md` hors de cette session (ici, chargé).
 
+### Traitement par l'auteur — Codex — 16/11/2026
+
+**Base** : réponse Claude publiée dans `5b7c258`, comparée à `c69194a` et à
+la refonte `e02a1f9`. Les trois pertes signalées sont confirmées par ces fichiers.
+**Traitement** : question des outils IA autorisés au CD47 conservée dans
+`CHANTIERS.md`, « Décisions en attente » ; relecture du diff du contradicteur
+avant publication rétablie dans `agora.md` §12 ; particularités historiques
+GDINV2 et pptx-creator reportées au point 5 de « Reste à propager ».
+Le point mineur est explicité dans les invariants : les règles 28, 31 et 47
+ne demandent pas de propagation spécifique. Les états actuels des copies et
+la réponse institutionnelle CD47 restent non vérifiés, sans conclusion inventée.
+Corrections des écarts démontrés sous l'autorisation de refonte du 16/11/2026 ;
+aucune nouvelle relecture demandée (règle 58). Ceci consigne le traitement de
+l'auteur, sans auto-réponse, nouveau verdict ni décision attribuée à l'utilisateur.
+
 # Blocs tranchés
 
 Total cumulé : 0 confirmé, 2 amendé, 0 contredit. Récits et preuves dans Git.

@@ -1,6 +1,6 @@
 # CHANTIERS — état courant de MD-LIB
 
-État au **16/11/2026 à 21:43** (Paris), base `main` `c69194a`.
+État au **16/11/2026 à 21:57** (Paris), base `main` `5b7c258`.
 Périmètre : MD-LIB uniquement ; aucun projet consommateur modifié par cette
 session. La réorganisation et le circuit Claude/Codex symétrique sont approuvés
 par l'utilisateur le 16/11/2026. Les anciennes passations restent dans Git.
@@ -16,11 +16,12 @@ par l'utilisateur le 16/11/2026. Les anciennes passations restent dans Git.
   modifié ; aucune suite de tests ou CI bloquante configurée dans ce dépôt.
   Destination de publication : `main`. Le commit de refonte se retrouve dans
   `git log --oneline -- CHANTIERS.md` ; vérifier sa présence sur `origin/main`.
-- AG-003 dans `AGORA.md` : une relecture de la livraison par Claude reste à
-  faire (critère 5, règles/procédures datées harmonisées). Le principe est déjà
-  autorisé ; la relecture vise les écarts de la livraison, sans réouvrir le
-  circuit à chaque correction. Relais : « pull maswaddpt47-cmyk/MD-LIB, lis
-  AGORA.md et réponds à AG-003 ». Aucun échange automatique entre comptes.
+- AG-003 : relecture Claude reçue dans `5b7c258`, verdict **amendé**.
+  Les trois pertes démontrées sont corrigées : question CD47 et particularités
+  des copies reportées ci-dessous, relecture du diff restaurée dans `agora.md`
+  §12. Traitement de l'auteur ajouté dans `AGORA.md`, sans auto-réponse ni
+  nouveau verdict. Aucun second tour de relecture demandé (règle 58) ; la
+  décision du bloc reste à l'utilisateur.
 
 ## Invariants à ne pas défaire
 
@@ -36,6 +37,8 @@ par l'utilisateur le 16/11/2026. Les anciennes passations restent dans Git.
 - Pas de propagation groupée. Les copies Codex et les adaptations pertinentes
   se vérifient au prochain passage dans chaque projet ; une session ouverte
   doit être invitée à relire les sources mises à jour.
+  Les règles 28, 31 et 47 restent dans MD-LIB : ne pas proposer de propagation
+  spécifique dans les projets consommateurs.
 - Pas de lecture de sauvegardes ou de fichiers réels d'usagers. Contrôles réels
   dans l'application de l'utilisateur, chiffres seuls ; politique propre aux
   projets personnels selon les consignes applicables.
@@ -47,6 +50,13 @@ par l'utilisateur le 16/11/2026. Les anciennes passations restent dans Git.
   du 26/10/2026 ; archive seulement.
 - `maswaddpt47-cmyk/fiches-generator` est une référence en lecture seule de
   FICHES_MEMO_ACTION_KOLB : ne jamais la modifier.
+
+## Décisions en attente
+
+- **Outils IA autorisés au CD47** : vérifier les instructions de service pour
+  Claude et Codex (`charte-ia-cd47.md`, consigne 8). Question ouverte depuis le
+  06/10/2026, réponse non consignée dans les sources lues au 16/11/2026 ; aucun
+  constat d'autorisation ou d'interdiction n'est établi ici.
 
 ## Projets consommateurs — repères
 
@@ -102,6 +112,12 @@ antérieures ; aucun contrôle distant de ces projets effectué par cette refont
    ancienne propagation des règles 61/62, du relais « pull » et de l'annonce
    AGORA 🔴 non consignée, à vérifier dans sa session. Adapter aussi les copies
    aux rôles symétriques aux prochains passages, en gardant les garanties (§9/§13).
+   GDINV2 : retrouver et consigner l'écart assumé du 22/09/2026 — sections
+   locales « Entretien » et « compléter, pas réécrire », hors liste du §9 ;
+   présence actuelle à vérifier au prochain passage. pptx-creator : la première
+   installation était restée sur la branche imposée ; vérifier la circulation
+   sur `main` dès qu'un vrai bloc AGORA doit passer entre sessions (§7), selon
+   les protections du projet. État actuel de ces copies non vérifié ici.
 6. **FICHES_MEMO_ACTION_KOLB** : règle de confidentialité des captures indiquée
    non reportée au constat du 06/10/2026, à vérifier dans son contexte.
 7. **Chiffres diffusés** : NEWGEN, écart de définition du taux de présence
