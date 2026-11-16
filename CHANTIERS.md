@@ -1,6 +1,6 @@
 # CHANTIERS — état courant de MD-LIB
 
-État au **16/11/2026 à 22:05** (Paris), base `main` `b1e8aa2`.
+État au **16/11/2026 à 22:20** (Paris), base `main` `387ce47`.
 Périmètre : MD-LIB uniquement ; aucun projet consommateur modifié par cette
 session. La réorganisation et le circuit Claude/Codex symétrique sont approuvés
 par l'utilisateur le 16/11/2026. Les anciennes passations restent dans Git.
@@ -109,6 +109,12 @@ antérieures ; aucun contrôle distant de ces projets effectué par cette refont
    installation était restée sur la branche imposée ; vérifier la circulation
    sur `main` dès qu'un vrai bloc AGORA doit passer entre sessions (§7), selon
    les protections du projet. État actuel de ces copies non vérifié ici.
+   **Libellé de l'annonce et rôle du contradicteur** (constat AG-003,
+   16/11/2026) : les `CLAUDE.md` de NEWGEN (`origin/main` `0aee1b5`) et NextStep
+   (`a73f5c0`) annoncent encore « Bloc AG-00N commité. → Dis « pull » à Codex »
+   et fixent « Contradicteur : Codex ». Au prochain passage dans chaque projet :
+   écrire « publié dans <owner/dépôt> » (`agora.md` §4) et ouvrir le rôle aux
+   deux sens (auteur Codex → Claude, §12). Pas de rupture en attendant.
 6. **FICHES_MEMO_ACTION_KOLB** : règle de confidentialité des captures indiquée
    non reportée au constat du 06/10/2026, à vérifier dans son contexte.
 7. **Chiffres diffusés** : NEWGEN, écart de définition du taux de présence
