@@ -90,7 +90,8 @@ antérieures ; aucun contrôle distant de ces projets effectué par cette refont
    (`0959152`).
 3. **Contrôle CHANTIERS, seuil de 30 Ko** : reporté le 16/11 dans NEWGEN et
    NextStep, présent dans sms-mail-multi, PAPPERBOARD le 17/11/2026 (`fabcea0`) ;
-   reste GDINV2 et FICHES_MEMO_ACTION_KOLB au prochain passage. Hook PAPPERBOARD auparavant refusé par
+   GDINV2 le 17/11/2026 (`8bd7b16`, hook `SessionStart` commité) ; reste
+   FICHES_MEMO_ACTION_KOLB au prochain passage. Hook PAPPERBOARD auparavant refusé par
    la plateforme : ne pas contourner ; son installation reste à l'utilisateur.
 4. **Déploiement** : rappel consigné dans SMS-mail, sms-mail-multi, GDINV2 et
    PAPPERBOARD, SpeedDial le 17/11/2026 (`6b59330`) ; autres projets actifs à vérifier. Installation du hook
@@ -104,9 +105,8 @@ antérieures ; aucun contrôle distant de ces projets effectué par cette refont
    ancienne propagation des règles 61/62, du relais « pull » et de l'annonce
    AGORA 🔴 non consignée, à vérifier dans sa session. Adapter aussi les copies
    aux rôles symétriques aux prochains passages, en gardant les garanties (§9/§13).
-   GDINV2 : retrouver et consigner l'écart assumé du 22/09/2026 — sections
-   locales « Entretien » et « compléter, pas réécrire », hors liste du §9 ;
-   présence actuelle à vérifier au prochain passage. pptx-creator : la première
+   GDINV2 : écart assumé du 22/09/2026 (« Entretien », « compléter, pas
+   réécrire ») présent et consigné dans son `AGORA.md` le 17/11/2026 (`6238968`). pptx-creator : la première
    installation était restée sur la branche imposée ; vérifier la circulation
    sur `main` dès qu'un vrai bloc AGORA doit passer entre sessions (§7), selon
    les protections du projet. État actuel de ces copies non vérifié ici.
@@ -116,7 +116,8 @@ antérieures ; aucun contrôle distant de ces projets effectué par cette refont
    et fixent « Contradicteur : Codex ». Au prochain passage dans chaque projet :
    écrire « publié dans <owner/dépôt> » (`agora.md` §4) et ouvrir le rôle aux
    deux sens (auteur Codex → Claude, §12). Pas de rupture en attendant.
-   PAPPERBOARD fait le 17/11/2026 (`fabcea0` : `CLAUDE.md` §6 et `AGORA.md`).
+   PAPPERBOARD fait le 17/11/2026 (`fabcea0` : `CLAUDE.md` §6 et `AGORA.md`) ;
+   GDINV2 le 17/11/2026 (`a8d7b33` : `CLAUDE.md`, `AGORA.md`, `AGENTS.md`).
    sms-mail-multi fait le 17/11/2026 (`CLAUDE.md` : annonce, critère 7 et sécurité).
    SpeedDial fait le 17/11/2026 (`6b59330` : `CLAUDE.md`, `AGORA.md`, puce
    « Relecteur d'un autre éditeur » dans `AGENTS.md`).
