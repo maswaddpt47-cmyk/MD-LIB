@@ -76,7 +76,8 @@ antérieures ; aucun contrôle distant de ces projets effectué par cette refont
 
 1. **Entrées et copies de consignes** au prochain « pull » : vérifier le ménage
    des `CLAUDE.md` et les puces `AGENTS.md` définies dans `CLAUDE.md` de MD-LIB.
-   Ménage déjà consigné pour sms-mail-multi, PAPPERBOARD et SpeedDial ; autres
+   Ménage déjà consigné pour sms-mail-multi, PAPPERBOARD, SpeedDial et GDINV2
+   (17/11/2026 : `4269bb3` ménage, `73ca910` puces `AGENTS.md`) ; autres
    projets actifs à vérifier. Autorisations/tests/Main/fin de tâche déjà
    consignés dans NEWGEN, NextStep, sms-mail-multi, PAPPERBOARD, SpeedDial,
    CRConum-V10 et MentiAnalyser selon leurs spécificités ; vérifier aussi les
