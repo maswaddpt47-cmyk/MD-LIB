@@ -66,7 +66,7 @@ Les preuves détaillées et anciens commits de propagation sont dans Git.
 | PAPPERBOARD | WoocLight, projet personnel depuis le 14/10/2026, politique/charte propres ; `main` protégée par `tests`, CI de branche verte puis SHA précis publié. |
 | SpeedDial | Projet personnel, Pages, publication directe sur `main`. |
 | CRConum-V10 | Pages et « Main toujours » décidés le 13/11/2026. |
-| MentiAnalyser | Relire sa passation ; modèle AGENTS actualisé au constat du 13/11/2026 (`43ef075`). |
+| MentiAnalyser | Relire sa passation ; ménage `CLAUDE.md`, synchronisation règle 63 et tests de la CI le 17/11/2026 (`823c904`) ; annonce AGORA, rôles symétriques et relais « pull » (`74eae2c`) ; `AGENTS.md` à jour. |
 
 ## Reste à propager
 
@@ -100,10 +100,9 @@ antérieures ; aucun contrôle distant de ces projets effectué par cette refont
    ne pas supposer un hook universel.
 5. **AGORA, autonomie et relais** : test du §9 encore non consigné pour
    sms-mail-multi, pptx-creator, FICHES_MEMO_ACTION_KOLB, PAPPERBOARD, SpeedDial
-   et CRConum-V10. Relais nommant le dépôt consigné dans GDINV2 et sms-mail-multi ;
-   vérifier les autres actifs quand un bloc doit circuler. MentiAnalyser :
-   ancienne propagation des règles 61/62, du relais « pull » et de l'annonce
-   AGORA 🔴 non consignée, à vérifier dans sa session. Adapter aussi les copies
+   et CRConum-V10. Relais nommant le dépôt consigné dans GDINV2, sms-mail-multi
+   et MentiAnalyser (17/11/2026, `74eae2c`) ; vérifier les autres actifs quand
+   un bloc doit circuler. Adapter aussi les copies
    aux rôles symétriques aux prochains passages, en gardant les garanties (§9/§13).
    GDINV2 : écart assumé du 22/09/2026 (« Entretien », « compléter, pas
    réécrire ») présent et consigné dans son `AGORA.md` le 17/11/2026 (`6238968`). pptx-creator : la première
