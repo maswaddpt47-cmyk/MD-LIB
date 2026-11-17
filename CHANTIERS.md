@@ -83,13 +83,12 @@ antérieures ; aucun contrôle distant de ces projets effectué par cette refont
    précisions récentes dans ces copies. Ne pas recréer des copies communes
    intégrales dans les `CLAUDE.md`.
 2. **Gestionnaire de mots de passe, règle 69** : copie consignée dans les
-   projets ci-dessus. PAPPERBOARD : connexion animateur encore indiquée non
-   conforme au 15/11/2026 (`admin.php:90-92` : `name`, identifiant et
-   `autocomplete="on"` manquants) ; vérifier avant correction. Autres copies
+   projets ci-dessus. PAPPERBOARD : connexion animateur conforme (vérifié le
+   17/11/2026, `admin.php:90-96`, corrigée le 15/11 par `a883ce8`). Autres copies
    actives à vérifier au passage, ainsi que « bouton qui lance l'application ».
 3. **Contrôle CHANTIERS, seuil de 30 Ko** : reporté le 16/11 dans NEWGEN et
-   NextStep et présent dans sms-mail-multi ; reste GDINV2, FICHES_MEMO_ACTION_KOLB
-   et PAPPERBOARD au prochain passage. Hook PAPPERBOARD auparavant refusé par
+   NextStep, présent dans sms-mail-multi, PAPPERBOARD le 17/11/2026 (`fabcea0`) ;
+   reste GDINV2 et FICHES_MEMO_ACTION_KOLB au prochain passage. Hook PAPPERBOARD auparavant refusé par
    la plateforme : ne pas contourner ; son installation reste à l'utilisateur.
 4. **Déploiement** : rappel consigné dans SMS-mail, sms-mail-multi, GDINV2 et
    PAPPERBOARD ; autres projets actifs à vérifier. Installation du hook
@@ -115,6 +114,7 @@ antérieures ; aucun contrôle distant de ces projets effectué par cette refont
    et fixent « Contradicteur : Codex ». Au prochain passage dans chaque projet :
    écrire « publié dans <owner/dépôt> » (`agora.md` §4) et ouvrir le rôle aux
    deux sens (auteur Codex → Claude, §12). Pas de rupture en attendant.
+   PAPPERBOARD fait le 17/11/2026 (`fabcea0` : `CLAUDE.md` §6 et `AGORA.md`).
 6. **FICHES_MEMO_ACTION_KOLB** : règle de confidentialité des captures indiquée
    non reportée au constat du 06/10/2026, à vérifier dans son contexte.
 7. **Chiffres diffusés** : NEWGEN, écart de définition du taux de présence
