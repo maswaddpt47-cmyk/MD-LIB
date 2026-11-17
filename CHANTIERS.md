@@ -86,12 +86,14 @@ antérieures ; aucun contrôle distant de ces projets effectué par cette refont
    projets ci-dessus. PAPPERBOARD : connexion animateur conforme (vérifié le
    17/11/2026, `admin.php:90-96`, corrigée le 15/11 par `a883ce8`). Autres copies
    actives à vérifier au passage, ainsi que « bouton qui lance l'application ».
+   SpeedDial : conforme, précisions reportées dans `AGENTS.md` le 17/11/2026
+   (`0959152`).
 3. **Contrôle CHANTIERS, seuil de 30 Ko** : reporté le 16/11 dans NEWGEN et
    NextStep, présent dans sms-mail-multi, PAPPERBOARD le 17/11/2026 (`fabcea0`) ;
    reste GDINV2 et FICHES_MEMO_ACTION_KOLB au prochain passage. Hook PAPPERBOARD auparavant refusé par
    la plateforme : ne pas contourner ; son installation reste à l'utilisateur.
 4. **Déploiement** : rappel consigné dans SMS-mail, sms-mail-multi, GDINV2 et
-   PAPPERBOARD ; autres projets actifs à vérifier. Installation du hook
+   PAPPERBOARD, SpeedDial le 17/11/2026 (`6b59330`) ; autres projets actifs à vérifier. Installation du hook
    vérifiée le 30/10/2026 dans un environnement « Micky » seulement ; second
    compte et autres environnements non vérifiés. Détecter les outils présents,
    ne pas supposer un hook universel.
@@ -116,6 +118,8 @@ antérieures ; aucun contrôle distant de ces projets effectué par cette refont
    deux sens (auteur Codex → Claude, §12). Pas de rupture en attendant.
    PAPPERBOARD fait le 17/11/2026 (`fabcea0` : `CLAUDE.md` §6 et `AGORA.md`).
    sms-mail-multi fait le 17/11/2026 (`CLAUDE.md` : annonce, critère 7 et sécurité).
+   SpeedDial fait le 17/11/2026 (`6b59330` : `CLAUDE.md`, `AGORA.md`, puce
+   « Relecteur d'un autre éditeur » dans `AGENTS.md`).
    NEWGEN et NextStep faits le 17/11/2026 (`CLAUDE.md`, `AGORA.md` de NEWGEN, puce
    « Relecteur d'un autre éditeur » dans les deux `AGENTS.md`).
 6. **FICHES_MEMO_ACTION_KOLB** : règle de confidentialité des captures indiquée
