@@ -115,6 +115,8 @@ antérieures ; aucun contrôle distant de ces projets effectué par cette refont
    écrire « publié dans <owner/dépôt> » (`agora.md` §4) et ouvrir le rôle aux
    deux sens (auteur Codex → Claude, §12). Pas de rupture en attendant.
    PAPPERBOARD fait le 17/11/2026 (`fabcea0` : `CLAUDE.md` §6 et `AGORA.md`).
+   NEWGEN et NextStep faits le 17/11/2026 (`CLAUDE.md`, `AGORA.md` de NEWGEN, puce
+   « Relecteur d'un autre éditeur » dans les deux `AGENTS.md`).
 6. **FICHES_MEMO_ACTION_KOLB** : règle de confidentialité des captures indiquée
    non reportée au constat du 06/10/2026, à vérifier dans son contexte.
 7. **Chiffres diffusés** : NEWGEN, écart de définition du taux de présence
