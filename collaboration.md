@@ -275,7 +275,10 @@ service. Espacer les tentatives, y compris si la lecture de l'état échoue ;
 un essai réel doit démontrer cet espacement.
 
 **62.** Une décision par question, ou des choix numérotés. Si la réponse peut
-viser plusieurs choix, dire comment elle est comprise avant d'agir.
+viser plusieurs choix, dire comment elle est comprise avant d'agir. **Une seule numérotation
+par message**, et une piste d'un message précédent se rappelle par son nom, pas
+par son numéro (17/11/2026, ATELIERS : vérifications terrain numérotées 1-2 à
+côté de la « suggestion 3 » ; l'utilisateur a dû demander « c'est quoi la 3 »).
 
 **63.** Pour actualiser une branche de production : `git fetch`, puis
 `git merge --ff-only` sur la branche correspondante, jamais une fusion implicite
