@@ -1,6 +1,6 @@
 # CHANTIERS — état courant de MD-LIB
 
-État au **16/11/2026 à 22:20** (Paris), base `main` `387ce47`.
+État au **18/11/2026 à 13:43** (Paris), base `main` `c6c28d6` (relue par « pull » : alignements de l'annonce AGORA et du relecteur faits dans sms-mail-multi, NEWGEN, NextStep, PAPPERBOARD, SpeedDial, GDINV2 et MentiAnalyser ; règle 62 précisée, une seule numérotation par message, `4146dbd`). Avant : état au **16/11/2026 à 22:20** (Paris), base `main` `387ce47`.
 Périmètre : MD-LIB uniquement ; aucun projet consommateur modifié par cette
 session. La réorganisation et le circuit Claude/Codex symétrique sont approuvés
 par l'utilisateur le 16/11/2026. Les anciennes passations restent dans Git.
