@@ -125,10 +125,10 @@ antérieures ; aucun contrôle distant de ces projets effectué par cette refont
    « Relecteur d'un autre éditeur » dans les deux `AGENTS.md`).
 6. **FICHES_MEMO_ACTION_KOLB** : règle de confidentialité des captures indiquée
    non reportée au constat du 06/10/2026, à vérifier dans son contexte.
-7. **Chiffres diffusés** : NEWGEN, écart de définition du taux de présence
-   consigné entre Historique/mail mensuel (50 %) et bilan trimestriel (75 %) :
-   décision métier à retrouver ou demander, pas de correction par déduction.
-   NextStep porte une copie à vérifier. Voir les passations locales actuelles.
+7. **Chiffres diffusés** : l'écart de taux de présence du 20/10 (50 % / 75 %) n'a plus
+   d'objet dans le code : une seule règle depuis AG-032/037 (`tauxPresence`, `utils.js:683`,
+   identique dans NextStep ; même règle dans `api/lib/bilan.php:114`), vérifié le 19/11/2026.
+   Chiffres réels non recomptés ici : c'est l'audit Codex du bilan, avant le 05/12, dans NEWGEN.
 
 Les règles sur données enregistrées, chiffres affichés, mails ou archives se
 reportent seulement si leur contexte existe. FICHES_MEMO_ACTION_KOLB et
