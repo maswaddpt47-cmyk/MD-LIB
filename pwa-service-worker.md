@@ -74,6 +74,14 @@ Un HTML conservé en cache peut continuer à référencer les anciennes versions
 - Après un déploiement important, vérifier qu'au moins une personne en mode
   PWA reçoit le correctif sans manipulation.
 
+**Manifeste d'une application installée** (sms-mail-multi, 19/11/2026 :
+orientation restée verrouillée en portrait après correction). Sur Android,
+l'application installée garde le manifeste lu à l'installation. Pour une
+modification de `manifest.json` (orientation, nom, icônes) : fixer un `id`,
+changer le lien (`manifest.json?v=N`), puis faire désinstaller et réinstaller
+l'application. L'onglet Chrome applique tout de suite le nouveau manifeste :
+il ne prouve pas que l'application installée l'a reçu.
+
 ## 6. Le service worker survit — toute modification future repasse par ici
 
 L'ajout ultérieur d'un cache peut affecter des appareils déjà équipés. Garder

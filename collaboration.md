@@ -328,6 +328,13 @@ laisse passer.
 **72.** Une opération sur des données annonce qui est concerné et sa période,
 surtout si l'opération précédente avait une portée plus étroite.
 
+**73.** Un message d'erreur nomme la cause que la réponse permet d'établir,
+pas une seule cause pour tous les échecs. Pour une API, distinguer au moins
+401 (identifiant refusé), 403 (droits insuffisants), 404 (ressource
+inaccessible ou absente) et une panne réseau, en gardant le code reçu
+(SpeedDial, 20/11/2026 : « dépôt introuvable » affiché pour un jeton mal
+collé ; le dépôt existait).
+
 ## Côté utilisateur — repères utiles
 
 1. Donner le contexte temporel et les tentatives déjà faites dès le départ.
