@@ -335,6 +335,16 @@ inaccessible ou absente) et une panne réseau, en gardant le code reçu
 (SpeedDial, 20/11/2026 : « dépôt introuvable » affiché pour un jeton mal
 collé ; le dépôt existait).
 
+**74.** Un faux serveur de test renvoie la forme complète de la vraie réponse :
+tous les champs que l'écran lit. Une réponse incomplète fait planter l'écran
+et oriente vers une fausse cause (ATELIERS, 20/11/2026 : réponse du QR code
+sans « avis », fenêtre et volet disparus dans le test).
+
+**75.** Un test cible un élément par son rôle, son titre ou la zone qui le
+contient, jamais par un nombre seul ou un mot courant qu'un autre élément peut
+afficher (ATELIERS, 20/11/2026 : `getByText('28')` cliquait la pastille des
+Nouveautés ; publication de NEWGEN bloquée par la CI).
+
 ## Côté utilisateur — repères utiles
 
 1. Donner le contexte temporel et les tentatives déjà faites dès le départ.
