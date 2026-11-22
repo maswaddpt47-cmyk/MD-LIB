@@ -138,6 +138,11 @@ leur politique propre ; les références institutionnelles restent conditionnell
 
 ## Pistes
 
-Aucune piste supplémentaire proposée par cette refonte. Les actions ci-dessus
-restent à traiter dans le périmètre de chaque projet, avec son état actualisé.
-
+- *Proposée (22/11/2026)* — **Vérifier le déploiement attendu pour le commit.**
+  Avec une réponse GitHub fictive, `outils/attendre-deploiement.sh` annonce un
+  déploiement réussi quand seuls les tests ont réussi, ou quand Pages a été
+  ignoré. Exiger la réussite du workflow et de l'étape de publication attendus
+  pour ce commit. Afficher « publication non vérifiée » si la preuve manque.
+  Cela évite d'annoncer une version que les utilisateurs ne peuvent pas encore
+  ouvrir. Prévoir environ une demi-journée si le workflow et l'étape peuvent être
+  identifiés pour les projets concernés.
