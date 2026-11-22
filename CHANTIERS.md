@@ -1,11 +1,23 @@
 # CHANTIERS — état courant de MD-LIB
 
-État au **21/11/2026 à 00:48** (Paris) : clôture de la session ATELIERS (règle 32), **règles 74** (faux serveur de test à la forme complète de la vraie réponse) et **75** (un test ne cible jamais un nombre seul), approuvées par l'utilisateur ; non propagées, lues par l'import commun. Avant : état au **21/11/2026 à 00:41** (Paris), base `main` `fbd5f9f` : clôture de session (règle 32), deux règles approuvées par l'utilisateur : **règle 73** (message d'erreur fidèle à la cause, cas SpeedDial du 20/11) et manifeste d'une application installée (`pwa-service-worker.md` §5, cas sms-mail-multi du 19/11). Non propagées : chaque projet les lit par l'import commun ; la correction des messages SpeedDial se fait dans sa propre session (prompt remis le 20/11). Avant : état au **20/11/2026 à 00:01** (Paris), base `main` `fc1c76d` (relue par « pull » : écart de taux de présence de NEWGEN sans objet dans le code, une seule règle depuis AG-032/037). Avant : état au **18/11/2026 à 13:43** (Paris), base `main` `c6c28d6` (relue par « pull » : alignements de l'annonce AGORA et du relecteur faits dans sms-mail-multi, NEWGEN, NextStep, PAPPERBOARD, SpeedDial, GDINV2 et MentiAnalyser ; règle 62 précisée, une seule numérotation par message, `4146dbd`). Avant : état au **16/11/2026 à 22:20** (Paris), base `main` `387ce47`.
-Périmètre : MD-LIB uniquement ; aucun projet consommateur modifié par cette
-session. La réorganisation et le circuit Claude/Codex symétrique sont approuvés
-par l'utilisateur le 16/11/2026. Les anciennes passations restent dans Git.
+État au **22/11/2026 à 10:34** (Paris), base `main` `88881dd`.
+Le contrôle du workflow, de la tâche et de l'étape de publication a été corrigé.
+
+État précédent au **21/11/2026 à 00:48** (Paris) : clôture de la session ATELIERS (règle 32), **règles 74** (faux serveur de test à la forme complète de la vraie réponse) et **75** (un test ne cible jamais un nombre seul), approuvées par l'utilisateur ; non propagées, lues par l'import commun. Avant : état au **21/11/2026 à 00:41** (Paris), base `main` `fbd5f9f` : clôture de session (règle 32), deux règles approuvées par l'utilisateur : **règle 73** (message d'erreur fidèle à la cause, cas SpeedDial du 20/11) et manifeste d'une application installée (`pwa-service-worker.md` §5, cas sms-mail-multi du 19/11). Non propagées : chaque projet les lit par l'import commun ; la correction des messages SpeedDial se fait dans sa propre session (prompt remis le 20/11). Avant : état au **20/11/2026 à 00:01** (Paris), base `main` `fc1c76d` (relue par « pull » : écart de taux de présence de NEWGEN sans objet dans le code, une seule règle depuis AG-032/037). Avant : état au **18/11/2026 à 13:43** (Paris), base `main` `c6c28d6` (relue par « pull » : alignements de l'annonce AGORA et du relecteur faits dans sms-mail-multi, NEWGEN, NextStep, PAPPERBOARD, SpeedDial, GDINV2 et MentiAnalyser ; règle 62 précisée, une seule numérotation par message, `4146dbd`). Avant : état au **16/11/2026 à 22:20** (Paris), base `main` `387ce47`.
+La réorganisation de MD-LIB et le circuit Claude/Codex symétrique ont été
+approuvés par l'utilisateur le 16/11/2026. Les anciennes passations restent
+dans Git.
 
 ## Contrôles et reprise
+
+- `outils/attendre-deploiement.sh` vérifie la dernière tentative du workflow,
+  la tâche et l'étape de publication attendus pour le SHA. GitHub Pages
+  automatique est le cas par défaut. Pour les autres workflows, utiliser les
+  trois noms exacts en appel direct ou consulter GitHub selon [la procédure](deploiement.md).
+- Vérification réelle en lecture seule sur CRConum-V10 au SHA `fafd7f4`.
+  Le workflow, la tâche et l'étape de GitHub Pages sont confirmés.
+  Les 23 scénarios avec API fictive et le test du hook passent, avec
+  contre-épreuves sur les anciens verdicts « tests seuls » et « Pages ignoré ».
 
 - Réorganisation documentaire : règles numérotées conservées, entrées Claude
   et Codex distinctes, index dans README, suivi courant ici. Arbitrages Git
@@ -138,11 +150,4 @@ leur politique propre ; les références institutionnelles restent conditionnell
 
 ## Pistes
 
-- *Proposée (22/11/2026)* — **Vérifier le déploiement attendu pour le commit.**
-  Avec une réponse GitHub fictive, `outils/attendre-deploiement.sh` annonce un
-  déploiement réussi quand seuls les tests ont réussi, ou quand Pages a été
-  ignoré. Exiger la réussite du workflow et de l'étape de publication attendus
-  pour ce commit. Afficher « publication non vérifiée » si la preuve manque.
-  Cela évite d'annoncer une version que les utilisateurs ne peuvent pas encore
-  ouvrir. Prévoir environ une demi-journée si le workflow et l'étape peuvent être
-  identifiés pour les projets concernés.
+Aucune piste en attente.

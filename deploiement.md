@@ -19,7 +19,8 @@ publication et résultats. Nommer le moyen utilisé et les limites éventuelles.
 - **❌ Échec** : signaler l'étape en échec ; corriger une cause établie, sans
   inventer un défaut du dépôt ni une panne de la plateforme.
 - **⏳ En cours** : le dire et surveiller la suite en arrière-plan.
-- **➖ / rien vérifié** : ne pas annoncer « en ligne » ; rechercher ce qui manque.
+- **➖ Publication non vérifiée** : rechercher la preuve de publication avant
+  toute annonce.
 
 **Échec sans étape exécutée** : regarder l'état de l'exécution, la définition du
 workflow et les journaux disponibles. Des tests locaux verts ne prouvent pas
@@ -50,9 +51,9 @@ vient d'un incident ; il ne garantit pas le temps de résolution du suivant.
 - **Claude Code, hook effectivement installé** : le Setup script
   `outils/script-demarrage.sh` installe un hook `PostToolUse` sur Bash. Après une
   commande contenant `git push`, il recherche les dépôts voisins dont `main`,
-  `master`, `sandbox` ou `gh-pages` vient d'être poussé. Vérifier l'installation
-  et les chemins dans cet environnement ; le mécanisme n'est pas garanti dans
-  toutes les sessions cloud.
+  `master`, `sandbox` ou `gh-pages` vient d'être poussé et vérifie la publication
+  automatique GitHub Pages. Vérifier l'installation et les chemins dans cet
+  environnement. Le mécanisme dépend de la configuration de la session cloud.
 - **Codex, session locale ou absence de rapport du hook** : lancer explicitement
   le script depuis la copie de MD-LIB présente dans la session, ou utiliser le
   contrôle GitHub décrit ci-dessus si le script n'est pas utilisable.
@@ -63,13 +64,35 @@ Exemple depuis la racine de MD-LIB, avec le chemin réel du dépôt et son SHA :
 bash outils/attendre-deploiement.sh /chemin/du-depot SHA_COMMIT
 ```
 
-Le script lit GitHub Actions (avec `$GITHUB_TOKEN` s'il est disponible). Son
-délai de surveillance par défaut est de 8 minutes ; les attentes longues se
-surveillent en arrière-plan (`collaboration.md`, règle 52). Il ignore les tâches
-planifiées et les lancements manuels : vérifier explicitement une publication
-qui dépend de ces déclencheurs. Avec ce script, **seul le code 0 (✅, SHA nommé)**
-appuie l'annonce : 1 = échec, 2 = pas fini, 3 = rien vérifié (aucun workflow vu
-au bout de 90 s, branche ou SHA introuvable, dépôt hors GitHub).
+Pour GitHub Pages automatique, le script vérifie la dernière exécution du
+workflow `dynamic/pages/pages-build-deployment` pour le SHA et la réussite de
+sa tâche `deploy`, étape `Deploy to GitHub Pages`. Pour un workflow personnalisé,
+donner son chemin, le nom exact de la tâche et celui de l'étape de publication.
+L'exemple suivant suppose que ces trois noms correspondent à la configuration.
+
+```bash
+bash outils/attendre-deploiement.sh /chemin/du-depot SHA_COMMIT \
+  .github/workflows/publier.yml 'Déploiement production' 'Publier en production'
+```
+
+Si le même workflow, la même tâche et la même étape servent plusieurs branches,
+indiquer à la place du SHA le nom de la branche publiée. Le script lit son SHA
+distant et filtre les exécutions de cette branche. Un déploiement manuel,
+planifié ou déclenché par une pull request se vérifie directement sur GitHub.
+Procéder de même si le workflow ou l'étape de publication attendus ne peuvent
+être identifiés par le script.
+
+Le script lit GitHub Actions avec `$GITHUB_TOKEN` s'il est disponible. Il attend
+jusqu'à 90 s l'apparition du workflow attendu et 8 minutes par défaut une
+exécution en cours. Les attentes longues se surveillent en arrière-plan
+(`collaboration.md`, règle 52).
+
+| Code | Résultat |
+|---|---|
+| 0 | ✅ Workflow, tâche et étape attendus réussis pour le SHA indiqué |
+| 1 | ❌ Échec du workflow, de la tâche ou de l'étape attendus |
+| 2 | ⏳ Exécution attendue toujours en cours à l'expiration du délai |
+| 3 | ➖ Publication non vérifiée. Preuve absente, étape ignorée ou API indisponible, par exemple. |
 
 ## Dans les projets
 
