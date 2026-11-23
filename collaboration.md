@@ -345,6 +345,18 @@ contient, jamais par un nombre seul ou un mot courant qu'un autre élément peut
 afficher (ATELIERS, 20/11/2026 : `getByText('28')` cliquait la pastille des
 Nouveautés ; publication de NEWGEN bloquée par la CI).
 
+**76.** Une valeur proposée automatiquement (date, heure, montant…) suit les
+champs dont elle dépend tant que l'utilisateur ne l'a pas modifiée ; une valeur
+saisie ou choisie à la main n'est jamais remplacée. Recenser toutes les voies
+d'entrée du formulaire avant d'annoncer le cas couvert (sms-mail-multi,
+23/11/2026 : CMS changé, date du CMS précédent conservée ; saisie manuelle
+oubliée après les orientations).
+
+**77.** Une donnée créée implicitement par une action (journée ouverte à
+l'enregistrement d'un rendez-vous) est retirée quand plus rien ne la justifie :
+sinon elle reste invisible et fausse les chiffres (sms-mail-multi, 23/11/2026 :
+journée vide cachée dans l'Agenda, comptée 6 places et proposée).
+
 ## Côté utilisateur — repères utiles
 
 1. Donner le contexte temporel et les tentatives déjà faites dès le départ.
