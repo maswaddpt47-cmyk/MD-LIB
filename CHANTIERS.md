@@ -1,13 +1,5 @@
 # CHANTIERS — état courant de MD-LIB
 
-## Relais de session — PASSATIONS-PILOTE (23/11/2026)
-
-- Dépôt privé `maswaddpt47-cmyk/PASSATIONS-PILOTE`, branche `main` : passation fictive actualisée dans `projets/TEST.md`, commit `05fc088b25ff0248bb6b6dff204af86329ef5842`.
-- Quatre étapes fictives consignées terminées ; aucune nouvelle étape exécutée. Aucune nouvelle règle issue de cette session (règle 32).
-- Reprise : lire le README et la passation du dépôt pilote, vérifier le commit distant, puis demander l'autorisation avant de simuler la revue finale fictive. Ne pas répéter les quatre étapes.
-- Le dépôt pilote ne possède pas de `CHANTIERS.md` local ; ce relais est consigné ici sans créer de règle ni de fichier supplémentaire.
-
-
 État au **23/11/2026** (Paris), base `main` `47cd250` (relue par « pull » : `attendre-deploiement.sh` vérifie le workflow de publication attendu pour le SHA ; un dépôt à workflow personnalisé, comme sms-mail-multi, doit le nommer, sinon ➖). Avant : état au **22/11/2026 à 10:34** (Paris), base `main` `88881dd`.
 Le contrôle du workflow, de la tâche et de l'étape de publication a été corrigé.
 
