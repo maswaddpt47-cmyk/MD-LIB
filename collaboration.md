@@ -357,6 +357,12 @@ l'enregistrement d'un rendez-vous) est retirée quand plus rien ne la justifie :
 sinon elle reste invisible et fausse les chiffres (sms-mail-multi, 23/11/2026 :
 journée vide cachée dans l'Agenda, comptée 6 places et proposée).
 
+**78.** Au début d'une tâche, et si sa nature change, indiquer en une ligne le
+modèle le plus économe adapté à son exécution (gamme et niveau de réflexion),
+avec la raison. Signaler un modèle en cours surdimensionné ou insuffisant ;
+l'utilisateur choisit, l'IA ne change pas de modèle d'elle-même. C'est une
+estimation : nommer une gamme connue, sans inventer de version ni de coût.
+
 ## Côté utilisateur — repères utiles
 
 1. Donner le contexte temporel et les tentatives déjà faites dès le départ.
