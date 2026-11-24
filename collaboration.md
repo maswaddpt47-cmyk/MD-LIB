@@ -240,7 +240,10 @@ muter le code ou le dénominateur ; vérifier que le harnais lit la copie mutée
 Relire les tests écrits par script pour éviter une assertion absorbée par un
 commentaire. Grouper les mutations indépendantes, puis une seule suite
 complète. Un score précise son périmètre : au moins une mutation par fonction
-ajoutée/modifiée, sinon signaler le code nouveau non couvert.
+ajoutée/modifiée, sinon signaler le code nouveau non couvert. Un essai qui lit
+l'écran après une action asynchrone (import de fichier, appel réseau) attend
+d'abord l'état voulu : sans cela, il passe ou échoue selon le timing ; la
+mutation le révèle (PILOTAGE-PORTFOLIO, 24/11/2026).
 
 **56.** Après un « pull », synchroniser selon la règle 63 puis lire le journal
 et les écarts depuis la base de `CHANTIERS.md` ; actualiser son état avant de
@@ -370,6 +373,12 @@ modèle le plus économe adapté à son exécution (gamme et niveau de réflexio
 avec la raison. Signaler un modèle en cours surdimensionné ou insuffisant ;
 l'utilisateur choisit, l'IA ne change pas de modèle d'elle-même. C'est une
 estimation : nommer une gamme connue, sans inventer de version ni de coût.
+
+**79.** Un voyant (vert, orange, rouge) ne passe vert que sur une preuve datée
+et fraîche : relevé récent et référence connue. Une donnée absente, périmée ou
+illisible s'affiche dans un état à part (gris, « à vérifier »), jamais en vert ;
+l'état global est le pire des états individuels. PILOTAGE-PORTFOLIO, AG-002,
+24/11/2026 : un relevé absent ou expiré ne donne pas « Tout va bien ».
 
 ## Côté utilisateur — repères utiles
 
