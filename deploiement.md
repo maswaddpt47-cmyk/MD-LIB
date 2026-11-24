@@ -28,6 +28,12 @@ que le dépôt est hors de cause. Ne pas pousser de commit vide pour débloquer.
 Relancer **une fois** la même exécution si une relance est pertinente, puis
 vérifier https://www.githubstatus.com (Actions, Pages). Si cette page est
 inaccessible depuis la session, demander à l'utilisateur de la consulter.
+**Déploiement Pages : pas de relance partielle.** Constat du 24/11/2026
+(ATELIERS_NEWGEN, run 702) : « Re-run failed jobs » d'une tâche qui téléverse
+puis déploie l'artefact a créé un second artefact `github-pages` dans le même
+run, et `deploy-pages` a refusé (« Multiple artifacts named… »). Lancer un run
+neuf (`workflow_dispatch` ou relance complète) ; mesuré une fois, pas établi
+pour d'autres workflows.
 Incident confirmé : programmer une relance avec l'outil disponible après le
 délai annoncé, sans boucle, et consigner l'état réel dans `CHANTIERS.md`.
 
