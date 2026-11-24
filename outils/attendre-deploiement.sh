@@ -6,8 +6,10 @@
 #
 # Usages :
 #   attendre-deploiement.sh [dossier-du-depot] [branche|sha] [workflow tâche étape]
-#       Défauts : dossier courant, main, workflow automatique de GitHub Pages.
-#       Pour un autre workflow, préciser son chemin, la tâche et l'étape.
+#       Défauts : dossier courant, main, puis le workflow du dépôt qui publie
+#       par `actions/deploy-pages` s'il est unique, sinon le workflow
+#       automatique de GitHub Pages. Pour un autre cas, préciser son chemin,
+#       la tâche et l'étape.
 #       Codes : 0 publication vérifiée, 1 échec, 2 délai dépassé,
 #       3 publication non vérifiée.
 #   attendre-deploiement.sh --hook
@@ -26,6 +28,65 @@ SANS_WORKFLOW=${ATTENTE_SANS_WORKFLOW:-90} # aucun workflow après ça : rien à
 FENETRE=${ATTENTE_FENETRE:-300}           # un push plus ancien n'est pas « celui-ci »
 BRANCHES="main master sandbox gh-pages"
 PAS=20
+
+# Workflow propre au dépôt qui publie GitHub Pages (`uses: actions/deploy-pages`) :
+# affiche son chemin, sa tâche et son étape (une ligne chacun) s'il est unique,
+# rien sinon. Lecture ligne à ligne, sans module YAML (24/11/2026 : SpeedDial
+# publie par .github/workflows/deploy.yml, le défaut répondait « non vérifié »).
+detecter_workflow() {
+  python3 - "$1" <<'PY'
+import glob, os, re, sys
+
+found = []
+for path in sorted(glob.glob(os.path.join(sys.argv[1], ".github/workflows/*.y*ml"))):
+    try:
+        lines = open(path, encoding="utf-8").read().splitlines()
+    except OSError:
+        continue
+    in_jobs, job, job_name, step_indent, step = False, None, None, None, None
+
+    def close_step():
+        if step and step.get("deploy") and step.get("name") and job:
+            found.append((os.path.relpath(path, sys.argv[1]), job_name or job, step["name"]))
+
+    for raw in lines:
+        line = raw.split(" #")[0].rstrip()
+        if not line.strip() or line.lstrip().startswith("#"):
+            continue
+        indent = len(line) - len(line.lstrip())
+        if indent == 0:
+            close_step(); step = None
+            in_jobs = line.startswith("jobs:")
+            continue
+        if not in_jobs:
+            continue
+        m = re.match(r"^  ([A-Za-z0-9_-]+):\s*$", line)
+        if m:
+            close_step(); step = None
+            job, job_name, step_indent = m.group(1), None, None
+            continue
+        m = re.match(r"^    name:\s*(.+)$", line)
+        if m and step is None:
+            job_name = m.group(1).strip().strip("'\"")
+            continue
+        m = re.match(r"^(\s*)- (.*)$", line)
+        if m and (step_indent is None or len(m.group(1)) == step_indent):
+            close_step()
+            step_indent, step = len(m.group(1)), {}
+            line = m.group(1) + "  " + m.group(2)
+        if step is None:
+            continue
+        m = re.match(r"^\s*name:\s*(.+)$", line)
+        if m and len(line) - len(line.lstrip()) == step_indent + 2:
+            step["name"] = m.group(1).strip().strip("'\"")
+        if re.match(r"^\s*uses:\s*['\"]?actions/deploy-pages@", line):
+            step["deploy"] = True
+    close_step()
+
+if len(found) == 1:
+    print("\n".join(found[0]))
+PY
+}
 
 attendre() {
   local dir="$1" br="$2" url slug sha nom
@@ -182,6 +243,10 @@ PY
       exit 3
     fi
   fi
+  if (( $# <= 2 )); then
+    mapfile -t propre < <(detecter_workflow "$dir")
+    if (( ${#propre[@]} == 3 )); then attendre "$dir" "$ref" "${propre[@]}"; exit $?; fi
+  fi
   attendre "$dir" "$ref" "${@:3}"; exit $?
 fi
 
@@ -196,7 +261,12 @@ for dir in "$RACINE"/*/; do
     # Un push met à jour origin/<br> : son reflog date l'envoi.
     t=$(git -C "$dir" reflog show --date=unix "origin/$br" -1 2>/dev/null | sed -nE 's/.*@\{([0-9]+)\}: update by push.*/\1/p')
     [ -n "$t" ] && [ $((maintenant - t)) -le "$FENETRE" ] || continue
-    sortie=$(attendre "$dir" "$br"); code=$?
+    mapfile -t propre < <(detecter_workflow "$dir")
+    if (( ${#propre[@]} == 3 )); then
+      sortie=$(attendre "$dir" "$br" "${propre[@]}"); code=$?
+    else
+      sortie=$(attendre "$dir" "$br"); code=$?
+    fi
     rapport="$rapport$sortie"$'\n'
     if [ $code -ne 0 ] && { [ $pire -eq 0 ] || [ $code -lt $pire ]; }; then pire=$code; fi
   done

@@ -64,10 +64,14 @@ Exemple depuis la racine de MD-LIB, avec le chemin réel du dépôt et son SHA :
 bash outils/attendre-deploiement.sh /chemin/du-depot SHA_COMMIT
 ```
 
-Pour GitHub Pages automatique, le script vérifie la dernière exécution du
-workflow `dynamic/pages/pages-build-deployment` pour le SHA et la réussite de
-sa tâche `deploy`, étape `Deploy to GitHub Pages`. Pour un workflow personnalisé,
-donner son chemin, le nom exact de la tâche et celui de l'étape de publication.
+Sans workflow précisé, le script cherche d'abord dans `.github/workflows/` du
+dépôt l'unique étape `uses: actions/deploy-pages` et vérifie ce workflow, sa
+tâche et cette étape (hook compris ; 24/11/2026, SpeedDial). Sinon, pour GitHub
+Pages automatique, il vérifie la dernière exécution du workflow
+`dynamic/pages/pages-build-deployment` pour le SHA et la réussite de sa tâche
+`deploy`, étape `Deploy to GitHub Pages`. Si plusieurs workflows publient, ou
+si la détection ne convient pas, donner son chemin, le nom exact de la tâche et
+celui de l'étape de publication.
 L'exemple suivant suppose que ces trois noms correspondent à la configuration.
 
 ```bash
