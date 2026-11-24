@@ -72,7 +72,9 @@ où elle est constatée).
   sur des données fictives, sinon recadrées ; fichiers de test anonymisés.
   Une capture qui montre des données réelles se signale en une ligne :
   rappel d'habitude, pas alerte RGPD. Ne jamais dramatiser une donnée
-  anonyme : la règle vise l'identifiable.
+  anonyme : la règle vise l'identifiable. Un fichier réel joint est lu d'office
+  par la plateforme : ne pas l'exploiter, proposer d'effacer sa copie du
+  conteneur, rappeler qu'il reste dans l'historique (`collaboration.md` règle 59).
 - **Durées et purges** : pour les projets soumis aux règles des archives
   publiques, une purge automatique est une élimination soumise au tableau de
   gestion et au visa des Archives départementales (`archivage-cd47.md`).

@@ -32,7 +32,11 @@ ne répond pas à une question en attente. Continuer le travail indépendant.
 
 **5.** Identifier l'application, l'écran et l'élément visés avant de questionner.
 Un nom générique désigne d'abord l'élément du chantier en cours. Clarifier
-seulement ce qui empêche réellement de choisir correctement.
+seulement ce qui empêche réellement de choisir correctement. Si la demande vise
+un projet absent de la session, nommer le projet supposé et fournir un message
+prêt à coller dans une session de ce projet, plutôt que corriger hors de ses
+règles et de ses tests (24/11/2026 : doublons d'import ICS de sms-mail-multi
+signalés dans une session SpeedDial).
 
 **6.** En contexte multi-dépôts, commencer chaque commande du dépôt par
 `cd /chemin/complet &&`. Vérifier branche, état Git, journal et consignes du
@@ -264,6 +268,10 @@ avant le code. L'utilisateur garde la décision.
 à la demande de l'utilisateur (CD47, charte IA §4). Faire calculer le diagnostic
 dans son application, chiffres seuls à l'écran, et lui demander le résultat.
 Les projets personnels hors CD47 suivent leur propre politique de données.
+Un fichier réel joint à la conversation est lu d'office par la plateforme : ne
+pas l'exploiter ni le recopier, le dire en une ligne, proposer d'effacer sa
+copie du conteneur et rappeler que le contenu reste dans l'historique de la
+conversation (24/11/2026 : export ICS d'agenda avec données d'usagers).
 
 **60.** Avant de pousser, lancer tous les tests du déploiement, dans toutes
 ses conditions (scripts et fuseaux). Une exception validée dans les consignes
