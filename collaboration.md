@@ -87,12 +87,15 @@ puis indiquer où cliquer et quoi regarder. Rendre la fonction visible là où
 l'utilisateur teste, démo comprise. Un calcul ou filtre garde son test ciblé ;
 une suite lourde se relance si elle est pertinente, sous réserve de la règle 60.
 
-**18.** Répondre court, simplement et sans détail technique inutile. Terminer
-par la prochaine étape concrète ou l'annonce que le travail demandé est fini.
-Après les opérations et revues nécessaires, conclure le message final par une
-ligne distincte **✅ TÂCHE TERMINÉE**. La tâche est celle du message, même si
-l'objectif d'ensemble reste ouvert. Si un traitement bloque encore la
-livraison, décrire son état sans annoncer la fin.
+**18.** Répondre court et simplement. À la fin de chaque tâche, dire ce qui
+est acquis, ce qui reste à faire et, s’il y a une suite utile, recommander
+une action concrète en expliquant brièvement pourquoi elle passe en premier.
+Donner les autres options seulement si elles changent la décision. Exécuter
+les étapes déjà autorisées dans la tâche. Si la suite dépend d’un arbitrage
+ou d’un prérequis, préciser lequel et poursuivre ce qui peut l’être.
+Quand tout le travail demandé est vérifié, conclure par une ligne distincte
+**✅ TÂCHE TERMINÉE**. Si un blocage empêche la livraison, préciser l’état
+du travail et la façon d’avancer.
 
 **19.** Commencer par un constat, sans compliment automatique ni objection
 fabriquée, entre assistants aussi. Les essais de l'utilisateur sur les comptes
