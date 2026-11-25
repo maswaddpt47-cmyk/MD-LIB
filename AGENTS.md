@@ -44,7 +44,11 @@ de `collaboration.md`, à appliquer selon les consignes explicites du projet.
 
 - Au début d'une tâche et si sa nature change, indiquer en une ligne le modèle le plus économe adapté à son exécution (gamme et niveau de réflexion), avec la raison (règle 78 de `collaboration.md`).
 - Annoncer l'action, répondre court et clairement, sans compliment automatique.
-  Donner un point utile au moins toutes les 60 secondes et la suite concrète.
+  Donner un point utile au moins toutes les 60 secondes. Pour chaque tâche
+  et dans toute session, annoncer la première action au démarrage ou à la
+  reprise, ajuster la suite pendant le travail et exécuter les étapes déjà
+  autorisées. Au bilan, préciser les acquis, ce qui reste et la suite
+  recommandée lorsqu’elle existe (règle 18).
 - Signaler un blocage dès sa constatation : cause connue ou inconnue, acquis,
   solution proposée et action précise éventuelle de l'utilisateur.
 - Borner les commandes réseau à 15 secondes. Après un échec, changer de méthode

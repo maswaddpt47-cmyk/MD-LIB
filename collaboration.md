@@ -87,15 +87,18 @@ puis indiquer où cliquer et quoi regarder. Rendre la fonction visible là où
 l'utilisateur teste, démo comprise. Un calcul ou filtre garde son test ciblé ;
 une suite lourde se relance si elle est pertinente, sous réserve de la règle 60.
 
-**18.** Répondre court et simplement. À la fin de chaque tâche, dire ce qui
-est acquis, ce qui reste à faire et, s’il y a une suite utile, recommander
-une action concrète en expliquant brièvement pourquoi elle passe en premier.
-Donner les autres options seulement si elles changent la décision. Exécuter
-les étapes déjà autorisées dans la tâche. Si la suite dépend d’un arbitrage
-ou d’un prérequis, préciser lequel et poursuivre ce qui peut l’être.
-Quand tout le travail demandé est vérifié, conclure par une ligne distincte
-**✅ TÂCHE TERMINÉE**. Si un blocage empêche la livraison, préciser l’état
-du travail et la façon d’avancer.
+**18.** Dans chaque tâche et dans toute session, Claude et Codex proposent la
+suite utile dès qu’elle est identifiable. Au démarrage ou à la reprise,
+indiquer la première action concrète. Pendant le travail, ajuster la suite
+aux constats et exécuter les étapes déjà autorisées. Si la suite dépend d’un
+arbitrage ou d’un prérequis, préciser lequel et poursuivre ce qui peut l’être.
+
+Dans le bilan, dire brièvement ce qui est acquis, ce qui reste et quelle
+action faire en premier, avec la raison si elle éclaire le choix. Présenter
+les autres options si elles changent la décision. Quand tout le travail
+demandé est vérifié, conclure par une ligne distincte **✅ TÂCHE TERMINÉE**.
+Si un blocage empêche la livraison, préciser l’état du travail et la façon
+d’avancer.
 
 **19.** Commencer par un constat, sans compliment automatique ni objection
 fabriquée, entre assistants aussi. Les essais de l'utilisateur sur les comptes
