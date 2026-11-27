@@ -386,6 +386,38 @@ illisible s'affiche dans un état à part (gris, « à vérifier »), jamais en 
 l'état global est le pire des états individuels. PILOTAGE-PORTFOLIO, AG-002,
 24/11/2026 : un relevé absent ou expiré ne donne pas « Tout va bien ».
 
+**80.** Avant de réécrire un historique git (purge de données, `filter-repo`,
+`filter-branch`) : vérifier que le clone est complet (`git rev-parse
+--is-shallow-repository` doit donner `false` ; un clone de session est souvent
+partiel et la réécriture tronquerait l'historique), réécrire de préférence **les
+seuls commits touchés** (`filter-repo` change aussi les identifiants de tout commit
+signé), puis contrôler le résultat par un **clone miroir** (`git clone --mirror`)
+qui inclut `refs/pull/*`, pas par `--depth 1`. Les références de pull requests
+gardent les anciens commits et restent lisibles par tous sur un dépôt public
+(sms-mail-multi, 27/11/2026 : des sauvegardes d'usagers de juillet étaient encore
+lisibles après la purge du 02/09). Annoncer ce qu'une purge ne peut pas effacer
+(références de pull requests, forks, caches) et la demande à faire au support de
+l'hébergeur.
+
+**81.** Une mutation ne prouve rien si la base échoue déjà : avant d'annoncer des
+mutants rejetés, exécuter le test **sans** mutation et constater qu'il passe,
+puis restaurer la copie après chaque mutant. Complète les règles 14 et 55
+(sms-mail-multi, 27/11/2026 : deux séries de « mutants rejetés » étaient sans
+valeur, la base du test échouait déjà).
+
+**82.** Données de test et exemples : jamais de nom, numéro, adresse ou texte vu sur
+une capture ou dans un fichier réel de l'utilisateur, même pour un test ou un
+exemple de document (sms-mail-multi, 27/11/2026 : un nom d'usager repris d'une
+capture est entré dans l'historique d'un dépôt public). Utiliser des valeurs
+manifestement fictives (« DU TEST Alice ») et, avant de pousser, chercher dans le
+diff les noms vus à l'écran. Complète la règle 59 et la charte IA du CD47 §4.
+
+**83.** Ne committer qu'après **lecture** de la sortie complète de la suite
+locale : une boucle de scripts suivie d'un `git commit` enchaîné n'arrête rien si un
+script échoue. Un script en échec se corrige avant le commit, ou le message du
+commit le dit. Complète la règle 60 (sms-mail-multi, 27/11/2026 : commit fait alors
+que `check-archives.js` échouait ; corrigé avant tout envoi).
+
 ## Côté utilisateur — repères utiles
 
 1. Donner le contexte temporel et les tentatives déjà faites dès le départ.

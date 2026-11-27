@@ -1,6 +1,8 @@
 # CHANTIERS — état courant de MD-LIB
 
-État au **24/11/2026** (Paris), base `main` `76cd340` + clôture de la session SpeedDial (règle 32) : précisions des règles 5 (projet absent de la session : message prêt à coller) et 59 (fichier réel joint : ne pas l'exploiter, proposer l'effacement), reprise dans `rgpd-securite.md` ; `outils/attendre-deploiement.sh` détecte le workflow propre au dépôt qui publie Pages (`76cd340`). Accord de l'utilisateur.
+État au **27/11/2026 à 23:23** (Paris), base `main` `ab38822` + clôture de la session sms-mail-multi (règle 32) : **règles 80** (réécriture d'historique : clone complet, réécriture ciblée, contrôle par clone miroir avec `refs/pull/*`), **81** (mutation : vérifier d'abord que la base passe), **82** (données de test : jamais de valeur vue sur une capture) et **83** (commit seulement après lecture de la suite), approuvées par l'utilisateur le 27/11/2026 (« Écrit les 4 »). **Propagation aux `AGENTS.md` non faite** : à proposer projet par projet au prochain « pull » (règle 47) ; le chargement commun de `collaboration.md` suffit aux sessions Claude.
+
+Précédent : État au **24/11/2026** (Paris), base `main` `76cd340` + clôture de la session SpeedDial (règle 32) : précisions des règles 5 (projet absent de la session : message prêt à coller) et 59 (fichier réel joint : ne pas l'exploiter, proposer l'effacement), reprise dans `rgpd-securite.md` ; `outils/attendre-deploiement.sh` détecte le workflow propre au dépôt qui publie Pages (`76cd340`). Accord de l'utilisateur.
 
 Précédent : État au **23/11/2026** (Paris), base `main` `47cd250` (relue par « pull » : `attendre-deploiement.sh` vérifie le workflow de publication attendu pour le SHA ; un dépôt à workflow personnalisé, comme sms-mail-multi, doit le nommer, sinon ➖). Avant : état au **22/11/2026 à 10:34** (Paris), base `main` `88881dd`.
 Le contrôle du workflow, de la tâche et de l'étape de publication a été corrigé.
